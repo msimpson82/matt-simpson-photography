@@ -203,14 +203,22 @@
             </div>
 
             <!-- Current Photo of the Day -->
+            {{ $potdPosts := where site.RegularPages "Section" "potd" }}
+            {{ $featuredPost := where $potdPosts "Params.featured" true }}
+            {{ $sortedPosts := sort $potdPosts "Date" "desc" }}
+            {{ $currentPost := index $sortedPosts 0 }}
+            {{ if $featuredPost }}
+                {{ $currentPost = index $featuredPost 0 }}
+            {{ end }}
+
             <div class="potd-featured">
                 <div class="potd-featured-image">
-                    <img src="/images/potd/2025-06-12.jpg" alt="Photo of the Day - June 12, 2025">
+                    <img src="/images/potd/{{ $currentPost.Params.image }}" alt="Photo of the Day - {{ $currentPost.Date.Format "January 2, 2006" }}">
                 </div>
                 <div class="potd-featured-content">
-                    <div class="potd-date">June 12, 2025</div>
+                    <div class="potd-date">{{ $currentPost.Date.Format "January 2, 2006" }}</div>
                     <p class="potd-caption">
-                        Caught this beautiful moment during golden hour at Cherokee Park. Sometimes the simplest scenes hold the most magic—just light, shadow, and the quiet promise of evening.
+                        {{ $currentPost.Content }}
                     </p>
                 </div>
             </div>
@@ -218,21 +226,14 @@
             <!-- Recent Days Thumbnails -->
             <div class="potd-recent">
                 <div class="potd-thumbnails">
-                    <div class="potd-thumbnail" data-date="June 11, 2025" data-image="/images/potd/2025-06-12.jpg" data-caption="Morning mist rolling through the trees at Bernheim Forest.">
-                        <img src="/images/potd/2025-06-12.jpg" alt="June 11, 2025">
-                    </div>
-                    <div class="potd-thumbnail" data-date="June 10, 2025" data-image="/images/potd/2025-06-12.jpg" data-caption="Street art meets shadow in NuLu.">
-                        <img src="/images/potd/2025-06-12.jpg" alt="June 10, 2025">
-                    </div>
-                    <div class="potd-thumbnail" data-date="June 9, 2025" data-image="/images/potd/2025-06-12.jpg" data-caption="Coffee steam and Sunday morning light.">
-                        <img src="/images/potd/2025-06-12.jpg" alt="June 9, 2025">
-                    </div>
-                    <div class="potd-thumbnail" data-date="June 8, 2025" data-image="/images/potd/2025-06-12.jpg" data-caption="Caught this incredible cloud formation over the Ohio River.">
-                        <img src="/images/potd/2025-06-12.jpg" alt="June 8, 2025">
-                    </div>
-                    <div class="potd-thumbnail" data-date="June 7, 2025" data-image="/images/potd/2025-06-12.jpg" data-caption="Late night rain creates beautiful reflections downtown.">
-                        <img src="/images/potd/2025-06-12.jpg" alt="June 7, 2025">
-                    </div>
+                    {{ $recentPosts := first 5 $sortedPosts }}
+                    {{ range $index, $post := $recentPosts }}
+                        {{ if ne $post $currentPost }}
+                            <div class="potd-thumbnail" data-date="{{ $post.Date.Format "January 2, 2006" }}" data-image="/images/potd/{{ $post.Params.image }}" data-caption="{{ $post.Content }}">
+                                <img src="/images/potd/{{ $post.Params.image }}" alt="{{ $post.Date.Format "January 2, 2006" }}">
+                            </div>
+                        {{ end }}
+                    {{ end }}
                 </div>
                 <a href="#" class="potd-archive-link">Archive</a>
             </div>
@@ -496,7 +497,7 @@
             card.style.transitionDelay = `${index * 0.15}s`;
         });
 
-        // Photo of the Day thumbnail functionality
+        // Photo of the Day thumbnail functionality  
         const potdThumbnails = document.querySelectorAll('.potd-thumbnail');
         const potdFeaturedImage = document.querySelector('.potd-featured-image img');
         const potdFeaturedDate = document.querySelector('.potd-date');
