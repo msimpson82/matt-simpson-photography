@@ -389,6 +389,9 @@ body {
     overflow: hidden;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .project-image {
@@ -426,6 +429,9 @@ body {
 .featured-projects .project-content,
 .projects-list-page .project-content {
     padding: 20px 32px 20px 32px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .featured-projects .project-title,
@@ -445,6 +451,7 @@ body {
     color: var(--gray);
     margin-bottom: 20px;
     font-family: var(--secondary-font);
+    flex-grow: 1;
 }
 
 .project-button {
@@ -460,6 +467,8 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-family: var(--secondary-font);
+    align-self: flex-start;
+    margin-top: auto;
 }
 
 .project-button:hover {
@@ -702,6 +711,9 @@ body {
     .featured-projects .project-content,
     .projects-list-page .project-content {
         padding: 16px 24px 16px 24px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
     }
 }
 
