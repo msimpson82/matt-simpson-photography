@@ -998,6 +998,15 @@ body {
     line-height: 1;
 }
 
+.potd-featured-content .potd-title {
+    font-family: var(--secondary-font);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
 .potd-description {
     font-size: 1rem;
     line-height: 1.6;
