@@ -8,6 +8,126 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Project Page Specific Styles */
+        .project-content .project-container {
+            max-width: 700px;
+        }
+        
+        .project-article {
+            font-size: 1.1rem;
+            line-height: 1.9;
+        }
+        
+        .project-article h2 {
+            font-family: var(--secondary-font);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--black);
+            margin: 3rem 0 1.5rem 0;
+            line-height: 1.3;
+        }
+        
+        .project-article h3 {
+            font-family: var(--secondary-font);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--black);
+            margin: 2.5rem 0 1rem 0;
+            line-height: 1.3;
+        }
+        
+        .project-article p {
+            margin-bottom: 1.8rem;
+        }
+        
+        .project-article blockquote {
+            font-family: var(--primary-font);
+            font-style: italic;
+            font-size: 1.3rem;
+            line-height: 1.6;
+            color: var(--gray);
+            border-left: 4px solid var(--black);
+            padding: 1.5rem 0 1.5rem 2rem;
+            margin: 3rem 0;
+            background: var(--light-gray);
+            position: relative;
+        }
+        
+        .project-article blockquote::before {
+            content: '"';
+            font-family: var(--primary-font);
+            font-size: 4rem;
+            color: var(--black);
+            position: absolute;
+            left: 0.5rem;
+            top: -0.5rem;
+            opacity: 0.3;
+        }
+        
+        .project-article ul, .project-article ol {
+            margin: 2rem 0;
+            padding-left: 2rem;
+        }
+        
+        .project-article li {
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+        
+        .project-article ul li {
+            list-style: none;
+            position: relative;
+        }
+        
+        .project-article ul li::before {
+            content: '•';
+            color: var(--black);
+            font-weight: bold;
+            position: absolute;
+            left: -1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .project-article strong {
+            font-weight: 600;
+            color: var(--black);
+        }
+        
+        .project-article em {
+            font-family: var(--primary-font);
+            font-style: italic;
+        }
+        
+        .project-article code {
+            background: var(--light-gray);
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.9rem;
+            color: var(--black);
+        }
+        
+        .project-article hr {
+            border: none;
+            height: 2px;
+            background: var(--light-gray);
+            margin: 4rem 0;
+            opacity: 0.5;
+        }
+        
+        /* Add subtle breathing room */
+        .project-content {
+            padding: 5rem 1.5rem;
+        }
+        
+        /* First paragraph special styling */
+        .project-article p:first-child {
+            font-size: 1.2rem;
+            color: var(--gray);
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Navigation -->
