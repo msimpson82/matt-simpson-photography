@@ -2,8 +2,8 @@
 date: 2025-06-13
 title: My True First Photo of the Day
 Image: meg.jpg
-
+Featured: true
 ---
 
-This is my first true photo of the day. It’s of my wife, and it was on a date night. We had dinner, drinks, and spent the evening walking around town, laughing a lot, and taking photos. The less we “tried” to take a good photo, the more I liked them. And man, I really love the girl.
+test - This is my first true photo of the day. It’s of my wife, and it was on a date night. We had dinner, drinks, and spent the evening walking around town, laughing a lot, and taking photos. The less we “tried” to take a good photo, the more I liked them. And man, I really love the girl.
 
