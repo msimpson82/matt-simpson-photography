@@ -1,58 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matt Simpson Photography</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-    <!-- Header Navigation -->
-    <header class="header" id="header">
-        <div class="nav-container">
-            <svg class="email-icon" onclick="window.location.href='mailto:hello@hardsearstudio.com'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            
-            <a href="#" class="nav-logo" id="navLogo">Matt Simpson Photography</a>
-            
-            <nav class="desktop-nav">
-                <div class="nav-dropdown">
-                    <a href="#" class="nav-dropdown-toggle">Work</a>
-                    <div class="nav-dropdown-menu">
-                        <a href="#portfolio">Portfolio</a>
-                        <a href="/projects">Featured Projects</a>
-                        <a href="#potd">Photo of the Day</a>
-                    </div>
-                </div>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-close" id="mobileMenuClose"></div>
-        <ul class="mobile-menu-links">
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="/projects">Featured Projects</a></li>
-            <li><a href="#potd">Photo of the Day</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-
+{{ define "main" }}
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <h1 class="hero-logo" id="heroLogo">Matt Simpson Photography</h1>
@@ -287,24 +233,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <h3 class="footer-logo">Matt Simpson Photography</h3>
-            <p class="footer-text">
-                Commercial photographer specializing in portraits, branding, and professional headshots in Louisville, KY.
-            </p>
-            <div class="footer-social">
-                <a href="mailto:hello@hardsearstudio.com" class="social-link">Email</a>
-                <a href="#" class="social-link">Instagram</a>
-                <a href="#" class="social-link">LinkedIn</a>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Matt Simpson Photography. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
         <div class="lightbox-container">
@@ -338,7 +266,9 @@
             </div>
         </div>
     </div>
+{{ end }}
 
+{{ define "scripts" }}
     <script>
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -383,48 +313,6 @@
             } else {
                 const navProgress = (scrollY - navFadeStart) / (navFadeEnd - navFadeStart);
                 navLogo.style.opacity = navProgress;
-            }
-        });
-
-        // Mobile menu functionality
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileMenuClose = document.getElementById('mobileMenuClose');
-
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-
-        mobileMenuClose.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-
-        document.querySelectorAll('.mobile-menu-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-
-        // Desktop navigation dropdown functionality
-        const navDropdown = document.querySelector('.nav-dropdown');
-        const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
-        const dropdownMenu = document.querySelector('.nav-dropdown-menu');
-
-        dropdownToggle.addEventListener('mouseenter', () => {
-            navDropdown.classList.add('active');
-        });
-
-        navDropdown.addEventListener('mouseleave', () => {
-            navDropdown.classList.remove('active');
-        });
-
-        // Close dropdown when clicking elsewhere
-        document.addEventListener('click', (e) => {
-            if (!navDropdown.contains(e.target)) {
-                navDropdown.classList.remove('active');
             }
         });
 
@@ -568,15 +456,16 @@
         });
         
         // Navigation arrow handlers
-        potdPrevBtn.addEventListener('click', () => {
-            const newIndex = currentPotdIndex > 0 ? currentPotdIndex - 1 : potdThumbnails.length - 1;
-            updatePotdDisplay(newIndex);
-        });
-        
-        potdNextBtn.addEventListener('click', () => {
-            const newIndex = currentPotdIndex < potdThumbnails.length - 1 ? currentPotdIndex + 1 : 0;
-            updatePotdDisplay(newIndex);
-        });
+        if (potdPrevBtn && potdNextBtn) {
+            potdPrevBtn.addEventListener('click', () => {
+                const newIndex = currentPotdIndex > 0 ? currentPotdIndex - 1 : potdThumbnails.length - 1;
+                updatePotdDisplay(newIndex);
+            });
+            
+            potdNextBtn.addEventListener('click', () => {
+                const newIndex = currentPotdIndex < potdThumbnails.length - 1 ? currentPotdIndex + 1 : 0;
+                updatePotdDisplay(newIndex);
+            });
+        }
     </script>
-</body>
-</html>
+{{ end }}
