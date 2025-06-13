@@ -1,255 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} - Matt Simpson Photography</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ .Title }} – Matt Simpson Photography</title>
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body class="project-page">
-    <!-- Header Navigation -->
-    <header class="header" id="header">
-        <div class="nav-container">
-            <svg class="email-icon" onclick="window.location.href='mailto:hello@hardsearstudio.com'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            
-            <a href="/" class="nav-logo">Matt Simpson Photography</a>
-            
-            <nav class="desktop-nav">
-                <a href="/#portfolio">Work</a>
-                <a href="/#potd">Photo of the Day</a>
-                <a href="/#about">About</a>
-                <a href="/#contact">Contact</a>
-            </nav>
-            
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
+<body>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-close" id="mobileMenuClose"></div>
-        <ul class="mobile-menu-links">
-            <li><a href="/#portfolio">Work</a></li>
-            <li><a href="/#potd">Photo of the Day</a></li>
-            <li><a href="/#about">About</a></li>
-            <li><a href="/#contact">Contact</a></li>
-        </ul>
+  {{ partial "header.html" . }}
+
+  <section class="project-hero">
+    <div class="project-hero-image">
+      <img src="{{ .Params.featured }}" alt="{{ .Title }}">
     </div>
-
-    <!-- Project Hero Section -->
-    <section class="project-hero">
-        <div class="project-hero-image">
-            <img src="/images/{{ .Params.hero_image }}" alt="{{ .Title }}">
+    <div class="project-hero-content">
+      <div class="project-breadcrumb"><a href="/#featured-projects">← Back to Projects</a></div>
+      <h1 class="project-title">{{ .Title }}</h1>
+      <div class="project-meta">
+        <div class="project-meta-item">
+          <span class="meta-label">Date</span>
+          <span>{{ .Date.Format "January 2, 2006" }}</span>
         </div>
-        <div class="project-hero-content">
-            <div class="project-breadcrumb">
-                <a href="/">Home</a> / <a href="/#featured-projects">Projects</a> / {{ .Title }}
-            </div>
-            <h1 class="project-title">{{ .Title }}</h1>
-            <div class="project-meta">
-                <div class="project-meta-item">
-                    <span class="meta-label">Client</span>
-                    <span class="meta-value">{{ .Params.client }}</span>
-                </div>
-                <div class="project-meta-item">
-                    <span class="meta-label">Date</span>
-                    <span class="meta-value">{{ .Date.Format "January 2006" }}</span>
-                </div>
-                <div class="project-meta-item">
-                    <span class="meta-label">Category</span>
-                    <span class="meta-value">{{ .Params.category }}</span>
-                </div>
-            </div>
+        <div class="project-meta-item">
+          <span class="meta-label">Client</span>
+          <span>{{ .Params.client }}</span>
         </div>
-    </section>
-
-    <!-- Project Content -->
-    <section class="project-content">
-        <div class="project-container">
-            <div class="project-article">
-                <div class="project-text">
-                    {{ .Content }}
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Gallery -->
-    {{ if .Params.gallery }}
-   <section class="project-gallery">
-  <div class="portfolio-grid">
-    {{ range .Params.gallery }}
-    <div class="portfolio-item" data-image="/images/projects/{{ . }}">
-      <img src="/images/projects/{{ . }}" alt="{{ $.Title }} Gallery Image">
+      </div>
     </div>
-    {{ end }}
-  </div>
-</section>
+  </section>
 
-
-
-    {{ end }}
-
-    <!-- Navigation -->
-    <section class="project-nav">
-        <div class="project-container">
-            <a href="/#featured-projects" class="back-to-projects">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="15,18 9,12 15,6"></polyline>
-                </svg>
-                Back to Projects
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <h3 class="footer-logo">Matt Simpson Photography</h3>
-            <p class="footer-text">
-                Commercial photographer specializing in portraits, branding, and professional headshots in Louisville, KY.
-            </p>
-            <div class="footer-social">
-                <a href="mailto:hello@hardsearstudio.com" class="social-link">Email</a>
-                <a href="#" class="social-link">Instagram</a>
-                <a href="#" class="social-link">LinkedIn</a>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Matt Simpson Photography. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-container">
-            <div class="lightbox-image-area">
-                <img id="lightboxImage" src="" alt="Gallery Image">
-                <div class="lightbox-nav lightbox-prev" id="lightboxPrev">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                        <polyline points="15,18 9,12 15,6"></polyline>
-                    </svg>
-                </div>
-                <div class="lightbox-nav lightbox-next" id="lightboxNext">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                        <polyline points="9,18 15,12 9,6"></polyline>
-                    </svg>
-                </div>
-            </div>
-            <div class="lightbox-sidebar">
-                <div class="lightbox-header">
-                    <div class="lightbox-counter" id="lightboxCounter">1 / 6</div>
-                    <div class="lightbox-close" id="lightboxClose">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </div>
-                </div>
-                <div class="lightbox-content">
-                    <h3 class="lightbox-title">{{ .Title }}</h3>
-                    <p class="lightbox-description">Project gallery showcasing the work delivered for this engagement.</p>
-                </div>
-            </div>
-        </div>
+  <section class="project-content">
+    <div class="project-container">
+      <article class="project-article">
+        {{ .Content }}
+      </article>
     </div>
+  </section>
 
-    <script>
-        // Mobile menu functionality
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileMenuClose = document.getElementById('mobileMenuClose');
+  <section class="project-gallery">
+    <div class="portfolio-grid">
+      {{ range .Params.gallery }}
+      <div class="portfolio-item" data-image="{{ .src }}">
+        <img src="{{ .src }}" alt="{{ .alt }}">
+      </div>
+      {{ end }}
+    </div>
+  </section>
 
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
+  {{ partial "lightbox.html" . }}
+  {{ partial "footer.html" . }}
 
-        mobileMenuClose.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-
-        document.querySelectorAll('.mobile-menu-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-
-        // Gallery lightbox functionality
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImage = document.getElementById('lightboxImage');
-        const lightboxClose = document.getElementById('lightboxClose');
-        const lightboxPrev = document.getElementById('lightboxPrev');
-        const lightboxNext = document.getElementById('lightboxNext');
-        const lightboxCounter = document.getElementById('lightboxCounter');
-
-        let currentImageIndex = 0;
-        const images = Array.from(galleryItems);
-
-        function openLightbox(index) {
-            currentImageIndex = index;
-            updateLightboxContent();
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        function updateLightboxContent() {
-            const currentItem = images[currentImageIndex];
-            const imgSrc = currentItem.querySelector('img').src;
-
-            lightboxImage.src = imgSrc;
-            lightboxCounter.textContent = `${currentImageIndex + 1} / ${images.length}`;
-        }
-
-        function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            updateLightboxContent();
-        }
-
-        function prevImage() {
-            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-            updateLightboxContent();
-        }
-
-        galleryItems.forEach((item, index) => {
-            item.addEventListener('click', () => openLightbox(index));
-        });
-
-        lightboxClose.addEventListener('click', closeLightbox);
-        lightboxNext.addEventListener('click', nextImage);
-        lightboxPrev.addEventListener('click', prevImage);
-
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                closeLightbox();
-            }
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (!lightbox.classList.contains('active')) return;
-            
-            if (e.key === 'Escape') closeLightbox();
-            if (e.key === 'ArrowRight') nextImage();
-            if (e.key === 'ArrowLeft') prevImage();
-        });
-    </script>
+  <script src="/js/lightbox.js"></script>
 </body>
 </html>
