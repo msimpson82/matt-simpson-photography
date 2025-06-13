@@ -423,11 +423,11 @@ body {
     font-family: var(--secondary-font);
 }
 
-.project-content {
+.featured-projects .project-content {
     padding: 12px 32px 16px 32px;
 }
 
-.project-title {
+.featured-projects .project-title {
     font-family: var(--secondary-font);
     font-size: 1.5rem;
     font-weight: 700;
@@ -436,7 +436,7 @@ body {
     line-height: 1.2;
 }
 
-.project-description {
+.featured-projects .project-description {
     font-size: 0.95rem;
     line-height: 1.6;
     color: var(--gray);
@@ -696,7 +696,7 @@ body {
         height: 200px;
     }
     
-    .project-content {
+    .featured-projects .project-content {
         padding: 10px 24px 14px 24px;
     }
 }
@@ -1211,24 +1211,24 @@ body {
     color: var(--black);
 }
 
-.project-content {
+.project-page .project-content {
     padding: 4rem 1.5rem;
     background: var(--white);
 }
 
-.project-container {
+.project-page .project-container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.project-article {
+.project-page .project-article {
     font-family: var(--secondary-font);
     font-size: 1rem;
     line-height: 1.8;
     color: var(--black);
 }
 
-.project-gallery {
+.project-page .project-gallery {
     padding: 6rem 1.5rem;
     max-width: 1400px;
     margin: 0 auto;
