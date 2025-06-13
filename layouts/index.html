@@ -203,14 +203,22 @@
             </div>
 
             <!-- Current Photo of the Day -->
+            {{ $potdPosts := where site.RegularPages "Section" "potd" }}
+            {{ $featuredPost := where $potdPosts "Params.featured" true }}
+            {{ $sortedPosts := sort $potdPosts "Date" "desc" }}
+            {{ $currentPost := index $sortedPosts 0 }}
+            {{ if $featuredPost }}
+                {{ $currentPost = index $featuredPost 0 }}
+            {{ end }}
+
             <div class="potd-featured">
                 <div class="potd-featured-image">
-                    <img src="https://imagedelivery.net/33hsxGsUvJI8qCjA_il4aQ/2025-06-12/public" alt="Photo of the Day - June 12, 2025">
+                    <img src="https://imagedelivery.net/33hsxGsUvJI8qCjA_il4aQ/{{ $currentPost.Params.image }}/public" alt="Photo of the Day - {{ $currentPost.Date.Format "January 2, 2006" }}">
                 </div>
                 <div class="potd-featured-content">
-                    <div class="potd-date">June 12, 2025</div>
+                    <div class="potd-date">{{ $currentPost.Date.Format "January 2, 2006" }}</div>
                     <p class="potd-caption">
-                        Caught this beautiful moment during golden hour at Cherokee Park. Sometimes the simplest scenes hold the most magic—just light, shadow, and the quiet promise of evening.
+                        {{ $currentPost.Content }}
                     </p>
                 </div>
             </div>
@@ -218,12 +226,14 @@
             <!-- Recent Days Thumbnails -->
             <div class="potd-recent">
                 <div class="potd-thumbnails">
-                    <!-- Add more thumbnails here as you upload new photos -->
-                    <!-- Example for next photo:
-                    <div class="potd-thumbnail" data-date="June 13, 2025" data-image="https://imagedelivery.net/33hsxGsUvJI8qCjA_il4aQ/2025-06-13.jpg/public" data-caption="Your caption here">
-                        <img src="https://imagedelivery.net/33hsxGsUvJI8qCjA_il4aQ/2025-06-13.jpg/public" alt="June 13, 2025">
-                    </div>
-                    -->
+                    {{ $recentPosts := first 5 $sortedPosts }}
+                    {{ range $index, $post := $recentPosts }}
+                        {{ if ne $post $currentPost }}
+                            <div class="potd-thumbnail" data-date="{{ $post.Date.Format "January 2, 2006" }}" data-image="https://imagedelivery.net/33hsxGsUvJI8qCjA_il4aQ/{{ $post.Params.image }}/public" data-caption="{{ $post.Content }}">
+                                <img src="https://imagedelivery.net/33hsxGsUvJI8qCjA_il4aQ/{{ $post.Params.image }}/public" alt="{{ $post.Date.Format "January 2, 2006" }}">
+                            </div>
+                        {{ end }}
+                    {{ end }}
                 </div>
                 <a href="#" class="potd-archive-link">Archive</a>
             </div>
