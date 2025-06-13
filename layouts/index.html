@@ -232,15 +232,34 @@
 
             <!-- Recent Days Thumbnails -->
             <div class="potd-recent">
-                <div class="potd-thumbnails">
-                    {{ $recentPosts := first 5 $sortedPosts }}
-                    {{ range $index, $post := $recentPosts }}
-                        {{ if ne $post $currentPost }}
-                            <div class="potd-thumbnail" data-date="{{ $post.Date.Format "January 2, 2006" }}" data-image="/images/potd/{{ $post.Params.image }}" data-caption="{{ $post.Content }}">
+                <div class="potd-navigation">
+                    <button class="potd-nav-btn potd-prev" id="potdPrev">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15,18 9,12 15,6"></polyline>
+                        </svg>
+                    </button>
+                    
+                    <div class="potd-thumbnails">
+                        {{ $recentPosts := first 6 $sortedPosts }}
+                        {{ range $index, $post := $recentPosts }}
+                            {{ $isActive := "" }}
+                            {{ if eq $post $currentPost }}{{ $isActive = "active" }}{{ end }}
+                            <div class="potd-thumbnail {{ $isActive }}" 
+                                 data-date="{{ $post.Date.Format "January 2, 2006" }}" 
+                                 data-image="/images/potd/{{ $post.Params.image }}" 
+                                 data-caption="{{ $post.Content }}"
+                                 data-title="{{ $post.Title }}"
+                                 data-index="{{ $index }}">
                                 <img src="/images/potd/{{ $post.Params.image }}" alt="{{ $post.Date.Format "January 2, 2006" }}">
                             </div>
                         {{ end }}
-                    {{ end }}
+                    </div>
+                    
+                    <button class="potd-nav-btn potd-next" id="potdNext">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9,18 15,12 9,6"></polyline>
+                        </svg>
+                    </button>
                 </div>
                 <a href="#" class="potd-archive-link">Archive</a>
             </div>
@@ -497,30 +516,66 @@
             if (e.key === 'ArrowLeft') prevImage();
         });
 
-        // Photo of the Day thumbnail functionality  
+        // Photo of the Day thumbnail and navigation functionality  
         const potdThumbnails = document.querySelectorAll('.potd-thumbnail');
         const potdFeaturedImage = document.querySelector('.potd-featured-image img');
         const potdFeaturedDate = document.querySelector('.potd-date');
+        const potdFeaturedTitle = document.querySelector('.potd-featured-content .potd-title');
         const potdFeaturedCaption = document.querySelector('.potd-caption');
+        const potdPrevBtn = document.getElementById('potdPrev');
+        const potdNextBtn = document.getElementById('potdNext');
+        
+        let currentPotdIndex = 0;
+        
+        // Find the initially active thumbnail
+        potdThumbnails.forEach((thumbnail, index) => {
+            if (thumbnail.classList.contains('active')) {
+                currentPotdIndex = index;
+            }
+        });
 
-        potdThumbnails.forEach(thumbnail => {
+        function updatePotdDisplay(index) {
+            const thumbnail = potdThumbnails[index];
+            if (!thumbnail) return;
+            
+            const date = thumbnail.dataset.date;
+            const image = thumbnail.dataset.image;
+            const caption = thumbnail.dataset.caption;
+            const title = thumbnail.dataset.title;
+
+            potdFeaturedImage.style.opacity = '0';
+            setTimeout(() => {
+                potdFeaturedImage.src = image;
+                potdFeaturedImage.alt = `Photo of the Day - ${date}`;
+                potdFeaturedDate.textContent = date;
+                potdFeaturedTitle.textContent = title;
+                potdFeaturedCaption.textContent = caption;
+                potdFeaturedImage.style.opacity = '1';
+            }, 200);
+
+            // Update active thumbnail
+            potdThumbnails.forEach(thumb => thumb.classList.remove('active'));
+            thumbnail.classList.add('active');
+            
+            currentPotdIndex = index;
+        }
+
+        // Thumbnail click handlers
+        potdThumbnails.forEach((thumbnail, index) => {
             thumbnail.addEventListener('click', () => {
-                const date = thumbnail.dataset.date;
-                const image = thumbnail.dataset.image;
-                const caption = thumbnail.dataset.caption;
-
-                potdFeaturedImage.style.opacity = '0';
-                setTimeout(() => {
-                    potdFeaturedImage.src = image;
-                    potdFeaturedImage.alt = `Photo of the Day - ${date}`;
-                    potdFeaturedDate.textContent = date;
-                    potdFeaturedCaption.textContent = caption;
-                    potdFeaturedImage.style.opacity = '1';
-                }, 200);
-
-                potdThumbnails.forEach(thumb => thumb.classList.remove('active'));
-                thumbnail.classList.add('active');
+                updatePotdDisplay(index);
             });
+        });
+        
+        // Navigation arrow handlers
+        potdPrevBtn.addEventListener('click', () => {
+            const newIndex = currentPotdIndex > 0 ? currentPotdIndex - 1 : potdThumbnails.length - 1;
+            updatePotdDisplay(newIndex);
+        });
+        
+        potdNextBtn.addEventListener('click', () => {
+            const newIndex = currentPotdIndex < potdThumbnails.length - 1 ? currentPotdIndex + 1 : 0;
+            updatePotdDisplay(newIndex);
         });
     </script>
 </body>

@@ -1061,12 +1061,68 @@ body {
     padding-top: 2rem;
 }
 
+.potd-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.potd-nav-btn {
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.potd-nav-btn:hover {
+    background: var(--gray);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.potd-nav-btn:active {
+    transform: translateY(0);
+}
+
 .potd-thumbnails {
     display: flex;
     justify-content: center;
     gap: 0.75rem;
-    margin-bottom: 1.5rem;
     flex-wrap: wrap;
+    min-width: 0;
+    flex: 1;
+    max-width: 500px;
+}
+
+@media (max-width: 600px) {
+    .potd-navigation {
+        gap: 0.75rem;
+    }
+    
+    .potd-nav-btn {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .potd-thumbnails {
+        gap: 0.5rem;
+        max-width: 280px;
+    }
+    
+    .potd-thumbnail {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 .potd-thumbnail {
@@ -1128,6 +1184,15 @@ body {
     
     .potd-featured-content {
         text-align: left;
+    }
+    
+    .potd-navigation {
+        gap: 1.5rem;
+    }
+    
+    .potd-nav-btn {
+        width: 44px;
+        height: 44px;
     }
 }
 
