@@ -86,18 +86,16 @@
 
     <!-- Project Gallery -->
     {{ if .Params.gallery }}
-    <section class="project-gallery">
-        <div class="project-container">
-            <h2 class="gallery-title">Project Gallery</h2>
-            <div class="gallery-grid">
-                {{ range .Params.gallery }}
-                <div class="gallery-item" data-image="/images/projects/{{ . }}">
-                    <img src="/images/projects/{{ . }}" alt="{{ $.Title }} Gallery Image">
-                </div>
-                {{ end }}
-            </div>
+   <section class="project-gallery">
+    <div class="gallery-container">
+        <div class="gallery-scroll">
+            {{ range .Params.gallery }}
+            <img src="/images/projects/{{ . }}" alt="{{ $.Title }} Gallery Image">
+            {{ end }}
         </div>
-    </section>
+    </div>
+</section>
+
     {{ end }}
 
     <!-- Navigation -->
