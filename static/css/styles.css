@@ -1058,3 +1058,132 @@ body {
         padding: 8rem 3rem 4rem;
     }
 }
+
+/* Project Page Layout */
+.project-hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding: 60px 0;
+    background-color: var(--light-gray);
+}
+
+.project-hero-image {
+    flex: 1 1 50%;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.project-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-hero-content {
+    flex: 1 1 50%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--white);
+}
+
+.project-breadcrumb {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    color: var(--gray);
+}
+
+.project-title {
+    font-family: var(--primary-font);
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.project-meta-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.meta-label {
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.project-content {
+    padding: 4rem 1.5rem;
+    background: var(--white);
+}
+
+.project-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-article {
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--black);
+}
+
+.project-gallery {
+    padding: 4rem 1.5rem;
+    background-color: var(--light-gray);
+}
+
+.gallery-title {
+    text-align: center;
+    font-family: var(--primary-font);
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+}
+
+.project-nav {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background: var(--white);
+}
+
+.back-to-projects {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--black);
+    transition: all 0.3s ease;
+}
+
+.back-to-projects:hover {
+    color: var(--gray);
+    transform: translateX(-4px);
+}
