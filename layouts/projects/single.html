@@ -87,14 +87,15 @@
     <!-- Project Gallery -->
     {{ if .Params.gallery }}
    <section class="project-gallery">
-    <div class="gallery-container">
-        <div class="gallery-scroll">
-            {{ range .Params.gallery }}
-            <img src="/images/projects/{{ . }}" alt="{{ $.Title }} Gallery Image">
-            {{ end }}
-        </div>
+  <div class="project-gallery-grid">
+    {{ range .Params.gallery }}
+    <div class="project-gallery-item">
+      <img src="/images/projects/{{ . }}" alt="{{ $.Title }} Gallery Image">
     </div>
+    {{ end }}
+  </div>
 </section>
+
 
     {{ end }}
 
