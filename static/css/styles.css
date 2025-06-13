@@ -423,11 +423,13 @@ body {
     font-family: var(--secondary-font);
 }
 
-.featured-projects .project-content {
+.featured-projects .project-content,
+.projects-list-page .project-content {
     padding: 20px 32px 20px 32px;
 }
 
-.featured-projects .project-title {
+.featured-projects .project-title,
+.projects-list-page .project-title {
     font-family: var(--secondary-font);
     font-size: 1.5rem;
     font-weight: 700;
@@ -436,7 +438,8 @@ body {
     line-height: 1.2;
 }
 
-.featured-projects .project-description {
+.featured-projects .project-description,
+.projects-list-page .project-description {
     font-size: 0.95rem;
     line-height: 1.6;
     color: var(--gray);
@@ -696,7 +699,8 @@ body {
         height: 200px;
     }
     
-    .featured-projects .project-content {
+    .featured-projects .project-content,
+    .projects-list-page .project-content {
         padding: 16px 24px 16px 24px;
     }
 }
@@ -1211,24 +1215,24 @@ body {
     color: var(--black);
 }
 
-.project-page .project-content {
+.single-project-page .project-content {
     padding: 4rem 1.5rem;
     background: var(--white);
 }
 
-.project-page .project-container {
+.single-project-page .project-container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.project-page .project-article {
+.single-project-page .project-article {
     font-family: var(--secondary-font);
     font-size: 1rem;
     line-height: 1.8;
     color: var(--black);
 }
 
-.project-page .project-gallery {
+.single-project-page .project-gallery {
     padding: 6rem 1.5rem;
     max-width: 1400px;
     margin: 0 auto;
