@@ -66,19 +66,20 @@
                 {{ range .Pages.ByDate.Reverse }}
                     {{ $description := "" }}
                     {{ if eq .Title "Storyfest Louisville" }}
-                        {{ $description = "Comprehensive event coverage capturing the energy and storytelling magic of Louisville's premier narrative festival, documenting performances, audience engagement, and behind-the-scenes moments." }}
+                        {{ $description = "Comprehensive event coverage capturing the energy and storytelling magic of Louisville's premier narrative festival." }}
                     {{ else if eq .Title "Talespin Ale Fest" }}
-                        {{ $description = "Dynamic festival photography showcasing craft beer culture, vendor interactions, live entertainment, and the vibrant community atmosphere of this celebrated brewing event." }}
+                        {{ $description = "Dynamic festival photography showcasing craft beer culture, vendor interactions, and vibrant community atmosphere." }}
                     {{ else if eq .Title "Omythic Cigar Podcast" }}
-                        {{ $description = "Brand storytelling through atmospheric photography, capturing the luxury and sophistication of premium cigars with dramatic lighting and rich textures for podcast marketing." }}
+                        {{ $description = "Brand storytelling through atmospheric photography, capturing luxury and sophistication with dramatic lighting." }}
                     {{ else if eq .Title "The Perfumery" }}
-                        {{ $description = "Elegant product and lifestyle photography showcasing artisanal fragrances, capturing the essence of luxury retail through careful composition and lighting design." }}
+                        {{ $description = "Elegant product and lifestyle photography showcasing artisanal fragrances and luxury retail essence." }}
                     {{ else if eq .Title "Current812" }}
-                        {{ $description = "Contemporary brand photography for innovative local business, creating compelling visual content that communicates their forward-thinking approach and professional excellence." }}
+                        {{ $description = "Contemporary brand photography creating compelling visual content for innovative local business." }}
                     {{ else }}
-                        {{ $description = .Summary | truncate 150 }}
+                        {{ $description = .Summary | truncate 100 }}
                     {{ end }}
                     
+                    {{ if and .Title (ne .Title "") .Params.hero_image }}
                     <div class="project-card">
                         <div class="project-image">
                             <img src="/images/{{ .Params.hero_image }}" alt="{{ .Title }}">
@@ -90,6 +91,7 @@
                             <a href="{{ .Permalink }}" class="project-button">View Full Gallery</a>
                         </div>
                     </div>
+                    {{ end }}
                 {{ end }}
             </div>
         </div>
