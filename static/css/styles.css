@@ -308,6 +308,7 @@ body {
 .project-card {
     flex: 0 0 350px;
     max-width: 450px;
+    max-height: 500px;
     background: var(--white);
     border-radius: 12px;
     overflow: hidden;
