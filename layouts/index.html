@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt Simpson Photography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <svg class="email-icon" onclick="window.location.href='mailto:hello@hardsearstudio.com'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            
+            <a href="#" class="nav-logo" id="navLogo">Matt Simpson Photography</a>
+            
+            <nav class="desktop-nav">
+                <a href="#portfolio">Work</a>
+                <a href="#potd">Photo of the Day</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-close" id="mobileMenuClose"></div>
+        <ul class="mobile-menu-links">
+            <li><a href="#portfolio">Work</a></li>
+            <li><a href="#potd">Photo of the Day</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <h1 class="hero-logo" id="heroLogo">Matt Simpson Photography</h1>
+        <div class="hero-content">
+            <p class="hero-text">
+                Hi, I'm Matt - a commercial photographer in Louisville, KY, specializing in portraits, branding, and professional headshots.
+            </p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="cta-button">My Work</a>
+                <a href="#about" class="cta-button secondary">More About Me</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Grunge Border -->
+    <div class="grunge-border"></div>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-image="/images/rocker.jpg">
+                <img src="/images/rocker.jpg" alt="Music and entertainment photography">
+            </div>
+            <div class="portfolio-item" data-image="/images/wedding2.jpg">
+                <img src="/images/wedding2.jpg" alt="Wedding photography">
+            </div>
+            <div class="portfolio-item" data-image="/images/portrait7.jpg">
+                <img src="/images/portrait7.jpg" alt="Professional portrait photography">
+            </div>
+            <div class="portfolio-item" data-image="/images/portrait6.jpg">
+                <img src="/images/portrait6.jpg" alt="Personal branding photography">
+            </div>
+            <div class="portfolio-item" data-image="/images/portraits.jpg">
+                <img src="/images/portraits.jpg" alt="Group portrait photography">
+            </div>
+            <div class="portfolio-item" data-image="/images/wedding.jpeg">
+                <img src="/images/wedding.jpeg" alt="Wedding moment photography">
+            </div>
+            <div class="portfolio-item" data-image="/images/portrait4.jpeg">
+                <img src="/images/portrait4.jpeg" alt="Character portrait photography">
+            </div>
+            <div class="portfolio-item" data-image="/images/couple.jpeg">
+                <img src="/images/couple.jpeg" alt="Couple photography">
+            </div>
+            <div class="portfolio-item" data-image="/images/portrait3.jpeg">
+                <img src="/images/portrait3.jpeg" alt="Artistic portrait photography">
+            </div>
+            <div class="portfolio-item" data-image="/images/portrait2.jpg">
+                <img src="/images/portrait2.jpg" alt="Lifestyle portrait photography">
+            </div>
+            <div class="portfolio-item" data-image="/images/portrait1.jpeg">
+                <img src="/images/portrait1.jpeg" alt="Professional headshot photography">
+            </div>
+            <div class="portfolio-item" data-image="/images/shoes.jpg">
+                <img src="/images/shoes.jpg" alt="Product photography">
+            </div>
+            <div class="portfolio-item" data-image="/images/alex1.jpeg">
+                <img src="/images/alex1.jpeg" alt="Personal portrait photography">
+            </div>
+            <div class="portfolio-item" data-image="/images/portrait7.jpeg">
+                <img src="/images/portrait7.jpeg" alt="Studio portrait photography">
+            </div>
+            <div class="portfolio-item" data-image="/images/greenriver.jpg">
+                <img src="/images/greenriver.jpg" alt="Landscape photography">
+            </div>
+            <div class="portfolio-item" data-image="/images/6.jpg">
+                <img src="/images/6.jpg" alt="Environmental photography">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="featured-projects" id="featured-projects">
+        <div class="featured-projects-container">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="projects-grid">
+                <!-- Storyfest Louisville -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/images/story.jpg" alt="Storyfest Louisville Event Photography">
+                        <div class="project-category">Event Photography</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Storyfest Louisville</h3>
+                        <p class="project-description">Comprehensive event coverage capturing the energy and storytelling magic of Louisville's premier narrative festival, documenting performances, audience engagement, and behind-the-scenes moments.</p>
+                        <a href="#" class="project-button">View Full Gallery</a>
+                    </div>
+                </div>
+
+                <!-- Talespin Ale Fest -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/images/talespin.jpg" alt="Talespin Ale Fest Event Photography">
+                        <div class="project-category">Event Photography</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Talespin Ale Fest</h3>
+                        <p class="project-description">Dynamic festival photography showcasing craft beer culture, vendor interactions, live entertainment, and the vibrant community atmosphere of this celebrated brewing event.</p>
+                        <a href="#" class="project-button">View Full Gallery</a>
+                    </div>
+                </div>
+
+                <!-- Omythic Cigar Podcast -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/images/omythic.jpg" alt="Omythic Cigar Podcast Branding Photography">
+                        <div class="project-category">Branding Photography</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Omythic Cigar Podcast</h3>
+                        <p class="project-description">Brand storytelling through atmospheric photography, capturing the luxury and sophistication of premium cigars with dramatic lighting and rich textures for podcast marketing.</p>
+                        <a href="#" class="project-button">View Full Gallery</a>
+                    </div>
+                </div>
+
+                <!-- The Perfumery -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/images/perfumery.jpg" alt="The Perfumery Branding Photography">
+                        <div class="project-category">Branding Photography</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">The Perfumery</h3>
+                        <p class="project-description">Elegant product and lifestyle photography showcasing artisanal fragrances, capturing the essence of luxury retail through careful composition and lighting design.</p>
+                        <a href="#" class="project-button">View Full Gallery</a>
+                    </div>
+                </div>
+
+                <!-- Current812 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/images/current.jpg" alt="Current812 Branding Photography">
+                        <div class="project-category">Branding Photography</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Current812</h3>
+                        <p class="project-description">Contemporary brand photography for innovative local business, creating compelling visual content that communicates their forward-thinking approach and professional excellence.</p>
+                        <a href="#" class="project-button">View Full Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo of the Day Section -->
+    <section class="potd-section" id="potd">
+        <div class="potd-container">
+            <div class="potd-intro">
+                <h2 class="potd-title">Photo of the Day</h2>
+                <p class="potd-description">
+                    No client briefs, no deadlines...just capturing what catches my eye, what makes me smile, or what strikes me as beautiful. Thank you for looking.
+                </p>
+            </div>
+
+            <!-- Current Photo of the Day -->
+            <div class="potd-featured">
+                <div class="potd-featured-image">
+                    <img src="/images/potd/2025-06-12.jpg" alt="Photo of the Day - June 12, 2025">
+                </div>
+                <div class="potd-featured-content">
+                    <div class="potd-date">June 12, 2025</div>
+                    <p class="potd-caption">
+                        Caught this beautiful moment during golden hour at Cherokee Park. Sometimes the simplest scenes hold the most magic—just light, shadow, and the quiet promise of evening.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Recent Days Thumbnails -->
+            <div class="potd-recent">
+                <div class="potd-thumbnails">
+                    <div class="potd-thumbnail" data-date="June 11, 2025" data-image="/images/potd/2025-06-12.jpg" data-caption="Morning mist rolling through the trees at Bernheim Forest.">
+                        <img src="/images/potd/2025-06-12.jpg" alt="June 11, 2025">
+                    </div>
+                    <div class="potd-thumbnail" data-date="June 10, 2025" data-image="/images/potd/2025-06-12.jpg" data-caption="Street art meets shadow in NuLu.">
+                        <img src="/images/potd/2025-06-12.jpg" alt="June 10, 2025">
+                    </div>
+                    <div class="potd-thumbnail" data-date="June 9, 2025" data-image="/images/potd/2025-06-12.jpg" data-caption="Coffee steam and Sunday morning light.">
+                        <img src="/images/potd/2025-06-12.jpg" alt="June 9, 2025">
+                    </div>
+                    <div class="potd-thumbnail" data-date="June 8, 2025" data-image="/images/potd/2025-06-12.jpg" data-caption="Caught this incredible cloud formation over the Ohio River.">
+                        <img src="/images/potd/2025-06-12.jpg" alt="June 8, 2025">
+                    </div>
+                    <div class="potd-thumbnail" data-date="June 7, 2025" data-image="/images/potd/2025-06-12.jpg" data-caption="Late night rain creates beautiful reflections downtown.">
+                        <img src="/images/potd/2025-06-12.jpg" alt="June 7, 2025">
+                    </div>
+                </div>
+                <a href="#" class="potd-archive-link">Archive</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section" id="contact">
+        <div class="cta-container">
+            <h2 class="cta-title">Let's Create Something Amazing</h2>
+            <p class="cta-subtitle">Ready to bring your vision to life? Get in touch.</p>
+            
+            <form class="contact-form" action="mailto:hello@hardsearstudio.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <input type="text" class="form-input" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-input" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-textarea" name="message" placeholder="Tell me about your project..." required></textarea>
+                </div>
+                <button type="submit" class="form-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3 class="footer-logo">Matt Simpson Photography</h3>
+            <p class="footer-text">
+                Commercial photographer specializing in portraits, branding, and professional headshots in Louisville, KY.
+            </p>
+            <div class="footer-social">
+                <a href="mailto:hello@hardsearstudio.com" class="social-link">Email</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">LinkedIn</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Matt Simpson Photography. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-container">
+            <div class="lightbox-image-area">
+                <img id="lightboxImage" src="" alt="Portfolio Image">
+                <div class="lightbox-nav lightbox-prev" id="lightboxPrev">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <polyline points="15,18 9,12 15,6"></polyline>
+                    </svg>
+                </div>
+                <div class="lightbox-nav lightbox-next" id="lightboxNext">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <div class="lightbox-sidebar">
+                <div class="lightbox-header">
+                    <div class="lightbox-counter" id="lightboxCounter">1 / 16</div>
+                    <div class="lightbox-close" id="lightboxClose">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
+                </div>
+                <div class="lightbox-content">
+                    <h3 class="lightbox-title" id="lightboxTitle">Commercial Photography</h3>
+                    <p class="lightbox-description" id="lightboxDescription">Professional brand storytelling through compelling visual narratives.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // All your JavaScript functionality here
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        const heroLogo = document.getElementById('heroLogo');
+        const navLogo = document.getElementById('navLogo');
+        
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const heroHeight = window.innerHeight;
+            
+            const heroFadeProgress = Math.min(scrollY / (heroHeight * 0.18), 1);
+            
+            if (heroFadeProgress > 0) {
+                const scale = 1 - (heroFadeProgress * 0.3);
+                heroLogo.style.transform = `scale(${scale})`;
+                heroLogo.style.opacity = 1 - heroFadeProgress;
+            } else {
+                heroLogo.style.transform = 'scale(1)';
+                heroLogo.style.opacity = 1;
+            }
+
+            const navFadeStart = heroHeight * 0.10;
+            const navFadeEnd = heroHeight * 0.15;
+            
+            if (scrollY < navFadeStart) {
+                navLogo.style.opacity = 0;
+            } else if (scrollY > navFadeEnd) {
+                navLogo.style.opacity = 1;
+            } else {
+                const navProgress = (scrollY - navFadeStart) / (navFadeEnd - navFadeStart);
+                navLogo.style.opacity = navProgress;
+            }
+        });
+
+        // Mobile menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        document.querySelectorAll('.mobile-menu-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Portfolio lightbox functionality
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        const lightboxCounter = document.getElementById('lightboxCounter');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxDescription = document.getElementById('lightboxDescription');
+
+        let currentImageIndex = 0;
+        const images = Array.from(portfolioItems);
+
+        const captions = [
+            { title: "Music & Entertainment", description: "Capturing the energy and passion of live performances." },
+            { title: "Wedding Photography", description: "Documenting love stories with elegance and authenticity." },
+            { title: "Professional Portraits", description: "Executive portraits that convey confidence and professionalism." },
+            { title: "Personal Branding", description: "Creating compelling portraits that tell your unique story." },
+            { title: "Group Portraits", description: "Coordinated sessions capturing family dynamics." },
+            { title: "Wedding Moments", description: "Intimate wedding photography focusing on candid emotions." },
+            { title: "Character Portraits", description: "Artistic portrait work that captures personality." },
+            { title: "Couple Photography", description: "Romantic sessions celebrating relationships." },
+            { title: "Portrait Artistry", description: "Creative portrait work combining technical excellence." },
+            { title: "Lifestyle Portraits", description: "Natural portrait photography in comfortable settings." },
+            { title: "Professional Headshots", description: "Clean, professional headshots for business profiles." },
+            { title: "Product Photography", description: "Commercial product photography with perfect lighting." },
+            { title: "Personal Portraits", description: "Individual portrait sessions capturing personality." },
+            { title: "Studio Portraits", description: "Controlled studio environment with professional lighting." },
+            { title: "Landscape Photography", description: "Breathtaking natural landscapes with dramatic lighting." },
+            { title: "Environmental Photography", description: "Documentary-style photography in natural environments." }
+        ];
+
+        function openLightbox(index) {
+            currentImageIndex = index;
+            updateLightboxContent();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function updateLightboxContent() {
+            const currentItem = images[currentImageIndex];
+            const imgSrc = currentItem.querySelector('img').src;
+            const caption = captions[currentImageIndex];
+
+            lightboxImage.src = imgSrc;
+            lightboxCounter.textContent = `${currentImageIndex + 1} / ${images.length}`;
+            lightboxTitle.textContent = caption.title;
+            lightboxDescription.textContent = caption.description;
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateLightboxContent();
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            updateLightboxContent();
+        }
+
+        portfolioItems.forEach((item, index) => {
+            item.addEventListener('click', () => openLightbox(index));
+        });
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxNext.addEventListener('click', nextImage);
+        lightboxPrev.addEventListener('click', prevImage);
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-title, .portfolio-item, .project-card, .potd-intro, .potd-featured, .potd-recent').forEach(el => {
+            observer.observe(el);
+        });
+
+        const portfolioItemsForAnimation = document.querySelectorAll('.portfolio-item');
+        portfolioItemsForAnimation.forEach((item, index) => {
+            item.style.transitionDelay = `${index * 0.1}s`;
+        });
+        
+        const projectCards = document.querySelectorAll('.project-card');
+        projectCards.forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.15}s`;
+        });
+
+        // Photo of the Day thumbnail functionality
+        const potdThumbnails = document.querySelectorAll('.potd-thumbnail');
+        const potdFeaturedImage = document.querySelector('.potd-featured-image img');
+        const potdFeaturedDate = document.querySelector('.potd-date');
+        const potdFeaturedCaption = document.querySelector('.potd-caption');
+
+        potdThumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                const date = thumbnail.dataset.date;
+                const image = thumbnail.dataset.image;
+                const caption = thumbnail.dataset.caption;
+
+                potdFeaturedImage.style.opacity = '0';
+                setTimeout(() => {
+                    potdFeaturedImage.src = image;
+                    potdFeaturedImage.alt = `Photo of the Day - ${date}`;
+                    potdFeaturedDate.textContent = date;
+                    potdFeaturedCaption.textContent = caption;
+                    potdFeaturedImage.style.opacity = '1';
+                }, 200);
+
+                potdThumbnails.forEach(thumb => thumb.classList.remove('active'));
+                thumbnail.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
