@@ -64,6 +64,21 @@
         <div class="featured-projects-container">
             <div class="projects-grid">
                 {{ range .Pages.ByDate.Reverse }}
+                    {{ $description := "" }}
+                    {{ if eq .Title "Storyfest Louisville" }}
+                        {{ $description = "Comprehensive event coverage capturing the energy and storytelling magic of Louisville's premier narrative festival, documenting performances, audience engagement, and behind-the-scenes moments." }}
+                    {{ else if eq .Title "Talespin Ale Fest" }}
+                        {{ $description = "Dynamic festival photography showcasing craft beer culture, vendor interactions, live entertainment, and the vibrant community atmosphere of this celebrated brewing event." }}
+                    {{ else if eq .Title "Omythic Cigar Podcast" }}
+                        {{ $description = "Brand storytelling through atmospheric photography, capturing the luxury and sophistication of premium cigars with dramatic lighting and rich textures for podcast marketing." }}
+                    {{ else if eq .Title "The Perfumery" }}
+                        {{ $description = "Elegant product and lifestyle photography showcasing artisanal fragrances, capturing the essence of luxury retail through careful composition and lighting design." }}
+                    {{ else if eq .Title "Current812" }}
+                        {{ $description = "Contemporary brand photography for innovative local business, creating compelling visual content that communicates their forward-thinking approach and professional excellence." }}
+                    {{ else }}
+                        {{ $description = .Summary | truncate 150 }}
+                    {{ end }}
+                    
                     <div class="project-card">
                         <div class="project-image">
                             <img src="/images/{{ .Params.hero_image }}" alt="{{ .Title }}">
@@ -71,7 +86,7 @@
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">{{ .Title }}</h3>
-                            <p class="project-description">{{ .Summary | truncate 150 }}</p>
+                            <p class="project-description">{{ $description }}</p>
                             <a href="{{ .Permalink }}" class="project-button">View Full Gallery</a>
                         </div>
                     </div>
