@@ -206,7 +206,7 @@ body {
     width: 100vw;
     height: 304px;
     margin-left: calc(-50vw + 50%);
-    background-image: url('images/blackbar.svg');
+    background-image: url('/images/blackbar.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
