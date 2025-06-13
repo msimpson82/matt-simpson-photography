@@ -306,10 +306,6 @@ body {
 }
 
 .project-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
     flex: 0 0 350px;
     max-width: 450px;
     background: var(--white);
@@ -319,9 +315,17 @@ body {
     transition: all 0.4s ease;
     display: flex;
     flex-direction: column;
-    height: auto; /* allow height to grow */
-}
+    height: auto;
 
+    flex: 0 0 350px;
+    max-width: 450px;
+    max-height: 500px;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
 
 .project-image {
     position: relative;
@@ -356,11 +360,12 @@ body {
 }
 
 .project-content {
-    padding: 1.5rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 1.5rem;
+
     padding: 1.5rem;
 }
 
@@ -434,6 +439,12 @@ body {
 }
 
 .project-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+
     padding: 2rem;
 }
 
@@ -707,6 +718,12 @@ body {
     }
     
     .project-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+
         padding: 1.5rem;
     }
 }
@@ -1260,6 +1277,12 @@ body {
 }
 
 .project-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+
     padding: 8rem 1.5rem;
     background: var(--white);
 }
@@ -1425,6 +1448,12 @@ body {
     }
     
     .project-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+
         padding: 10rem 2rem;
     }
     
@@ -1467,6 +1496,12 @@ body {
     }
     
     .project-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+
         padding: 12rem 3rem;
     }
     
