@@ -314,7 +314,7 @@
     </div>
 
     <script>
-        // All your JavaScript functionality here
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -328,6 +328,7 @@
             });
         });
 
+        // Logo animation and header visibility
         const heroLogo = document.getElementById('heroLogo');
         const navLogo = document.getElementById('navLogo');
         
@@ -467,34 +468,6 @@
             if (e.key === 'Escape') closeLightbox();
             if (e.key === 'ArrowRight') nextImage();
             if (e.key === 'ArrowLeft') prevImage();
-        });
-
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.section-title, .portfolio-item, .project-card, .potd-intro, .potd-featured, .potd-recent').forEach(el => {
-            observer.observe(el);
-        });
-
-        const portfolioItemsForAnimation = document.querySelectorAll('.portfolio-item');
-        portfolioItemsForAnimation.forEach((item, index) => {
-            item.style.transitionDelay = `${index * 0.1}s`;
-        });
-        
-        const projectCards = document.querySelectorAll('.project-card');
-        projectCards.forEach((card, index) => {
-            card.style.transitionDelay = `${index * 0.15}s`;
         });
 
         // Photo of the Day thumbnail functionality  

@@ -313,13 +313,6 @@ body {
     overflow: hidden;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.project-card.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .project-image {
@@ -409,16 +402,8 @@ body {
     font-weight: 700;
     text-align: center;
     margin-bottom: 4rem;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
     line-height: 1;
     color: var(--black);
-}
-
-.section-title.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .portfolio-grid {
@@ -434,9 +419,6 @@ body {
     break-inside: avoid;
     overflow: hidden;
     cursor: pointer;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
     position: relative;
     background: var(--light-gray);
 }
@@ -445,22 +427,6 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.4s ease;
-}
-
-.portfolio-item:hover img {
-    transform: scale(1.05);
-}
-
-.portfolio-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     transition: transform 0.4s ease;
 }
 
@@ -921,14 +887,6 @@ body {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-}
-
-.potd-intro.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .potd-title {
@@ -952,15 +910,7 @@ body {
     display: grid;
     gap: 3rem;
     align-items: center;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
     margin-bottom: 3rem;
-}
-
-.potd-featured.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .potd-featured-image {
@@ -1009,14 +959,6 @@ body {
 .potd-recent {
     text-align: center;
     padding-top: 2rem;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-}
-
-.potd-recent.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .potd-thumbnails {
