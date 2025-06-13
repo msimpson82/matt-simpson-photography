@@ -6,7 +6,7 @@ client: "Storyfest Louisville"
 hero_image: "story.jpg"
 body_class: "single-project-page"
 gallery:
-  - "storyfest-1.jpg"
+  - "storyfest.jpg"
   - "storyfest-2.jpg"
   - "storyfest-3.jpg"
   - "storyfest-4.jpg"
@@ -23,9 +23,9 @@ gallery:
   - "storyfest-15.jpg"
 ---
 
-## The Challenge
+## The Shoot
 
-Storyfest Louisville brings together the city's most compelling storytellers for an evening of narrative magic. As the event's photographer, I was tasked with capturing both the intimate moments of individual performances and the collective energy of an engaged audience.
+Storyfest Louisville is HOPE IN ACTION. Created by The Tommy Elliott Fund, a registered 501(c)(3), this entity was formed after a mass shooting in Louisville on April 10, 2023. This tragedy was a pivotal moment for the community, and something which was close to my heart. I was actually on Main St., a block away from the shooting, and it affected me deeply. When Storyfest reached out for photography coverage of their second storytelling event, I knew I had to be a part of it and donated my time to the cause.
 
 The main challenges included:
 
@@ -33,16 +33,6 @@ The main challenges included:
 - **Capturing emotion** - Both performer passion and audience reactions  
 - **Maintaining atmosphere** - Working quietly to preserve the storytelling magic
 
-## The Approach
-
-Working in varied lighting conditions, I focused on preserving the authentic emotions and connections that make live storytelling so powerful.
-
-> "The best event photography doesn't just document what happened—it captures how it felt to be there."
-
-### Technical Considerations
-
-Each photograph tells its own story within the larger narrative of the event, capturing not just what happened, but how it felt to be there.
-
 ## The Results
 
-The resulting collection serves as both documentation of the festival and an invitation for future audiences to experience the magic of live storytelling themselves.
+This 4 hour shoot netted Storyfest Louisville a collection of over 300 images to use in their online marketing and branding efforts. It was a real pleasure to serve my commmunity, and my heart is forever with those affected by the shooting at Old National Bank.
