@@ -157,8 +157,18 @@ body {
     transform: translateY(-10px);
     transition: all 0.3s ease;
     z-index: 1001;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -0.75rem;
+    left: 0;
+    right: 0;
+    height: 0.75rem;
+    background: transparent;
 }
 
 .nav-dropdown.active .nav-dropdown-menu {
