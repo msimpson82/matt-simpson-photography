@@ -7,6 +7,10 @@ hero_image: "story.jpg"
 gallery:
   - "storyfest-1.jpg"
   - "storyfest-2.jpg"
+  - "storyfest-3.jpg"
+  - "storyfest-4.jpg"
+  - "storyfest-5.jpg"
+  - "storyfest-6.jpg"
 ---
 
 ## The Challenge
