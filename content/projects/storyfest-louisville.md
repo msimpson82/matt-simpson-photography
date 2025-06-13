@@ -12,6 +12,15 @@ gallery:
   - "storyfest-4.jpg"
   - "storyfest-5.jpg"
   - "storyfest-6.jpg"
+  - "storyfest-7.jpg"
+  - "storyfest-8.jpg"
+  - "storyfest-9.jpg"
+  - "storyfest-10.jpg"
+  - "storyfest-11.jpg"
+  - "storyfest-12.jpg"
+  - "storyfest-13.jpg"
+  - "storyfest-14.jpg"
+  - "storyfest-15.jpg"
 ---
 
 ## The Challenge
