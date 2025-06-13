@@ -1148,57 +1148,36 @@ body {
     background: var(--white);
 }
 
-.project-gallery-grid {
+.portfolio-grid {
     column-count: 2;
     column-gap: 1.5rem;
 }
 
-.project-gallery-item {
+.portfolio-item {
     display: inline-block;
     width: 100%;
     margin-bottom: 1.5rem;
     break-inside: avoid;
     overflow: hidden;
+    cursor: pointer;
+    position: relative;
     background: var(--light-gray);
-    border-radius: 6px;
 }
 
-.project-gallery-item img {
+.portfolio-item img {
     width: 100%;
     height: auto;
     display: block;
     transition: transform 0.4s ease;
 }
 
-.project-gallery-item:hover img {
+.portfolio-item:hover img {
     transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
-    .project-gallery-grid {
+    .portfolio-grid {
         column-count: 1;
     }
-}
-
-.project-nav {
-    padding: 3rem 1.5rem;
-    text-align: center;
-    background: var(--white);
-}
-
-.back-to-projects {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-decoration: none;
-    color: var(--black);
-    transition: all 0.3s ease;
-}
-
-.back-to-projects:hover {
-    color: var(--gray);
-    transform: translateX(-4px);
 }
 
