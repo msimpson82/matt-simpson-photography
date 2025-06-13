@@ -75,6 +75,12 @@ body {
     opacity: 1;
 }
 
+/* Make logo visible by default on non-home pages */
+.projects-list-page .nav-logo,
+.single-project-page .nav-logo {
+    opacity: 1;
+}
+
 .hamburger {
     position: absolute;
     right: 1.5rem;

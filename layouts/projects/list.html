@@ -137,6 +137,28 @@
                 document.body.style.overflow = '';
             });
         });
+
+        // Desktop navigation dropdown functionality
+        const navDropdown = document.querySelector('.nav-dropdown');
+        const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+        const dropdownMenu = document.querySelector('.nav-dropdown-menu');
+
+        if (navDropdown && dropdownToggle) {
+            dropdownToggle.addEventListener('mouseenter', () => {
+                navDropdown.classList.add('active');
+            });
+
+            navDropdown.addEventListener('mouseleave', () => {
+                navDropdown.classList.remove('active');
+            });
+
+            // Close dropdown when clicking elsewhere
+            document.addEventListener('click', (e) => {
+                if (!navDropdown.contains(e.target)) {
+                    navDropdown.classList.remove('active');
+                }
+            });
+        }
     </script>
 
     <style>

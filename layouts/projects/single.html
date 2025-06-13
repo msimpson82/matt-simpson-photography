@@ -141,9 +141,14 @@
             <a href="/" class="nav-logo" id="navLogo">Matt Simpson Photography</a>
             
             <nav class="desktop-nav">
-                <a href="/#portfolio">Work</a>
-                <a href="/projects">Featured Projects</a>
-                <a href="/#potd">Photo of the Day</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle">Work</a>
+                    <div class="nav-dropdown-menu">
+                        <a href="/#portfolio">Portfolio</a>
+                        <a href="/projects">Featured Projects</a>
+                        <a href="/#potd">Photo of the Day</a>
+                    </div>
+                </div>
                 <a href="/#about">About</a>
                 <a href="/#contact">Contact</a>
             </nav>
@@ -160,7 +165,7 @@
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-close" id="mobileMenuClose"></div>
         <ul class="mobile-menu-links">
-            <li><a href="/#portfolio">Work</a></li>
+            <li><a href="/#portfolio">Portfolio</a></li>
             <li><a href="/projects">Featured Projects</a></li>
             <li><a href="/#potd">Photo of the Day</a></li>
             <li><a href="/#about">About</a></li>
@@ -289,6 +294,27 @@
                 document.body.style.overflow = '';
             });
         });
+
+        // Desktop navigation dropdown functionality
+        const navDropdown = document.querySelector('.nav-dropdown');
+        const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+
+        if (navDropdown && dropdownToggle) {
+            dropdownToggle.addEventListener('mouseenter', () => {
+                navDropdown.classList.add('active');
+            });
+
+            navDropdown.addEventListener('mouseleave', () => {
+                navDropdown.classList.remove('active');
+            });
+
+            // Close dropdown when clicking elsewhere
+            document.addEventListener('click', (e) => {
+                if (!navDropdown.contains(e.target)) {
+                    navDropdown.classList.remove('active');
+                }
+            });
+        }
 
         // Lightbox functionality (same as main page)
         const portfolioItems = document.querySelectorAll('.portfolio-item');
