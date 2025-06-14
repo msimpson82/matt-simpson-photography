@@ -7,7 +7,6 @@ hero_image: "perfumery-19.jpg"
 body_class: "single-project-page"
 gallery:
   - "perfumery.jpg"
-  - "perfumery-2.jpg"
   - "perfumery-3.jpg"
   - "perfumery-4.jpg"
   - "perfumery-5.jpg"
