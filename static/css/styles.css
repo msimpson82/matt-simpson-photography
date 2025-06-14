@@ -76,8 +76,9 @@ body {
 }
 
 /* Make logo visible by default on non-home pages */
-.projects-list-page .nav-logo,
-.single-project-page .nav-logo {
+body:not([class=""]) .nav-logo,
+body.projects-list-page .nav-logo,
+body.single-project-page .nav-logo {
     opacity: 1;
 }
 
@@ -380,11 +381,13 @@ body {
 }
 
 .projects-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
     margin-top: 4rem;
-    justify-content: center;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-card {
@@ -1209,11 +1212,19 @@ body {
         width: 44px;
         height: 44px;
     }
+    
+    .page-header {
+        padding: 10rem 2rem 6rem;
+    }
 }
 
 @media (min-width: 1200px) {
     .potd-section {
         padding: 10rem 3rem 8rem;
+    }
+    
+    .page-header {
+        padding: 12rem 3rem 8rem;
     }
 }
 
@@ -1306,6 +1317,51 @@ body {
     font-size: 0.75rem;
     text-transform: uppercase;
     color: var(--black);
+}
+
+/* Page Header Styles */
+.page-header {
+    padding: 8rem 1.5rem 4rem;
+    background: var(--light-gray);
+    text-align: center;
+}
+
+.page-header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+.breadcrumb a {
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: var(--black);
+}
+
+.page-title {
+    font-family: var(--secondary-font);
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 .single-project-page .project-content {
