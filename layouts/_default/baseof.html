@@ -79,10 +79,16 @@
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const header = document.getElementById('header');
+
+        let lastScrollY = 0;
+        let scrollTimer = null;
 
         hamburger.addEventListener('click', () => {
             mobileMenu.classList.add('active');
             document.body.style.overflow = 'hidden';
+            // Show nav when mobile menu opens
+            header.classList.remove('nav-hidden');
         });
 
         mobileMenuClose.addEventListener('click', () => {
@@ -117,6 +123,36 @@
                 }
             });
         }
+
+        // Universal nav hide/show behavior (works on all pages)
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            
+            // Throttle nav hide/show behavior
+            if (scrollTimer) clearTimeout(scrollTimer);
+            
+            scrollTimer = setTimeout(() => {
+                // Hide/show nav after scrolling past initial viewport
+                if (scrollY > window.innerHeight * 0.3) {
+                    const scrollDifference = Math.abs(scrollY - lastScrollY);
+                    
+                    if (scrollDifference > 5) { // Minimum scroll distance to trigger
+                        if (scrollY > lastScrollY) {
+                            // Scrolling down - hide nav
+                            header.classList.add('nav-hidden');
+                        } else {
+                            // Scrolling up - show nav
+                            header.classList.remove('nav-hidden');
+                        }
+                    }
+                } else {
+                    // Near top - always show nav
+                    header.classList.remove('nav-hidden');
+                }
+                
+                lastScrollY = scrollY;
+            }, 10);
+        });
     </script>
 
     <!-- Page-specific JavaScript -->
