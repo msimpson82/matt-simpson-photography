@@ -59,7 +59,11 @@
             <nav class="breadcrumb">
                 <a href="/">Home</a> / Featured Projects
             </nav>
-            <h1 class="page-title">{{ .Title }}</h1>
+            <h1 class="page-title">
+                <img src="/images/skulllogo.png" alt="" class="skull-icon skull-left">
+                {{ .Title }}
+                <img src="/images/skulllogo.png" alt="" class="skull-icon skull-right">
+            </h1>
             <p class="page-subtitle">{{ .Content }}</p>
         </div>
     </section>
@@ -93,8 +97,6 @@
                         <a href="/projects/talespin-ale-fest" class="project-button">View Full Gallery</a>
                     </div>
                 </div>
-
-
 
                 <!-- The Perfumery -->
                 <div class="project-card">
