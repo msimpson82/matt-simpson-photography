@@ -102,6 +102,7 @@
                     </div>
                 </div>
 
+
                 <!-- The Perfumery -->
                 <div class="project-card">
                     <div class="project-image">
@@ -202,8 +203,8 @@
     <!-- Call to Action Section -->
     <section class="cta-section" id="contact">
         <div class="cta-container">
-            <h2 class="cta-title">Let's Create!</h2>
-            <p class="cta-subtitle">I'm a commercial photographer ready to work. Shoot me a message and let's get started!</p>
+            <h2 class="cta-title">Let's Create Something Amazing</h2>
+            <p class="cta-subtitle">Ready to bring your vision to life? Get in touch.</p>
             
             <form class="contact-form" action="mailto:hello@hardsearstudio.com" method="post" enctype="text/plain">
                 <div class="form-group">
@@ -274,11 +275,26 @@
         // Logo animation and header visibility
         const heroLogo = document.getElementById('heroLogo');
         const navLogo = document.getElementById('navLogo');
+        const header = document.getElementById('header');
+        const portfolioSection = document.getElementById('portfolio');
+        
+        let lastScrollY = 0;
+        let portfolioTop = 0;
+        let scrollTimer = null;
+        
+        // Get portfolio position on load and resize
+        function updatePortfolioPosition() {
+            portfolioTop = portfolioSection.offsetTop;
+        }
+        
+        updatePortfolioPosition();
+        window.addEventListener('resize', updatePortfolioPosition);
         
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             const heroHeight = window.innerHeight;
             
+            // Existing logo fade behavior
             const heroFadeProgress = Math.min(scrollY / (heroHeight * 0.18), 1);
             
             if (heroFadeProgress > 0) {
@@ -301,6 +317,31 @@
                 const navProgress = (scrollY - navFadeStart) / (navFadeEnd - navFadeStart);
                 navLogo.style.opacity = navProgress;
             }
+            
+            // Throttle nav hide/show behavior
+            if (scrollTimer) clearTimeout(scrollTimer);
+            
+            scrollTimer = setTimeout(() => {
+                // New nav hide/show behavior - only after portfolio section
+                if (scrollY > portfolioTop + 100) { // Small offset to prevent flickering
+                    const scrollDifference = Math.abs(scrollY - lastScrollY);
+                    
+                    if (scrollDifference > 5) { // Minimum scroll distance to trigger
+                        if (scrollY > lastScrollY) {
+                            // Scrolling down - hide nav
+                            header.classList.add('nav-hidden');
+                        } else {
+                            // Scrolling up - show nav
+                            header.classList.remove('nav-hidden');
+                        }
+                    }
+                } else {
+                    // Above portfolio - always show nav
+                    header.classList.remove('nav-hidden');
+                }
+                
+                lastScrollY = scrollY;
+            }, 10);
         });
 
         // Portfolio lightbox functionality
@@ -318,22 +359,22 @@
         const images = Array.from(portfolioItems);
 
         const captions = [
-            { title: "Music & Entertainment", description: "Leah Connolly | Singer of Mule Haggard | Lexington, KY" },
-            { title: "Wedding Photography", description: "The wedding of Hayley + Michael | Louisville, KY" },
-            { title: "Portraits", description: "Portrait of Reagan Etherington | Mt. Saint Francis, New Albany, IN." },
-            { title: "Personal Branding", description: "Evan Matthews, Designer | Louisville, KY" },
-            { title: "Group Portraits", description: "Let's shoot your entire office crew!" },
-            { title: "Wedding Photography", description: "Tyler got hitched!" },
-            { title: "Character Portraits", description: "Thomas Somphanthabansouk | AKA Buff Thomas" },
-            { title: "Couple Photography", description: "Looking for love & finding it." },
-            { title: "Portraits", description: "Portrait in the studio." },
-            { title: "Portraits", description: "Reagan Etherington | Heyman Talent Model" },
-            { title: "Portraits", description: "Fashion shoot for Him Gentleman's Boutique" },
-            { title: "Product Photography", description: "Product photography for Him Gentleman's Boutique" },
-            { title: "Portraits", description: "Buff Thomas" },
-            { title: "Portraits", description: "Shot on behalf of Heaven Hill Distillery" },
-            { title: "Product Photography", description: "Green River Whiskey" },
-            { title: "Creative Portraits", description: "Raven's Roost Boutique Marketing Photography" }
+            { title: "Music & Entertainment", description: "Capturing the energy and passion of live performances." },
+            { title: "Wedding Photography", description: "Documenting love stories with elegance and authenticity." },
+            { title: "Professional Portraits", description: "Executive portraits that convey confidence and professionalism." },
+            { title: "Personal Branding", description: "Creating compelling portraits that tell your unique story." },
+            { title: "Group Portraits", description: "Coordinated sessions capturing family dynamics." },
+            { title: "Wedding Moments", description: "Intimate wedding photography focusing on candid emotions." },
+            { title: "Character Portraits", description: "Artistic portrait work that captures personality." },
+            { title: "Couple Photography", description: "Romantic sessions celebrating relationships." },
+            { title: "Portrait Artistry", description: "Creative portrait work combining technical excellence." },
+            { title: "Lifestyle Portraits", description: "Natural portrait photography in comfortable settings." },
+            { title: "Professional Headshots", description: "Clean, professional headshots for business profiles." },
+            { title: "Product Photography", description: "Commercial product photography with perfect lighting." },
+            { title: "Personal Portraits", description: "Individual portrait sessions capturing personality." },
+            { title: "Studio Portraits", description: "Controlled studio environment with professional lighting." },
+            { title: "Landscape Photography", description: "Breathtaking natural landscapes with dramatic lighting." },
+            { title: "Environmental Photography", description: "Documentary-style photography in natural environments." }
         ];
 
         function openLightbox(index) {
