@@ -102,6 +102,19 @@
                     </div>
                 </div>
 
+                <!-- Omythic Cigar Podcast -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/images/omythic.jpg" alt="Omythic Cigar Podcast Branding Photography">
+                        <div class="project-category">Branding Photography</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Omythic Cigar Podcast</h3>
+                        <p class="project-description">Brand storytelling through atmospheric photography, capturing the luxury and sophistication of premium cigars with dramatic lighting and rich textures for podcast marketing.</p>
+                        <a href="/projects/omythic-cigar-podcast" class="project-button">View Full Gallery</a>
+                    </div>
+                </div>
+
                 <!-- The Perfumery -->
                 <div class="project-card">
                     <div class="project-image">
@@ -267,6 +280,28 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+
+        // Mobile menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        document.querySelectorAll('.mobile-menu-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
                 }
             });
         });
