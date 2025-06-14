@@ -75,8 +75,7 @@ body {
     opacity: 1;
 }
 
-/* Make logo visible by default on non-home pages */
-body:not([class=""]) .nav-logo,
+/* Make logo visible by default ONLY on non-home pages */
 body.projects-list-page .nav-logo,
 body.single-project-page .nav-logo {
     opacity: 1;
