@@ -23,8 +23,6 @@ gallery:
   - "perfumery-16.jpg"
   - "perfumery-17.jpg"
   - "perfumery-18.jpg"
-  - "perfumery-19.jpg"
-  - "perfumery-20.jpg"
   - "perfumery-21.jpg"
   - "perfumery-22.jpg"
 ---
