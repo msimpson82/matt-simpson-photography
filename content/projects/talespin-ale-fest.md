@@ -1,6 +1,6 @@
 ---
 title: "Tailspin Ale Fest"
-date: 2025-05-1
+date: 2025-05-01
 project_type: "Event Photography"
 client: "Tailspin Ale Fest"
 hero_image: "tailspin.jpg"
