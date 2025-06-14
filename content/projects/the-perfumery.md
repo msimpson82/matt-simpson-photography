@@ -8,8 +8,6 @@ body_class: "single-project-page"
 gallery:
   - "perfumery.jpg"
   - "perfumery-3.jpg"
-  - "perfumery-4.jpg"
-  - "perfumery-5.jpg"
   - "perfumery-6.jpg"
   - "perfumery-7.jpg"
   - "perfumery-8.jpg"
