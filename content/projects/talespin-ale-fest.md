@@ -3,7 +3,7 @@ title: "Tailspin Ale Fest"
 date: 2025-05-01
 project_type: "Event Photography"
 client: "Tailspin Ale Fest"
-hero_image: "tailspin.jpg"
+hero_image: "tailspin18.jpg"
 body_class: "single-project-page"
 gallery:
   - "tailspin.jpg"
