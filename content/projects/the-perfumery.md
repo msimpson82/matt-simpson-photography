@@ -24,8 +24,8 @@ gallery:
 
 ## The Shoot
 
-Cheers! Tailspin Ale Fest features over 50 breweries from across America with a dedicated section of brews from the bluegrass state of Kentucky. They do a great job with their marketing and needed high quality photos to really kick their online presence in high gear. 
+I worked with The Perfumery to photograph their factory and highlight the hands on process behind their essential oils. The focus was on the lab, where real scientists were mixing and testing every batch. My job was to capture that detail and precision for their website and international print campaigns. It was a great shoot, and yeah, I came home smelling pretty amazing.
 
 ## The Results
 
-This 6 hour shoot netted Tailspin an online portfolio of over 300 photos of the event! I can't wait to do it again next year.
+This 6 hour shoot netted The Perfumery with over 100 photos for use in their digital and print marketing campaigns!
