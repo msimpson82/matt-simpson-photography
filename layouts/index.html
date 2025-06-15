@@ -257,7 +257,7 @@
 
 {{ define "scripts" }}
     <script>
-        // Smooth scrolling for anchor links
+        // smooth scroll when clicking nav links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -268,7 +268,7 @@
                         block: 'start'
                     });
 
-        // Mobile menu functionality
+        // hamburger menu stuff
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileMenuClose = document.getElementById('mobileMenuClose');
@@ -293,7 +293,7 @@
             });
         });
 
-        // Logo animation and header visibility
+        // logo fade in/out on scroll + nav hide/show
         const heroLogo = document.getElementById('heroLogo');
         const navLogo = document.getElementById('navLogo');
         const header = document.getElementById('header');
@@ -303,7 +303,7 @@
         let portfolioTop = 0;
         let scrollTimer = null;
         
-        // Get portfolio position on load and resize
+        // update portfolio position when window resizes
         function updatePortfolioPosition() {
             portfolioTop = portfolioSection.offsetTop;
         }
@@ -315,7 +315,7 @@
             const scrollY = window.scrollY;
             const heroHeight = window.innerHeight;
             
-            // Existing logo fade behavior
+            // hero logo fade out
             const heroFadeProgress = Math.min(scrollY / (heroHeight * 0.18), 1);
             
             if (heroFadeProgress > 0) {
@@ -327,6 +327,7 @@
                 heroLogo.style.opacity = 1;
             }
 
+            // nav logo fade in
             const navFadeStart = heroHeight * 0.10;
             const navFadeEnd = heroHeight * 0.15;
             
@@ -339,25 +340,25 @@
                 navLogo.style.opacity = navProgress;
             }
             
-            // Throttle nav hide/show behavior
+            // throttle the nav hide/show
             if (scrollTimer) clearTimeout(scrollTimer);
             
             scrollTimer = setTimeout(() => {
-                // New nav hide/show behavior - only after portfolio section
-                if (scrollY > portfolioTop + 100) { // Small offset to prevent flickering
+                // only hide nav after portfolio section
+                if (scrollY > portfolioTop + 100) {
                     const scrollDifference = Math.abs(scrollY - lastScrollY);
                     
-                    if (scrollDifference > 5) { // Minimum scroll distance to trigger
+                    if (scrollDifference > 5) {
                         if (scrollY > lastScrollY) {
-                            // Scrolling down - hide nav
+                            // scrolling down - hide nav
                             header.classList.add('nav-hidden');
                         } else {
-                            // Scrolling up - show nav
+                            // scrolling up - show nav
                             header.classList.remove('nav-hidden');
                         }
                     }
                 } else {
-                    // Above portfolio - always show nav
+                    // above portfolio - always show nav
                     header.classList.remove('nav-hidden');
                 }
                 
@@ -365,7 +366,7 @@
             }, 10);
         });
 
-        // Portfolio lightbox functionality
+        // lightbox for portfolio images
         const portfolioItems = document.querySelectorAll('.portfolio-item');
         const lightbox = document.getElementById('lightbox');
         const lightboxImage = document.getElementById('lightboxImage');
@@ -453,7 +454,7 @@
             if (e.key === 'ArrowLeft') prevImage();
         });
 
-        // Photo of the Day thumbnail and navigation functionality  
+        // photo of the day navigation
         const potdThumbnails = document.querySelectorAll('.potd-thumbnail');
         const potdFeaturedImage = document.querySelector('.potd-featured-image img');
         const potdFeaturedDate = document.querySelector('.potd-date');
@@ -464,7 +465,7 @@
         
         let currentPotdIndex = 0;
         
-        // Find the initially active thumbnail
+        // find which thumbnail is active on load
         potdThumbnails.forEach((thumbnail, index) => {
             if (thumbnail.classList.contains('active')) {
                 currentPotdIndex = index;
@@ -490,21 +491,21 @@
                 potdFeaturedImage.style.opacity = '1';
             }, 200);
 
-            // Update active thumbnail
+            // update which thumbnail looks active
             potdThumbnails.forEach(thumb => thumb.classList.remove('active'));
             thumbnail.classList.add('active');
             
             currentPotdIndex = index;
         }
 
-        // Thumbnail click handlers
+        // click on thumbnails
         potdThumbnails.forEach((thumbnail, index) => {
             thumbnail.addEventListener('click', () => {
                 updatePotdDisplay(index);
             });
         });
         
-        // Navigation arrow handlers
+        // arrow buttons for potd
         if (potdPrevBtn && potdNextBtn) {
             potdPrevBtn.addEventListener('click', () => {
                 const newIndex = currentPotdIndex > 0 ? currentPotdIndex - 1 : potdThumbnails.length - 1;
