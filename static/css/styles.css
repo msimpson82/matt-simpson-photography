@@ -1740,3 +1740,239 @@ body.single-project-page .nav-logo {
         gap: 20px;
     }
 }
+
+/* POTD Archive Styles */
+.potd-archive-section {
+    padding: 4rem 1.5rem 6rem;
+    background: var(--white);
+}
+
+.potd-archive-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Thumbnail Mosaic - No Gaps, 230x230px */
+.potd-mosaic {
+    display: inline-block;
+    line-height: 0;
+    font-size: 0;
+}
+
+.potd-thumb {
+    width: 230px !important;
+    height: 230px !important;
+    display: inline-block;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    cursor: pointer;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.potd-thumb img {
+    width: 230px !important;
+    height: 230px !important;
+    object-fit: cover;
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+.potd-thumb:hover {
+    opacity: 0.8;
+}
+
+/* Lightbox */
+.potd-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 3000;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.potd-lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.potd-lightbox-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.potd-lightbox-image-area {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.potd-lightbox-image-area img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.potd-lightbox .potd-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 100;
+}
+
+.potd-lightbox .potd-nav-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%);
+}
+
+.potd-lightbox .potd-prev-btn {
+    left: 2rem;
+}
+
+.potd-lightbox .potd-next-btn {
+    right: 2rem;
+}
+
+.potd-lightbox-card {
+    width: 300px;
+    background: #222;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.potd-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.potd-close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.potd-card-content {
+    padding: 2rem;
+    flex: 1;
+}
+
+.potd-card-date {
+    font-family: var(--secondary-font);
+    font-size: 0.8rem;
+    color: #ccc;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.potd-card-title {
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.potd-card-caption {
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+    font-style: italic;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .potd-archive-section {
+        padding: 3rem 1rem 4rem;
+    }
+    
+    .potd-lightbox-content {
+        flex-direction: column;
+    }
+    
+    .potd-lightbox-card {
+        width: 100%;
+        height: 250px;
+    }
+    
+    .potd-lightbox-image-area {
+        padding: 1rem;
+    }
+    
+    .potd-nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .potd-prev-btn {
+        left: 1rem;
+    }
+    
+    .potd-next-btn {
+        right: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .potd-archive-section {
+        padding: 6rem 2rem 8rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .potd-archive-section {
+        padding: 8rem 3rem 10rem;
+    }
+}
+
+/* Footer Styles - REPLACE existing footer styles in Complete Main Site Stylesheet */
+
+.footer {
+    background: var(--white);
+    padding: 80px 0 40px;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Archive page logo fix */
+body.potd-archive-page .nav-logo {
+    opacity: 1 !important;
+    display: block !important;
+}
