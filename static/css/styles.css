@@ -368,6 +368,83 @@ body.single-project-page .nav-logo {
     }
 }
 
+/* Portfolio Section */
+.portfolio {
+    padding: 6rem 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: var(--white);
+}
+
+.section-title {
+    font-family: var(--secondary-font);
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+    line-height: 1;
+    color: var(--black);
+}
+
+.portfolio-grid {
+    column-count: 2;
+    column-gap: 1.5rem;
+    margin: 0;
+}
+
+.portfolio-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    break-inside: avoid;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    background: var(--light-gray);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Headshot Section */
+.headshot-section {
+    padding: 2rem 1.5rem;
+    background: var(--light-gray);
+}
+
+.headshot-container {
+    max-width: 1400px;
+    margin: 20px auto;
+}
+
+.headshot-section .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 4rem;
+    max-width: none;
+}
+
+@media (min-width: 768px) {
+    .headshot-section {
+        padding: 2rem 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .headshot-section {
+        padding: 1rem 1rem;
+    }
+}
+
 /* Featured Galleries Section */
 .featured-projects {
     padding: 8rem 1.5rem;
@@ -410,7 +487,7 @@ body.single-project-page .nav-logo {
     color: var(--white);
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-top: -40px;
+    margin-top: 20px;
 }
 
 .project-card {
@@ -439,7 +516,7 @@ body.single-project-page .nav-logo {
 
 .project-image {
     flex: 1;
-    height: 450px;
+    height: auto;
     overflow: hidden;
     position: relative;
 }
@@ -475,7 +552,8 @@ body.single-project-page .nav-logo {
 }
 
 .featured-projects .project-content,
-.projects-list-page .project-content {
+.projects-list-page .project-content,
+.headshot-section .project-content {
     flex: 1;
     padding: 4rem;
     display: flex;
@@ -485,7 +563,8 @@ body.single-project-page .nav-logo {
 }
 
 .featured-projects .project-title,
-.projects-list-page .project-title {
+.projects-list-page .project-title,
+.headshot-section .project-title {
     font-family: var(--secondary-font);
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 900;
@@ -497,7 +576,8 @@ body.single-project-page .nav-logo {
 }
 
 .featured-projects .project-description,
-.projects-list-page .project-description {
+.projects-list-page .project-description,
+.headshot-section .project-description {
     font-size: 1.1rem;
     line-height: 1.6;
     color: var(--gray);
@@ -544,52 +624,6 @@ body.single-project-page .nav-logo {
 
 .project-button:hover:before {
     left: 0;
-}
-
-/* Portfolio Section */
-.portfolio {
-    padding: 6rem 1.5rem;
-    max-width: 1400px;
-    margin: 0 auto;
-    background: var(--white);
-}
-
-.section-title {
-    font-family: var(--secondary-font);
-    font-size: clamp(2.5rem, 8vw, 5rem);
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 4rem;
-    line-height: 1;
-    color: var(--black);
-}
-
-.portfolio-grid {
-    column-count: 2;
-    column-gap: 1.5rem;
-    margin: 0;
-}
-
-.portfolio-item {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 1.5rem;
-    break-inside: avoid;
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
-    background: var(--light-gray);
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.4s ease;
-}
-
-.portfolio-item:hover img {
-    transform: scale(1.05);
 }
 
 /* Lightbox */
@@ -765,7 +799,8 @@ body.single-project-page .nav-logo {
         margin-bottom: calc(2rem - 5px);
     }
     
-    .featured-projects {
+    .featured-projects,
+    .headshot-section {
         padding: 6rem 1.5rem;
     }
     
@@ -779,14 +814,16 @@ body.single-project-page .nav-logo {
     }
     
     .featured-projects .project-content,
-    .projects-list-page .project-content {
+    .projects-list-page .project-content,
+    .headshot-section .project-content {
         padding: 16px 24px 16px 24px;
         display: flex;
         flex-direction: column;
         flex-grow: 1;
     }
     
-    .featured-projects .projects-grid {
+    .featured-projects .projects-grid,
+    .headshot-section .projects-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
@@ -1043,7 +1080,8 @@ body.single-project-page .nav-logo {
         padding: 6rem 2rem 3rem;
     }
 
-    .featured-projects {
+    .featured-projects,
+    .headshot-section {
         padding: 8rem 2rem;
     }
 }
@@ -1323,8 +1361,9 @@ body.single-project-page .nav-logo {
         min-width: 200px;
     }
 
-    .featured-projects {
-        padding: 10rem 3rem;
+    .featured-projects,
+    .headshot-section {
+        padding: 3rem 3rem;
     }
 }
 
