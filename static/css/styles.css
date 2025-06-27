@@ -71,6 +71,19 @@ body {
     line-height: calc(1em - 5px);
 }
 
+/* Mobile logo scaling fix */
+@media (max-width: 480px) {
+    .nav-logo {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-logo {
+        font-size: 1.4rem;
+    }
+}
+
 .nav-logo.visible {
     opacity: 1;
 }
@@ -1074,10 +1087,10 @@ body.single-project-page .nav-logo {
     transform: rotate(180deg);
 }
 
-/* Footer */
+/* Footer - Mobile Optimized */
 .footer {
     background: var(--light-gray);
-    padding: 4rem 1.5rem 2rem;
+    padding: 3rem 1.5rem 2rem;
     text-align: center;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -1087,44 +1100,93 @@ body.single-project-page .nav-logo {
     margin: 0 auto;
 }
 
-.footer-logo {
-    font-family: var(--secondary-font);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--black);
-    margin-bottom: 1rem;
+/* Mobile-first compact footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.5rem 1.5rem 1rem;
+    }
+    
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .footer-logo {
+        display: none; /* Hide logo */
+    }
+    
+    .footer-text {
+        display: none; /* Hide description on mobile */
+    }
+    
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 0.75rem;
+        line-height: 0.9;
+    }
+    
+    .social-link {
+        color: var(--gray);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+        line-height: 0.9;
+    }
+    
+    .social-link:hover {
+        color: var(--black);
+    }
+    
+    .footer-bottom {
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        color: var(--gray);
+        font-size: 0.8rem;
+        line-height: 1.1;
+    }
 }
 
-.footer-text {
-    color: var(--gray);
-    margin-bottom: 2rem;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.social-link {
-    color: var(--gray);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.social-link:hover {
-    color: var(--black);
-}
-
-.footer-bottom {
-    padding-top: 2rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    color: var(--gray);
-    font-size: 0.9rem;
+/* Desktop footer (keeps current design) */
+@media (min-width: 769px) {
+    .footer-logo {
+        display: none; /* Hide logo on desktop too */
+    }
+    
+    .footer-text {
+        color: var(--gray);
+        margin-bottom: 2rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .social-link {
+        color: var(--gray);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    
+    .social-link:hover {
+        color: var(--black);
+    }
+    
+    .footer-bottom {
+        padding-top: 2rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        color: var(--gray);
+        font-size: 0.9rem;
+    }
 }
 
 @media (min-width: 768px) {
@@ -1768,30 +1830,19 @@ body.single-project-page .nav-logo {
 }
 
 .footer-brand {
-    display: flex;
-    flex-direction: column;
+    display: none; /* Hide entire brand section with logo and website */
 }
 
 .footer-logo-container {
-    display: flex;
-    align-items: center;
-    gap: 1px;
-    margin-bottom: 20px;
+    display: none; /* Hide logo container */
 }
 
 .footer-skull {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+    display: none; /* Hide skull logo */
 }
 
 .footer-logo {
-    font-family: var(--primary-font);
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--black);
-    margin: 0;
-    line-height: 1.2;
+    display: none; /* Hide logo text */
 }
 
 .footer-text {
@@ -1804,10 +1855,7 @@ body.single-project-page .nav-logo {
 }
 
 .footer-website {
-    font-family: var(--secondary-font);
-    font-size: 14px;
-    color: var(--black);
-    font-weight: 500;
+    display: none; /* Hide website URL */
 }
 
 .footer-column h4 {
@@ -1836,7 +1884,7 @@ body.single-project-page .nav-logo {
     color: var(--gray);
     text-decoration: none;
     transition: color 0.2s ease;
-    line-height: 1.4;
+    line-height: 1.2;
 }
 
 .footer-column a:hover {
@@ -1859,6 +1907,7 @@ body.single-project-page .nav-logo {
     font-size: 12px;
     color: var(--gray);
     margin: 0;
+    line-height: 1.1;
 }
 
 .footer-legal {
@@ -1872,6 +1921,7 @@ body.single-project-page .nav-logo {
     color: var(--gray);
     text-decoration: none;
     transition: color 0.2s ease;
+    line-height: 1.1;
 }
 
 .footer-legal a:hover {
@@ -1887,25 +1937,50 @@ body.single-project-page .nav-logo {
 
 @media (max-width: 768px) {
     .footer {
-        padding: 60px 0 30px;
+        padding: 30px 0 15px;
     }
     
     .footer-content {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 20px;
         padding: 0 20px;
+    }
+    
+    .footer-column h4 {
+        margin-bottom: 12px;
+        line-height: 1.1;
+        font-size: 13px;
+    }
+    
+    .footer-column li {
+        margin-bottom: 6px;
+    }
+    
+    .footer-column a {
+        line-height: 1.1;
+        font-size: 13px;
     }
     
     .footer-bottom {
         flex-direction: column;
-        gap: 20px;
+        gap: 12px;
         text-align: center;
-        margin-top: 40px;
-        padding-top: 20px;
+        margin-top: 20px;
+        padding-top: 15px;
+        line-height: 1.1;
+    }
+    
+    .footer-bottom p {
+        font-size: 11px;
     }
     
     .footer-legal {
         gap: 20px;
+        line-height: 1.1;
+    }
+    
+    .footer-legal a {
+        font-size: 11px;
     }
 }
 
