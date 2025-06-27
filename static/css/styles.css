@@ -381,7 +381,7 @@ body.single-project-page .nav-logo {
     font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 700;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     line-height: 1;
     color: var(--black);
 }
@@ -416,26 +416,26 @@ body.single-project-page .nav-logo {
 
 /* Headshot Section */
 .headshot-section {
-    padding: 2rem 1.5rem;
+    padding: 1rem 1.5rem;
     background: var(--light-gray);
 }
 
 .headshot-container {
     max-width: 1400px;
-    margin: 20px auto;
+    margin: 0 auto;
 }
 
 .headshot-section .projects-grid {
     display: flex;
     flex-direction: column;
     gap: 0;
-    margin-top: 4rem;
+    margin-top: 0;
     max-width: none;
 }
 
 @media (min-width: 768px) {
     .headshot-section {
-        padding: 2rem 2rem;
+        padding: 1rem 2rem;
     }
 }
 
@@ -447,7 +447,7 @@ body.single-project-page .nav-logo {
 
 /* Featured Galleries Section */
 .featured-projects {
-    padding: 8rem 1.5rem;
+    padding: 2rem 1.5rem;
     background: var(--black);
 }
 
@@ -461,7 +461,7 @@ body.single-project-page .nav-logo {
     font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 700;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     line-height: 1;
     color: var(--white);
     text-transform: uppercase;
@@ -473,7 +473,7 @@ body.single-project-page .nav-logo {
     display: flex;
     flex-direction: column;
     gap: 0;
-    margin-top: 4rem;
+    margin-top: 2rem;
     max-width: none;
 }
 
@@ -482,12 +482,12 @@ body.single-project-page .nav-logo {
     font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 700;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     line-height: 1;
     color: var(--white);
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 .project-card {
@@ -499,7 +499,7 @@ body.single-project-page .nav-logo {
     border: none;
     box-shadow: none;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .project-card:nth-child(even) {
@@ -558,7 +558,6 @@ body.single-project-page .nav-logo {
     padding: 4rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     background: var(--white);
 }
 
@@ -801,7 +800,7 @@ body.single-project-page .nav-logo {
     
     .featured-projects,
     .headshot-section {
-        padding: 4rem 1rem;
+        padding: 2rem 1rem;
     }
     
     /* Mobile: Beautiful stacked cards */
@@ -809,7 +808,7 @@ body.single-project-page .nav-logo {
     .headshot-section .project-card {
         flex-direction: column !important;
         min-height: auto;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
@@ -838,11 +837,17 @@ body.single-project-page .nav-logo {
         overflow: hidden;
     }
     
+    /* Headshot card specific height to prevent cropping */
+    .headshot-section .project-image {
+        height: 400px;
+    }
+    
     .featured-projects .project-image img,
     .headshot-section .project-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center top;
         transition: transform 0.6s ease;
     }
     
@@ -853,7 +858,7 @@ body.single-project-page .nav-logo {
     
     .featured-projects .project-content,
     .headshot-section .project-content {
-        padding: 2rem 1.5rem 2.5rem;
+        padding: 1.5rem 1.5rem 1.5rem;
         display: flex;
         flex-direction: column;
         background: var(--white);
@@ -871,20 +876,20 @@ body.single-project-page .nav-logo {
         border-radius: 4px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         align-self: flex-start;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
     
     .featured-projects .project-title,
     .headshot-section .project-title {
-        margin-top: 0.5rem;
-        margin-bottom: 1rem;
+        margin-top: 0;
+        margin-bottom: 0.75rem;
         font-size: clamp(1.5rem, 5vw, 2rem);
         line-height: 1.1;
     }
     
     .featured-projects .project-description,
     .headshot-section .project-description {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         font-size: 1rem;
         line-height: 1.5;
         color: var(--gray);
@@ -895,7 +900,6 @@ body.single-project-page .nav-logo {
         align-self: stretch;
         text-align: center;
         padding: 1rem 2rem;
-        margin-top: auto;
     }
     
     .featured-projects .projects-grid,
@@ -1158,7 +1162,7 @@ body.single-project-page .nav-logo {
 
     .featured-projects,
     .headshot-section {
-        padding: 8rem 2rem;
+        padding: 2rem 2rem;
     }
 }
 
@@ -1439,7 +1443,7 @@ body.single-project-page .nav-logo {
 
     .featured-projects,
     .headshot-section {
-        padding: 3rem 3rem;
+        padding: 2rem 3rem;
     }
 }
 
