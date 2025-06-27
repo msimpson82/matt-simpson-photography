@@ -383,7 +383,7 @@ body.single-project-page .nav-logo {
 
 /* Portfolio Section */
 .portfolio {
-    padding: 6rem 1.5rem;
+    padding: 1rem 2rem;
     max-width: 1400px;
     margin: 0 auto;
     background: var(--white);
@@ -548,7 +548,7 @@ body.single-project-page .nav-logo {
 .project-category {
     background: var(--black);
     color: var(--white);
-    padding: 0.5rem 1rem;
+    padding: .5rem 1rem;
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -889,7 +889,7 @@ body.single-project-page .nav-logo {
         border-radius: 4px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         align-self: flex-start;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
     }
     
     .featured-projects .project-title,
@@ -940,7 +940,7 @@ body.single-project-page .nav-logo {
     }
 
     .portfolio {
-        padding: 8rem 2rem;
+        padding: 2rem 2rem;
     }
 
     .portfolio-grid {
@@ -1636,7 +1636,7 @@ body.single-project-page .nav-logo {
 }
 
 .single-project-page .project-gallery {
-    padding: 6rem 1.5rem;
+    padding: 4rem 1.5rem calc(2rem - 20px);
     max-width: 1400px;
     margin: 0 auto;
     background: var(--white);
