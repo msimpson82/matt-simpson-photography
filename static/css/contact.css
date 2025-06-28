@@ -1,0 +1,135 @@
+/* Contact Section Styles - CTA & Contact Form */
+
+.cta-section {
+    background: var(--black);
+    padding: 8rem 1.5rem;
+    position: relative;
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta-title {
+    font-family: var(--secondary-font);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+.cta-subtitle {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    color: var(--white);
+    margin-bottom: 4rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.contact-form {
+    display: grid;
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    background: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    font-size: 1rem;
+    font-family: var(--secondary-font);
+    transition: all 0.3s ease;
+    resize: none;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--white);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: var(--secondary-font);
+}
+
+.form-textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.form-submit {
+    background: var(--white);
+    color: var(--black);
+    border: 2px solid var(--white);
+    padding: 1.5rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: var(--secondary-font);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    justify-self: center;
+    min-width: 200px;
+}
+
+.form-submit:hover {
+    background: var(--black);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.form-submit:active {
+    transform: translateY(0);
+}
+
+/* Responsive Contact */
+@media (min-width: 768px) {
+    .cta-section {
+        padding: 10rem 2rem;
+    }
+    
+    .contact-form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "name email"
+            "message message"
+            "submit submit";
+    }
+    
+    .form-group:nth-child(1) {
+        grid-area: name;
+    }
+    
+    .form-group:nth-child(2) {
+        grid-area: email;
+    }
+    
+    .form-group:nth-child(3) {
+        grid-area: message;
+    }
+    
+    .form-submit {
+        grid-area: submit;
+    }
+}
+
+@media (min-width: 1200px) {
+    .cta-section {
+        padding: 12rem 3rem;
+    }
+}

@@ -1,0 +1,157 @@
+/* Page-Specific Styles - About, Archive, etc. */
+
+/* About Page Styles */
+.about-page .nav-logo {
+    opacity: 1 !important;
+}
+
+/* About Minimal Layout */
+.about-minimal {
+    background: var(--black);
+    min-height: 100vh;
+    padding: 140px 0 100px;
+}
+
+.about-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Photo */
+.about-photo {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.about-photo img {
+    width: 2000px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Story */
+.about-story {
+    margin-bottom: 80px;
+}
+
+.about-story p {
+    font-family: var(--secondary-font);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--white);
+    margin: 0 0 24px 0;
+    text-align: left;
+}
+
+/* Separator */
+.about-separator {
+    width: 100%;
+    height: 1px;
+    background: var(--white);
+    opacity: 0.3;
+    margin: 0 0 60px 0;
+}
+
+/* Links */
+.about-links {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.about-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0 16px 40px;
+    color: var(--white);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.about-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: url('/images/skulllogo.png') no-repeat center;
+    background-size: contain;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.about-link:hover::before {
+    opacity: 1;
+}
+
+.about-link:hover {
+    color: var(--white);
+    opacity: 0.7;
+}
+
+.about-link:last-child {
+    border-bottom: none;
+}
+
+.link-label {
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.link-detail {
+    font-family: var(--secondary-font);
+    font-size: 14px;
+    color: var(--white);
+    opacity: 0.7;
+}
+
+/* Mobile Responsive About Page */
+@media (max-width: 768px) {
+    .about-minimal {
+        padding: 120px 0 80px;
+    }
+    
+    .about-container {
+        padding: 0 20px;
+    }
+    
+    .about-photo {
+        margin-bottom: 60px;
+    }
+    
+    .about-story {
+        margin-bottom: 60px;
+    }
+    
+    .about-story p {
+        font-size: 16px;
+        font-weight: 300;
+    }
+    
+    .about-separator {
+        margin: 0 0 40px 0;
+    }
+    
+    .about-links {
+        gap: 20px;
+    }
+    
+    .about-link {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 0 12px 40px;
+        gap: 4px;
+    }
+    
+    .link-detail {
+        font-size: 13px;
+    }
+}

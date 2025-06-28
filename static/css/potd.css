@@ -1,0 +1,460 @@
+/* Photo of the Day Section Styles */
+
+.potd-section {
+    padding: 6rem 1.5rem 4rem;
+    background: var(--white);
+}
+
+.potd-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.potd-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.potd-title {
+    font-family: var(--secondary-font);
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.potd-featured-content .potd-title {
+    font-family: var(--secondary-font);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.potd-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--gray);
+    font-family: var(--secondary-font);
+    font-weight: 300;
+}
+
+.potd-featured {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.potd-featured-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.potd-featured-image:hover {
+    transform: translateY(-5px);
+}
+
+.potd-featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.4s ease;
+}
+
+.potd-featured-content {
+    text-align: left;
+}
+
+.potd-date {
+    font-family: var(--secondary-font);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+.potd-caption {
+    font-family: var(--primary-font);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--black);
+    font-style: italic;
+    font-weight: 300;
+}
+
+.potd-recent {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.potd-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.potd-nav-btn {
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.potd-nav-btn:hover {
+    background: var(--gray);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.potd-nav-btn:active {
+    transform: translateY(0);
+}
+
+.potd-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    min-width: 0;
+    flex: 1;
+    max-width: 500px;
+}
+
+.potd-thumbnail {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+}
+
+.potd-thumbnail:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.potd-thumbnail.active {
+    border-color: var(--black);
+    transform: translateY(-2px);
+}
+
+.potd-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.potd-thumbnail:hover img {
+    transform: scale(1.05);
+}
+
+.potd-archive-link {
+    display: inline-block;
+    color: var(--gray);
+    text-decoration: none;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.potd-archive-link:hover {
+    color: var(--black);
+}
+
+/* POTD Archive Styles */
+.potd-archive-section {
+    padding: 4rem 1.5rem 6rem;
+    background: var(--white);
+}
+
+.potd-archive-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Thumbnail Mosaic - No Gaps, 230x230px */
+.potd-mosaic {
+    display: inline-block;
+    line-height: 0;
+    font-size: 0;
+}
+
+.potd-thumb {
+    width: 230px !important;
+    height: 230px !important;
+    display: inline-block;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    cursor: pointer;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.potd-thumb img {
+    width: 230px !important;
+    height: 230px !important;
+    object-fit: cover;
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+.potd-thumb:hover {
+    opacity: 0.8;
+}
+
+/* POTD Lightbox */
+.potd-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 3000;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.potd-lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.potd-lightbox-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.potd-lightbox-image-area {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.potd-lightbox-image-area img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.potd-lightbox .potd-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 100;
+}
+
+.potd-lightbox .potd-nav-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%);
+}
+
+.potd-lightbox .potd-prev-btn {
+    left: 2rem;
+}
+
+.potd-lightbox .potd-next-btn {
+    right: 2rem;
+}
+
+.potd-lightbox-card {
+    width: 300px;
+    background: #222;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.potd-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.potd-close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.potd-card-content {
+    padding: 2rem;
+    flex: 1;
+}
+
+.potd-card-date {
+    font-family: var(--secondary-font);
+    font-size: 0.8rem;
+    color: #ccc;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.potd-card-title {
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.potd-card-caption {
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+    font-style: italic;
+}
+
+/* Mobile Responsive POTD */
+@media (max-width: 600px) {
+    .potd-navigation {
+        gap: 0.75rem;
+    }
+    
+    .potd-nav-btn {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .potd-thumbnails {
+        gap: 0.5rem;
+        max-width: 280px;
+    }
+    
+    .potd-thumbnail {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 768px) {
+    .potd-section {
+        padding: 8rem 2rem 6rem;
+    }
+    
+    .potd-featured {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+    
+    .potd-featured-content {
+        text-align: left;
+    }
+    
+    .potd-navigation {
+        gap: 1.5rem;
+    }
+    
+    .potd-nav-btn {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .potd-archive-section {
+        padding: 6rem 2rem 8rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .potd-section {
+        padding: 10rem 3rem 8rem;
+    }
+    
+    .potd-archive-section {
+        padding: 8rem 3rem 10rem;
+    }
+}
+
+/* Mobile Responsive POTD Lightbox */
+@media (max-width: 768px) {
+    .potd-archive-section {
+        padding: 3rem 1rem 4rem;
+    }
+    
+    .potd-lightbox-content {
+        flex-direction: column;
+    }
+    
+    .potd-lightbox-card {
+        width: 100%;
+        height: 250px;
+    }
+    
+    .potd-lightbox-image-area {
+        padding: 1rem;
+    }
+    
+    .potd-nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .potd-prev-btn {
+        left: 1rem;
+    }
+    
+    .potd-next-btn {
+        right: 1rem;
+    }
+}
