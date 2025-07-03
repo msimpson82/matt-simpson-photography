@@ -1,10 +1,9 @@
 {{ define "main" }}
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <h1 class="hero-logo" id="heroLogo">MATT SIMPSON PHOTOGRAPHY</h1>
         <div class="hero-content">
             <p class="hero-text">
-                Hi, I'm Matt - a commercial photographer in Louisville, KY, specializing in portraits, branding, and professional headshots.
+                I'm <span class="name">Matt</span>, and I create <span class="highlight">killer visuals</span> for <span class="highlight">high-stakes shoots</span>, <span class="highlight">bold campaigns</span>, & <span class="highlight">unstoppable clients</span>.
             </p>
             <div class="hero-buttons">
                 <a href="#portfolio" class="cta-button">My Work</a>
@@ -12,9 +11,6 @@
             </div>
         </div>
     </section>
-    
-    <!-- Grunge Border -->
-    <div class="grunge-border"></div>
 
     <!-- Portfolio Section -->
     <section class="portfolio" id="portfolio">
@@ -321,73 +317,37 @@
             });
         });
 
-        // logo fade in/out on scroll + nav hide/show
-        const heroLogo = document.getElementById('heroLogo');
-        const navLogo = document.getElementById('navLogo');
+        // New nav scroll behavior
         const header = document.getElementById('header');
-        const portfolioSection = document.getElementById('portfolio');
         
         let lastScrollY = 0;
-        let portfolioTop = 0;
         let scrollTimer = null;
-        
-        // update portfolio position when window resizes
-        function updatePortfolioPosition() {
-            portfolioTop = portfolioSection.offsetTop;
-        }
-        
-        updatePortfolioPosition();
-        window.addEventListener('resize', updatePortfolioPosition);
         
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
-            const heroHeight = window.innerHeight;
             
-            // hero logo fade out
-            const heroFadeProgress = Math.min(scrollY / (heroHeight * 0.18), 1);
-            
-            if (heroFadeProgress > 0) {
-                const scale = 1 - (heroFadeProgress * 0.3);
-                heroLogo.style.transform = `scale(${scale})`;
-                heroLogo.style.opacity = 1 - heroFadeProgress;
-            } else {
-                heroLogo.style.transform = 'scale(1)';
-                heroLogo.style.opacity = 1;
-            }
-
-            // nav logo fade in
-            const navFadeStart = heroHeight * 0.10;
-            const navFadeEnd = heroHeight * 0.15;
-            
-            if (scrollY < navFadeStart) {
-                navLogo.style.opacity = 0;
-            } else if (scrollY > navFadeEnd) {
-                navLogo.style.opacity = 1;
-            } else {
-                const navProgress = (scrollY - navFadeStart) / (navFadeEnd - navFadeStart);
-                navLogo.style.opacity = navProgress;
-            }
-            
-            // throttle the nav hide/show
+            // Throttle scroll events
             if (scrollTimer) clearTimeout(scrollTimer);
             
             scrollTimer = setTimeout(() => {
-                // only hide nav after portfolio section
-                if (scrollY > portfolioTop + 100) {
+                if (scrollY > 25) {
                     const scrollDifference = Math.abs(scrollY - lastScrollY);
                     
-                    if (scrollDifference > 5) {
+                    if (scrollDifference > 2) {
                         if (scrollY > lastScrollY) {
-                            // scrolling down - hide nav
+                            // Scrolling down - hide nav
                             header.classList.add('nav-hidden');
+                            header.classList.remove('scrolled');
                         } else {
-                            // scrolling up - show nav
+                            // Scrolling up - show nav with white background
                             header.classList.remove('nav-hidden');
+                            header.classList.add('scrolled');
                         }
                     }
                 } else {
-                    // above portfolio - always show nav
+                    // At top - show transparent nav
                     header.classList.remove('nav-hidden');
+                    header.classList.remove('scrolled');
                 }
                 
                 lastScrollY = scrollY;

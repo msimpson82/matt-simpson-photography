@@ -1,4 +1,53 @@
-{{ define "main" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - Matt Simpson Photography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="{{ .Params.body_class }}">
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="/" class="nav-logo" id="navLogo">Matt Simpson Photography</a>
+            
+            <nav class="desktop-nav">
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle">Work</a>
+                    <div class="nav-dropdown-menu">
+                        <a href="/#portfolio">Portfolio</a>
+                        <a href="/#featured-projects">Featured Galleries</a>
+                        <a href="/#potd">Photo of the Day</a>
+                    </div>
+                </div>
+                <a href="/about">About</a>
+                <a href="/#contact">Contact</a>
+            </nav>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-close" id="mobileMenuClose"></div>
+        <ul class="mobile-menu-links">
+            <li><a href="/#portfolio">Work</a></li>
+            <li><a href="/#featured-projects">Featured Galleries</a></li>
+            <li><a href="/#potd">Photo of the Day</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </div>
+
     <!-- About Page -->
     <section class="about-minimal">
         <div class="about-container">
@@ -52,4 +101,148 @@
             </div>
         </div>
     </section>
-{{ end }}
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo-container">
+                    <img src="/images/skulllogo.png" alt="Matt Simpson Photography" class="footer-skull">
+                    <h3 class="footer-logo">Matt Simpson Photography</h3>
+                </div>
+                <p class="footer-text">
+                    Commercial photographer specializing in portraits, branding, and professional headshots in Louisville, KY.
+                </p>
+                <div class="footer-website">mattsimpsonphoto.netlify.app</div>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Portfolio</h4>
+                <ul>
+                    <li><a href="/#portfolio">Portfolio Gallery</a></li>
+                    <li><a href="/#featured-projects">Featured Galleries</a></li>
+                    <li><a href="/#potd">Photo of the Day</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="https://hardsearstudio.com" target="_blank">Food Photography</a></li>
+                    <li><a href="https://meaganjordanphotography.com" target="_blank">Wedding Photography</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/matt-simpson-2238771b8/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://instagram.com/mattsimpsonphoto" target="_blank">Instagram</a></li>
+                    <li><a href="mailto:matt@mattsimpsonmedia.com">Email</a></li>
+                    <li><a href="https://letterboxd.com/mattonawire" target="_blank">Letterboxd</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Matt Simpson Photography. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="/about">About</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        document.querySelectorAll('.mobile-menu-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Desktop navigation dropdown functionality
+        const navDropdown = document.querySelector('.nav-dropdown');
+        const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+
+        if (navDropdown && dropdownToggle) {
+            dropdownToggle.addEventListener('mouseenter', () => {
+                navDropdown.classList.add('active');
+            });
+
+            navDropdown.addEventListener('mouseleave', () => {
+                navDropdown.classList.remove('active');
+            });
+
+            // Mobile dropdown click behavior
+            dropdownToggle.addEventListener('click', (e) => {
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    navDropdown.classList.toggle('active');
+                }
+            });
+
+            // Close dropdown when clicking elsewhere
+            document.addEventListener('click', (e) => {
+                if (!navDropdown.contains(e.target)) {
+                    navDropdown.classList.remove('active');
+                }
+            });
+        }
+
+        // Secondary page nav scroll behavior
+        const header = document.getElementById('header');
+        
+        // Start with white background
+        header.classList.add('scrolled');
+        
+        let lastScrollY = 0;
+        let scrollTimer = null;
+        
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            
+            if (scrollTimer) clearTimeout(scrollTimer);
+            
+            scrollTimer = setTimeout(() => {
+                if (scrollY > 25) {
+                    const scrollDifference = Math.abs(scrollY - lastScrollY);
+                    
+                    if (scrollDifference > 2) {
+                        if (scrollY > lastScrollY) {
+                            // Scrolling down - hide nav
+                            header.classList.add('nav-hidden');
+                        } else {
+                            // Scrolling up - show nav with white background
+                            header.classList.remove('nav-hidden');
+                            header.classList.add('scrolled');
+                        }
+                    }
+                } else {
+                    // Near top - show nav with white background
+                    header.classList.remove('nav-hidden');
+                    header.classList.add('scrolled');
+                }
+                
+                lastScrollY = scrollY;
+            }, 10);
+        });
+    </script>
+</body>
+</html>

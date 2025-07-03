@@ -13,11 +13,6 @@
     <!-- Header Navigation -->
     <header class="header" id="header">
         <div class="nav-container">
-            <svg class="email-icon" onclick="window.location.href='mailto:hello@hardsearstudio.com'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            
             <a href="/" class="nav-logo" id="navLogo">Matt Simpson Photography</a>
             
             <nav class="desktop-nav">
@@ -218,6 +213,44 @@
                 }
             });
         }
+        
+        // Add nav scroll behavior for secondary pages
+        const header = document.getElementById('header');
+        
+        // Start with scrolled state on secondary pages
+        header.classList.add('scrolled');
+        
+        let lastScrollY = 0;
+        let scrollTimer = null;
+        
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            
+            if (scrollTimer) clearTimeout(scrollTimer);
+            
+            scrollTimer = setTimeout(() => {
+                if (scrollY > 25) {
+                    const scrollDifference = Math.abs(scrollY - lastScrollY);
+                    
+                    if (scrollDifference > 2) {
+                        if (scrollY > lastScrollY) {
+                            // Scrolling down - hide nav
+                            header.classList.add('nav-hidden');
+                        } else {
+                            // Scrolling up - show nav with white background
+                            header.classList.remove('nav-hidden');
+                            header.classList.add('scrolled');
+                        }
+                    }
+                } else {
+                    // Near top - show nav with white background
+                    header.classList.remove('nav-hidden');
+                    header.classList.add('scrolled');
+                }
+                
+                lastScrollY = scrollY;
+            }, 10);
+        });
     </script>
 </body>
 </html>
