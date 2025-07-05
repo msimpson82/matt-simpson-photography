@@ -114,7 +114,7 @@
     max-width: 600px;
     margin: 1.5rem auto 2rem auto;
     position: relative;
-    min-height: 170px;
+    min-height: 160px;
     z-index: 1;
 }
 
@@ -162,6 +162,29 @@
     line-height: 1.7;
     color: var(--black);
     opacity: 0.8;
+    margin: 0;
+}
+
+.service-cta-button {
+    display: inline-block;
+    background: var(--black);
+    color: var(--white);
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 2px solid var(--black);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--secondary-font);
+    margin-bottom: 2rem;
+}
+
+.service-cta-button:hover {
+    background: transparent;
+    color: var(--black);
+    transform: translateY(-2px);
 }
 
 .services-dots {
@@ -264,18 +287,17 @@
         min-height: 140px;
     }
     
-    .service-title {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .service-title-link {
-        display: block;
-        -webkit-tap-highlight-color: transparent;
-    }
-    
     .service-description {
         font-size: 1rem;
+    }
+    
+    .service-cta-button {
+        padding: 0.9rem 2rem;
+        font-size: 0.85rem;
+        -webkit-tap-highlight-color: transparent;
+        display: block;
+        text-align: center;
+        margin-bottom: 1.5rem;
     }
     
     .services-dots {
@@ -288,11 +310,19 @@
     }
 }
 
-@media (max-width: 480px) {
-    .service-title {
-        font-size: 2rem;
+@media (min-width: 769px) and (max-width: 1023px) {
+    .service-cta-button {
+        display: inline-block;
     }
-    
+}
+
+@media (min-width: 1024px) {
+    .service-cta-button {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 480px) {
     .services-image {
         margin: 0 auto 2rem auto;
     }
@@ -302,6 +332,10 @@
         height: 90vw;
         max-width: 420px;
         max-height: 420px;
+    }
+    
+    .services-content {
+        min-height: 160px;
     }
     
     .services-navigation {
