@@ -1,0 +1,144 @@
+/* Bold Commercial Section Styles */
+
+.bold-commercial {
+    background: transparent;
+    padding: 6rem 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.bold-commercial-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 4rem;
+    align-items: center;
+    width: 95%;
+}
+
+.bold-commercial-images {
+    width: 100%;
+}
+
+.bold-image-item {
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.bold-image-item:hover {
+    transform: translateY(-5px);
+}
+
+.bold-image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.bold-image-item:hover img {
+    transform: scale(1.05);
+}
+
+.bold-commercial-content {
+    padding-left: 0;
+    padding-right: 5rem;
+}
+
+.bold-commercial-title {
+    font-family: var(--secondary-font);
+    font-size: clamp(3rem, 3vw, 5rem);
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+}
+
+.bold-commercial-description {
+    font-family: var(--secondary-font);
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--black);
+    margin: 0;
+}
+
+.bold-commercial-description strong {
+    font-weight: 700;
+    color: var(--black);
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+    .bold-commercial {
+        padding: 4rem 0;
+        min-height: auto;
+    }
+    
+    .bold-commercial-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        width: 84%;
+    }
+    
+    .bold-commercial-images {
+        order: 2;
+    }
+    
+    .bold-commercial-content {
+        order: 1;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .bold-commercial-title {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .bold-commercial {
+        padding: 8rem 0;
+    }
+    
+    .bold-commercial-container {
+        grid-template-columns: 40% 60%;
+        gap: 0.5rem;
+    }
+    
+    .bold-commercial-content {
+        padding-right: 5rem;
+    }
+    
+    .bold-commercial-title {
+        font-size: clamp(2.5rem, 4vw, 3.5rem);
+    }
+    
+    .bold-commercial-description {
+        font-size: clamp(1rem, 2vw, 3rem);
+    }
+    
+    /* Make collage smaller on tablet and up */
+    .bold-image-item img {
+        width: calc(100% - 200px);
+        margin: 50px auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bold-commercial {
+        padding: 10rem 0;
+    }
+    
+    .bold-commercial-container {
+        gap: 0.75rem;
+    }
+    
+    .bold-commercial-content {
+        padding-right: 6rem;
+    }
+}

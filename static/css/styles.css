@@ -9,6 +9,8 @@
 
 /* Page sections */
 @import url('hero.css');
+@import url('bold.css');
+@import url('services.css');
 @import url('portfolio.css');
 @import url('projects.css');
 @import url('potd.css');
