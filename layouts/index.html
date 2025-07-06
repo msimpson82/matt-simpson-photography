@@ -6,7 +6,6 @@
                 I'm <span class="name">Matt</span>, and I create <span class="highlight">killer visuals</span> for <span class="highlight">high-stakes shoots</span>, <span class="highlight">bold campaigns</span>, & <span class="highlight">unstoppable clients</span>.
             </p>
             <div class="hero-buttons">
-                <a href="#portfolio" class="cta-button">My Work</a>
                 <a href="/about" class="cta-button secondary">More About Me</a>
             </div>
         </div>
@@ -279,40 +278,6 @@
 </form>
         </div>
     </section>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-container">
-            <div class="lightbox-image-area">
-                <img id="lightboxImage" src="" alt="Portfolio Image">
-                <div class="lightbox-nav lightbox-prev" id="lightboxPrev">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                        <polyline points="15,18 9,12 15,6"></polyline>
-                    </svg>
-                </div>
-                <div class="lightbox-nav lightbox-next" id="lightboxNext">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                        <polyline points="9,18 15,12 9,6"></polyline>
-                    </svg>
-                </div>
-            </div>
-            <div class="lightbox-sidebar">
-                <div class="lightbox-header">
-                    <div class="lightbox-counter" id="lightboxCounter">1 / 16</div>
-                    <div class="lightbox-close" id="lightboxClose">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </div>
-                </div>
-                <div class="lightbox-content">
-                    <h3 class="lightbox-title" id="lightboxTitle">Commercial Photography</h3>
-                    <p class="lightbox-description" id="lightboxDescription">Professional brand storytelling through compelling visual narratives.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 {{ end }}
 
 {{ define "scripts" }}
@@ -388,94 +353,6 @@
                 
                 lastScrollY = scrollY;
             }, 10);
-        });
-
-        // lightbox for portfolio images
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImage = document.getElementById('lightboxImage');
-        const lightboxClose = document.getElementById('lightboxClose');
-        const lightboxPrev = document.getElementById('lightboxPrev');
-        const lightboxNext = document.getElementById('lightboxNext');
-        const lightboxCounter = document.getElementById('lightboxCounter');
-        const lightboxTitle = document.getElementById('lightboxTitle');
-        const lightboxDescription = document.getElementById('lightboxDescription');
-
-        let currentImageIndex = 0;
-        const images = Array.from(portfolioItems);
-
-        const captions = [
-            { title: "Band Photography", description: "Leah Conolly, Mule Haggard Vocalist, Lexington, KY." },
-            { title: "Wedding Photography", description: "Speed Art Museum | Shot on 85mm 1.2" },
-            { title: "Portrait Photography", description: "Reagan Etherington | Creative shoot at Mount St. Francis" },
-            { title: "Personal Branding", description: "Evan Matthews | Matthews Design branding photography" },
-            { title: "Group Portraits", description: "Corporate group and headshot photography available." },
-            { title: "Wedding Moments", description: "Weddings, elopements, and engagement photography available." },
-            { title: "Creative Portraits", description: "Looking to collab? I'm always interested in creative portrait sessions." },
-            { title: "Couple Photography", description: "Romantic sessions celebrating relationships." },
-            { title: "Portrait Photography", description: "Studio portrait work." },
-            { title: "Portrait Photography", description: "Reagan Etherington" },
-            { title: "Fashion Photography", description: "Shot on behalf of Him Gentleman's Boutique" },
-            { title: "Product Photography", description: "Commercial product photography." },
-            { title: "Portrait Photography", description: "AKA Buff Thomas" },
-            { title: "Branding Photography", description: "Shot on behalf of Heaven Hill Distilliers" },
-            { title: "Product Photography", description: "Green River Whiskey." },
-            { title: "Creative Portraits", description: "Shot on behalf of Ravens Roost" }
-        ];
-
-        function openLightbox(index) {
-            currentImageIndex = index;
-            updateLightboxContent();
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        function updateLightboxContent() {
-            const currentItem = images[currentImageIndex];
-            const imgSrc = currentItem.querySelector('img').src;
-            const caption = captions[currentImageIndex];
-
-            lightboxImage.src = imgSrc;
-            lightboxCounter.textContent = `${currentImageIndex + 1} / ${images.length}`;
-            lightboxTitle.textContent = caption.title;
-            lightboxDescription.textContent = caption.description;
-        }
-
-        function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            updateLightboxContent();
-        }
-
-        function prevImage() {
-            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-            updateLightboxContent();
-        }
-
-        portfolioItems.forEach((item, index) => {
-            item.addEventListener('click', () => openLightbox(index));
-        });
-
-        lightboxClose.addEventListener('click', closeLightbox);
-        lightboxNext.addEventListener('click', nextImage);
-        lightboxPrev.addEventListener('click', prevImage);
-
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                closeLightbox();
-            }
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (!lightbox.classList.contains('active')) return;
-            
-            if (e.key === 'Escape') closeLightbox();
-            if (e.key === 'ArrowRight') nextImage();
-            if (e.key === 'ArrowLeft') prevImage();
         });
 
         // photo of the day navigation
