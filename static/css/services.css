@@ -126,34 +126,15 @@
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.5s ease;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .services-slide.active {
     opacity: 1;
     transform: translateY(0);
-}
-
-.service-title {
-    font-family: var(--secondary-font);
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
-    font-weight: 800;
-    color: var(--black);
-    line-height: 1;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-}
-
-.service-title-link {
-    text-decoration: none;
-    color: inherit;
-    display: inline-block;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.service-title-link:hover .service-title {
-    color: var(--gray);
-    transform: translateY(-2px);
+    pointer-events: auto;
+    z-index: 10;
 }
 
 .service-description {
@@ -179,6 +160,8 @@
     letter-spacing: 1px;
     font-family: var(--secondary-font);
     margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 .service-cta-button:hover {
@@ -310,18 +293,6 @@
     }
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
-    .service-cta-button {
-        display: inline-block;
-    }
-}
-
-@media (min-width: 1024px) {
-    .service-cta-button {
-        display: inline-block;
-    }
-}
-
 @media (max-width: 480px) {
     .services-image {
         margin: 0 auto 2rem auto;
@@ -347,5 +318,17 @@
         width: 48px;
         height: 48px;
         font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    .service-cta-button {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 1024px) {
+    .service-cta-button {
+        display: inline-block;
     }
 }

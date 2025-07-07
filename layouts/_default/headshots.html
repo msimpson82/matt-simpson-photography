@@ -1,0 +1,167 @@
+{{ define "main" }}
+    <!-- Headshots Hero Section -->
+    <section class="headshots-hero" id="headshots-hero">
+        <div class="hero-container">
+            <div class="headshots-hero-content">
+                <h1 class="headshots-hero-title">
+                    <span class="hero-line">Less Awkward.</span>
+                    <span class="hero-line">More Awesome.</span>
+                </h1>
+                <p class="headshots-hero-subtitle">
+                    Professional headshots that open doors, build trust, and make you unforgettable.
+                </p>
+                <div class="headshots-hero-buttons">
+                    <a href="#contact" class="cta-button primary">Book Your Session</a>
+                    <a href="#services" class="cta-button secondary">How I Work</a>
+                </div>
+            </div>
+            <div class="headshots-hero-image">
+                <img src="/images/headshot.jpg" alt="Professional Headshot Example">
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section (formerly Red Container) -->
+    <section class="red-container-section">
+        <div class="red-container">
+            <div class="red-content-wrapper">
+                <div class="red-inner-container">
+                    <h2 class="red-container-title">A Single Headshot Can Make A <strong>Huge Impact.</strong></h2>
+                </div>
+                <div class="red-paragraph-container">
+                    <p class="red-paragraph-text">
+                        Like it or not, we're in the swipe-right era, where we navigate our professional and social landscapes by being seen first online, long before meeting in person.
+                    </p>
+                    <p class="red-paragraph-text">
+                        Whether it's LinkedIn, email signatures, online bios, or dating profiles, we are at the mercy of the mobile snap judgment. So put on a happy face and get ready for your close-up. It may be the first (and last) impression you can make.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Goals Section -->
+    <section class="headshots-goals">
+        <div class="goals-container">
+            <h2 class="goals-title">
+                My <span class="highlight">Two Goals</span> For
+                Every Headshot
+            </h2>
+            <p class="goals-intro">
+                Personally, I like to identify two key attributes I want my professional headshots to convey for clients.
+            </p>
+            
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <div class="goal-number">1</div>
+                    <h3 class="goal-heading">Confidence</h3>
+                    <p class="goal-description">
+                        Your headshot should radiate competence and self-assurance. This is someone who can get the job done.
+                    </p>
+                </div>
+                <div class="goal-card">
+                    <div class="goal-number">2</div>
+                    <h3 class="goal-heading">Approachability</h3>
+                    <p class="goal-description">
+                        You want to appear warm and accessible. This is someone I can talk to and work with.
+                    </p>
+                </div>
+            </div>
+            
+            <p class="goals-conclusion">
+                Call it my North Star of headshot photography. When your potential client or hiring manager sees your profile picture, I want their first impression to be: a) this is someone I can talk to, and b) this is someone who can get the job done. With those two pillars guiding our shoot, I am confident we can leave the session with something that will empower you and leave you feeling ready to land that next job.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="headshots-services" id="services">
+        <div class="services-container">
+            <h2 class="services-title">How I Work</h2>
+            
+            <div class="service-options">
+                <div class="service-card">
+                    <div class="service-icon">📸</div>
+                    <h3>Studio Sessions</h3>
+                    <p>Professional headshots in my comfortable Germantown studio with controlled lighting and multiple backdrop options.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>On-Location</h3>
+                    <p>I'll come to your office or preferred location for headshots in your professional environment.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">👥</div>
+                    <h3>Volume Corporate</h3>
+                    <p>Efficient on-site sessions for your entire team. I'll knock out the whole company in one organized shoot.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Studio Section -->
+    <section class="headshots-studio">
+        <div class="studio-container">
+            <div class="studio-image">
+                <img src="/images/matt.jpg" alt="Matt Simpson in studio">
+            </div>
+            <div class="studio-content">
+                <h2 class="studio-title">Quick, Painless, Professional</h2>
+                <p class="studio-text">
+                    So, what's stopping you from booking a headshot session with me? I'm guessing your current headshot is pretty old! Let's get it updated!
+                </p>
+                <p class="studio-text">
+                    I make shooting your new headshot quick and painless with a replicable system that gives me consistent, high-quality results, all from the comfort of my photography studio in historic Germantown, Louisville, KY.
+                </p>
+                <p class="studio-text emphasis">
+                    I love what I do, and you'll love the results. So let's do this!
+                </p>
+                <a href="#contact" class="cta-button primary">Schedule Your Session Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="headshots-contact" id="contact">
+        <div class="contact-container">
+            <h2 class="contact-title">Book Your Headshot Session</h2>
+            <p class="contact-subtitle">
+                Use the form below and reach out to schedule your headshot session today!
+            </p>
+            
+            <form class="headshot-form" name="headshot-contact" method="POST" data-netlify="true">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" class="form-input" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" name="email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="tel" class="form-input" name="phone" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-input" name="session-type" required>
+                            <option value="">Select Session Type</option>
+                            <option value="individual-studio">Individual - Studio</option>
+                            <option value="individual-location">Individual - On Location</option>
+                            <option value="corporate-volume">Corporate Volume Session</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <textarea class="form-textarea" name="message" placeholder="Tell me about your headshot needs..." rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="form-submit">Get Started</button>
+                <input type="hidden" name="form-name" value="headshot-contact">
+            </form>
+        </div>
+    </section>
+{{ end }}

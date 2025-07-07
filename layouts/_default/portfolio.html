@@ -1,0 +1,97 @@
+{{ define "main" }}
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="project-hero-image">
+            {{ if .Params.hero_image }}
+                <img src="/images/projects/{{ .Params.hero_image }}" alt="{{ .Title }}">
+            {{ else }}
+                <img src="/images/default-hero.jpg" alt="{{ .Title }}">
+            {{ end }}
+        </div>
+        <div class="project-hero-content">
+            <div class="project-breadcrumb">
+                <a href="/">Home</a> / <a href="/#featured-projects">Featured Projects</a> / {{ .Title }}
+            </div>
+            <h1 class="project-title">{{ .Title }}</h1>
+            <div class="project-meta">
+                <div class="project-meta-item">
+                    <span class="meta-label">PROJECT TYPE</span>
+                    <span>{{ .Params.project_type }}</span>
+                </div>
+                <div class="project-meta-item">
+                    <span class="meta-label">SERVICE</span>
+                    <span>Photography</span>
+                </div>
+                <div class="project-meta-item">
+                    <span class="meta-label">CATEGORY</span>
+                    <span>Portfolio</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Shoot Section -->
+    <section class="project-content">
+        <div class="project-container">
+            <h2 style="font-family: var(--secondary-font); font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem; text-align: center;">The Shoot</h2>
+            <article class="project-article">
+                {{ .Content }}
+            </article>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    {{ if .Params.gallery }}
+    <section class="project-gallery">
+        <div class="portfolio-grid">
+            {{ range .Params.gallery }}
+                <div class="portfolio-item">
+                    <img src="/images/projects/{{ . }}" alt="{{ $.Title }}">
+                </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+{{ end }}
+
+{{ define "scripts" }}
+    <script>
+        // Navigation scroll behavior for secondary pages
+        const header = document.getElementById('header');
+        
+        // Start with white background
+        header.classList.add('scrolled');
+        
+        let lastScrollY = 0;
+        let scrollTimer = null;
+        
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            
+            if (scrollTimer) clearTimeout(scrollTimer);
+            
+            scrollTimer = setTimeout(() => {
+                if (scrollY > 25) {
+                    const scrollDifference = Math.abs(scrollY - lastScrollY);
+                    
+                    if (scrollDifference > 2) {
+                        if (scrollY > lastScrollY) {
+                            // Scrolling down - hide nav
+                            header.classList.add('nav-hidden');
+                        } else {
+                            // Scrolling up - show nav with white background
+                            header.classList.remove('nav-hidden');
+                            header.classList.add('scrolled');
+                        }
+                    }
+                } else {
+                    // Near top - show nav with white background
+                    header.classList.remove('nav-hidden');
+                    header.classList.add('scrolled');
+                }
+                
+                lastScrollY = scrollY;
+            }, 10);
+        });
+    </script>
+{{ end }}

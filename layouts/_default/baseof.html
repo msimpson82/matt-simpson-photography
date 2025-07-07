@@ -154,6 +154,43 @@
                 }
             });
         }
+
+        // Nav scroll behavior - works on all pages
+        const header = document.getElementById('header');
+        
+        let lastScrollY = 0;
+        let scrollTimer = null;
+        
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            
+            // Throttle scroll events
+            if (scrollTimer) clearTimeout(scrollTimer);
+            
+            scrollTimer = setTimeout(() => {
+                if (scrollY > 25) {
+                    const scrollDifference = Math.abs(scrollY - lastScrollY);
+                    
+                    if (scrollDifference > 2) {
+                        if (scrollY > lastScrollY) {
+                            // Scrolling down - hide nav
+                            header.classList.add('nav-hidden');
+                            header.classList.remove('scrolled');
+                        } else {
+                            // Scrolling up - show nav with white background
+                            header.classList.remove('nav-hidden');
+                            header.classList.add('scrolled');
+                        }
+                    }
+                } else {
+                    // At top - show transparent nav
+                    header.classList.remove('nav-hidden');
+                    header.classList.remove('scrolled');
+                }
+                
+                lastScrollY = scrollY;
+            }, 10);
+        });
     </script>
     
     <!-- Page-specific scripts block -->

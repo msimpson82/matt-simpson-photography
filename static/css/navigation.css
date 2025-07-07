@@ -298,3 +298,24 @@
         min-width: 200px;
     }
 }
+/* Secondary page navigation */
+.secondary-page .header {
+    background: var(--white);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-page .nav-logo {
+    color: var(--black);
+}
+
+.secondary-page .hamburger span {
+    background: var(--black);
+}
+
+.secondary-page .desktop-nav a {
+    color: var(--black);
+}
+
+.secondary-page .nav-dropdown-toggle::after {
+    border-top-color: var(--black);
+}
