@@ -89,7 +89,7 @@
             
             <div class="services-content">
                 <div class="services-slide active" data-service="0">
-                    <a href="/headshots/" class="service-cta-button">View Headshot Portfolio</a>
+                    <a href="/headshots" class="service-cta-button">View Headshot Portfolio</a>
                     <p class="service-description">
                         Professional headshots that command attention. From corporate executives to creative professionals, creating powerful portraits that open doors and build brands.
                     </p>
@@ -282,6 +282,7 @@
 
 {{ define "scripts" }}
     <script>
+    document.addEventListener('DOMContentLoaded', function() {
         // smooth scroll when clicking nav links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -292,29 +293,33 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                }
+            });
+        });
 
         // hamburger menu stuff
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileMenuClose = document.getElementById('mobileMenuClose');
 
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                mobileMenu.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
 
-        mobileMenuClose.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        });
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
 
         document.querySelectorAll('.mobile-menu-links a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
                 document.body.style.overflow = '';
-            });
-        });
-                }
             });
         });
 
@@ -429,7 +434,17 @@
         let currentServiceIndex = 0;
         const totalServices = 4;
         
+        // Debug logging
+        console.log('Services elements found:', {
+            photos: servicesPhotos.length,
+            slides: servicesSlides.length,
+            dots: servicesDots.length,
+            prevBtn: servicesPrev,
+            nextBtn: servicesNext
+        });
+        
         function updateService(index) {
+            console.log('Updating to service index:', index);
             // Remove active classes from ALL photos across all containers
             servicesPhotos.forEach(photo => photo.classList.remove('active'));
             servicesSlides.forEach(slide => slide.classList.remove('active'));
@@ -459,17 +474,34 @@
         
         // Arrow navigation
         if (servicesPrev) {
-            servicesPrev.addEventListener('click', prevService);
+            servicesPrev.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Previous arrow clicked');
+                prevService();
+            });
+        } else {
+            console.error('Previous button not found!');
         }
+        
         if (servicesNext) {
-            servicesNext.addEventListener('click', nextService);
+            servicesNext.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Next arrow clicked');
+                nextService();
+            });
+        } else {
+            console.error('Next button not found!');
         }
         
         // Dot navigation
         servicesDots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
+                console.log('Dot clicked:', index);
                 updateService(index);
             });
         });
+    });
     </script>
 {{ end }}
