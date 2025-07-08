@@ -16,14 +16,12 @@
             <a href="/" class="nav-logo" id="navLogo">Matt Simpson Photography</a>
             
             <nav class="desktop-nav">
-                <div class="nav-dropdown">
-                    <a href="#" class="nav-dropdown-toggle">Work</a>
-                    <div class="nav-dropdown-menu">
-                        <a href="/#portfolio">Portfolio</a>
-                        <a href="/#featured-projects">Featured Galleries</a>
-                        <a href="/#potd">Photo of the Day</a>
-                    </div>
-                </div>
+                <a href="/headshots">Headshots</a>
+                <a href="/projects/events/">Events</a>
+                <a href="/projects/branding/">Branding</a>
+                <a href="/projects/portraits/">Portraits</a>
+                <a href="/#featured-projects">Galleries</a>
+                <a href="/#potd">POTD</a>
                 <a href="/about">About</a>
                 <a href="/#contact">Contact</a>
             </nav>
@@ -40,9 +38,14 @@
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-close" id="mobileMenuClose"></div>
         <ul class="mobile-menu-links">
-            <li><a href="/#portfolio">Work</a></li>
+            <li class="mobile-menu-section">Work</li>
+            <li><a href="/headshots">Headshots</a></li>
+            <li><a href="/projects/events/">Event Photography</a></li>
+            <li><a href="/projects/branding/">Branding</a></li>
+            <li><a href="/projects/portraits/">Portraits</a></li>
             <li><a href="/#featured-projects">Featured Galleries</a></li>
             <li><a href="/#potd">Photo of the Day</a></li>
+            <li class="mobile-menu-divider"></li>
             <li><a href="/about">About</a></li>
             <li><a href="/#contact">Contact</a></li>
         </ul>
@@ -119,7 +122,10 @@
             <div class="footer-column">
                 <h4>Portfolio</h4>
                 <ul>
-                    <li><a href="/#portfolio">Portfolio Gallery</a></li>
+                    <li><a href="/headshots">Headshots</a></li>
+                    <li><a href="/projects/events/">Event Photography</a></li>
+                    <li><a href="/projects/branding/">Branding</a></li>
+                    <li><a href="/projects/portraits/">Portraits</a></li>
                     <li><a href="/#featured-projects">Featured Galleries</a></li>
                     <li><a href="/#potd">Photo of the Day</a></li>
                 </ul>
@@ -176,35 +182,6 @@
                 document.body.style.overflow = '';
             });
         });
-
-        // Desktop navigation dropdown functionality
-        const navDropdown = document.querySelector('.nav-dropdown');
-        const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
-
-        if (navDropdown && dropdownToggle) {
-            dropdownToggle.addEventListener('mouseenter', () => {
-                navDropdown.classList.add('active');
-            });
-
-            navDropdown.addEventListener('mouseleave', () => {
-                navDropdown.classList.remove('active');
-            });
-
-            // Mobile dropdown click behavior
-            dropdownToggle.addEventListener('click', (e) => {
-                if (window.innerWidth <= 1024) {
-                    e.preventDefault();
-                    navDropdown.classList.toggle('active');
-                }
-            });
-
-            // Close dropdown when clicking elsewhere
-            document.addEventListener('click', (e) => {
-                if (!navDropdown.contains(e.target)) {
-                    navDropdown.classList.remove('active');
-                }
-            });
-        }
 
         // Secondary page nav scroll behavior
         const header = document.getElementById('header');

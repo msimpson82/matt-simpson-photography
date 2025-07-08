@@ -98,6 +98,37 @@
                     <p>Efficient on-site sessions for your entire team. I'll knock out the whole company in one organized shoot.</p>
                 </div>
             </div>
+            
+            <!-- Headshots Gallery -->
+            <div class="headshots-gallery">
+                <div class="headshots-grid">
+                    <div class="headshot-item" data-index="0">
+                        <img src="/images/hs1.jpg" alt="Professional Headshot 1">
+                    </div>
+                    <div class="headshot-item" data-index="1">
+                        <img src="/images/hs2.jpg" alt="Professional Headshot 2">
+                    </div>
+                    <div class="headshot-item" data-index="2">
+                        <img src="/images/hs3.jpg" alt="Professional Headshot 3">
+                    </div>
+                    <div class="headshot-item" data-index="3">
+                        <img src="/images/hs4.jpg" alt="Professional Headshot 4">
+                    </div>
+                    <div class="headshot-item" data-index="4">
+                        <img src="/images/hs5.jpg" alt="Professional Headshot 5">
+                    </div>
+                    <div class="headshot-item" data-index="5">
+                        <img src="/images/hs6.jpg" alt="Professional Headshot 6">
+                    </div>
+                    <div class="headshot-item" data-index="6">
+                        <img src="/images/hs7.jpg" alt="Professional Headshot 7">
+                    </div>
+                    <div class="headshot-item" data-index="7">
+                        <img src="/images/hs9.jpg" alt="Professional Headshot 8">
+                    </div>
+                    
+                </div>
+            </div>
         </div>
     </section>
 
@@ -164,4 +195,146 @@
             </form>
         </div>
     </section>
+    
+    <!-- Headshots Lightbox -->
+    <div class="headshots-lightbox" id="headshotsLightbox">
+        <div class="lightbox-container">
+            <div class="lightbox-image-area">
+                <img src="" alt="" id="lightboxImage">
+                <div class="lightbox-nav lightbox-prev" id="lightboxPrev">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15,18 9,12 15,6"></polyline>
+                    </svg>
+                </div>
+                <div class="lightbox-nav lightbox-next" id="lightboxNext">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <div class="lightbox-sidebar">
+                <div class="lightbox-header">
+                    <div class="lightbox-counter">
+                        <span id="currentImage">1</span> / <span id="totalImages">9</span>
+                    </div>
+                    <div class="lightbox-close" id="lightboxClose">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
+                </div>
+                <div class="lightbox-content">
+                    <h3 class="lightbox-title">Professional Headshot Gallery</h3>
+                    <p class="lightbox-description">
+                        Browse through our collection of professional headshots showcasing different styles, lighting setups, and backgrounds. Each image represents the quality and attention to detail you can expect from your session.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{{ end }}
+
+{{ define "scripts" }}
+    <script>
+        // Headshots Gallery Lightbox Functionality
+        const headshotItems = document.querySelectorAll('.headshot-item');
+        const lightbox = document.getElementById('headshotsLightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        const currentImageSpan = document.getElementById('currentImage');
+        const totalImagesSpan = document.getElementById('totalImages');
+        
+        let currentIndex = 0;
+        const totalImages = 9;
+        
+        // Image data
+        const headshotImages = [
+            { src: '/images/hs1.jpg', alt: 'Professional Headshot 1' },
+            { src: '/images/hs2.jpg', alt: 'Professional Headshot 2' },
+            { src: '/images/hs3.jpg', alt: 'Professional Headshot 3' },
+            { src: '/images/hs4.jpg', alt: 'Professional Headshot 4' },
+            { src: '/images/hs5.jpg', alt: 'Professional Headshot 5' },
+            { src: '/images/hs6.jpg', alt: 'Professional Headshot 6' },
+            { src: '/images/hs7.jpg', alt: 'Professional Headshot 7' },
+            { src: '/images/hs9.jpg', alt: 'Professional Headshot 8' },
+            
+        ];
+        
+        // Open lightbox
+        headshotItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentIndex = index;
+                updateLightboxImage();
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Close lightbox
+        lightboxClose.addEventListener('click', closeLightbox);
+        
+        // Close on background click (but not on image or sidebar)
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        
+        // Prevent closing when clicking on image area content
+        document.querySelector('.lightbox-image-area').addEventListener('click', (e) => {
+            if (e.target.classList.contains('lightbox-image-area')) {
+                closeLightbox();
+            }
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowLeft') {
+                navigatePrev();
+            } else if (e.key === 'ArrowRight') {
+                navigateNext();
+            }
+        });
+        
+        // Previous image
+        lightboxPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navigatePrev();
+        });
+        
+        // Next image
+        lightboxNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navigateNext();
+        });
+        
+        function navigatePrev() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateLightboxImage();
+        }
+        
+        function navigateNext() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateLightboxImage();
+        }
+        
+        function updateLightboxImage() {
+            const image = headshotImages[currentIndex];
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt;
+            currentImageSpan.textContent = currentIndex + 1;
+        }
+        
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    </script>
 {{ end }}

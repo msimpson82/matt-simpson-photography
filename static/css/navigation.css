@@ -88,15 +88,16 @@
 
 .desktop-nav {
     display: none;
-    gap: 2.5rem;
+    gap: 1.75rem;
     list-style: none;
+    align-items: center;
 }
 
 .desktop-nav a {
     color: var(--white);
     text-decoration: none;
     font-weight: 400;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 
@@ -106,86 +107,6 @@
 
 .desktop-nav a:hover {
     opacity: 0.7;
-}
-
-/* Dropdown Navigation */
-.nav-dropdown {
-    position: relative;
-}
-
-.nav-dropdown-toggle {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-.nav-dropdown-toggle::after {
-    content: '';
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 4px solid var(--white);
-    margin-left: 0.5rem;
-    transition: all 0.3s ease;
-}
-
-.header.scrolled .nav-dropdown-toggle::after {
-    border-top-color: var(--black);
-}
-
-.nav-dropdown.active .nav-dropdown-toggle::after {
-    transform: rotate(180deg);
-}
-
-.nav-dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: auto;
-    background: var(--white);
-    min-width: 200px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    padding: 1rem 0;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    z-index: 1001;
-    margin-top: 0.75rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.nav-dropdown-menu::before {
-    content: '';
-    position: absolute;
-    top: -0.75rem;
-    left: 0;
-    right: 0;
-    height: 0.75rem;
-    background: transparent;
-}
-
-.nav-dropdown.active .nav-dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.nav-dropdown-menu a {
-    display: block;
-    padding: 0.75rem 1.5rem;
-    color: var(--black);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: background 0.3s ease;
-    border-radius: 0;
-}
-
-.nav-dropdown-menu a:hover {
-    background: rgba(0, 0, 0, 0.05);
-    opacity: 1;
 }
 
 /* Mobile Menu Overlay */
@@ -240,23 +161,59 @@
 .mobile-menu-links {
     list-style: none;
     text-align: center;
+    width: 100%;
 }
 
 .mobile-menu-links li {
-    margin: 1.5rem 0;
+    margin: 1rem 0;
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 .mobile-menu-links a {
     color: var(--white);
     text-decoration: none;
-    font-family: var(--primary-font);
-    font-size: 2.5rem;
-    font-weight: 300;
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    font-weight: 400;
     transition: opacity 0.3s ease;
+    display: inline-block;
+    padding: 0.25rem 0;
 }
 
 .mobile-menu-links a:hover {
     opacity: 0.7;
+}
+
+/* Mobile menu section header */
+.mobile-menu-section {
+    color: var(--white);
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.5;
+    margin: 2rem 0 1rem 0;
+}
+
+/* Mobile menu divider */
+.mobile-menu-links .mobile-menu-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 1px;
+    margin: 2rem 0;
+    padding: 0;
+}
+
+.mobile-menu-links .mobile-menu-divider::after {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Nav hide/show animation */
@@ -283,9 +240,9 @@
     .desktop-nav {
         display: flex;
     }
-
-    .nav-dropdown-menu {
-        min-width: 180px;
+    
+    .desktop-nav a {
+        font-size: 0.85rem;
     }
 }
 
@@ -294,8 +251,22 @@
         padding: 0 3rem;
     }
     
-    .nav-dropdown-menu {
-        min-width: 200px;
+    .desktop-nav {
+        gap: 2rem;
+    }
+    
+    .desktop-nav a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .desktop-nav {
+        gap: 2.25rem;
+    }
+    
+    .desktop-nav a {
+        font-size: 0.95rem;
     }
 }
 /* Secondary page navigation */
@@ -314,8 +285,4 @@
 
 .secondary-page .desktop-nav a {
     color: var(--black);
-}
-
-.secondary-page .nav-dropdown-toggle::after {
-    border-top-color: var(--black);
 }

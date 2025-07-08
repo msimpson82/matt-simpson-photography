@@ -1,6 +1,8 @@
 /* Lightbox Modal Styles */
 
-.lightbox {
+.lightbox,
+.headshots-lightbox,
+.potd-lightbox {
     position: fixed;
     top: 0;
     left: 0;
@@ -13,7 +15,9 @@
     transition: opacity 0.3s ease;
 }
 
-.lightbox.active {
+.lightbox.active,
+.headshots-lightbox.active,
+.potd-lightbox.active {
     display: flex;
     opacity: 1;
 }
@@ -40,24 +44,41 @@
     border-radius: 8px;
 }
 
+/* Navigation arrows with semi-transparent white background */
 .lightbox-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.6);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
     z-index: 10;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .lightbox-nav:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+.lightbox-nav svg {
+    stroke: white !important;
+    width: 24px;
+    height: 24px;
+    stroke-width: 3 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
 }
 
 .lightbox-prev {
@@ -98,11 +119,24 @@
     justify-content: center;
     cursor: pointer;
     border-radius: 50%;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .lightbox-close:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+.lightbox-close svg {
+    stroke: white !important;
+    width: 24px;
+    height: 24px;
+    stroke-width: 3 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
 }
 
 .lightbox-content {
@@ -125,6 +159,13 @@
     font-family: var(--secondary-font);
 }
 
+/* Ensure all lightbox navigation is visible */
+.lightbox svg,
+.headshots-lightbox svg,
+.potd-lightbox svg {
+    stroke: white !important;
+}
+
 /* Mobile Responsive Lightbox */
 @media (max-width: 768px) {
     .lightbox-container {
@@ -143,6 +184,13 @@
     .lightbox-nav {
         width: 40px;
         height: 40px;
+        background: rgba(255, 255, 255, 0.35);
+        border-width: 1.5px;
+    }
+    
+    .lightbox-nav svg {
+        width: 20px;
+        height: 20px;
     }
     
     .lightbox-prev {
