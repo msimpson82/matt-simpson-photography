@@ -9,6 +9,66 @@
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <style>
+        /* Force black navigation on secondary pages */
+        .header {
+            background: var(--white) !important;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
+        }
+        
+        .nav-logo {
+            color: var(--black) !important;
+        }
+        
+        .hamburger span {
+            background: var(--black) !important;
+        }
+        
+        .desktop-nav a {
+            color: var(--black) !important;
+        }
+        
+        /* Dropdown styling */
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .nav-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--white);
+            min-width: 200px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border-radius: 4px;
+            padding: 0.5rem 0;
+            margin-top: 0.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .nav-dropdown:hover .nav-dropdown-menu,
+        .nav-dropdown.active .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: var(--black) !important;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        
+        .nav-dropdown-menu a:hover {
+            background: var(--light-gray);
+        }
+        
         /* Project Page Specific Styles */
         .project-content .project-container {
             max-width: 700px;
@@ -136,14 +196,12 @@
             <a href="/" class="nav-logo" id="navLogo">Matt Simpson Photography</a>
             
             <nav class="desktop-nav">
-                <div class="nav-dropdown">
-                    <a href="#" class="nav-dropdown-toggle">Work</a>
-                    <div class="nav-dropdown-menu">
-                        <a href="/#portfolio">Portfolio</a>
-                        <a href="/#featured-projects">Featured Galleries</a>
-                        <a href="/#potd">Photo of the Day</a>
-                    </div>
-                </div>
+                <a href="/headshots">Headshots</a>
+                <a href="/projects/events/">Events</a>
+                <a href="/projects/branding/">Branding</a>
+                <a href="/projects/portraits/">Portraits</a>
+                <a href="/#featured-projects">Galleries</a>
+                <a href="/#potd">POTD</a>
                 <a href="/about">About</a>
                 <a href="/#contact">Contact</a>
             </nav>
@@ -160,9 +218,14 @@
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-close" id="mobileMenuClose"></div>
         <ul class="mobile-menu-links">
-            <li><a href="/#portfolio">Work</a></li>
+            <li class="mobile-menu-section">Work</li>
+            <li><a href="/headshots">Headshots</a></li>
+            <li><a href="/projects/events/">Event Photography</a></li>
+            <li><a href="/projects/branding/">Branding</a></li>
+            <li><a href="/projects/portraits/">Portraits</a></li>
             <li><a href="/#featured-projects">Featured Galleries</a></li>
             <li><a href="/#potd">Photo of the Day</a></li>
+            <li class="mobile-menu-divider"></li>
             <li><a href="/about">About</a></li>
             <li><a href="/#contact">Contact</a></li>
         </ul>
@@ -218,17 +281,54 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <h3 class="footer-logo">Matt Simpson Photography</h3>
-            <p class="footer-text">
-                Commercial photographer specializing in portraits, branding, and professional headshots in Louisville, KY.
-            </p>
-            <div class="footer-social">
-                <a href="mailto:hello@hardsearstudio.com" class="social-link">Email</a>
-                <a href="#" class="social-link">Instagram</a>
-                <a href="#" class="social-link">LinkedIn</a>
+            <div class="footer-brand">
+                <div class="footer-logo-container">
+                    <img src="/images/skulllogo.png" alt="Matt Simpson Photography" class="footer-skull">
+                    <h3 class="footer-logo">Matt Simpson Photography</h3>
+                </div>
+                <p class="footer-text">
+                    Commercial photographer specializing in portraits, branding, and professional headshots in Louisville, KY.
+                </p>
+                <div class="footer-website">mattsimpsonphoto.netlify.app</div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Matt Simpson Photography. All rights reserved.</p>
+            
+            <div class="footer-column">
+                <h4>Portfolio</h4>
+                <ul>
+                    <li><a href="/headshots">Headshots</a></li>
+                    <li><a href="/projects/events/">Event Photography</a></li>
+                    <li><a href="/projects/branding/">Branding</a></li>
+                    <li><a href="/projects/portraits/">Portraits</a></li>
+                    <li><a href="/#featured-projects">Featured Galleries</a></li>
+                    <li><a href="/#potd">Photo of the Day</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="https://hardsearstudio.com" target="_blank">Food Photography</a></li>
+                    <li><a href="https://meaganjordanphotography.com" target="_blank">Wedding Photography</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/matt-simpson-2238771b8/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://instagram.com/mattsimpsonphoto" target="_blank">Instagram</a></li>
+                    <li><a href="mailto:matt@mattsimpsonmedia.com">Email</a></li>
+                    <li><a href="https://letterboxd.com/mattonawire" target="_blank">Letterboxd</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Matt Simpson Photography. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="/about">About</a>
+                <a href="/#contact">Contact</a>
             </div>
         </div>
     </footer>
@@ -289,27 +389,6 @@
                 document.body.style.overflow = '';
             });
         });
-
-        // Desktop navigation dropdown functionality
-        const navDropdown = document.querySelector('.nav-dropdown');
-        const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
-
-        if (navDropdown && dropdownToggle) {
-            dropdownToggle.addEventListener('mouseenter', () => {
-                navDropdown.classList.add('active');
-            });
-
-            navDropdown.addEventListener('mouseleave', () => {
-                navDropdown.classList.remove('active');
-            });
-
-            // Close dropdown when clicking elsewhere
-            document.addEventListener('click', (e) => {
-                if (!navDropdown.contains(e.target)) {
-                    navDropdown.classList.remove('active');
-                }
-            });
-        }
 
         // Lightbox functionality (same as main page)
         const portfolioItems = document.querySelectorAll('.portfolio-item');
@@ -377,11 +456,10 @@
             if (e.key === 'ArrowLeft') prevImage();
         });
         
-        // Add nav scroll behavior for secondary pages
+        // Nav scroll behavior for secondary pages
         const header = document.getElementById('header');
         
-        // Start with scrolled state on secondary pages
-        header.classList.add('scrolled');
+        // Header already starts with white background due to inline styles
         
         let lastScrollY = 0;
         let scrollTimer = null;

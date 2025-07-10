@@ -86,8 +86,10 @@
     opacity: 0.7;
 }
 
+/* FIXED: Desktop navigation properly displays as flexbox */
 .desktop-nav {
     display: none;
+    flex-direction: row; /* Explicitly set to row */
     gap: 1.75rem;
     list-style: none;
     align-items: center;
@@ -99,6 +101,7 @@
     font-weight: 400;
     font-size: 0.9rem;
     transition: color 0.3s ease;
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 .header.scrolled .desktop-nav a {
@@ -237,8 +240,10 @@
         display: none;
     }
 
+    /* FIXED: Ensure desktop nav displays as flex on larger screens */
     .desktop-nav {
         display: flex;
+        flex-direction: row;
     }
     
     .desktop-nav a {
@@ -269,6 +274,7 @@
         font-size: 0.95rem;
     }
 }
+
 /* Secondary page navigation */
 .secondary-page .header {
     background: var(--white);
