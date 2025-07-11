@@ -1,0 +1,289 @@
+{{ define "main" }}
+    <!-- Branding Hero Section -->
+    <section class="branding-hero" id="branding-hero">
+        <div class="hero-container">
+            <div class="branding-hero-content">
+                <h1 class="branding-hero-title">
+                    <span class="hero-line">Your Brand.</span>
+                    <span class="hero-line">Amplified.</span>
+                </h1>
+                <p class="branding-hero-subtitle">
+                    Professional brand photography that tells your story, showcases your products, and makes customers fall in love with what you do.
+                </p>
+                <div class="branding-hero-buttons">
+                    <a href="#contact" class="cta-button primary">Start Your Project</a>
+                    <a href="#gallery" class="cta-button secondary">View Portfolio</a>
+                </div>
+            </div>
+            <div class="branding-hero-image">
+                <img src="/images/branding/brand2.jpg" alt="Professional Brand Photography">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Branding Section -->
+    <section class="branding-why">
+        <div class="branding-container">
+            <div class="branding-content-wrapper">
+                <h2 class="branding-section-title">Making Your Business Unforgettable</h2>
+                <div class="branding-text-content">
+                    <p class="branding-paragraph">
+                        Whether you're running a small startup, managing a big corporation, launching a new product, or pouring your heart into a beloved restaurant, you already know the truth: getting noticed online isn't optional anymore.
+                    </p>
+                    <p class="branding-paragraph">
+                        From your website to social media feeds to those big, bold billboards on the highway, professional photography introduces your brand to the world in a way that nothing else quite can. It's your first impression, your handshake, your chance to say "this is who we are."
+                    </p>
+                    <p class="branding-paragraph">
+                        I specialize in creating images that make your products look like a million bucks. But beyond that, I love shooting those highly stylized lifestyle images that really invite your customers to connect with you on a deeper level. The kind of photos that make people stop scrolling and think "I want to be part of that."
+                    </p>
+                    <p class="branding-paragraph emphasis">
+                        I've worked with businesses of all sizes to bring their vision to life through photography, and I'd love to help tell your story next. Let's create something amazing together.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branding Gallery -->
+    <section class="branding-gallery-section" id="gallery">
+        <div class="branding-gallery-container">
+            <h2 class="gallery-title">Brand Photography Portfolio</h2>
+            
+            <div class="branding-grid">
+                <div class="branding-item" data-index="0">
+                    <img src="/images/branding/branding1.jpg" alt="Brand Photography 1">
+                </div>
+                <div class="branding-item" data-index="1">
+                    <img src="/images/branding/branding2.jpg" alt="Brand Photography 2">
+                </div>
+                <div class="branding-item" data-index="2">
+                    <img src="/images/branding/branding3.jpg" alt="Brand Photography 3">
+                </div>
+                <div class="branding-item" data-index="3">
+                    <img src="/images/branding/branding4.jpg" alt="Brand Photography 4">
+                </div>
+                <div class="branding-item" data-index="4">
+                    <img src="/images/branding/branding5.jpg" alt="Brand Photography 5">
+                </div>
+                <div class="branding-item" data-index="5">
+                    <img src="/images/branding/branding6.jpg" alt="Brand Photography 6">
+                </div>
+                <div class="branding-item" data-index="6">
+                    <img src="/images/branding/branding7.jpg" alt="Brand Photography 7">
+                </div>
+                <div class="branding-item" data-index="7">
+                    <img src="/images/branding/branding8.jpg" alt="Brand Photography 8">
+                </div>
+                <div class="branding-item" data-index="8">
+                    <img src="/images/branding/branding9.jpg" alt="Brand Photography 9">
+                </div>
+                <div class="branding-item" data-index="9">
+                    <img src="/images/branding/branding10.jpg" alt="Brand Photography 10">
+                </div>
+                <div class="branding-item" data-index="10">
+                    <img src="/images/branding/branding11.jpg" alt="Brand Photography 11">
+                </div>
+                <div class="branding-item" data-index="11">
+                    <img src="/images/branding/branding12.jpg" alt="Brand Photography 12">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="branding-contact" id="contact">
+        <div class="contact-container">
+            <h2 class="contact-title">Let's Build Your Brand Together</h2>
+            <p class="contact-subtitle">
+                Ready to elevate your brand with professional photography? Let's talk about your vision.
+            </p>
+            
+            <form class="branding-form" name="branding-contact" method="POST" data-netlify="true">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" class="form-input" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" name="email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="tel" class="form-input" name="phone" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" name="company" placeholder="Company Name">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" class="form-input" name="industry" placeholder="Industry/Business Type">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-input" name="project-type">
+                            <option value="">Project Type</option>
+                            <option value="product">Product Photography</option>
+                            <option value="lifestyle">Lifestyle Photography</option>
+                            <option value="both">Both Product & Lifestyle</option>
+                            <option value="campaign">Full Brand Campaign</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <textarea class="form-textarea" name="message" placeholder="Tell me about your brand and what you're looking for..." rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="form-submit">Get Started</button>
+                <input type="hidden" name="form-name" value="branding-contact">
+            </form>
+        </div>
+    </section>
+    
+    <!-- Branding Lightbox -->
+    <div class="branding-lightbox" id="brandingLightbox">
+        <div class="lightbox-container">
+            <div class="lightbox-image-area">
+                <img src="" alt="" id="lightboxImage">
+                <div class="lightbox-nav lightbox-prev" id="lightboxPrev">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15,18 9,12 15,6"></polyline>
+                    </svg>
+                </div>
+                <div class="lightbox-nav lightbox-next" id="lightboxNext">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <div class="lightbox-sidebar">
+                <div class="lightbox-header">
+                    <div class="lightbox-counter">
+                        <span id="currentImage">1</span> / <span id="totalImages">12</span>
+                    </div>
+                    <div class="lightbox-close" id="lightboxClose">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
+                </div>
+                <div class="lightbox-content">
+                    <h3 class="lightbox-title">Brand Photography Gallery</h3>
+                    <p class="lightbox-description">
+                        Professional brand photography showcasing product shots, lifestyle imagery, and visual storytelling for businesses across Louisville and beyond. Each image is crafted to elevate your brand and connect with your audience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{{ end }}
+
+{{ define "scripts" }}
+    <script>
+        // Branding Gallery Lightbox Functionality
+        const brandingItems = document.querySelectorAll('.branding-item');
+        const lightbox = document.getElementById('brandingLightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        const currentImageSpan = document.getElementById('currentImage');
+        const totalImagesSpan = document.getElementById('totalImages');
+        
+        let currentIndex = 0;
+        const totalImages = 12;
+        
+        // Image data
+        const brandingImages = [
+            { src: '/images/branding/branding1.jpg', alt: 'Brand Photography 1' },
+            { src: '/images/branding/branding2.jpg', alt: 'Brand Photography 2' },
+            { src: '/images/branding/branding3.jpg', alt: 'Brand Photography 3' },
+            { src: '/images/branding/branding4.jpg', alt: 'Brand Photography 4' },
+            { src: '/images/branding/branding5.jpg', alt: 'Brand Photography 5' },
+            { src: '/images/branding/branding6.jpg', alt: 'Brand Photography 6' },
+            { src: '/images/branding/branding7.jpg', alt: 'Brand Photography 7' },
+            { src: '/images/branding/branding8.jpg', alt: 'Brand Photography 8' },
+            { src: '/images/branding/branding9.jpg', alt: 'Brand Photography 9' },
+            { src: '/images/branding/branding10.jpg', alt: 'Brand Photography 10' },
+            { src: '/images/branding/branding11.jpg', alt: 'Brand Photography 11' },
+            { src: '/images/branding/branding12.jpg', alt: 'Brand Photography 12' }
+        ];
+        
+        // Open lightbox
+        brandingItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentIndex = index;
+                updateLightboxImage();
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Close lightbox
+        lightboxClose.addEventListener('click', closeLightbox);
+        
+        // Close on background click (but not on image or sidebar)
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        
+        // Prevent closing when clicking on image area content
+        document.querySelector('.lightbox-image-area').addEventListener('click', (e) => {
+            if (e.target.classList.contains('lightbox-image-area')) {
+                closeLightbox();
+            }
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowLeft') {
+                navigatePrev();
+            } else if (e.key === 'ArrowRight') {
+                navigateNext();
+            }
+        });
+        
+        // Previous image
+        lightboxPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navigatePrev();
+        });
+        
+        // Next image
+        lightboxNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navigateNext();
+        });
+        
+        function navigatePrev() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateLightboxImage();
+        }
+        
+        function navigateNext() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateLightboxImage();
+        }
+        
+        function updateLightboxImage() {
+            const image = brandingImages[currentIndex];
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt;
+            currentImageSpan.textContent = currentIndex + 1;
+        }
+        
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    </script>
+{{ end }}

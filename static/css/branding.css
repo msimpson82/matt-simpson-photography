@@ -1,0 +1,414 @@
+/* Branding Page Specific Styles */
+
+/* Branding Hero Section */
+.branding-hero {
+    min-height: 90vh;
+    padding: 100px 2rem 3rem;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.branding-hero-content {
+    flex: 1;
+    max-width: 450px;
+}
+
+.branding-hero-title {
+    font-family: var(--secondary-font);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-line {
+    display: block;
+}
+
+.branding-hero-subtitle {
+    font-family: var(--secondary-font);
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 300;
+    line-height: 1.4;
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+.branding-hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.branding-hero-image {
+    flex: 1;
+    max-width: 450px;
+    position: relative;
+}
+
+.branding-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Why Branding Section */
+.branding-why {
+    background: var(--light-gray);
+    padding: 5rem 2rem;
+}
+
+.branding-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.branding-content-wrapper {
+    text-align: left;
+}
+
+.branding-section-title {
+    font-family: var(--secondary-font);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--black);
+    text-align: center;
+}
+
+.branding-text-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.branding-paragraph {
+    font-family: var(--secondary-font);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.branding-paragraph.emphasis {
+    font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+    font-weight: 500;
+    color: var(--black);
+    margin-top: 2rem;
+    text-align: left;
+}
+
+/* Branding Gallery Section */
+.branding-gallery-section {
+    padding: 6rem 2rem;
+    background: var(--white);
+}
+
+.branding-gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-title {
+    font-family: var(--secondary-font);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--black);
+}
+
+.branding-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.branding-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    aspect-ratio: 1 / 1;
+}
+
+/* Fallback for browsers without aspect-ratio support */
+.branding-item::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.branding-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.branding-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.branding-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Branding Contact Section */
+.branding-contact {
+    padding: 6rem 2rem;
+    background: var(--black);
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-title {
+    font-family: var(--secondary-font);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.contact-subtitle {
+    font-size: 1.2rem;
+    color: var(--white);
+    opacity: 0.8;
+    margin-bottom: 3rem;
+}
+
+.branding-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 0;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    padding: 1.2rem 1.5rem;
+    font-size: 1rem;
+    font-family: var(--secondary-font);
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    position: static;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Ensure select element has same styling */
+select.form-input {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23ffffff' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.5rem center;
+    padding-right: 3rem;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--white);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-submit {
+    background: var(--white);
+    color: var(--black);
+    border: 2px solid var(--white);
+    padding: 1.5rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: var(--secondary-font);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    align-self: center;
+    min-width: 250px;
+    border-radius: 4px;
+}
+
+.form-submit:hover {
+    background: transparent;
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Branding Lightbox */
+.branding-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 3000;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.branding-lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* Lightbox uses existing styles from lightbox.css */
+
+/* Mobile Responsive Branding */
+@media (max-width: 480px) {
+    /* Gallery adjustments for very small screens */
+    .branding-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Hero adjustments */
+    .branding-hero {
+        padding: 90px 1.5rem 2rem;
+        min-height: auto;
+    }
+    
+    .hero-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .branding-hero-content {
+        margin-bottom: 0;
+        text-align: center;
+        order: 2;
+    }
+    
+    .branding-hero-image {
+        order: 1;
+        max-width: 100%;
+    }
+    
+    .branding-hero-title {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+    
+    .branding-hero-buttons {
+        justify-content: center;
+    }
+    
+    /* Content adjustments */
+    .branding-why {
+        padding: 4rem 1.5rem;
+    }
+    
+    /* Gallery adjustments */
+    .branding-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .branding-item {
+        aspect-ratio: 1 / 1;
+    }
+    
+    /* Form adjustments */
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .branding-hero {
+        padding: 100px 2rem 3rem;
+    }
+    
+    .hero-container {
+        gap: 2rem;
+    }
+    
+    /* Gallery adjustments for tablet */
+    .branding-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .branding-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .branding-hero {
+        padding: 100px 3rem 4rem;
+    }
+    
+    .hero-container {
+        max-width: 1000px;
+    }
+    
+    .branding-why,
+    .branding-gallery-section,
+    .branding-contact {
+        padding: 8rem 3rem;
+    }
+}
