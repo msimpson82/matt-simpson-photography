@@ -60,53 +60,21 @@
         <div class="galleries-title">Featured Projects</div>
     </div>
 
+    {{ $featured := where (where site.RegularPages "Section" "projects") "Params.homepage_featured" true }}
+    {{ $sorted := sort $featured "Params.homepage_order" }}
+    {{ range $sorted }}
     <div class="gal-item">
         <div class="gal-photo">
-            <img src="/images/storyfest-louisville-event-coverage.jpg" alt="Storyfest Louisville event photography — keynote speaker at storytelling festival" loading="lazy">
+            <img src="/images/{{ .Params.hero_image }}" alt="{{ .Title }} — {{ .Params.project_type }} Louisville KY" loading="lazy">
         </div>
         <div class="gal-content">
-            <div class="gal-tag">Event Photography</div>
-            <div class="gal-name">Storyfest Louisville</div>
-            <p class="gal-desc">Full event coverage for Louisville's premier storytelling festival. Live performances, audience engagement, and behind-the-scenes moments captured across a multi-day event.</p>
-            <a href="/projects/storyfest-louisville/" class="gal-btn">View Full Gallery</a>
+            <div class="gal-tag">{{ .Params.project_type }}</div>
+            <div class="gal-name">{{ .Title }}</div>
+            <p class="gal-desc">{{ .Params.homepage_description }}</p>
+            <a href="{{ .RelPermalink }}" class="gal-btn">View Full Gallery</a>
         </div>
     </div>
-
-    <div class="gal-item">
-        <div class="gal-photo">
-            <img src="/images/talespin-ale-fest-louisville-photography.jpg" alt="Talespin Ale Fest Louisville — craft beer festival event photography" loading="lazy">
-        </div>
-        <div class="gal-content">
-            <div class="gal-tag">Event Photography</div>
-            <div class="gal-name">Talespin Ale Fest</div>
-            <p class="gal-desc">Event photography for one of Louisville's celebrated craft beer festivals. Vendor interactions, live entertainment, and the energy of a community gathering.</p>
-            <a href="/projects/talespin-ale-fest/" class="gal-btn">View Full Gallery</a>
-        </div>
-    </div>
-
-    <div class="gal-item">
-        <div class="gal-photo">
-            <img src="/images/the-perfumery-product-photography-louisville.jpg" alt="The Perfumery Louisville — artisan fragrance product and lifestyle photography" loading="lazy">
-        </div>
-        <div class="gal-content">
-            <div class="gal-tag">Commercial Photography</div>
-            <div class="gal-name">The Perfumery</div>
-            <p class="gal-desc">Product and lifestyle photography for an artisanal fragrance company. Elevated brand imagery showcasing the craft, the product, and the people behind it.</p>
-            <a href="/projects/the-perfumery/" class="gal-btn">View Full Gallery</a>
-        </div>
-    </div>
-
-    <div class="gal-item">
-        <div class="gal-photo">
-            <img src="/images/current812-apartment-brand-photography-jeffersonville.jpg" alt="Current812 Jeffersonville IN — luxury apartment brand photography and lifestyle imagery" loading="lazy">
-        </div>
-        <div class="gal-content">
-            <div class="gal-tag">Commercial Photography</div>
-            <div class="gal-name">Current812</div>
-            <p class="gal-desc">Brand photography for a luxury apartment complex in Jeffersonville, Indiana. Interior, exterior, and lifestyle shots used across the property's website and marketing materials.</p>
-            <a href="/projects/current812/" class="gal-btn">View Full Gallery</a>
-        </div>
-    </div>
+    {{ end }}
 </section>
 
 <!-- Testimonial Band -->
