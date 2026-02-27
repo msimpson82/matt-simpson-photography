@@ -1,6 +1,7 @@
 ---
-description: "Professional headshot photography in Louisville, KY. Corporate headshots, LinkedIn photos, and personal branding portraits that make a lasting impression."
-title: "Professional Headshots"
+title: "Headshot Photographer Louisville KY"
+description: "Professional headshot photographer in Louisville, KY. Corporate headshots, LinkedIn photos, actor headshots, and team portraits. Natural light studio in Germantown. Book your session today."
 layout: "headshots"
-body_class: "secondary-page"
+url: "/headshot-photographer-louisville-ky/"
+body_class: "page-headshots"
 ---

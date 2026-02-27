@@ -1,292 +1,252 @@
+{{ define "head" }}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {"@type":"Question","name":"How far in advance should I book event photography?","acceptedAnswer":{"@type":"Answer","text":"As early as possible. For large events, conferences, and festivals, I recommend reaching out at least 4 to 6 weeks ahead. For smaller events, 2 weeks is usually fine, but the sooner you lock it in, the better."}},
+        {"@type":"Question","name":"How long will you be at my event?","acceptedAnswer":{"@type":"Answer","text":"That depends on the event. Some need 2 hours of coverage, others need a full day. We discuss the schedule beforehand so you get exactly the coverage you need."}},
+        {"@type":"Question","name":"Do you bring your own lighting?","acceptedAnswer":{"@type":"Answer","text":"Yes. I carry professional lighting gear and use it whenever the venue needs it. Convention floors, ballrooms, outdoor evening events — I'm equipped for all of it."}},
+        {"@type":"Question","name":"How many photos will I receive?","acceptedAnswer":{"@type":"Answer","text":"It depends on the length and scale of the event. A 2-hour corporate event might deliver 100 to 200 images. A full-day festival could be 500 or more. Every image is edited and ready to use."}},
+        {"@type":"Question","name":"Can I use the photos for marketing and social media?","acceptedAnswer":{"@type":"Answer","text":"Yes. You receive full usage rights for all delivered images. Use them on your website, social media, printed materials, and future event promotions."}},
+        {"@type":"Question","name":"Do you shoot video at events?","acceptedAnswer":{"@type":"Answer","text":"My focus is photography. If you need video, I can recommend trusted videographers in Louisville who I've worked alongside at events."}},
+        {"@type":"Question","name":"What does event photography cost?","acceptedAnswer":{"@type":"Answer","text":"Pricing depends on the type of event, duration, and deliverables. Reach out through the contact form for a quote tailored to your event."}},
+        {"@type":"Question","name":"Where do you cover events?","acceptedAnswer":{"@type":"Answer","text":"I cover events throughout Louisville, KY, Southern Indiana (Jeffersonville, New Albany, Clarksville), Lexington, KY, and surrounding areas within about 60 miles."}}
+    ]
+}
+</script>
+{{ end }}
+
 {{ define "main" }}
-    <!-- Events Hero Section -->
-    <section class="events-hero" id="events-hero">
-        <div class="hero-container">
-            <div class="events-hero-content">
-                <h1 class="events-hero-title">
-                    <span class="hero-line">Capture the Energy.</span>
-                    <span class="hero-line">Share the Story.</span>
-                </h1>
-                <p class="events-hero-subtitle">
-                    Professional event photography in Louisville, KY and Southern Indiana that brings your moments to life and makes everyone wish they were there.
-                </p>
-                <div class="events-hero-buttons">
-                    <a href="#contact" class="cta-button primary">Book Your Event</a>
-                    <a href="#gallery" class="cta-button secondary">View Gallery</a>
-                </div>
-            </div>
-            <div class="events-hero-image">
-                <img src="/images/event2.jpg" alt="Professional Event Photography">
-            </div>
-        </div>
-    </section>
 
-    <!-- Why Events Section -->
-    <section class="events-why">
-        <div class="events-container">
-            <div class="events-content-wrapper">
-                <h2 class="events-section-title">Why I Love Event Photography</h2>
-                <div class="events-text-content">
-                    <p class="events-paragraph">
-                        I love to shoot events. I love meeting new people, being part of the energy, capturing moments, using flash, and seeing people smile. From candids to posed group shots, there are just so many opportunities to get interesting shots when covering an event.
-                    </p>
-                    <p class="events-paragraph">
-                        Event photography is incredibly important for marketing your NEXT event. Folks who didn't attend will see all the fun and get that unmistakable FOMO. Your websites will look sharp, your social media will pop, and we'll make sure everyone looks like they had the time of their lives.
-                    </p>
-                    <p class="events-paragraph emphasis">
-                        If you have an event coming up, you need professional photography. Please use the form below and let's talk!
-                    </p>
-                </div>
-            </div>
+<!-- Hero -->
+<section class="sp-hero">
+    <div class="sp-hero-photo">
+        <img src="/images/event2.jpg" alt="Event photography Louisville KY — corporate events and festivals">
+        <div class="sp-hero-photo-tag">Now Booking</div>
+    </div>
+    <div class="sp-hero-content">
+        <div class="sp-hero-eyebrow">Louisville Event Photographer</div>
+        <h1>Event Photography<br>That Markets <span class="serif">Your Next One.</span></h1>
+        <p class="sp-hero-p">Corporate events, conferences, festivals, and galas. Professional event photography in Louisville, Southern Indiana, and Lexington.</p>
+        <div class="sp-hero-actions">
+            <a href="#contact" class="btn-primary">Book Event Coverage</a>
+            <a href="#gallery" class="btn-outline">See the Work</a>
         </div>
-    </section>
+        <div class="sp-hero-note">Louisville, KY</div>
+    </div>
+</section>
 
-    <!-- Events Gallery -->
-    <section class="events-gallery-section" id="gallery">
-        <div class="events-gallery-container">
-            <h2 class="gallery-title">Event Photography Portfolio</h2>
-            
-            <div class="events-grid">
-                <div class="event-item" data-index="0">
-                    <img src="/images/event1.jpg" alt="Event Photography 1">
-                </div>
-                <div class="event-item" data-index="1">
-                    <img src="/images/event2.jpg" alt="Event Photography 2">
-                </div>
-                <div class="event-item" data-index="2">
-                    <img src="/images/event3.jpg" alt="Event Photography 3">
-                </div>
-                <div class="event-item" data-index="3">
-                    <img src="/images/event4.jpg" alt="Event Photography 4">
-                </div>
-                <div class="event-item" data-index="4">
-                    <img src="/images/event5.jpg" alt="Event Photography 5">
-                </div>
-                <div class="event-item" data-index="5">
-                    <img src="/images/event6.jpg" alt="Event Photography 6">
-                </div>
-                <div class="event-item" data-index="6">
-                    <img src="/images/event7.jpg" alt="Event Photography 7">
-                </div>
-                <div class="event-item" data-index="7">
-                    <img src="/images/event8.jpg" alt="Event Photography 8">
-                </div>
-                <div class="event-item" data-index="8">
-                    <img src="/images/event9.jpg" alt="Event Photography 9">
-                </div>
-                <div class="event-item" data-index="9">
-                    <img src="/images/event10.jpg" alt="Event Photography 10">
-                </div>
-                <div class="event-item" data-index="10">
-                    <img src="/images/event11.jpg" alt="Event Photography 11">
-                </div>
-                <div class="event-item" data-index="11">
-                    <img src="/images/event12.jpg" alt="Event Photography 12">
-                </div>
-                <div class="event-item" data-index="12">
-                    <img src="/images/event13.jpg" alt="Event Photography 13">
-                </div>
-                <div class="event-item" data-index="13">
-                    <img src="/images/event14.jpg" alt="Event Photography 14">
-                </div>
-                <div class="event-item" data-index="14">
-                    <img src="/images/event15.jpg" alt="Event Photography 15">
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Teal Band -->
+<div class="band">
+    <div class="band-track">
+        <span class="band-word">Festivals</span>
+        <span class="band-word">Corporate Events</span>
+        <span class="band-word">Conferences</span>
+        <span class="band-word">Galas</span>
+        <span class="band-word">Fundraisers</span>
+        <span class="band-word">Louisville, KY</span>
+        <span class="band-word">Festivals</span>
+        <span class="band-word">Corporate Events</span>
+        <span class="band-word">Conferences</span>
+        <span class="band-word">Galas</span>
+        <span class="band-word">Fundraisers</span>
+        <span class="band-word">Louisville, KY</span>
+    </div>
+</div>
 
-    <!-- Contact Section -->
-    <section class="events-contact" id="contact">
-        <div class="contact-container">
-            <h2 class="contact-title">Book Your Event Photography</h2>
-            <p class="contact-subtitle">
-                Let's capture the energy and excitement of your next event!
-            </p>
-            
-            <form class="event-form" name="event-contact" method="POST" data-netlify="true">
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" class="form-input" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-input" name="email" placeholder="Your Email" required>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="tel" class="form-input" name="phone" placeholder="Phone Number">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-input" name="event-date" placeholder="Event Date">
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" class="form-input" name="event-type" placeholder="Type of Event">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-input" name="event-location" placeholder="Event Location">
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <textarea class="form-textarea" name="message" placeholder="Tell me about your event..." rows="4"></textarea>
-                </div>
-                
-                <button type="submit" class="form-submit">Get Started</button>
-                <input type="hidden" name="form-name" value="event-contact">
-            </form>
+<!-- Statement -->
+<section class="statement">
+    <div class="statement-inner">
+        <p class="statement-text">Event photography is not just about documenting what happened. It's about <strong>marketing what happens next.</strong> One event, shot right, gives you months of marketing content.</p>
+        <div class="statement-line"></div>
+    </div>
+</section>
+
+<!-- Why I Love Event Photography -->
+<section class="sp-split">
+    <div class="sp-split-content">
+        <div class="sp-split-label">Why I Shoot Events</div>
+        <h2 class="sp-split-title">Energy, People, <span class="serif">&amp; Moments.</span></h2>
+        <p class="sp-split-text">I love shooting events. I love meeting new people, being part of the energy, capturing moments, working the flash, and seeing people smile. From candids to posed group shots, there are endless opportunities to get interesting images when you're covering a live event.</p>
+        <p class="sp-split-text">The people who didn't attend will see your photos and feel that unmistakable FOMO. Your website will look sharp, your social media will pop, and everyone in those photos will look like they had the time of their lives.</p>
+    </div>
+    <div class="sp-split-photo">
+        <img src="/images/event5.jpg" alt="Louisville event photographer — festivals and corporate events">
+    </div>
+</section>
+
+<!-- Gallery -->
+<section class="sp-gallery" id="gallery">
+    <div class="sp-gallery-header">
+        <div>
+            <div class="sp-gallery-label">Portfolio</div>
+            <div class="sp-gallery-title">The work speaks.</div>
         </div>
-    </section>
-    
-    <!-- Events Lightbox -->
-    <div class="events-lightbox" id="eventsLightbox">
-        <div class="lightbox-container">
-            <div class="lightbox-image-area">
-                <img src="" alt="" id="lightboxImage">
-                <div class="lightbox-nav lightbox-prev" id="lightboxPrev">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="15,18 9,12 15,6"></polyline>
-                    </svg>
-                </div>
-                <div class="lightbox-nav lightbox-next" id="lightboxNext">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="9,18 15,12 9,6"></polyline>
-                    </svg>
+    </div>
+    <div class="sp-gallery-grid">
+        <div class="sp-gallery-item" data-index="0"><img src="/images/event1.jpg" alt="Event photographer Louisville KY"></div>
+        <div class="sp-gallery-item" data-index="1"><img src="/images/event3.jpg" alt="Corporate event photography Louisville"></div>
+        <div class="sp-gallery-item" data-index="2"><img src="/images/event4.jpg" alt="Festival photographer Louisville Kentucky"></div>
+        <div class="sp-gallery-item" data-index="3"><img src="/images/event6.jpg" alt="Louisville event coverage"></div>
+        <div class="sp-gallery-item" data-index="4"><img src="/images/event7.jpg" alt="Conference photographer Louisville KY"></div>
+        <div class="sp-gallery-item" data-index="5"><img src="/images/event8.jpg" alt="Gala photographer Louisville Kentucky"></div>
+        <div class="sp-gallery-item" data-index="6"><img src="/images/event9.jpg" alt="Louisville corporate event photography"></div>
+        <div class="sp-gallery-item" data-index="7"><img src="/images/event10.jpg" alt="Event photographer Southern Indiana"></div>
+    </div>
+</section>
+
+<!-- What I Shoot (Bebas rows on dark) -->
+<section class="sp-services">
+    <div class="sp-services-label">What I Shoot</div>
+    <div class="svc-row">
+        <div class="svc-num">01</div>
+        <div class="svc-name">Festivals</div>
+        <div class="svc-desc">Beer fests, music events, food festivals, community celebrations. I know how to capture the energy of a crowd and the small moments that tell the real story.</div>
+        <div class="svc-arrow">&rarr;</div>
+    </div>
+    <div class="svc-row">
+        <div class="svc-num">02</div>
+        <div class="svc-name">Corporate Events</div>
+        <div class="svc-desc">Company parties, award ceremonies, product launches, and milestone events. The handshakes, the keynotes, the candids, and the details.</div>
+        <div class="svc-arrow">&rarr;</div>
+    </div>
+    <div class="svc-row">
+        <div class="svc-num">03</div>
+        <div class="svc-name">Conferences</div>
+        <div class="svc-desc">Keynote speakers, breakout sessions, networking moments, sponsor activations, and expo floors. Whether it's the KICC or a hotel ballroom.</div>
+        <div class="svc-arrow">&rarr;</div>
+    </div>
+    <div class="svc-row">
+        <div class="svc-num">04</div>
+        <div class="svc-name">Galas &amp; Fundraisers</div>
+        <div class="svc-desc">Black-tie events, charity galas, and fundraising dinners. I capture the elegance, the energy, and the people who make these events happen.</div>
+        <div class="svc-arrow">&rarr;</div>
+    </div>
+</section>
+
+<!-- My Approach -->
+<section class="sp-split reverse">
+    <div class="sp-split-photo">
+        <img src="/images/event11.jpg" alt="Event photography approach — Louisville KY photographer">
+    </div>
+    <div class="sp-split-content">
+        <div class="sp-split-label">My Approach</div>
+        <h2 class="sp-split-title">Images You Can <span class="serif">Actually Use.</span></h2>
+        <p class="sp-split-text">I shoot events with one goal: give you images you can actually use. Not just a folder of 500 photos that sit on a hard drive. I'm thinking about your website, your social media, your next event's marketing materials, and your brand story while I'm shooting.</p>
+        <p class="sp-split-text">That means a mix of <strong>wide shots</strong> that show the scale and energy, <strong>tight candids</strong> that show real emotion, <strong>detail shots</strong> of the setup and production, and <strong>clean group shots</strong> when you need them.</p>
+        <p class="sp-split-text">I work in any lighting condition. Ballrooms, outdoor festivals, convention floors. I bring my own lighting when needed and I adapt fast.</p>
+    </div>
+</section>
+
+<!-- Events I've Covered -->
+<section class="sp-clients">
+    <div class="sp-clients-inner">
+        <div class="section-label">Track Record</div>
+        <div class="sp-clients-title">Events I've Covered</div>
+        <ul class="sp-clients-list">
+            <li>Louisville Farm Machinery Show</li>
+            <li>Taste of Louisville</li>
+            <li>Talespin Ale Fest</li>
+            <li>Waterfront Wednesday</li>
+            <li>Louisville's Fourth of July</li>
+            <li>Storyfest Louisville</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Process -->
+<section class="sp-process">
+    <div class="sp-process-inner">
+        <div class="sp-process-header">
+            <div class="sp-process-label">The Experience</div>
+            <div class="sp-process-title">What You Get</div>
+        </div>
+        <div class="proc-steps">
+            <div class="proc-step">
+                <div class="proc-num">01</div>
+                <div>
+                    <div class="proc-title">Before the Event</div>
+                    <div class="proc-text">We talk through your event schedule, the key moments you need captured, any VIPs or speakers to watch for, and the shots that matter most to your team. I come prepared.</div>
                 </div>
             </div>
-            <div class="lightbox-sidebar">
-                <div class="lightbox-header">
-                    <div class="lightbox-counter">
-                        <span id="currentImage">1</span> / <span id="totalImages">15</span>
-                    </div>
-                    <div class="lightbox-close" id="lightboxClose">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </div>
+            <div class="proc-step">
+                <div class="proc-num">02</div>
+                <div>
+                    <div class="proc-title">During the Event</div>
+                    <div class="proc-text">I show up on time, I stay for the duration we agreed on, and I work the entire room. I'm not standing in a corner waiting for something to happen. I'm moving, anticipating moments, and making sure nothing gets missed.</div>
                 </div>
-                <div class="lightbox-content">
-                    <h3 class="lightbox-title">Event Photography Gallery</h3>
-                    <p class="lightbox-description">
-                        Professional event photography capturing the energy, excitement, and memorable moments of conferences, celebrations, corporate events, and special occasions throughout Louisville and beyond.
-                    </p>
+            </div>
+            <div class="proc-step">
+                <div class="proc-num">03</div>
+                <div>
+                    <div class="proc-title">After the Event</div>
+                    <div class="proc-text">I deliver a curated gallery of edited images. Every photo is color-corrected, retouched where needed, and delivered in high-res and web-ready formats. Turnaround time is discussed at booking.</div>
                 </div>
             </div>
         </div>
     </div>
+</section>
+
+<!-- FAQ -->
+<section class="sp-faq">
+    <div class="sp-faq-inner">
+        <div class="sp-faq-header">
+            <div class="section-label">Common Questions</div>
+            <div class="sp-faq-title">FAQ</div>
+        </div>
+        <div class="faq-item"><div class="faq-question">How far in advance should I book event photography?</div><div class="faq-answer"><p>As early as possible. For large events, conferences, and festivals, I recommend reaching out at least 4 to 6 weeks ahead. For smaller events, 2 weeks is usually fine, but the sooner you lock it in, the better.</p></div></div>
+        <div class="faq-item"><div class="faq-question">How long will you be at my event?</div><div class="faq-answer"><p>That depends on the event. Some need 2 hours of coverage, others need a full day. We discuss the schedule beforehand so you get exactly the coverage you need.</p></div></div>
+        <div class="faq-item"><div class="faq-question">Do you bring your own lighting?</div><div class="faq-answer"><p>Yes. I carry professional lighting gear and use it whenever the venue needs it. Convention floors, ballrooms, outdoor evening events — I'm equipped for all of it.</p></div></div>
+        <div class="faq-item"><div class="faq-question">How many photos will I receive?</div><div class="faq-answer"><p>It depends on the length and scale of the event. A 2-hour corporate event might deliver 100 to 200 images. A full-day festival could be 500 or more. Every image is edited and ready to use.</p></div></div>
+        <div class="faq-item"><div class="faq-question">Can I use the photos for marketing and social media?</div><div class="faq-answer"><p>Yes. You receive full usage rights for all delivered images. Use them on your website, social media, printed materials, and future event promotions.</p></div></div>
+        <div class="faq-item"><div class="faq-question">Do you shoot video at events?</div><div class="faq-answer"><p>My focus is photography. If you need video, I can recommend trusted videographers in Louisville who I've worked alongside at events.</p></div></div>
+        <div class="faq-item"><div class="faq-question">What does event photography cost?</div><div class="faq-answer"><p>Pricing depends on the type of event, duration, and deliverables. Reach out through the contact form for a quote tailored to your event.</p></div></div>
+        <div class="faq-item"><div class="faq-question">Where do you cover events?</div><div class="faq-answer"><p>I cover events throughout Louisville, KY, Southern Indiana (Jeffersonville, New Albany, Clarksville), Lexington, KY, and surrounding areas within about 60 miles.</p></div></div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="contact" id="contact">
+    <div class="contact-label">Book Event Photography in Louisville</div>
+    <div class="contact-title">Let's Cover Your Event.</div>
+    <p class="contact-sub">Have an event coming up? Fill out the form below and let's talk. I cover corporate events, festivals, conferences, and galas throughout Louisville, Southern Indiana, and Lexington.</p>
+    <form class="contact-form" name="event-contact" method="POST" data-netlify="true">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="event-type" placeholder="Type of Event">
+        <input type="text" name="event-date" placeholder="Event Date">
+        <textarea name="message" placeholder="Tell me about your event..." required></textarea>
+        <button type="submit" class="contact-submit">Get Started</button>
+        <input type="hidden" name="form-name" value="event-contact">
+    </form>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <div class="lightbox-close" id="lightboxClose"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
+    <div class="lightbox-nav lightbox-prev" id="lightboxPrev"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15,18 9,12 15,6"></polyline></svg></div>
+    <img class="lightbox-image" id="lightboxImage" src="" alt="">
+    <div class="lightbox-nav lightbox-next" id="lightboxNext"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"></polyline></svg></div>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
 {{ end }}
 
 {{ define "scripts" }}
-    <script>
-        // Events Gallery Lightbox Functionality
-        const eventItems = document.querySelectorAll('.event-item');
-        const lightbox = document.getElementById('eventsLightbox');
-        const lightboxImage = document.getElementById('lightboxImage');
-        const lightboxClose = document.getElementById('lightboxClose');
-        const lightboxPrev = document.getElementById('lightboxPrev');
-        const lightboxNext = document.getElementById('lightboxNext');
-        const currentImageSpan = document.getElementById('currentImage');
-        const totalImagesSpan = document.getElementById('totalImages');
-        
-        let currentIndex = 0;
-        const totalImages = 15;
-        
-        // Image data
-        const eventImages = [
-            { src: '/images/event1.jpg', alt: 'Event Photography 1' },
-            { src: '/images/event2.jpg', alt: 'Event Photography 2' },
-            { src: '/images/event3.jpg', alt: 'Event Photography 3' },
-            { src: '/images/event4.jpg', alt: 'Event Photography 4' },
-            { src: '/images/event5.jpg', alt: 'Event Photography 5' },
-            { src: '/images/event6.jpg', alt: 'Event Photography 6' },
-            { src: '/images/event7.jpg', alt: 'Event Photography 7' },
-            { src: '/images/event8.jpg', alt: 'Event Photography 8' },
-            { src: '/images/event9.jpg', alt: 'Event Photography 9' },
-            { src: '/images/event10.jpg', alt: 'Event Photography 10' },
-            { src: '/images/event11.jpg', alt: 'Event Photography 11' },
-            { src: '/images/event12.jpg', alt: 'Event Photography 12' },
-            { src: '/images/event13.jpg', alt: 'Event Photography 13' },
-            { src: '/images/event14.jpg', alt: 'Event Photography 14' },
-            { src: '/images/event15.jpg', alt: 'Event Photography 15' }
-        ];
-        
-        // Open lightbox
-        eventItems.forEach((item, index) => {
-            item.addEventListener('click', () => {
-                currentIndex = index;
-                updateLightboxImage();
-                lightbox.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-        });
-        
-        // Close lightbox
-        lightboxClose.addEventListener('click', closeLightbox);
-        
-        // Close on background click (but not on image or sidebar)
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                closeLightbox();
-            }
-        });
-        
-        // Prevent closing when clicking on image area content
-        document.querySelector('.lightbox-image-area').addEventListener('click', (e) => {
-            if (e.target.classList.contains('lightbox-image-area')) {
-                closeLightbox();
-            }
-        });
-        
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (!lightbox.classList.contains('active')) return;
-            
-            if (e.key === 'Escape') {
-                closeLightbox();
-            } else if (e.key === 'ArrowLeft') {
-                navigatePrev();
-            } else if (e.key === 'ArrowRight') {
-                navigateNext();
-            }
-        });
-        
-        // Previous image
-        lightboxPrev.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navigatePrev();
-        });
-        
-        // Next image
-        lightboxNext.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navigateNext();
-        });
-        
-        function navigatePrev() {
-            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-            updateLightboxImage();
-        }
-        
-        function navigateNext() {
-            currentIndex = (currentIndex + 1) % totalImages;
-            updateLightboxImage();
-        }
-        
-        function updateLightboxImage() {
-            const image = eventImages[currentIndex];
-            lightboxImage.src = image.src;
-            lightboxImage.alt = image.alt;
-            currentImageSpan.textContent = currentIndex + 1;
-        }
-        
-        function closeLightbox() {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    </script>
+<script>
+(function(){
+    document.querySelectorAll('.faq-question').forEach(function(q){ q.addEventListener('click', function(){ this.parentElement.classList.toggle('open'); }); });
+    var items=document.querySelectorAll('.sp-gallery-item'),lightbox=document.getElementById('lightbox'),lbImg=document.getElementById('lightboxImage'),lbCounter=document.getElementById('lightboxCounter'),idx=0,images=[];
+    items.forEach(function(item){var img=item.querySelector('img');images.push({src:img.src,alt:img.alt});});
+    function showLb(i){idx=i;lbImg.src=images[idx].src;lbImg.alt=images[idx].alt;lbCounter.textContent=(idx+1)+' / '+images.length;lightbox.classList.add('active');document.body.style.overflow='hidden';}
+    function closeLb(){lightbox.classList.remove('active');document.body.style.overflow='';}
+    items.forEach(function(item,i){item.addEventListener('click',function(){showLb(i);});});
+    document.getElementById('lightboxClose').addEventListener('click',closeLb);
+    lightbox.addEventListener('click',function(e){if(e.target===lightbox)closeLb();});
+    document.getElementById('lightboxPrev').addEventListener('click',function(e){e.stopPropagation();showLb((idx-1+images.length)%images.length);});
+    document.getElementById('lightboxNext').addEventListener('click',function(e){e.stopPropagation();showLb((idx+1)%images.length);});
+    document.addEventListener('keydown',function(e){if(!lightbox.classList.contains('active'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')showLb((idx-1+images.length)%images.length);if(e.key==='ArrowRight')showLb((idx+1)%images.length);});
+})();
+</script>
 {{ end }}

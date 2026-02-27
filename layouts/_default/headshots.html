@@ -1,340 +1,395 @@
+{{ define "head" }}
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How long does a headshot session take?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most individual sessions run 30 to 60 minutes depending on how many looks we are going for. Team sessions vary based on group size, but I keep things moving."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Where is your studio?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "My studio is in the Germantown neighborhood of Louisville, KY. It's a natural light space that's comfortable, relaxed, and built specifically for portrait and headshot work."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do you travel for headshots?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. I regularly shoot on-location throughout Louisville, Southern Indiana (Jeffersonville, New Albany, Clarksville), and Lexington, KY. I will come to your office or any location that works for your team."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What should I wear to my headshot session?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Solid colors work best. Navy, charcoal, black, white, and deep greens are safe picks. Bring 2 to 3 options. Avoid busy patterns, visible logos, and anything that doesn't fit well. Full wardrobe guidance is provided after booking."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How many final images do I receive?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "This depends on your session type. We will discuss deliverables at booking so you know exactly what to expect."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do you retouch headshots?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Every headshot includes professional retouching. I keep it clean and natural. You will look like the best version of yourself, not a different person."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How quickly will I get my photos?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Turnaround time is discussed at booking and depends on the session scope. I respect deadlines and will always give you a clear timeline upfront."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How much do headshots cost?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pricing varies based on session type (individual, team, on-location). Reach out through the contact form or call to get a quote for your specific needs."
+            }
+        }
+    ]
+}
+</script>
+{{ end }}
+
 {{ define "main" }}
-    <!-- Headshots Hero Section -->
-    <section class="headshots-hero" id="headshots-hero">
-        <div class="hero-container">
-            <div class="headshots-hero-content">
-                <h1 class="headshots-hero-title">
-                    <span class="hero-line">Less Awkward.</span>
-                    <span class="hero-line">More Awesome.</span>
-                </h1>
-                <p class="headshots-hero-subtitle">
-                    Professional headshots in Louisville, KY that open doors, build trust, and make you unforgettable.
-                </p>
-                <div class="headshots-hero-buttons">
-                    <a href="#contact" class="cta-button primary">Book Your Session</a>
-                    <a href="#services" class="cta-button secondary">How I Work</a>
-                </div>
-            </div>
-            <div class="headshots-hero-image">
-                <img src="/images/headshot.jpg" alt="Professional headshot photography in Louisville KY by Matt Simpson">
-            </div>
-        </div>
-    </section>
 
-    <!-- Impact Section (formerly Red Container) -->
-    <section class="red-container-section">
-        <div class="red-container">
-            <div class="red-content-wrapper">
-                <div class="red-inner-container">
-                    <h2 class="red-container-title">A Single Headshot Can Make A <strong>Huge Impact.</strong></h2>
-                </div>
-                <div class="red-paragraph-container">
-                    <p class="red-paragraph-text">
-                        Like it or not, we're in the swipe-right era, where we navigate our professional and social landscapes by being seen first online, long before meeting in person.
-                    </p>
-                    <p class="red-paragraph-text">
-                        Whether it's LinkedIn, email signatures, online bios, or dating profiles, we are at the mercy of the mobile snap judgment. So put on a happy face and get ready for your close-up. It may be the first (and last) impression you can make.
-                    </p>
-                </div>
-            </div>
+<!-- Hero -->
+<section class="sp-hero">
+    <div class="sp-hero-photo">
+        <img src="/images/headshot.jpg" alt="Professional headshot photography Louisville KY">
+        <div class="sp-hero-photo-tag">Now Booking</div>
+    </div>
+    <div class="sp-hero-content">
+        <div class="sp-hero-eyebrow">Louisville Headshot Photographer</div>
+        <h1>Professional Headshots<br>That Actually <span class="serif">Work.</span></h1>
+        <p class="sp-hero-p">Corporate headshots, LinkedIn portraits, actor headshots, and team photos. Shot in my natural light studio in Germantown, Louisville.</p>
+        <div class="sp-hero-actions">
+            <a href="#contact" class="btn-primary">Book a Session</a>
+            <a href="#gallery" class="btn-outline">See the Work</a>
         </div>
-    </section>
+        <div class="sp-hero-note">Louisville, KY</div>
+    </div>
+</section>
 
-    <!-- Goals Section -->
-    <section class="headshots-goals">
-        <div class="goals-container">
-            <h2 class="goals-title">
-                My <span class="highlight">Two Goals</span> For
-                Every Headshot
-            </h2>
-            <p class="goals-intro">
-                Personally, I like to identify two key attributes I want my professional headshots to convey for clients.
-            </p>
-            
-            <div class="goals-grid">
-                <div class="goal-card">
-                    <div class="goal-number">1</div>
-                    <h3 class="goal-heading">Confidence</h3>
-                    <p class="goal-description">
-                        Your headshot should radiate competence and self-assurance. This is someone who can get the job done.
-                    </p>
-                </div>
-                <div class="goal-card">
-                    <div class="goal-number">2</div>
-                    <h3 class="goal-heading">Approachability</h3>
-                    <p class="goal-description">
-                        You want to appear warm and accessible. This is someone I can talk to and work with.
-                    </p>
-                </div>
-            </div>
-            
-            <p class="goals-conclusion">
-                Call it my North Star of headshot photography. When your potential client or hiring manager sees your profile picture, I want their first impression to be: a) this is someone I can talk to, and b) this is someone who can get the job done. With those two pillars guiding our shoot, I am confident we can leave the session with something that will empower you and leave you feeling ready to land that next job.
-            </p>
-        </div>
-    </section>
+<!-- Teal Band -->
+<div class="band">
+    <div class="band-track">
+        <span class="band-word">Headshots</span>
+        <span class="band-word">Corporate Teams</span>
+        <span class="band-word">LinkedIn</span>
+        <span class="band-word">Executive Portraits</span>
+        <span class="band-word">Personal Branding</span>
+        <span class="band-word">Louisville, KY</span>
+        <span class="band-word">Headshots</span>
+        <span class="band-word">Corporate Teams</span>
+        <span class="band-word">LinkedIn</span>
+        <span class="band-word">Executive Portraits</span>
+        <span class="band-word">Personal Branding</span>
+        <span class="band-word">Louisville, KY</span>
+    </div>
+</div>
 
-    <!-- Services Section -->
-    <section class="headshots-services" id="services">
-        <div class="services-container">
-            <h2 class="services-title">How I Work</h2>
-            
-            <div class="service-options">
-                <div class="service-card">
-                    <div class="service-icon">📸</div>
-                    <h3>Studio Sessions</h3>
-                    <p>Professional headshots in my comfortable Germantown studio in Louisville, KY with controlled lighting and multiple backdrop options.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">🏢</div>
-                    <h3>On-Location</h3>
-                    <p>I'll come to your office or preferred location for headshots in your professional environment.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">👥</div>
-                    <h3>Volume Corporate</h3>
-                    <p>Efficient on-site sessions for your entire team. I'll knock out the whole company in one organized shoot.</p>
-                </div>
-            </div>
-            
-            <!-- Headshots Gallery -->
-            <div class="headshots-gallery">
-                <div class="headshots-grid">
-                    <div class="headshot-item" data-index="0">
-                        <img src="/images/hs1.jpg" alt="Professional Headshot 1">
-                    </div>
-                    <div class="headshot-item" data-index="1">
-                        <img src="/images/hs2.jpg" alt="Professional Headshot 2">
-                    </div>
-                    <div class="headshot-item" data-index="2">
-                        <img src="/images/hs3.jpg" alt="Professional Headshot 3">
-                    </div>
-                    <div class="headshot-item" data-index="3">
-                        <img src="/images/hs4.jpg" alt="Professional Headshot 4">
-                    </div>
-                    <div class="headshot-item" data-index="4">
-                        <img src="/images/hs5.jpg" alt="Professional Headshot 5">
-                    </div>
-                    <div class="headshot-item" data-index="5">
-                        <img src="/images/hs6.jpg" alt="Professional Headshot 6">
-                    </div>
-                    <div class="headshot-item" data-index="6">
-                        <img src="/images/hs7.jpg" alt="Professional Headshot 7">
-                    </div>
-                    <div class="headshot-item" data-index="7">
-                        <img src="/images/hs9.jpg" alt="Professional Headshot 8">
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Statement -->
+<section class="statement">
+    <div class="statement-inner">
+        <p class="statement-text">Whether it's LinkedIn, email signatures, online bios, or dating profiles, we are at the mercy of the <strong>mobile snap judgment.</strong> So put on a happy face and get ready for your close-up. It may be the first (and last) impression you can make.</p>
+        <div class="statement-line"></div>
+    </div>
+</section>
 
-    <!-- Studio Section -->
-    <section class="headshots-studio">
-        <div class="studio-container">
-            <div class="studio-image">
-                <img src="/images/fam.jpg" alt="Matt Simpson in studio">
-            </div>
-            <div class="studio-content">
-                <h2 class="studio-title">Quick, Painless, Professional</h2>
-                <p class="studio-text">
-                    So, what's stopping you from booking a headshot session with me? I'm guessing your current headshot is pretty old! Let's get it updated!
-                </p>
-                <p class="studio-text">
-                    I make shooting your new headshot quick and painless with a replicable system that gives me consistent, high-quality results, all from the comfort of my photography studio in historic Germantown, Louisville, KY.
-                </p>
-                <p class="studio-text emphasis">
-                    I love what I do, and you'll love the results. So let's do this!
-                </p>
-                <a href="#contact" class="cta-button primary">Schedule Your Session Today</a>
-            </div>
+<!-- Gallery -->
+<section class="sp-gallery" id="gallery">
+    <div class="sp-gallery-header">
+        <div>
+            <div class="sp-gallery-label">Portfolio</div>
+            <div class="sp-gallery-title">The work speaks.</div>
         </div>
-    </section>
+    </div>
+    <div class="sp-gallery-grid">
+        <div class="sp-gallery-item" data-index="0"><img src="/images/hs1.jpg" alt="Professional headshot photographer Louisville KY"></div>
+        <div class="sp-gallery-item" data-index="1"><img src="/images/hs2.jpg" alt="Corporate headshot photography Louisville Kentucky"></div>
+        <div class="sp-gallery-item" data-index="2"><img src="/images/hs3.jpg" alt="Louisville KY professional headshot session"></div>
+        <div class="sp-gallery-item" data-index="3"><img src="/images/hs4.jpg" alt="Executive headshot photographer Louisville"></div>
+        <div class="sp-gallery-item" data-index="4"><img src="/images/hs5.jpg" alt="LinkedIn headshot photographer Louisville KY"></div>
+        <div class="sp-gallery-item" data-index="5"><img src="/images/hs6.jpg" alt="Business headshot photography Louisville Kentucky"></div>
+        <div class="sp-gallery-item" data-index="6"><img src="/images/hs7.jpg" alt="Professional portrait photographer Louisville KY"></div>
+        <div class="sp-gallery-item" data-index="7"><img src="/images/hs9.jpg" alt="Headshot session Louisville Germantown studio"></div>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section class="headshots-contact" id="contact">
-        <div class="contact-container">
-            <h2 class="contact-title">Book Your Louisville Headshot Session</h2>
-            <p class="contact-subtitle">
-                Use the form below and reach out to schedule your headshot session today!
-            </p>
-            
-            <form class="headshot-form" name="headshot-contact" method="POST" data-netlify="true">
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" class="form-input" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-input" name="email" placeholder="Your Email" required>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="tel" class="form-input" name="phone" placeholder="Phone Number">
-                    </div>
-                    <div class="form-group">
-                        <select class="form-input" name="session-type" required>
-                            <option value="">Select Session Type</option>
-                            <option value="individual-studio">Individual - Studio</option>
-                            <option value="individual-location">Individual - On Location</option>
-                            <option value="corporate-volume">Corporate Volume Session</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <textarea class="form-textarea" name="message" placeholder="Tell me about your headshot needs..." rows="4"></textarea>
-                </div>
-                
-                <button type="submit" class="form-submit">Get Started</button>
-                <input type="hidden" name="form-name" value="headshot-contact">
-            </form>
+<!-- Stats -->
+<div class="stat-row">
+    <div class="stat-card"><div class="stat-num">500+</div><div class="stat-label">Headshots Delivered</div></div>
+    <div class="stat-card"><div class="stat-num">30</div><div class="stat-label">Minute Sessions</div></div>
+    <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">Satisfaction</div></div>
+</div>
+
+<!-- How I Work (Bebas Neue rows on dark) -->
+<section class="sp-services">
+    <div class="sp-services-label">How I Work</div>
+    <div class="svc-row">
+        <div class="svc-num">01</div>
+        <div class="svc-name">Studio Sessions</div>
+        <div class="svc-desc">Professional headshots in my comfortable Germantown studio in Louisville, KY with controlled lighting and multiple backdrop options.</div>
+        <div class="svc-arrow">&rarr;</div>
+    </div>
+    <div class="svc-row">
+        <div class="svc-num">02</div>
+        <div class="svc-name">On-Location</div>
+        <div class="svc-desc">I'll come to your office or preferred location for headshots in your professional environment.</div>
+        <div class="svc-arrow">&rarr;</div>
+    </div>
+    <div class="svc-row">
+        <div class="svc-num">03</div>
+        <div class="svc-name">Volume Corporate</div>
+        <div class="svc-desc">Efficient on-site sessions for your entire team. I'll knock out the whole company in one organized shoot.</div>
+        <div class="svc-arrow">&rarr;</div>
+    </div>
+</section>
+
+<!-- Two Goals -->
+<section class="sp-split">
+    <div class="sp-split-content">
+        <div class="sp-split-label">My Two Goals For Every Headshot</div>
+        <h2 class="sp-split-title">Confidence <span class="serif">&amp; Approachability.</span></h2>
+        <p class="sp-split-text">Personally, I like to identify two key attributes I want my professional headshots to convey for clients.</p>
+        <p class="sp-split-text"><strong>1. Confidence</strong> &mdash; Your headshot should radiate competence and self-assurance. This is someone who can get the job done.</p>
+        <p class="sp-split-text"><strong>2. Approachability</strong> &mdash; You want to appear warm and accessible. This is someone I can talk to and work with.</p>
+        <p class="sp-split-text">Call it my north star. When your potential client or hiring manager sees your profile picture, I want their first impression to be: a) this is someone I can talk to, and b) this is someone who can get the job done. With those two pillars guiding our shoot, I am confident we can leave the session with something that will empower you and leave you feeling ready to land that next job.</p>
+    </div>
+    <div class="sp-split-photo">
+        <img src="/images/kaz.jpg" alt="Louisville KY headshot photographer — confidence and approachability">
+    </div>
+</section>
+
+<!-- Process -->
+<section class="sp-process">
+    <div class="sp-process-inner">
+        <div class="sp-process-header">
+            <div class="sp-process-label">The Experience</div>
+            <div class="sp-process-title">What to Expect</div>
+            <div class="sp-process-sub">It's easier than you think.</div>
         </div>
-    </section>
-    
-    <!-- Headshots Lightbox -->
-    <div class="headshots-lightbox" id="headshotsLightbox">
-        <div class="lightbox-container">
-            <div class="lightbox-image-area">
-                <img src="" alt="" id="lightboxImage">
-                <div class="lightbox-nav lightbox-prev" id="lightboxPrev">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="15,18 9,12 15,6"></polyline>
-                    </svg>
-                </div>
-                <div class="lightbox-nav lightbox-next" id="lightboxNext">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="9,18 15,12 9,6"></polyline>
-                    </svg>
+        <div class="proc-steps">
+            <div class="proc-step">
+                <div class="proc-num">01</div>
+                <div>
+                    <div class="proc-title">Before Your Session</div>
+                    <div class="proc-text">Get a good night's sleep. Spend a few minutes in front of a mirror figuring out which angles you like. If you're getting a haircut, do it 3 to 5 days before the shoot so it looks natural. Moisturize, drink water, and don't overthink it.</div>
                 </div>
             </div>
-            <div class="lightbox-sidebar">
-                <div class="lightbox-header">
-                    <div class="lightbox-counter">
-                        <span id="currentImage">1</span> / <span id="totalImages">9</span>
-                    </div>
-                    <div class="lightbox-close" id="lightboxClose">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </div>
+            <div class="proc-step">
+                <div class="proc-num">02</div>
+                <div>
+                    <div class="proc-title">Wardrobe</div>
+                    <div class="proc-text">Solid colors work best — navy, charcoal, black, white, deep greens. Bring 2 to 3 options. Layers add dimension. Avoid busy patterns, visible logos, and anything that doesn't fit well. Gem tones like emerald, burgundy, and sapphire photograph exceptionally well on everyone.</div>
                 </div>
-                <div class="lightbox-content">
-                    <h3 class="lightbox-title">Professional Headshot Gallery</h3>
-                    <p class="lightbox-description">
-                        Browse through our collection of professional headshots showcasing different styles, lighting setups, and backgrounds. Each image represents the quality and attention to detail you can expect from your session.
-                    </p>
+            </div>
+            <div class="proc-step">
+                <div class="proc-num">03</div>
+                <div>
+                    <div class="proc-title">The Session</div>
+                    <div class="proc-text">30 minutes. Multiple looks. Guided direction that makes you forget you ever dreaded being photographed. We review images together, adjust, and shoot some more until we nail it. You'll actually enjoy this.</div>
+                </div>
+            </div>
+            <div class="proc-step">
+                <div class="proc-num">04</div>
+                <div>
+                    <div class="proc-title">Delivery</div>
+                    <div class="proc-text">Professionally retouched images delivered in high-res and web-ready formats. Clean, natural retouching — you'll still look like yourself. Turnaround time is discussed at booking.</div>
                 </div>
             </div>
         </div>
     </div>
+</section>
+
+<!-- Why My Headshots Look Different -->
+<section class="sp-split reverse">
+    <div class="sp-split-photo">
+        <img src="/images/hs8.jpg" alt="Headshot photography studio Louisville KY Germantown">
+    </div>
+    <div class="sp-split-content">
+        <div class="sp-split-label">What Sets Me Apart</div>
+        <h2 class="sp-split-title">Why My Headshots <span class="serif">Look Different.</span></h2>
+        <p class="sp-split-text">I've spent years as a commercial photographer working with CEOs, marketing teams, and companies who need images that perform. Not images that just look nice in a frame. Images that go on websites, billboards, LinkedIn, and marketing campaigns and actually win attention.</p>
+        <p class="sp-split-text">That experience shows up in every headshot I take. My images are <strong>sharp, clean, modern, and rich.</strong> They have a pop to them that comes from understanding what it takes to compete visually online.</p>
+    </div>
+</section>
+
+<!-- Testimonial -->
+<section class="sp-testimonial">
+    <div class="sp-test-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+    <p class="sp-test-quote">"I walked in nervous and walked out feeling like a million bucks. Matt made the whole thing effortless. The photos were better than I ever imagined."</p>
+    <div class="sp-test-author">&mdash; Louisville Business Professional</div>
+</section>
+
+<!-- FAQ -->
+<section class="sp-faq">
+    <div class="sp-faq-inner">
+        <div class="sp-faq-header">
+            <div class="section-label">Common Questions</div>
+            <div class="sp-faq-title">FAQ</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How long does a headshot session take?</div>
+            <div class="faq-answer"><p>Most individual sessions run 30 to 60 minutes depending on how many looks we're going for. Team sessions vary based on group size, but I keep things moving.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Where is your studio?</div>
+            <div class="faq-answer"><p>My studio is in the Germantown neighborhood of Louisville, KY. It's a natural light space that's comfortable, relaxed, and built specifically for portrait and headshot work.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Do you travel for headshots?</div>
+            <div class="faq-answer"><p>Yes. I regularly shoot on-location throughout Louisville, Southern Indiana (Jeffersonville, New Albany, Clarksville), and Lexington, KY. I'll come to your office or any location that works for your team.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">What should I wear to my headshot session?</div>
+            <div class="faq-answer"><p>Solid colors work best. Navy, charcoal, black, white, and deep greens are safe picks. Bring 2 to 3 options. Avoid busy patterns, visible logos, and anything that doesn't fit well. Full wardrobe guidance is provided after booking.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How many final images do I receive?</div>
+            <div class="faq-answer"><p>This depends on your session type. We'll discuss deliverables at booking so you know exactly what to expect.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Do you retouch headshots?</div>
+            <div class="faq-answer"><p>Yes. Every headshot includes professional retouching. I keep it clean and natural. You'll look like the best version of yourself, not a different person.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How quickly will I get my photos?</div>
+            <div class="faq-answer"><p>Turnaround time is discussed at booking and depends on the session scope. I respect deadlines and will always give you a clear timeline upfront.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How much do headshots cost?</div>
+            <div class="faq-answer"><p>Pricing varies based on session type (individual, team, on-location). Reach out through the contact form or call to get a quote for your specific needs.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="contact" id="contact">
+    <div class="contact-label">Book a Louisville Headshot Photographer</div>
+    <div class="contact-title">Book Your Session.</div>
+    <p class="contact-sub">Ready to get a headshot that actually works for you? Fill out the form below or reach out directly. I shoot in my Germantown studio and on-location throughout Louisville, Southern Indiana, and Lexington.</p>
+    <form class="contact-form" name="headshot-contact" method="POST" data-netlify="true">
+        <div class="form-row">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-row">
+            <input type="tel" name="phone" placeholder="Phone Number">
+            <select name="session-type" required>
+                <option value="">Select Session Type</option>
+                <option value="individual-studio">Individual — Studio</option>
+                <option value="individual-location">Individual — On Location</option>
+                <option value="corporate-volume">Corporate Volume Session</option>
+            </select>
+        </div>
+        <textarea name="message" placeholder="Tell me about your headshot needs..." required></textarea>
+        <button type="submit" class="contact-submit">Get Started</button>
+        <input type="hidden" name="form-name" value="headshot-contact">
+    </form>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <div class="lightbox-close" id="lightboxClose">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </div>
+    <div class="lightbox-nav lightbox-prev" id="lightboxPrev">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15,18 9,12 15,6"></polyline></svg>
+    </div>
+    <img class="lightbox-image" id="lightboxImage" src="" alt="">
+    <div class="lightbox-nav lightbox-next" id="lightboxNext">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"></polyline></svg>
+    </div>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
 {{ end }}
 
 {{ define "scripts" }}
-    <script>
-        // Headshots Gallery Lightbox Functionality
-        const headshotItems = document.querySelectorAll('.headshot-item');
-        const lightbox = document.getElementById('headshotsLightbox');
-        const lightboxImage = document.getElementById('lightboxImage');
-        const lightboxClose = document.getElementById('lightboxClose');
-        const lightboxPrev = document.getElementById('lightboxPrev');
-        const lightboxNext = document.getElementById('lightboxNext');
-        const currentImageSpan = document.getElementById('currentImage');
-        const totalImagesSpan = document.getElementById('totalImages');
-        
-        let currentIndex = 0;
-        const totalImages = 9;
-        
-        // Image data
-        const headshotImages = [
-            { src: '/images/hs1.jpg', alt: 'Professional Headshot 1' },
-            { src: '/images/hs2.jpg', alt: 'Professional Headshot 2' },
-            { src: '/images/hs3.jpg', alt: 'Professional Headshot 3' },
-            { src: '/images/hs4.jpg', alt: 'Professional Headshot 4' },
-            { src: '/images/hs5.jpg', alt: 'Professional Headshot 5' },
-            { src: '/images/hs6.jpg', alt: 'Professional Headshot 6' },
-            { src: '/images/hs7.jpg', alt: 'Professional Headshot 7' },
-            { src: '/images/hs9.jpg', alt: 'Professional Headshot 8' },
-            
-        ];
-        
-        // Open lightbox
-        headshotItems.forEach((item, index) => {
-            item.addEventListener('click', () => {
-                currentIndex = index;
-                updateLightboxImage();
-                lightbox.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
+<script>
+(function(){
+    // FAQ toggles
+    document.querySelectorAll('.faq-question').forEach(function(q){
+        q.addEventListener('click', function(){
+            this.parentElement.classList.toggle('open');
         });
-        
-        // Close lightbox
-        lightboxClose.addEventListener('click', closeLightbox);
-        
-        // Close on background click (but not on image or sidebar)
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                closeLightbox();
-            }
-        });
-        
-        // Prevent closing when clicking on image area content
-        document.querySelector('.lightbox-image-area').addEventListener('click', (e) => {
-            if (e.target.classList.contains('lightbox-image-area')) {
-                closeLightbox();
-            }
-        });
-        
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (!lightbox.classList.contains('active')) return;
-            
-            if (e.key === 'Escape') {
-                closeLightbox();
-            } else if (e.key === 'ArrowLeft') {
-                navigatePrev();
-            } else if (e.key === 'ArrowRight') {
-                navigateNext();
-            }
-        });
-        
-        // Previous image
-        lightboxPrev.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navigatePrev();
-        });
-        
-        // Next image
-        lightboxNext.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navigateNext();
-        });
-        
-        function navigatePrev() {
-            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-            updateLightboxImage();
-        }
-        
-        function navigateNext() {
-            currentIndex = (currentIndex + 1) % totalImages;
-            updateLightboxImage();
-        }
-        
-        function updateLightboxImage() {
-            const image = headshotImages[currentIndex];
-            lightboxImage.src = image.src;
-            lightboxImage.alt = image.alt;
-            currentImageSpan.textContent = currentIndex + 1;
-        }
-        
-        function closeLightbox() {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    </script>
+    });
+
+    // Lightbox
+    var items = document.querySelectorAll('.sp-gallery-item');
+    var lightbox = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lightboxImage');
+    var lbCounter = document.getElementById('lightboxCounter');
+    var idx = 0;
+    var images = [];
+
+    items.forEach(function(item){
+        var img = item.querySelector('img');
+        images.push({ src: img.src, alt: img.alt });
+    });
+
+    function showLb(i){
+        idx = i;
+        lbImg.src = images[idx].src;
+        lbImg.alt = images[idx].alt;
+        lbCounter.textContent = (idx+1) + ' / ' + images.length;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLb(){
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    items.forEach(function(item, i){
+        item.addEventListener('click', function(){ showLb(i); });
+    });
+
+    document.getElementById('lightboxClose').addEventListener('click', closeLb);
+    lightbox.addEventListener('click', function(e){ if(e.target === lightbox) closeLb(); });
+
+    document.getElementById('lightboxPrev').addEventListener('click', function(e){
+        e.stopPropagation();
+        showLb((idx - 1 + images.length) % images.length);
+    });
+    document.getElementById('lightboxNext').addEventListener('click', function(e){
+        e.stopPropagation();
+        showLb((idx + 1) % images.length);
+    });
+
+    document.addEventListener('keydown', function(e){
+        if(!lightbox.classList.contains('active')) return;
+        if(e.key === 'Escape') closeLb();
+        if(e.key === 'ArrowLeft') showLb((idx - 1 + images.length) % images.length);
+        if(e.key === 'ArrowRight') showLb((idx + 1) % images.length);
+    });
+})();
+</script>
 {{ end }}

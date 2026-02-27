@@ -3,18 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} - Matt Simpson Photography</title>
-    {{ if .Params.description }}<meta name="description" content="{{ .Params.description }}">{{ else }}<meta name="description" content="Matt Simpson Photography — Louisville, KY photographer specializing in headshots, branding, events, and editorial portraits.">{{ end }}
+    <title>{{ if .IsHome }}Louisville Photographer | Headshots, Events &amp; Commercial | Matt Simpson Photography{{ else }}{{ .Title }} — Matt Simpson Photography{{ end }}</title>
+    {{ if .Params.description }}<meta name="description" content="{{ .Params.description }}">{{ else }}<meta name="description" content="Matt Simpson is a Louisville, KY photographer specializing in professional headshots, corporate event photography, and commercial photography for businesses throughout Louisville, Southern Indiana, and Lexington.">{{ end }}
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ if .IsHome }}Louisville Photographer | Matt Simpson Photography{{ else }}{{ .Title }} — Matt Simpson Photography{{ end }}">
+    <meta property="og:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}Louisville, KY photographer specializing in professional headshots, event coverage, and commercial photography.{{ end }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mattsimpson.photography{{ .RelPermalink }}">
+    <meta property="og:image" content="https://mattsimpson.photography/images/matt-1.jpg">
+    <meta property="og:site_name" content="Matt Simpson Photography">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://mattsimpson.photography{{ .RelPermalink }}">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Schema: LocalBusiness + ProfessionalService -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": ["LocalBusiness", "ProfessionalService"],
         "name": "Matt Simpson Photography",
-        "description": "Professional photographer in Louisville, KY specializing in headshots, branding, events, and editorial portraits.",
+        "description": "Professional photographer in Louisville, KY specializing in headshots, event photography, and commercial photography for businesses and professionals.",
         "url": "https://mattsimpson.photography",
         "telephone": "(502) 930-0666",
         "email": "matt@mattsimpsonmedia.com",
@@ -23,179 +40,179 @@
             "@type": "PostalAddress",
             "addressLocality": "Louisville",
             "addressRegion": "KY",
-            "addressCountry": "US"
+            "addressCountry": "US",
+            "addressNeighborhood": "Germantown"
         },
-        "areaServed": ["Louisville, KY", "Jeffersonville, IN", "New Albany, IN", "Southern Indiana"],
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 38.2527,
+            "longitude": -85.7585
+        },
+        "areaServed": [
+            { "@type": "City", "name": "Louisville", "addressRegion": "KY" },
+            { "@type": "City", "name": "Jeffersonville", "addressRegion": "IN" },
+            { "@type": "City", "name": "New Albany", "addressRegion": "IN" },
+            { "@type": "City", "name": "Clarksville", "addressRegion": "IN" },
+            { "@type": "City", "name": "Lexington", "addressRegion": "KY" },
+            { "@type": "City", "name": "Frankfort", "addressRegion": "KY" }
+        ],
         "priceRange": "$$",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00",
+            "closes": "17:00"
+        },
         "sameAs": [
             "https://instagram.com/mattsimpsonphoto",
             "https://www.linkedin.com/in/matt-simpson-2238771b8/"
         ]
     }
     </script>
+
+    {{ block "head" . }}{{ end }}
 </head>
 <body class="{{ .Params.body_class }}">
-    <!-- Header Navigation -->
-    <header class="header" id="header">
-        <div class="nav-container">
-            <a href="/" class="nav-logo" id="navLogo">Matt Simpson Photography</a>
-            
-            <nav class="desktop-nav">
-                <a href="/headshots">Headshots</a>
-                <a href="/events">Events</a>
-                <a href="/branding">Branding</a>
-                <a href="/projects/portraits/">Portraits</a>
-                <a href="/#featured-projects">Galleries</a>
-                <a href="/#potd">POTD</a>
-                <a href="/about">About</a>
-                <a href="/#contact">Contact</a>
-            </nav>
-            
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="/" class="nav-logo">Matt Simpson Photography</a>
+        <div class="nav-links">
+            <a href="/headshot-photographer-louisville-ky/"{{ if eq .Params.body_class "page-headshots" }} class="active"{{ end }}>Headshots</a>
+            <a href="/event-photographer-louisville-ky/"{{ if eq .Params.body_class "page-events" }} class="active"{{ end }}>Events</a>
+            <a href="/commercial-photographer-louisville-ky/"{{ if eq .Params.body_class "page-commercial" }} class="active"{{ end }}>Commercial</a>
+            <a href="/#featured-projects">Galleries</a>
+            <a href="/#potd">POTD</a>
+            <a href="/about/"{{ if eq .Params.body_class "page-about" }} class="active"{{ end }}>About</a>
+            <a href="/#contact">Contact</a>
         </div>
-    </header>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-close" id="mobileMenuClose"></div>
         <ul class="mobile-menu-links">
             <li class="mobile-menu-section">Work</li>
-            <li><a href="/headshots">Headshots</a></li>
-            <li><a href="/events">Event Photography</a></li>
-            <li><a href="/branding">Branding</a></li>
-            <li><a href="/projects/portraits/">Portraits</a></li>
+            <li><a href="/headshot-photographer-louisville-ky/">Headshots</a></li>
+            <li><a href="/event-photographer-louisville-ky/">Event Photography</a></li>
+            <li><a href="/commercial-photographer-louisville-ky/">Commercial</a></li>
             <li><a href="/#featured-projects">Featured Galleries</a></li>
             <li><a href="/#potd">Photo of the Day</a></li>
             <li class="mobile-menu-divider"></li>
-            <li><a href="/about">About</a></li>
+            <li><a href="/about/">About</a></li>
             <li><a href="/#contact">Contact</a></li>
         </ul>
     </div>
 
-    <!-- Main Content Block -->
+    <!-- Main Content -->
     {{ block "main" . }}{{ end }}
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
+    <footer class="footer-main">
+        <div class="footer-grid">
             <div class="footer-brand">
-                <div class="footer-logo-container">
-                    <img src="/images/skulllogo.png" alt="Matt Simpson Photography" class="footer-skull">
-                    <h3 class="footer-logo">Matt Simpson Photography</h3>
+                <div class="footer-logo-img"><img src="/images/skulllogo.png" alt="Matt Simpson Photography logo"></div>
+                <div>
+                    <div class="footer-brand-name">Matt Simpson Photography</div>
+                    <div class="footer-brand-desc">Commercial photographer specializing in professional headshots, event coverage, and commercial photography in Louisville, KY and Southern Indiana.</div>
                 </div>
-                <p class="footer-text">
-                    Commercial photographer specializing in portraits, branding, and professional headshots in Louisville, KY.
-                </p>
-                <div class="footer-website">mattsimpsonphoto.netlify.app</div>
             </div>
-            
-            <div class="footer-column">
-                <h4>Portfolio</h4>
-                <ul>
-                    <li><a href="/headshots">Headshots</a></li>
-                    <li><a href="/events">Event Photography</a></li>
-                    <li><a href="/branding">Branding</a></li>
-                    <li><a href="/projects/portraits/">Portraits</a></li>
-                    <li><a href="/#featured-projects">Featured Galleries</a></li>
-                    <li><a href="/#potd">Photo of the Day</a></li>
-                </ul>
+            <div class="footer-col">
+                <div class="footer-col-title">Portfolio</div>
+                <a href="/headshot-photographer-louisville-ky/">Headshots</a>
+                <a href="/event-photographer-louisville-ky/">Event Photography</a>
+                <a href="/commercial-photographer-louisville-ky/">Commercial</a>
+                <a href="/#featured-projects">Featured Galleries</a>
+                <a href="/#potd">Photo of the Day</a>
             </div>
-            
-            <div class="footer-column">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="https://hardsearstudio.com" target="_blank">Food Photography</a></li>
-                    <li><a href="https://meaganjordanphotography.com" target="_blank">Wedding Photography</a></li>
-                    <li><a href="/#contact">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h4>Connect</h4>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/matt-simpson-2238771b8/" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://instagram.com/mattsimpsonphoto" target="_blank">Instagram</a></li>
-                    <li><a href="mailto:matt@mattsimpsonmedia.com">Email</a></li>
-                    <li><a href="https://letterboxd.com/mattonawire" target="_blank">Letterboxd</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Matt Simpson Photography. All rights reserved.</p>
-            <div class="footer-legal">
-                <a href="/about">About</a>
+            <div class="footer-col">
+                <div class="footer-col-title">Services</div>
+                <a href="https://hardsearstudio.com" target="_blank">Food Photography</a>
+                <a href="https://meaganjordanphotography.com" target="_blank">Wedding Photography</a>
                 <a href="/#contact">Contact</a>
             </div>
+            <div class="footer-col">
+                <div class="footer-col-title">Connect</div>
+                <a href="https://www.linkedin.com/in/matt-simpson-2238771b8/" target="_blank">LinkedIn</a>
+                <a href="https://instagram.com/mattsimpsonphoto" target="_blank">Instagram</a>
+                <a href="mailto:matt@mattsimpsonmedia.com">Email</a>
+                <a href="https://letterboxd.com/mattonawire" target="_blank">Letterboxd</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Matt Simpson Photography. All rights reserved. &nbsp;&middot;&nbsp; <a href="/about/">About</a> &nbsp;&middot;&nbsp; <a href="/#contact">Contact</a> &nbsp;&middot;&nbsp; mattsimpson.photography
         </div>
     </footer>
 
+    <!-- Global Scripts -->
     <script>
-        // Mobile menu functionality
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileMenuClose = document.getElementById('mobileMenuClose');
+    (function(){
+        // Nav scroll: hide on scroll down, show on scroll up
+        var nav = document.getElementById('nav');
+        var lastY = 0, timer = null;
+        window.addEventListener('scroll', function(){
+            var y = window.scrollY;
+            if(timer) clearTimeout(timer);
+            timer = setTimeout(function(){
+                if(y > 25){
+                    if(Math.abs(y - lastY) > 2){
+                        if(y > lastY){
+                            nav.classList.add('nav-hidden');
+                            nav.classList.remove('scrolled');
+                        } else {
+                            nav.classList.remove('nav-hidden');
+                            nav.classList.add('scrolled');
+                        }
+                    }
+                } else {
+                    nav.classList.remove('nav-hidden','scrolled');
+                }
+                lastY = y;
+            }, 10);
+        }, {passive:true});
 
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
+        // Mobile menu
+        var hamburger = document.getElementById('hamburger');
+        var mobileMenu = document.getElementById('mobileMenu');
+        var mobileClose = document.getElementById('mobileMenuClose');
 
-        mobileMenuClose.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-
-        document.querySelectorAll('.mobile-menu-links a').forEach(link => {
-            link.addEventListener('click', () => {
+        if(hamburger){
+            hamburger.addEventListener('click', function(){
+                mobileMenu.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+        if(mobileClose){
+            mobileClose.addEventListener('click', function(){
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+        document.querySelectorAll('.mobile-menu-links a').forEach(function(link){
+            link.addEventListener('click', function(){
                 mobileMenu.classList.remove('active');
                 document.body.style.overflow = '';
             });
         });
 
-        // Nav scroll behavior - works on all pages
-        const header = document.getElementById('header');
-        
-        let lastScrollY = 0;
-        let scrollTimer = null;
-        
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            
-            // Throttle scroll events
-            if (scrollTimer) clearTimeout(scrollTimer);
-            
-            scrollTimer = setTimeout(() => {
-                if (scrollY > 25) {
-                    const scrollDifference = Math.abs(scrollY - lastScrollY);
-                    
-                    if (scrollDifference > 2) {
-                        if (scrollY > lastScrollY) {
-                            // Scrolling down - hide nav
-                            header.classList.add('nav-hidden');
-                            header.classList.remove('scrolled');
-                        } else {
-                            // Scrolling up - show nav with white background
-                            header.classList.remove('nav-hidden');
-                            header.classList.add('scrolled');
-                        }
-                    }
-                } else {
-                    // At top - show transparent nav
-                    header.classList.remove('nav-hidden');
-                    header.classList.remove('scrolled');
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(function(a){
+            a.addEventListener('click', function(e){
+                var target = document.querySelector(this.getAttribute('href'));
+                if(target){
+                    e.preventDefault();
+                    target.scrollIntoView({behavior:'smooth',block:'start'});
                 }
-                
-                lastScrollY = scrollY;
-            }, 10);
+            });
         });
+    })();
     </script>
-    
-    <!-- Page-specific scripts block -->
+
     {{ block "scripts" . }}{{ end }}
 </body>
 </html>

@@ -1,39 +1,76 @@
-/* Base Styles - Variables, Resets, Typography */
+/* ========================================
+   BASE — Variables, Reset, Typography
+   Matt Simpson Photography
+   ======================================== */
 
-/* CSS Reset */
-* {
+/* --- Design Tokens --- */
+:root {
+    /* Primary */
+    --teal: #1a6b5a;
+    --teal2: #24937d;
+    --teal-dark: #134d41;
+    --teal-soft: rgba(26, 107, 90, 0.06);
+
+    /* Neutrals */
+    --dark: #1a1714;
+    --mid: #7a7570;
+    --light: #b5b0ab;
+    --bg: #faf8f5;
+    --card: #fff;
+
+    /* Borders / Dividers */
+    --border-light: #e8e4df;
+    --border-dark: rgba(255, 255, 255, 0.08);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.08);
+    --shadow-teal: 0 8px 24px rgba(26, 107, 90, 0.2);
+
+    /* Typography */
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-serif: 'Instrument Serif', serif;
+    --font-display: 'Bebas Neue', sans-serif;
+
+    /* Spacing */
+    --section-pad: 120px;
+    --section-pad-mobile: 80px;
+    --container-pad: 48px;
+    --container-pad-mobile: 24px;
+
+    /* Transition */
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* --- Reset --- */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* CSS Variables */
-:root {
-    --primary-font: 'Newsreader', serif;
-    --secondary-font: 'IBM Plex Sans', sans-serif;
-    --black: #181617;
-    --white: #ffffff;
-    --gray: #666666;
-    --light-gray: #f5f5f5;
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Base Body Styles */
 body {
-    font-family: var(--secondary-font);
-    background: var(--white);
-    color: var(--black);
-    overflow-x: hidden;
+    background: var(--bg);
+    color: var(--dark);
+    font-family: var(--font-body);
+    font-size: 16px;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* Base Typography */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-p {
-    margin-bottom: 1rem;
+img {
+    max-width: 100%;
+    display: block;
 }
 
 a {
@@ -41,44 +78,95 @@ a {
     text-decoration: none;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+button {
+    font-family: var(--font-body);
+    cursor: pointer;
+    border: none;
+    background: none;
 }
 
-/* Form Elements */
-input, textarea, button {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
+::selection {
+    background: var(--teal);
+    color: #fff;
 }
 
-/* Lists */
-ul, ol {
-    list-style: none;
+
+/* --- Typography --- */
+
+/* Eyebrow / Label text */
+.eyebrow,
+.section-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--teal);
+    margin-bottom: 8px;
 }
 
-/* Section Spacing */
-section {
-    position: relative;
+/* Serif italic accent (used in headings) */
+.serif {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--teal);
 }
 
-/* Container Max Widths */
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+/* Display heading (Bebas Neue) */
+.display-heading {
+    font-family: var(--font-display);
+    letter-spacing: 2px;
+    line-height: 1;
 }
 
-@media (min-width: 768px) {
-    .container {
-        padding: 0 2rem;
-    }
+
+/* --- Buttons --- */
+.btn-primary {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--teal);
+    padding: 18px 44px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid var(--teal);
+    display: inline-block;
+    transition: all 0.3s;
+    cursor: pointer;
 }
 
-@media (min-width: 1200px) {
-    .container {
-        padding: 0 3rem;
-    }
+.btn-primary:hover {
+    background: var(--teal-dark);
+    border-color: var(--teal-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-teal);
+}
+
+.btn-outline {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--dark);
+    padding: 18px 44px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid var(--border-light);
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    border-color: var(--dark);
+    transform: translateY(-2px);
+}
+
+/* Dark-bg variant */
+.dark-section .btn-outline {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-section .btn-outline:hover {
+    border-color: #fff;
 }

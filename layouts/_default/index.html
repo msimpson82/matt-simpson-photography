@@ -1,507 +1,229 @@
 {{ define "main" }}
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-content">
-            <p class="hero-text">
-                I'm <span class="name">Matt</span>, and I create <span class="highlight">killer visuals</span> for <span class="highlight">high-stakes shoots</span>, <span class="highlight">bold campaigns</span>, & <span class="highlight">unstoppable clients</span>.
-            </p>
-            <div class="hero-buttons">
-                <a href="/about" class="cta-button secondary">More About Me</a>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-eyebrow">Louisville, KY Photographer</div>
+    <h1 class="hero-h1">Professional <span class="serif">headshots,</span> event coverage, and commercial photography in Louisville, Kentucky.</h1>
+    <p class="hero-p">I'm Matt Simpson. I photograph the people, events, and businesses that drive Louisville forward. From executive headshots and corporate events to marketing campaigns and brand launches — if your business needs a camera, I'm on it.</p>
+    <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Book a Session</a>
+        <a href="#featured-projects" class="btn-outline">See the Work</a>
+    </div>
+</section>
+
+<!-- Statement -->
+<section class="statement">
+    <div class="statement-inner">
+        <p class="statement-text"><strong>Bold, professional, and built for business.</strong> My photography shows up on company websites, LinkedIn profiles, marketing campaigns, and brand launches across Louisville and beyond. Whether you need a single headshot or a full-day commercial shoot, I deliver images that make you look as good as you are.</p>
+        <div class="statement-line"></div>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section class="services-section" id="services">
+    <div class="services-header">
+        <div class="services-label">Photography Services in Louisville, KY</div>
+        <div class="services-title">What I Do</div>
+    </div>
+    <div class="services-grid">
+        <a href="/headshot-photographer-louisville-ky/" class="svc-card">
+            <img src="/images/headshot.jpg" alt="Professional headshot photographer Louisville KY — Matt Simpson Photography">
+            <div class="svc-card-overlay">
+                <div class="svc-card-name">Headshots</div>
+                <div class="svc-card-desc">Corporate headshots, LinkedIn portraits, actor headshots, and team photos. Shot in my natural light Germantown studio or on-location at your office.</div>
+                <div class="svc-card-link">Headshot Photography &rarr;</div>
             </div>
+        </a>
+        <a href="/event-photographer-louisville-ky/" class="svc-card">
+            <img src="/images/event1.jpg" alt="Event photographer Louisville KY — Matt Simpson Photography">
+            <div class="svc-card-overlay">
+                <div class="svc-card-name">Events</div>
+                <div class="svc-card-desc">Conferences, galas, corporate events, and festivals. I capture the energy, the connections, and the moments that matter to your organization.</div>
+                <div class="svc-card-link">Event Photography &rarr;</div>
+            </div>
+        </a>
+        <a href="/commercial-photographer-louisville-ky/" class="svc-card">
+            <img src="/images/brand1.jpg" alt="Commercial photographer Louisville KY — Matt Simpson Photography">
+            <div class="svc-card-overlay">
+                <div class="svc-card-name">Commercial</div>
+                <div class="svc-card-desc">Marketing campaigns, website imagery, branding shoots, and corporate photography for businesses that need images that actually perform.</div>
+                <div class="svc-card-link">Commercial Photography &rarr;</div>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- Featured Galleries -->
+<section class="galleries" id="featured-projects">
+    <div class="galleries-header">
+        <div class="galleries-label">Selected Work</div>
+        <div class="galleries-title">Featured Projects</div>
+    </div>
+
+    <div class="gal-item">
+        <div class="gal-photo">
+            <img src="/images/story.jpg" alt="Storyfest Louisville event photography coverage">
         </div>
-    </section>
-
-    <!-- Bold Commercial Section -->
-    <section class="bold-commercial" id="bold-commercial">
-        <div class="bold-commercial-container">
-            <div class="bold-commercial-images">
-                <div class="bold-image-item">
-                    <img src="/images/collage.png" alt="Photography Collage">
-                </div>
-            </div>
-            <div class="bold-commercial-content">
-                <h2 class="bold-commercial-title">Bold, professional, & unabashedly commercial.</h2>
-                <p class="bold-commercial-description">
-                    My work thrives in ad campaigns, shines on billboards, and shows up across the feeds of powerful brands winning the game of attention. From product launches, rebrands, corporate headshots or events - <br><br>...if it needs a camera, <strong>I'm on it.</strong>
-                </p>
-            </div>
+        <div class="gal-content">
+            <div class="gal-tag">Event Photography</div>
+            <div class="gal-name">Storyfest Louisville</div>
+            <p class="gal-desc">Full event coverage for Louisville's premier storytelling festival. Live performances, audience engagement, and behind-the-scenes moments captured across a multi-day event.</p>
+            <a href="/projects/storyfest-louisville/" class="gal-btn">View Full Gallery</a>
         </div>
-    </section>
+    </div>
 
-    <!-- Services Section - Basic Foundation -->
-    <section class="services-section" id="services">
-        <div class="services-container">
-            <div class="services-label">SERVICES</div>
-            
-            <div class="services-image">
-                <div class="services-image-side">
-                    <div class="services-photo active" data-service="0">
-                        <img src="/images/kaz.jpg" alt="Headshots Photography">
-                    </div>
-                    <div class="services-photo" data-service="1">
-                        <img src="/images/event1.jpg" alt="Events Photography">
-                    </div>
-                    <div class="services-photo" data-service="2">
-                        <img src="/images/brand1.jpg" alt="Branding Photography">
-                    </div>
-                    <div class="services-photo" data-service="3">
-                        <img src="/images/port1.jpg" alt="Portraits Photography">
-                    </div>
-                </div>
-                
-                <div class="services-image-main">
-                    <div class="services-photo active" data-service="0">
-                        <img src="/images/headshot.jpg" alt="Headshots Photography">
-                    </div>
-                    <div class="services-photo" data-service="1">
-                        <img src="/images/event2.jpg" alt="Events Photography">
-                    </div>
-                    <div class="services-photo" data-service="2">
-                        <img src="/images/brand2.jpg" alt="Branding Photography">
-                    </div>
-                    <div class="services-photo" data-service="3">
-                        <img src="/images/port2.jpg" alt="Portraits Photography">
-                    </div>
-                </div>
-                
-                <div class="services-image-side">
-                    <div class="services-photo active" data-service="0">
-                        <img src="/images/headshot2.jpg" alt="Headshots Photography">
-                    </div>
-                    <div class="services-photo" data-service="1">
-                        <img src="/images/events3.jpg" alt="Events Photography">
-                    </div>
-                    <div class="services-photo" data-service="2">
-                        <img src="/images/brand3.jpg" alt="Branding Photography">
-                    </div>
-                    <div class="services-photo" data-service="3">
-                        <img src="/images/port3.jpg" alt="Portraits Photography">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="services-dots">
-                <div class="services-dot active" data-service="0"></div>
-                <div class="services-dot" data-service="1"></div>
-                <div class="services-dot" data-service="2"></div>
-                <div class="services-dot" data-service="3"></div>
-            </div>
-            
-            <div class="services-content">
-                <div class="services-slide active" data-service="0">
-                    <a href="/headshots" class="service-cta-button">View Headshot Portfolio</a>
-                    <p class="service-description">
-                        Professional headshots that command attention. From corporate executives to creative professionals, creating powerful portraits that open doors and build brands.
-                    </p>
-                </div>
-                
-                <div class="services-slide" data-service="1">
-                    <a href="/events" class="service-cta-button">View Event Portfolio</a>
-                    <p class="service-description">
-                        Dynamic event photography that captures the energy and essence of your occasions. From conferences to celebrations, documenting moments that matter.
-                    </p>
-                </div>
-                
-                <div class="services-slide" data-service="2">
-                    <a href="/branding" class="service-cta-button">View Branding Portfolio</a>
-                    <p class="service-description">
-                        Cohesive brand photography that tells your story visually. Creating authentic imagery that connects with your audience and drives engagement.
-                    </p>
-                </div>
-                
-                <div class="services-slide" data-service="3">
-                    <a href="/projects/portraits/" class="service-cta-button">View Portrait Portfolio</a>
-                    <p class="service-description">
-                        Expressive portrait photography that captures personality and emotion. Creating timeless images that celebrate the unique beauty of every individual.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="services-navigation">
-                <div class="services-arrow" id="servicesPrev">‹</div>
-                <div class="services-arrow" id="servicesNext">›</div>
-            </div>
+    <div class="gal-item">
+        <div class="gal-photo">
+            <img src="/images/talespin.jpg" alt="Talespin Ale Fest Louisville event photography">
         </div>
-    </section>
-
-    <!-- Featured Galleries Section -->
-    <section class="featured-projects" id="featured-projects">
-        <div class="featured-projects-container">
-            <h2 class="section-title">Featured Galleries</h2>
-            
-            <div class="projects-grid">
-                <!-- Storyfest Louisville -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/images/story.jpg" alt="Storyfest Louisville Event Photography">
-                        
-                    </div>
-                    <div class="project-content">
-                        <div class="project-category">Event Photography</div>
-                        <h3 class="project-title">Storyfest Louisville</h3>
-                        <p class="project-description">Comprehensive event coverage capturing the energy and storytelling magic of Louisville's premier narrative festival. Shot live performances, audience engagement, and behind-the-scenes moments.</p>
-                        <a href="/projects/storyfest-louisville" class="project-button">View Full Gallery</a>
-                    </div>
-                </div>
-
-                <!-- Talespin Ale Fest -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/images/talespin.jpg" alt="Talespin Ale Fest Event Photography">
-                        
-                    </div>
-                    <div class="project-content">
-                        <div class="project-category">Event Photography</div>
-                        <h3 class="project-title">Talespin Ale Fest</h3>
-                        <p class="project-description">Check out my event photography showcasing craft beer culture, vendor interactions, live entertainment, and the vibrant community atmosphere of this celebrated brewing event.</p>
-                        <a href="/projects/talespin-ale-fest" class="project-button">View Full Gallery</a>
-                    </div>
-                </div>
-
-                <!-- The Perfumery -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/images/perfumery.jpg" alt="The Perfumery Branding Photography">
-                        
-                    </div>
-                    <div class="project-content">
-                        <div class="project-category">Branding Photography</div>
-                        <h3 class="project-title">The Perfumery</h3>
-                        <p class="project-description">Elevated product and lifestyle photography showcasing artisanal fragrances and the hands that make it possible.</p>
-                        <a href="/projects/the-perfumery" class="project-button">View Full Gallery</a>
-                    </div>
-                </div>
-
-                <!-- Current812 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/images/current.jpg" alt="Current812 Branding Photography">
-                        <div class="project-category">Branding Photography</div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-category">Branding Photography</div>
-                        <h3 class="project-title">Current812</h3>
-                        <p class="project-description">Contemporary brand photography for a beautiful luxury apartment complex in Jeffersonville, Indiana.</p>
-                        <a href="/projects/current812" class="project-button">View Full Gallery</a>
-                    </div>
-                </div>
-            </div>
+        <div class="gal-content">
+            <div class="gal-tag">Event Photography</div>
+            <div class="gal-name">Talespin Ale Fest</div>
+            <p class="gal-desc">Event photography for one of Louisville's celebrated craft beer festivals. Vendor interactions, live entertainment, and the energy of a community gathering.</p>
+            <a href="/projects/talespin-ale-fest/" class="gal-btn">View Full Gallery</a>
         </div>
-    </section>
+    </div>
 
-    <!-- Photo of the Day Section -->
-    <section class="potd-section" id="potd">
-        <div class="potd-container">
-            <div class="potd-intro">
-                <h2 class="potd-title">Photo of the Day</h2>
-                <p class="potd-description">
-                    No client briefs, no deadlines...just capturing what catches my eye, what makes me smile, or what strikes me as beautiful. Thank you for looking.
-                </p>
-            </div>
+    <div class="gal-item">
+        <div class="gal-photo">
+            <img src="/images/perfumery.jpg" alt="The Perfumery commercial photography Louisville">
+        </div>
+        <div class="gal-content">
+            <div class="gal-tag">Commercial Photography</div>
+            <div class="gal-name">The Perfumery</div>
+            <p class="gal-desc">Product and lifestyle photography for an artisanal fragrance company. Elevated brand imagery showcasing the craft, the product, and the people behind it.</p>
+            <a href="/projects/the-perfumery/" class="gal-btn">View Full Gallery</a>
+        </div>
+    </div>
 
-            <!-- Current Photo of the Day -->
-            {{ $potdPosts := where site.RegularPages "Section" "potd" }}
-            {{ $featuredPost := where $potdPosts "Params.featured" true }}
-            {{ $sortedPosts := sort $potdPosts "Date" "desc" }}
-            {{ $currentPost := index $sortedPosts 0 }}
-            {{ if $featuredPost }}
-                {{ $currentPost = index $featuredPost 0 }}
+    <div class="gal-item">
+        <div class="gal-photo">
+            <img src="/images/current.jpg" alt="Current812 commercial photography Jeffersonville Indiana">
+        </div>
+        <div class="gal-content">
+            <div class="gal-tag">Commercial Photography</div>
+            <div class="gal-name">Current812</div>
+            <p class="gal-desc">Brand photography for a luxury apartment complex in Jeffersonville, Indiana. Interior, exterior, and lifestyle shots used across the property's website and marketing materials.</p>
+            <a href="/projects/current812/" class="gal-btn">View Full Gallery</a>
+        </div>
+    </div>
+</section>
+
+<!-- About (Who's Behind the Camera) -->
+<section class="about-section">
+    <div class="about-section-photo">
+        <img src="/images/aboutme.jpg" alt="Matt Simpson — Louisville KY commercial photographer">
+    </div>
+    <div class="about-section-content">
+        <div class="section-label">About the Photographer</div>
+        <h2 class="about-section-title">Who's Behind <span class="serif">the Camera</span></h2>
+        <p class="about-section-text">I'm Matt Simpson, a commercial photographer based in Louisville, Kentucky. I work with businesses, executives, and organizations that need professional photography — headshots, events, and commercial campaigns — and I've been doing it for years.</p>
+        <p class="about-section-text">My studio is in the Germantown neighborhood of Louisville. I shoot on-location throughout Louisville, <strong>Southern Indiana</strong> (Jeffersonville, New Albany, Clarksville), and <strong>Lexington, KY</strong>. I've worked with CEOs, marketing teams, startups, and organizations of all sizes. My images end up on websites, LinkedIn, billboards, brochures, and marketing campaigns.</p>
+        <a href="/about/" class="btn-primary" style="align-self:flex-start; margin-top:20px;">More About Me</a>
+    </div>
+</section>
+
+<!-- Photo of the Day -->
+<section class="potd" id="potd">
+    <div class="potd-header">
+        <div class="potd-label">Personal Work</div>
+        <div class="potd-title">Photo of the Day</div>
+    </div>
+    <p class="potd-sub">No client briefs, no deadlines. Just capturing what catches my eye, what makes me smile, or what strikes me as beautiful. Thank you for looking.</p>
+
+    {{ $potdPosts := where site.RegularPages "Section" "potd" }}
+    {{ $sortedPosts := sort $potdPosts "Date" "desc" }}
+    {{ $recentPosts := first 6 $sortedPosts }}
+    {{ $featuredPost := where $potdPosts "Params.featured" true }}
+    {{ $currentPost := index $sortedPosts 0 }}
+    {{ if $featuredPost }}
+        {{ $currentPost = index $featuredPost 0 }}
+    {{ end }}
+
+    <div class="potd-viewer">
+        <div class="potd-featured">
+            {{ range $index, $post := $recentPosts }}
+            <img src="/images/potd/{{ $post.Params.image }}" alt="Photo of the Day — {{ $post.Date.Format "January 2, 2006" }}" {{ if eq $post $currentPost }}class="active"{{ end }} data-caption="{{ $post.Title }}" data-date="{{ $post.Date.Format "January 2, 2006" }}">
             {{ end }}
-
-            <div class="potd-featured">
-                <div class="potd-featured-image">
-                    <img src="/images/potd/{{ $currentPost.Params.image }}" alt="Photo of the Day - {{ $currentPost.Date.Format "January 2, 2006" }}">
-                </div>
-                <div class="potd-featured-content">
-                    <div class="potd-date">{{ $currentPost.Date.Format "January 2, 2006" }}</div>
-                    <h3 class="potd-title">{{ $currentPost.Title }}</h3>
-                    <div class="potd-caption">
-                        {{ $currentPost.Content }}
-                    </div>
-                </div>
-            </div>
-
-            <!-- Recent Days Thumbnails -->
-            <div class="potd-recent">
-                <div class="potd-navigation">
-                    <button class="potd-nav-btn potd-prev" id="potdPrev">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="15,18 9,12 15,6"></polyline>
-                        </svg>
-                    </button>
-                    
-                    <div class="potd-thumbnails">
-                        {{ $recentPosts := first 6 $sortedPosts }}
-                        {{ range $index, $post := $recentPosts }}
-                            {{ $isActive := "" }}
-                            {{ if eq $post $currentPost }}{{ $isActive = "active" }}{{ end }}
-                            <div class="potd-thumbnail {{ $isActive }}" 
-                                 data-date="{{ $post.Date.Format "January 2, 2006" }}" 
-                                 data-image="/images/potd/{{ $post.Params.image }}" 
-                                 data-caption="{{ $post.Content }}"
-                                 data-title="{{ $post.Title }}"
-                                 data-index="{{ $index }}">
-                                <img src="/images/potd/{{ $post.Params.image }}" alt="{{ $post.Date.Format "January 2, 2006" }}">
-                            </div>
-                        {{ end }}
-                    </div>
-                    
-                    <button class="potd-nav-btn potd-next" id="potdNext">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="9,18 15,12 9,6"></polyline>
-                        </svg>
-                    </button>
-                </div>
-                <a href="/potd/archive/" class="potd-archive-link">View Full Archive</a>
-            </div>
         </div>
-    </section>
+        <button class="potd-nav potd-prev" onclick="potdNav(-1)">&lsaquo;</button>
+        <button class="potd-nav potd-next" onclick="potdNav(1)">&rsaquo;</button>
+    </div>
+    <div class="potd-caption" id="potdCaption">{{ $currentPost.Title }}</div>
+    <div class="potd-counter" id="potdCounter">1 / {{ len $recentPosts }}</div>
 
-    <!-- Call to Action Section -->
-    <section class="cta-section" id="contact">
-        <div class="cta-container">
-            <h2 class="cta-title">Let's Get to Work.</h2>
-            <p class="cta-subtitle">I am a professional photographer ready to work. Get in touch with the contact form below.</p>
-            
-        <form class="contact-form" name="contact" method="POST" data-netlify="true">
-    <div class="form-group">
-        <input type="text" class="form-input" name="name" placeholder="Your Name" required>
-    </div>
-    <div class="form-group">
-        <input type="email" class="form-input" name="email" placeholder="Your Email" required>
-    </div>
-    <div class="form-group">
-        <textarea class="form-textarea" name="message" placeholder="Tell me about your project..." required></textarea>
-    </div>
-    <button type="submit" class="form-submit">Send Message</button>
-    <input type="hidden" name="form-name" value="contact">
-</form>
+    <div class="potd-grid">
+        {{ range $index, $post := $recentPosts }}
+        <div class="potd-thumb{{ if eq $post $currentPost }} active{{ end }}" onclick="potdGo({{ $index }})">
+            <img src="/images/potd/{{ $post.Params.image }}" alt="POTD thumbnail">
         </div>
-    </section>
+        {{ end }}
+    </div>
+    <a href="/potd/archive/" class="potd-archive">View Full Archive</a>
+</section>
+
+<!-- Service Area -->
+<section class="service-area">
+    <div class="section-label">Where I Work</div>
+    <h2 class="service-area-title">Louisville <span class="serif">and Beyond</span></h2>
+    <p class="service-area-text">I'm based in Louisville, KY and serve clients throughout the region. Whether you need a photographer at your Louisville office, a corporate event in Lexington, or a commercial shoot in Southern Indiana — I'm there.</p>
+    <ul class="service-area-list">
+        <li>Louisville, KY</li>
+        <li>Germantown</li>
+        <li>NuLu</li>
+        <li>Highlands</li>
+        <li>St. Matthews</li>
+        <li>Jeffersontown</li>
+        <li>Downtown Louisville</li>
+        <li>Jeffersonville, IN</li>
+        <li>New Albany, IN</li>
+        <li>Clarksville, IN</li>
+        <li>Lexington, KY</li>
+        <li>Frankfort, KY</li>
+    </ul>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+    <div class="contact-label">Book a Louisville Photographer</div>
+    <div class="contact-title">Let's Get to Work.</div>
+    <p class="contact-sub">Ready to book a headshot session, schedule event coverage, or plan a commercial shoot? Fill out the form below or reach out directly. I work with businesses of all sizes throughout Louisville, Southern Indiana, and Lexington.</p>
+    <form class="contact-form" name="contact" method="POST" data-netlify="true">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="message" placeholder="Tell me about your project" required></textarea>
+        <button type="submit" class="contact-submit">Send Message</button>
+        <input type="hidden" name="form-name" value="contact">
+    </form>
+</section>
+
 {{ end }}
 
 {{ define "scripts" }}
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // smooth scroll when clicking nav links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+<script>
+// POTD carousel
+var potdIdx = 0;
+var potdImgs = document.querySelectorAll('.potd-featured img');
+var potdThumbs = document.querySelectorAll('.potd-thumb');
+var potdCaption = document.getElementById('potdCaption');
+var potdCounter = document.getElementById('potdCounter');
 
-        // hamburger menu stuff
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileMenuClose = document.getElementById('mobileMenuClose');
+// Find initial active
+potdImgs.forEach(function(img, i){ if(img.classList.contains('active')) potdIdx = i; });
 
-        if (hamburger) {
-            hamburger.addEventListener('click', () => {
-                mobileMenu.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-        }
+function potdGo(i){
+    potdImgs[potdIdx].classList.remove('active');
+    potdThumbs[potdIdx].classList.remove('active');
+    potdIdx = i;
+    if(potdIdx < 0) potdIdx = potdImgs.length - 1;
+    if(potdIdx >= potdImgs.length) potdIdx = 0;
+    potdImgs[potdIdx].classList.add('active');
+    potdThumbs[potdIdx].classList.add('active');
+    potdCaption.textContent = potdImgs[potdIdx].getAttribute('data-caption') || '';
+    potdCounter.textContent = (potdIdx + 1) + ' / ' + potdImgs.length;
+}
 
-        if (mobileMenuClose) {
-            mobileMenuClose.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        }
-
-        document.querySelectorAll('.mobile-menu-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-
-        // New nav scroll behavior
-        const header = document.getElementById('header');
-        
-        let lastScrollY = 0;
-        let scrollTimer = null;
-        
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            
-            // Throttle scroll events
-            if (scrollTimer) clearTimeout(scrollTimer);
-            
-            scrollTimer = setTimeout(() => {
-                if (scrollY > 25) {
-                    const scrollDifference = Math.abs(scrollY - lastScrollY);
-                    
-                    if (scrollDifference > 2) {
-                        if (scrollY > lastScrollY) {
-                            // Scrolling down - hide nav
-                            header.classList.add('nav-hidden');
-                            header.classList.remove('scrolled');
-                        } else {
-                            // Scrolling up - show nav with white background
-                            header.classList.remove('nav-hidden');
-                            header.classList.add('scrolled');
-                        }
-                    }
-                } else {
-                    // At top - show transparent nav
-                    header.classList.remove('nav-hidden');
-                    header.classList.remove('scrolled');
-                }
-                
-                lastScrollY = scrollY;
-            }, 10);
-        });
-
-        // photo of the day navigation
-        const potdThumbnails = document.querySelectorAll('.potd-thumbnail');
-        const potdFeaturedImage = document.querySelector('.potd-featured-image img');
-        const potdFeaturedDate = document.querySelector('.potd-date');
-        const potdFeaturedTitle = document.querySelector('.potd-featured-content .potd-title');
-        const potdFeaturedCaption = document.querySelector('.potd-caption');
-        const potdPrevBtn = document.getElementById('potdPrev');
-        const potdNextBtn = document.getElementById('potdNext');
-        
-        let currentPotdIndex = 0;
-        
-        // find which thumbnail is active on load
-        potdThumbnails.forEach((thumbnail, index) => {
-            if (thumbnail.classList.contains('active')) {
-                currentPotdIndex = index;
-            }
-        });
-
-        function updatePotdDisplay(index) {
-            const thumbnail = potdThumbnails[index];
-            if (!thumbnail) return;
-            
-            const date = thumbnail.dataset.date;
-            const image = thumbnail.dataset.image;
-            const caption = thumbnail.dataset.caption;
-            const title = thumbnail.dataset.title;
-
-            potdFeaturedImage.style.opacity = '0';
-            setTimeout(() => {
-                potdFeaturedImage.src = image;
-                potdFeaturedImage.alt = `Photo of the Day - ${date}`;
-                potdFeaturedDate.textContent = date;
-                potdFeaturedTitle.textContent = title;
-                potdFeaturedCaption.textContent = caption;
-                potdFeaturedImage.style.opacity = '1';
-            }, 200);
-
-            // update which thumbnail looks active
-            potdThumbnails.forEach(thumb => thumb.classList.remove('active'));
-            thumbnail.classList.add('active');
-            
-            currentPotdIndex = index;
-        }
-
-        // click on thumbnails
-        potdThumbnails.forEach((thumbnail, index) => {
-            thumbnail.addEventListener('click', () => {
-                updatePotdDisplay(index);
-            });
-        });
-        
-        // arrow buttons for potd
-        if (potdPrevBtn && potdNextBtn) {
-            potdPrevBtn.addEventListener('click', () => {
-                const newIndex = currentPotdIndex > 0 ? currentPotdIndex - 1 : potdThumbnails.length - 1;
-                updatePotdDisplay(newIndex);
-            });
-            
-            potdNextBtn.addEventListener('click', () => {
-                const newIndex = currentPotdIndex < potdThumbnails.length - 1 ? currentPotdIndex + 1 : 0;
-                updatePotdDisplay(newIndex);
-            });
-        }
-        
-        // Services basic functionality - Foundation
-        const servicesPhotos = document.querySelectorAll('.services-photo');
-        const servicesSlides = document.querySelectorAll('.services-slide');
-        const servicesDots = document.querySelectorAll('.services-dot');
-        const servicesPrev = document.getElementById('servicesPrev');
-        const servicesNext = document.getElementById('servicesNext');
-        
-        let currentServiceIndex = 0;
-        const totalServices = 4;
-        
-        // Debug logging
-        console.log('Services elements found:', {
-            photos: servicesPhotos.length,
-            slides: servicesSlides.length,
-            dots: servicesDots.length,
-            prevBtn: servicesPrev,
-            nextBtn: servicesNext
-        });
-        
-        function updateService(index) {
-            console.log('Updating to service index:', index);
-            // Remove active classes from ALL photos across all containers
-            servicesPhotos.forEach(photo => photo.classList.remove('active'));
-            servicesSlides.forEach(slide => slide.classList.remove('active'));
-            servicesDots.forEach(dot => dot.classList.remove('active'));
-            
-            // Add active classes to all photos with matching data-service
-            const activePhotos = document.querySelectorAll(`.services-photo[data-service="${index}"]`);
-            const activeSlide = document.querySelector(`.services-slide[data-service="${index}"]`);
-            const activeDot = document.querySelector(`.services-dot[data-service="${index}"]`);
-            
-            activePhotos.forEach(photo => photo.classList.add('active'));
-            if (activeSlide) activeSlide.classList.add('active');
-            if (activeDot) activeDot.classList.add('active');
-            
-            currentServiceIndex = index;
-        }
-        
-        function nextService() {
-            const next = (currentServiceIndex + 1) % totalServices;
-            updateService(next);
-        }
-        
-        function prevService() {
-            const prev = (currentServiceIndex - 1 + totalServices) % totalServices;
-            updateService(prev);
-        }
-        
-        // Arrow navigation
-        if (servicesPrev) {
-            servicesPrev.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                console.log('Previous arrow clicked');
-                prevService();
-            });
-        } else {
-            console.error('Previous button not found!');
-        }
-        
-        if (servicesNext) {
-            servicesNext.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                console.log('Next arrow clicked');
-                nextService();
-            });
-        } else {
-            console.error('Next button not found!');
-        }
-        
-        // Dot navigation
-        servicesDots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                console.log('Dot clicked:', index);
-                updateService(index);
-            });
-        });
-    });
-    </script>
+function potdNav(dir){ potdGo(potdIdx + dir); }
+</script>
 {{ end }}

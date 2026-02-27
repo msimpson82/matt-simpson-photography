@@ -1,6 +1,7 @@
 ---
-description: "Event photography in Louisville, KY and Southern Indiana. Conferences, galas, corporate events, and celebrations captured with energy and style."
-title: "Event Photography"
+title: "Event Photographer Louisville KY"
+description: "Louisville event photographer specializing in corporate events, conferences, festivals, and galas. Professional event photography throughout Louisville, Southern Indiana, and Lexington, KY."
 layout: "events"
-body_class: "secondary-page"
+url: "/event-photographer-louisville-ky/"
+body_class: "page-events"
 ---
