@@ -1,18 +1,18 @@
 {
-  "display_count": 8,
+  "display_count": 9,
   "images": [
     {
       "filename": "headshot-professional-woman-black-blazer-louisville.jpg",
       "alt": "Professional headshot Louisville KY- blonde woman in black blazer, white background",
       "path": "/images/",
-      "order": 1,
+      "order": 2,
       "active": true
     },
     {
       "filename": "headshot-executive-man-gray-suit-louisville.jpg",
       "alt": "Executive headshot Louisville KY -  man in gray suit and purple shirt, studio lighting",
       "path": "/images/",
-      "order": 2,
+      "order": 8,
       "active": true
     },
     {
@@ -54,7 +54,7 @@
       "filename": "louisville_actress_headshot.jpg",
       "alt": "louisville+actress+headshot",
       "path": "/images/",
-      "order": 8,
+      "order": 1,
       "active": true
     }
   ]
