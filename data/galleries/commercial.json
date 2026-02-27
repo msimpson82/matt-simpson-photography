@@ -1,0 +1,13 @@
+{
+  "display_count": 8,
+  "images": [
+    {"filename": "commercial-product-photography-louisville-1.jpg", "alt": "Product photography Louisville — commercial brand imagery for marketing", "path": "/images/branding/", "order": 1, "active": true},
+    {"filename": "commercial-lifestyle-photography-louisville-2.jpg", "alt": "Lifestyle photography Louisville — authentic brand storytelling for businesses", "path": "/images/branding/", "order": 2, "active": true},
+    {"filename": "commercial-brand-photography-louisville-3.jpg", "alt": "Brand photography Louisville — commercial visual content for marketing", "path": "/images/branding/", "order": 3, "active": true},
+    {"filename": "commercial-marketing-photography-louisville-4.jpg", "alt": "Marketing photography Louisville — campaign imagery for local businesses", "path": "/images/branding/", "order": 4, "active": true},
+    {"filename": "commercial-corporate-photography-louisville-5.jpg", "alt": "Corporate photography Louisville — professional business imagery", "path": "/images/branding/", "order": 5, "active": true},
+    {"filename": "commercial-business-photography-louisville-6.jpg", "alt": "Business photography Louisville — restaurant and hospitality industry", "path": "/images/branding/", "order": 6, "active": true},
+    {"filename": "commercial-content-photography-louisville-7.jpg", "alt": "Content photography Louisville — website and social media imagery for brands", "path": "/images/branding/", "order": 7, "active": true},
+    {"filename": "commercial-campaign-photography-louisville-8.jpg", "alt": "Campaign photography Louisville — commercial advertising and promotional imagery", "path": "/images/branding/", "order": 8, "active": true}
+  ]
+}

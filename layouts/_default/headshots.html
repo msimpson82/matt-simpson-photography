@@ -129,14 +129,12 @@
         </div>
     </div>
     <div class="sp-gallery-grid">
-        <div class="sp-gallery-item" data-index="0"><img src="/images/headshot-executive-man-gray-suit-louisville.jpg" alt="Executive headshot Louisville KY — man in gray suit and purple shirt, studio lighting" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="1"><img src="/images/headshot-creative-professional-dark-background-louisville.jpg" alt="Creative professional headshot Louisville — young man, dark background portrait" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="2"><img src="/images/headshot-corporate-woman-red-top-louisville.jpg" alt="Corporate headshot Louisville KY — woman in red top with silver necklace" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="3"><img src="/images/headshot-business-casual-man-plaid-louisville.jpg" alt="Business casual headshot Louisville — man in blue plaid shirt, studio portrait" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="4"><img src="/images/headshot-professional-woman-black-blazer-louisville.jpg" alt="Professional headshot Louisville KY — blonde woman in black blazer, white background" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="5"><img src="/images/headshot-linkedin-portrait-woman-louisville.jpg" alt="LinkedIn headshot Louisville — woman in black top, clean white background portrait" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="6"><img src="/images/headshot-executive-blue-blazer-brick-louisville.jpg" alt="Executive portrait Louisville — man in blue blazer, industrial brick wall background" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="7"><img src="/images/headshot-branding-portrait-natural-light-germantown.jpg" alt="Branding portrait Louisville — woman with curly hair on stool, natural light Germantown studio" loading="lazy"></div>
+        {{ $gallery := site.Data.galleries.headshots }}
+        {{ $active := where $gallery.images "active" true }}
+        {{ $sorted := sort $active "order" }}
+        {{ range first ($gallery.display_count) $sorted }}
+        <div class="sp-gallery-item"><img src="{{ .path }}{{ .filename }}" alt="{{ .alt }}" loading="lazy"></div>
+        {{ end }}
     </div>
 </section>
 

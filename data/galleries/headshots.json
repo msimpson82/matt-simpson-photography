@@ -1,0 +1,13 @@
+{
+  "display_count": 8,
+  "images": [
+    {"filename": "headshot-executive-man-gray-suit-louisville.jpg", "alt": "Executive headshot Louisville KY — man in gray suit and purple shirt, studio lighting", "path": "/images/", "order": 1, "active": true},
+    {"filename": "headshot-creative-professional-dark-background-louisville.jpg", "alt": "Creative professional headshot Louisville — young man, dark background portrait", "path": "/images/", "order": 2, "active": true},
+    {"filename": "headshot-corporate-woman-red-top-louisville.jpg", "alt": "Corporate headshot Louisville KY — woman in red top with silver necklace", "path": "/images/", "order": 3, "active": true},
+    {"filename": "headshot-business-casual-man-plaid-louisville.jpg", "alt": "Business casual headshot Louisville — man in blue plaid shirt, studio portrait", "path": "/images/", "order": 4, "active": true},
+    {"filename": "headshot-professional-woman-black-blazer-louisville.jpg", "alt": "Professional headshot Louisville KY — blonde woman in black blazer, white background", "path": "/images/", "order": 5, "active": true},
+    {"filename": "headshot-linkedin-portrait-woman-louisville.jpg", "alt": "LinkedIn headshot Louisville — woman in black top, clean white background portrait", "path": "/images/", "order": 6, "active": true},
+    {"filename": "headshot-executive-blue-blazer-brick-louisville.jpg", "alt": "Executive portrait Louisville — man in blue blazer, industrial brick wall background", "path": "/images/", "order": 7, "active": true},
+    {"filename": "headshot-branding-portrait-natural-light-germantown.jpg", "alt": "Branding portrait Louisville — woman with curly hair on stool, natural light Germantown studio", "path": "/images/", "order": 8, "active": true}
+  ]
+}

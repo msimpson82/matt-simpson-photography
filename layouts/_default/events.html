@@ -85,14 +85,12 @@
         </div>
     </div>
     <div class="sp-gallery-grid">
-        <div class="sp-gallery-item" data-index="0"><img src="/images/louisville-event-photography-conference.jpg" alt="Event photographer Louisville KY — corporate conference and festival coverage"></div>
-        <div class="sp-gallery-item" data-index="1"><img src="/images/event-photography-louisville-family-community.jpg" alt="Louisville community event — family posing together at outdoor festival" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="2"><img src="/images/event-photography-louisville-food-vendor.jpg" alt="Louisville festival food vendor — serving customers at lemonade stand" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="3"><img src="/images/event-photography-louisville-festival-cornhole.jpg" alt="Louisville festival games — people playing cornhole at outdoor community event" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="4"><img src="/images/event-photography-louisville-kids-foam-party.jpg" alt="Louisville kids festival — children playing in foam bubbles, Big Four Bridge" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="5"><img src="/images/event-photography-louisville-conference-speaker.jpg" alt="Louisville conference speaker — man in blazer presenting at corporate event podium" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="6"><img src="/images/event-photography-louisville-outdoor-tent-reception.jpg" alt="Louisville outdoor event — guests laughing and eating under tent at reception" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="7"><img src="/images/event-photography-louisville-corporate-networking.jpg" alt="Louisville corporate networking — attendees mingling at professional conference" loading="lazy"></div>
+        {{ $gallery := site.Data.galleries.events }}
+        {{ $active := where $gallery.images "active" true }}
+        {{ $sorted := sort $active "order" }}
+        {{ range first ($gallery.display_count) $sorted }}
+        <div class="sp-gallery-item"><img src="{{ .path }}{{ .filename }}" alt="{{ .alt }}" loading="lazy"></div>
+        {{ end }}
     </div>
 </section>
 

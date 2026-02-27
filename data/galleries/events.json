@@ -1,0 +1,13 @@
+{
+  "display_count": 8,
+  "images": [
+    {"filename": "louisville-event-photography-conference.jpg", "alt": "Event photographer Louisville KY — corporate conference and festival coverage", "path": "/images/", "order": 1, "active": true},
+    {"filename": "event-photography-louisville-family-community.jpg", "alt": "Louisville community event — family posing together at outdoor festival", "path": "/images/", "order": 2, "active": true},
+    {"filename": "event-photography-louisville-food-vendor.jpg", "alt": "Louisville festival food vendor — serving customers at lemonade stand", "path": "/images/", "order": 3, "active": true},
+    {"filename": "event-photography-louisville-festival-cornhole.jpg", "alt": "Louisville festival games — people playing cornhole at outdoor community event", "path": "/images/", "order": 4, "active": true},
+    {"filename": "event-photography-louisville-kids-foam-party.jpg", "alt": "Louisville kids festival — children playing in foam bubbles, Big Four Bridge", "path": "/images/", "order": 5, "active": true},
+    {"filename": "event-photography-louisville-conference-speaker.jpg", "alt": "Louisville conference speaker — man in blazer presenting at corporate event podium", "path": "/images/", "order": 6, "active": true},
+    {"filename": "event-photography-louisville-outdoor-tent-reception.jpg", "alt": "Louisville outdoor event — guests laughing and eating under tent at reception", "path": "/images/", "order": 7, "active": true},
+    {"filename": "event-photography-louisville-corporate-networking.jpg", "alt": "Louisville corporate networking — attendees mingling at professional conference", "path": "/images/", "order": 8, "active": true}
+  ]
+}

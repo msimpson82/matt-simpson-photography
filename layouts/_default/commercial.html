@@ -85,14 +85,12 @@
         </div>
     </div>
     <div class="sp-gallery-grid">
-        <div class="sp-gallery-item" data-index="0"><img src="/images/branding/commercial-product-photography-louisville-1.jpg" alt="Product photography Louisville — commercial brand imagery for marketing" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="1"><img src="/images/branding/commercial-lifestyle-photography-louisville-2.jpg" alt="Lifestyle photography Louisville — authentic brand storytelling for businesses" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="2"><img src="/images/branding/commercial-marketing-photography-louisville-4.jpg" alt="Marketing photography Louisville — campaign imagery for local businesses" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="3"><img src="/images/branding/commercial-corporate-photography-louisville-5.jpg" alt="Corporate photography Louisville — professional business imagery" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="4"><img src="/images/branding/commercial-business-photography-louisville-6.jpg" alt="Business photography Louisville — restaurant and hospitality industry" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="5"><img src="/images/branding/commercial-content-photography-louisville-7.jpg" alt="Content photography Louisville — website and social media imagery for brands" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="6"><img src="/images/branding/commercial-campaign-photography-louisville-8.jpg" alt="Campaign photography Louisville — commercial advertising and promotional imagery" loading="lazy"></div>
-        <div class="sp-gallery-item" data-index="7"><img src="/images/branding/commercial-editorial-photography-louisville-9.jpg" alt="Editorial photography Louisville — magazine-quality commercial portraits" loading="lazy"></div>
+        {{ $gallery := site.Data.galleries.commercial }}
+        {{ $active := where $gallery.images "active" true }}
+        {{ $sorted := sort $active "order" }}
+        {{ range first ($gallery.display_count) $sorted }}
+        <div class="sp-gallery-item"><img src="{{ .path }}{{ .filename }}" alt="{{ .alt }}" loading="lazy"></div>
+        {{ end }}
     </div>
 </section>
 
