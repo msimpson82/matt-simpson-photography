@@ -4,6 +4,9 @@ date: 2025-05-01
 project_type: "Corporate Branding"
 client: "The Perfumery"
 hero_image: "perfumery-19.jpg"
+homepage_featured: true
+homepage_order: 99
+homepage_description: ""
 body_class: "single-project-page"
 gallery:
   - "perfumery.jpg"
