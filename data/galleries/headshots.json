@@ -49,6 +49,13 @@
       "path": "/images/",
       "order": 7,
       "active": true
+    },
+    {
+      "filename": "louisville_actress_headshot.jpg",
+      "alt": "louisville+actress+headshot",
+      "path": "/images/",
+      "order": 8,
+      "active": true
     }
   ]
 }
