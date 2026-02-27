@@ -25,7 +25,7 @@ gallery:
 
 ## The Shoot
 
-Current812 is a luxury apartment community in Jeffersonville, Indiana. They needed brand photography that captured the lifestyle and feel of the property ÃÂ¢ÃÂÃÂ interiors, amenities, exteriors, and the kind of imagery that makes people want to live there. The goal was a complete visual package for their website and marketing materials.
+Current812 is a luxury apartment community in Jeffersonville, Indiana. They needed brand photography that captured the lifestyle and feel of the property  interiors, amenities, exteriors, and the kind of imagery that makes people want to live there. The goal was a complete visual package for their website and marketing materials.
 
 ## The Results
 
