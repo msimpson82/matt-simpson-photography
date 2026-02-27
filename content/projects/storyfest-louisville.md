@@ -3,7 +3,7 @@ title: "Storyfest Louisville"
 date: 2024-08-15
 project_type: "Event Photography"
 client: "Storyfest Louisville"
-hero_image: "story.jpg"
+hero_image: "storyfest-louisville-event-coverage.jpg"
 body_class: "single-project-page"
 gallery:
   - "storyfest.jpg"
