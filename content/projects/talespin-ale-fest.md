@@ -4,6 +4,9 @@ date: 2025-05-01
 project_type: "Event Photography"
 client: "Tailspin Ale Fest"
 hero_image: "tailspin-18.jpg"
+homepage_featured: true
+homepage_order: 99
+homepage_description: ""
 body_class: "single-project-page"
 gallery:
   - "tailspin.jpg"
