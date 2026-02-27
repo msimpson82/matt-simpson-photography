@@ -9,7 +9,6 @@ homepage_featured: true
 homepage_order: 99
 homepage_description: "Current812 is a luxury apartment community in Jeffersonville, Indiana. They needed brand photography that captured the lifestyle and feel of the property interiors, amenities, exteriors, and the kind of imagery that makes people want to live there."
 gallery:
-  - "current-812-new-1.jpg"
   - "current812.jpg"
   - "current812-2.jpg"
   - "current812-3.jpg"
