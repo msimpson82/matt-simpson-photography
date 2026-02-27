@@ -1,3 +1,6 @@
 baseURL = 'https://mattsimpson.photography/'
 languageCode = 'en-us'
 title = 'Matt Simpson Photography | Louisville Headshot & Branding Photographer'
+
+[markup.goldmark.renderer]
+  unsafe = true
