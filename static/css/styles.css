@@ -27,5 +27,8 @@
 /* Page-specific styles */
 @import url('pages.css');
 
+/* Content pages (about, galleries, etc.) */
+@import url('content.css');
+
 /* Utilities and helpers */
 @import url('utilities.css');

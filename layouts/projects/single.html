@@ -1,497 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} - Matt Simpson Photography</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-    <style>
-        /* Force black navigation on secondary pages */
-        .header {
-            background: var(--white) !important;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
-        }
-        
-        .nav-logo {
-            color: var(--black) !important;
-        }
-        
-        .hamburger span {
-            background: var(--black) !important;
-        }
-        
-        .desktop-nav a {
-            color: var(--black) !important;
-        }
-        
-        /* Dropdown styling */
-        .nav-dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .nav-dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--white);
-            min-width: 200px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-            border-radius: 4px;
-            padding: 0.5rem 0;
-            margin-top: 0.5rem;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-        
-        .nav-dropdown:hover .nav-dropdown-menu,
-        .nav-dropdown.active .nav-dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .nav-dropdown-menu a {
-            display: block;
-            padding: 0.75rem 1.5rem;
-            color: var(--black) !important;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            white-space: nowrap;
-        }
-        
-        .nav-dropdown-menu a:hover {
-            background: var(--light-gray);
-        }
-        
-        /* Project Page Specific Styles */
-        .project-content .project-container {
-            max-width: 700px;
-        }
-        
-        .project-article {
-            font-size: 1.1rem;
-            line-height: 1.9;
-        }
-        
-        .project-article h2 {
-            font-family: var(--secondary-font);
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--black);
-            margin: 3rem 0 1.5rem 0;
-            line-height: 1.3;
-        }
-        
-        .project-article h3 {
-            font-family: var(--secondary-font);
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--black);
-            margin: 2.5rem 0 1rem 0;
-            line-height: 1.3;
-        }
-        
-        .project-article p {
-            margin-bottom: 1.8rem;
-        }
-        
-        .project-article blockquote {
-            font-family: var(--primary-font);
-            font-style: italic;
-            font-size: 1.3rem;
-            line-height: 1.6;
-            color: var(--gray);
-            border-left: 4px solid var(--black);
-            padding: 1.5rem 0 1.5rem 2rem;
-            margin: 3rem 0;
-            background: var(--light-gray);
-            position: relative;
-        }
-        
-        .project-article blockquote::before {
-            content: '"';
-            font-family: var(--primary-font);
-            font-size: 4rem;
-            color: var(--black);
-            position: absolute;
-            left: 0.5rem;
-            top: -0.5rem;
-            opacity: 0.3;
-        }
-        
-        .project-article ul, .project-article ol {
-            margin: 2rem 0;
-            padding-left: 2rem;
-        }
-        
-        .project-article li {
-            margin-bottom: 0.8rem;
-            line-height: 1.7;
-        }
-        
-        .project-article ul li {
-            list-style: none;
-            position: relative;
-        }
-        
-        .project-article ul li::before {
-            content: '•';
-            color: var(--black);
-            font-weight: bold;
-            position: absolute;
-            left: -1.5rem;
-            font-size: 1.2rem;
-        }
-        
-        .project-article strong {
-            font-weight: 600;
-            color: var(--black);
-        }
-        
-        .project-article em {
-            font-family: var(--primary-font);
-            font-style: italic;
-        }
-        
-        .project-article code {
-            background: var(--light-gray);
-            padding: 0.2rem 0.5rem;
-            border-radius: 3px;
-            font-size: 0.9rem;
-            color: var(--black);
-        }
-        
-        .project-article hr {
-            border: none;
-            height: 2px;
-            background: var(--light-gray);
-            margin: 4rem 0;
-            opacity: 0.5;
-        }
-        
-        /* Add subtle breathing room */
-        .project-content {
-            padding: 5rem 1.5rem;
-        }
-        
-        /* First paragraph special styling */
-        .project-article p:first-child {
-            font-size: 1.2rem;
-            color: var(--gray);
-            font-weight: 300;
-            margin-bottom: 2.5rem;
-        }
-    </style>
-</head>
-<body class="single-project-page">
-    <!-- Header Navigation -->
-    <header class="header" id="header">
-        <div class="nav-container">
-            <a href="/" class="nav-logo" id="navLogo">Matt Simpson Photography</a>
-            
-            <nav class="desktop-nav">
-                <a href="/headshots">Headshots</a>
-                <a href="/projects/events/">Events</a>
-                <a href="/projects/branding/">Branding</a>
-                <a href="/projects/portraits/">Portraits</a>
-                <a href="/#featured-projects">Galleries</a>
-                <a href="/#potd">POTD</a>
-                <a href="/about">About</a>
-                <a href="/#contact">Contact</a>
-            </nav>
-            
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
+{{ define "main" }}
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-close" id="mobileMenuClose"></div>
-        <ul class="mobile-menu-links">
-            <li class="mobile-menu-section">Work</li>
-            <li><a href="/headshots">Headshots</a></li>
-            <li><a href="/projects/events/">Event Photography</a></li>
-            <li><a href="/projects/branding/">Branding</a></li>
-            <li><a href="/projects/portraits/">Portraits</a></li>
-            <li><a href="/#featured-projects">Featured Galleries</a></li>
-            <li><a href="/#potd">Photo of the Day</a></li>
-            <li class="mobile-menu-divider"></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/#contact">Contact</a></li>
-        </ul>
+<!-- Project Hero -->
+<section class="page-hero">
+    {{ if .Params.hero_image }}
+    <div class="page-hero-image">
+        <img src="/images/{{ .Params.hero_image }}" alt="{{ .Title }}">
     </div>
-
-    <!-- Project Hero Section -->
-    <section class="project-hero">
-        <div class="project-hero-image">
-            <img src="/images/{{ .Params.hero_image }}" alt="{{ .Title }}">
-        </div>
-        <div class="project-hero-content">
-            <div class="project-breadcrumb">
-                <a href="/">Home</a> / <a href="/projects">Featured Projects</a> / {{ .Title }}
-            </div>
-            <h1 class="project-title">{{ .Title }}</h1>
-            <div class="project-meta">
-                <div class="project-meta-item">
-                    <span class="meta-label">Project Type</span>
-                    <span>{{ .Params.project_type }}</span>
-                </div>
-                <div class="project-meta-item">
-                    <span class="meta-label">Client</span>
-                    <span>{{ .Params.client }}</span>
-                </div>
-                <div class="project-meta-item">
-                    <span class="meta-label">Date</span>
-                    <span>{{ .Date.Format "January 2006" }}</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Content -->
-    <section class="project-content">
-        <div class="project-container">
-            <article class="project-article">
-                {{ .Content }}
-            </article>
-        </div>
-    </section>
-
-    <!-- Project Gallery -->
-    <section class="project-gallery">
-        <div class="portfolio-grid">
-            {{ range .Params.gallery }}
-                <div class="portfolio-item" data-image="/images/projects/{{ . }}">
-                    <img src="/images/projects/{{ . }}" alt="{{ $.Title }} Gallery Image">
-                </div>
-            {{ end }}
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <div class="footer-logo-container">
-                    <img src="/images/skulllogo.png" alt="Matt Simpson Photography" class="footer-skull">
-                    <h3 class="footer-logo">Matt Simpson Photography</h3>
-                </div>
-                <p class="footer-text">
-                    Commercial photographer specializing in portraits, branding, and professional headshots in Louisville, KY.
-                </p>
-                <div class="footer-website">mattsimpsonphoto.netlify.app</div>
-            </div>
-            
-            <div class="footer-column">
-                <h4>Portfolio</h4>
-                <ul>
-                    <li><a href="/headshots">Headshots</a></li>
-                    <li><a href="/projects/events/">Event Photography</a></li>
-                    <li><a href="/projects/branding/">Branding</a></li>
-                    <li><a href="/projects/portraits/">Portraits</a></li>
-                    <li><a href="/#featured-projects">Featured Galleries</a></li>
-                    <li><a href="/#potd">Photo of the Day</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="https://hardsearstudio.com" target="_blank">Food Photography</a></li>
-                    <li><a href="https://meaganjordanphotography.com" target="_blank">Wedding Photography</a></li>
-                    <li><a href="/#contact">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h4>Connect</h4>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/matt-simpson-2238771b8/" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://instagram.com/mattsimpsonphoto" target="_blank">Instagram</a></li>
-                    <li><a href="mailto:matt@mattsimpsonmedia.com">Email</a></li>
-                    <li><a href="https://letterboxd.com/mattonawire" target="_blank">Letterboxd</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Matt Simpson Photography. All rights reserved.</p>
-            <div class="footer-legal">
-                <a href="/about">About</a>
-                <a href="/#contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Lightbox (same as main page) -->
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-container">
-            <div class="lightbox-image-area">
-                <img id="lightboxImage" src="" alt="Gallery Image">
-                <div class="lightbox-nav lightbox-prev" id="lightboxPrev">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                        <polyline points="15,18 9,12 15,6"></polyline>
-                    </svg>
-                </div>
-                <div class="lightbox-nav lightbox-next" id="lightboxNext">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                        <polyline points="9,18 15,12 9,6"></polyline>
-                    </svg>
-                </div>
-            </div>
-            <div class="lightbox-sidebar">
-                <div class="lightbox-header">
-                    <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
-                    <div class="lightbox-close" id="lightboxClose">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </div>
-                </div>
-                <div class="lightbox-content">
-                    <h3 class="lightbox-title" id="lightboxTitle">{{ .Title }}</h3>
-                    <p class="lightbox-description" id="lightboxDescription">{{ .Params.project_type }} - {{ .Params.client }}</p>
-                </div>
-            </div>
-        </div>
+    {{ end }}
+    <div class="page-breadcrumb">
+        <a href="/">Home</a> / <a href="/#featured-projects">Featured Projects</a> / {{ .Title }}
     </div>
+    <h1 class="page-hero-title">{{ .Title }}</h1>
+    {{ if or .Params.project_type .Params.client }}
+    <div class="page-meta">
+        {{ with .Params.project_type }}<div class="page-meta-item"><span class="page-meta-label">Project Type</span><span class="page-meta-value">{{ . }}</span></div>{{ end }}
+        {{ with .Params.client }}<div class="page-meta-item"><span class="page-meta-label">Client</span><span class="page-meta-value">{{ . }}</span></div>{{ end }}
+        <div class="page-meta-item"><span class="page-meta-label">Date</span><span class="page-meta-value">{{ .Date.Format "January 2006" }}</span></div>
+    </div>
+    {{ end }}
+</section>
 
-    <script>
-        // Mobile menu functionality
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileMenuClose = document.getElementById('mobileMenuClose');
+<!-- Project Content -->
+<section class="page-content">
+    <div class="page-content-inner">
+        {{ .Content }}
+    </div>
+</section>
 
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
+<!-- Project Gallery -->
+{{ if .Params.gallery }}
+<section class="project-gallery-grid">
+    <div class="project-gallery-inner">
+        {{ range $i, $img := .Params.gallery }}
+        <div class="project-gallery-item" data-lb-index="{{ $i }}">
+            <img src="/images/projects/{{ $img }}" alt="{{ $.Title }} Gallery Image">
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
 
-        mobileMenuClose.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        });
+<!-- CTA -->
+<section class="page-cta">
+    <div class="page-cta-inner">
+        <div class="page-cta-title">Like what you see?</div>
+        <p class="page-cta-text">Let's create something like this for your brand.</p>
+        <a href="/#contact" class="btn-primary">Get in Touch</a>
+    </div>
+</section>
 
-        document.querySelectorAll('.mobile-menu-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <button class="lightbox-prev" onclick="lbNav(-1)">&#8249;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <button class="lightbox-next" onclick="lbNav(1)">&#8250;</button>
+    <div class="lightbox-counter" id="lbCounter"></div>
+</div>
 
-        // Lightbox functionality (same as main page)
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImage = document.getElementById('lightboxImage');
-        const lightboxClose = document.getElementById('lightboxClose');
-        const lightboxPrev = document.getElementById('lightboxPrev');
-        const lightboxNext = document.getElementById('lightboxNext');
-        const lightboxCounter = document.getElementById('lightboxCounter');
-        const lightboxTitle = document.getElementById('lightboxTitle');
-        const lightboxDescription = document.getElementById('lightboxDescription');
+<script>
+(function() {
+    var items = document.querySelectorAll('.project-gallery-item');
+    if (!items.length) return;
 
-        let currentImageIndex = 0;
-        const images = Array.from(portfolioItems);
+    var images = [];
+    items.forEach(function(item, i) {
+        var img = item.querySelector('img');
+        images.push(img.src);
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', function() { openLightbox(i); });
+    });
 
-        function openLightbox(index) {
-            currentImageIndex = index;
-            updateLightboxContent();
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
+    var lb = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lightboxImg');
+    var lbCounter = document.getElementById('lbCounter');
+    var currentLb = 0;
 
-        function closeLightbox() {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-        }
+    window.openLightbox = function(idx) {
+        currentLb = idx;
+        lbImg.src = images[idx];
+        lbCounter.textContent = (idx + 1) + ' / ' + images.length;
+        lb.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+    window.closeLightbox = function() {
+        lb.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+    window.lbNav = function(dir) {
+        currentLb += dir;
+        if (currentLb < 0) currentLb = images.length - 1;
+        if (currentLb >= images.length) currentLb = 0;
+        lbImg.src = images[currentLb];
+        lbCounter.textContent = (currentLb + 1) + ' / ' + images.length;
+    };
 
-        function updateLightboxContent() {
-            const currentItem = images[currentImageIndex];
-            const imgSrc = currentItem.querySelector('img').src;
+    lb.addEventListener('click', function(e) {
+        if (e.target === lb) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e) {
+        if (!lb.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') lbNav(-1);
+        if (e.key === 'ArrowRight') lbNav(1);
+    });
+})();
+</script>
 
-            lightboxImage.src = imgSrc;
-            lightboxCounter.textContent = `${currentImageIndex + 1} / ${images.length}`;
-        }
-
-        function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            updateLightboxContent();
-        }
-
-        function prevImage() {
-            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-            updateLightboxContent();
-        }
-
-        portfolioItems.forEach((item, index) => {
-            item.addEventListener('click', () => openLightbox(index));
-        });
-
-        lightboxClose.addEventListener('click', closeLightbox);
-        lightboxNext.addEventListener('click', nextImage);
-        lightboxPrev.addEventListener('click', prevImage);
-
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                closeLightbox();
-            }
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (!lightbox.classList.contains('active')) return;
-            
-            if (e.key === 'Escape') closeLightbox();
-            if (e.key === 'ArrowRight') nextImage();
-            if (e.key === 'ArrowLeft') prevImage();
-        });
-        
-        // Nav scroll behavior for secondary pages
-        const header = document.getElementById('header');
-        
-        // Header already starts with white background due to inline styles
-        
-        let lastScrollY = 0;
-        let scrollTimer = null;
-        
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            
-            if (scrollTimer) clearTimeout(scrollTimer);
-            
-            scrollTimer = setTimeout(() => {
-                if (scrollY > 25) {
-                    const scrollDifference = Math.abs(scrollY - lastScrollY);
-                    
-                    if (scrollDifference > 2) {
-                        if (scrollY > lastScrollY) {
-                            // Scrolling down - hide nav
-                            header.classList.add('nav-hidden');
-                        } else {
-                            // Scrolling up - show nav with white background
-                            header.classList.remove('nav-hidden');
-                            header.classList.add('scrolled');
-                        }
-                    }
-                } else {
-                    // Near top - show nav with white background
-                    header.classList.remove('nav-hidden');
-                    header.classList.add('scrolled');
-                }
-                
-                lastScrollY = scrollY;
-            }, 10);
-        });
-    </script>
-</body>
-</html>
+{{ end }}

@@ -55,7 +55,7 @@
 }
 
 .nav-links a:hover {
-    color: var(--dark);
+    color: var(--teal);
 }
 
 .nav-links a.active {

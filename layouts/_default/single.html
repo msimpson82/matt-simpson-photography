@@ -1,0 +1,108 @@
+{{ define "main" }}
+
+<!-- Page Hero -->
+<section class="page-hero">
+    {{ if .Params.hero_image }}
+    <div class="page-hero-image">
+        <img src="{{ .Params.hero_image }}" alt="{{ .Title }}">
+    </div>
+    {{ end }}
+    <div class="page-hero-content">
+        {{ if .Params.breadcrumb }}
+        <div class="page-breadcrumb">
+            <a href="/">Home</a> / {{ if .Parent }}<a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a> / {{ end }}{{ .Title }}
+        </div>
+        {{ end }}
+        <h1 class="page-hero-title">{{ .Title }}</h1>
+        {{ with .Params.subtitle }}<p class="page-hero-subtitle">{{ . }}</p>{{ end }}
+        {{ if or .Params.project_type .Params.client .Params.date_display }}
+        <div class="page-meta">
+            {{ with .Params.project_type }}<div class="page-meta-item"><span class="page-meta-label">Project Type</span><span class="page-meta-value">{{ . }}</span></div>{{ end }}
+            {{ with .Params.client }}<div class="page-meta-item"><span class="page-meta-label">Client</span><span class="page-meta-value">{{ . }}</span></div>{{ end }}
+            {{ with .Params.date_display }}<div class="page-meta-item"><span class="page-meta-label">Date</span><span class="page-meta-value">{{ . }}</span></div>{{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+<!-- Page Content -->
+<section class="page-content">
+    <div class="page-content-inner">
+        {{ .Content }}
+    </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="page-cta">
+    <div class="page-cta-inner">
+        <div class="page-cta-title">Ready to work together?</div>
+        <p class="page-cta-text">Let's talk about your next project.</p>
+        <a href="/#contact" class="btn-primary">Get in Touch</a>
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <button class="lightbox-prev" onclick="lbNav(-1)">&#8249;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <button class="lightbox-next" onclick="lbNav(1)">&#8250;</button>
+    <div class="lightbox-counter" id="lbCounter"></div>
+    <div class="lightbox-caption" id="lbCaption"></div>
+</div>
+
+<script>
+// Make content images clickable for lightbox
+(function() {
+    var contentImgs = document.querySelectorAll('.page-content img');
+    if (contentImgs.length > 1) {
+        // Wrap images in a gallery grid
+        var images = [];
+        contentImgs.forEach(function(img, i) {
+            img.setAttribute('data-lb-index', i);
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', function() { openLightbox(i); });
+            images.push({ src: img.src, alt: img.alt });
+        });
+
+        // Lightbox functionality
+        var lb = document.getElementById('lightbox');
+        var lbImg = document.getElementById('lightboxImg');
+        var lbCounter = document.getElementById('lbCounter');
+        var lbCaption = document.getElementById('lbCaption');
+        var currentLb = 0;
+
+        window.openLightbox = function(idx) {
+            currentLb = idx;
+            lbImg.src = images[idx].src;
+            lbCaption.textContent = images[idx].alt || '';
+            lbCounter.textContent = (idx + 1) + ' / ' + images.length;
+            lb.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+        window.closeLightbox = function() {
+            lb.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+        window.lbNav = function(dir) {
+            currentLb += dir;
+            if (currentLb < 0) currentLb = images.length - 1;
+            if (currentLb >= images.length) currentLb = 0;
+            lbImg.src = images[currentLb].src;
+            lbCaption.textContent = images[currentLb].alt || '';
+            lbCounter.textContent = (currentLb + 1) + ' / ' + images.length;
+        };
+
+        lb.addEventListener('click', function(e) {
+            if (e.target === lb) closeLightbox();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (!lb.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') lbNav(-1);
+            if (e.key === 'ArrowRight') lbNav(1);
+        });
+    }
+})();
+</script>
+{{ end }}

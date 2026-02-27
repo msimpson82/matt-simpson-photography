@@ -1,0 +1,392 @@
+/* ===================================
+   CONTENT PAGES (About, Galleries, etc.)
+   =================================== */
+
+/* --- Page Hero --- */
+.page-hero {
+    padding: 160px var(--container-pad) 80px;
+    background: var(--bg);
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-hero-image {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 48px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.page-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.page-breadcrumb {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--light);
+    margin-bottom: 24px;
+}
+
+.page-breadcrumb a {
+    color: var(--teal);
+    text-decoration: none;
+}
+
+.page-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.page-hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 400;
+    color: var(--dark);
+    line-height: 1.05;
+    margin-bottom: 16px;
+}
+
+.page-hero-subtitle {
+    font-size: 18px;
+    color: var(--mid);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.page-meta {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.page-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.page-meta-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--teal);
+}
+
+.page-meta-value {
+    font-size: 15px;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+
+/* --- Page Content --- */
+.page-content {
+    padding: 0 var(--container-pad) 80px;
+    background: var(--bg);
+}
+
+.page-content-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Typography */
+.page-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 400;
+    color: var(--dark);
+    margin: 56px 0 20px;
+    line-height: 1.1;
+}
+
+.page-content h3 {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark);
+    margin: 40px 0 12px;
+}
+
+.page-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--mid);
+    margin-bottom: 20px;
+}
+
+.page-content strong {
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.page-content a {
+    color: var(--teal);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.page-content a:hover {
+    color: var(--teal-dark);
+}
+
+.page-content ul,
+.page-content ol {
+    margin: 16px 0 24px 24px;
+    color: var(--mid);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.page-content li {
+    margin-bottom: 8px;
+}
+
+.page-content blockquote {
+    border-left: 3px solid var(--teal);
+    padding: 16px 0 16px 24px;
+    margin: 32px 0;
+    font-style: italic;
+    color: var(--dark);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Images in content — gallery grid */
+.page-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 12px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-content img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+/* When there are multiple images, create a grid */
+.page-content p:has(img) + p:has(img),
+.page-content p:has(img) {
+    display: inline-block;
+    width: calc(50% - 8px);
+    vertical-align: top;
+    margin: 0 4px 8px;
+}
+
+/* For single hero-style images (first image or standalone) */
+.page-content > p:first-child:has(img) {
+    display: block;
+    width: 100%;
+    margin: 0 0 32px;
+}
+
+/* Links section on about page */
+.page-content .links-grid,
+.page-content p a[href*="linkedin"],
+.page-content p a[href*="instagram"] {
+    color: var(--teal);
+}
+
+
+/* --- Page CTA --- */
+.page-cta {
+    background: var(--dark);
+    padding: 80px var(--container-pad);
+    text-align: center;
+}
+
+.page-cta-inner {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.page-cta-title {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 5vw, 48px);
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.page-cta-text {
+    font-size: 17px;
+    color: var(--light);
+    margin-bottom: 32px;
+    line-height: 1.7;
+}
+
+
+/* --- Mobile --- */
+@media (max-width: 900px) {
+    .page-hero {
+        padding: 120px var(--container-pad-mobile) 48px;
+    }
+
+    .page-meta {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .page-content {
+        padding: 0 var(--container-pad-mobile) 60px;
+    }
+
+    .page-content h2 {
+        margin-top: 40px;
+    }
+
+    /* Stack images on mobile */
+    .page-content p:has(img) + p:has(img),
+    .page-content p:has(img) {
+        display: block;
+        width: 100%;
+        margin: 0 0 12px;
+    }
+
+    .page-cta {
+        padding: 60px var(--container-pad-mobile);
+    }
+}
+
+
+/* ===================================
+   ABOUT PAGE - Links Section
+   =================================== */
+
+.about-links-section {
+    padding: 0 var(--container-pad) 80px;
+    background: var(--bg);
+}
+
+.about-links-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.about-link-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 24px;
+    background: var(--card);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s var(--ease);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.about-link-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    border-color: var(--teal);
+}
+
+.about-link-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-link-detail {
+    font-size: 13px;
+    color: var(--teal);
+}
+
+@media (max-width: 900px) {
+    .about-links-section {
+        padding: 0 var(--container-pad-mobile) 60px;
+    }
+
+    .about-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .about-links-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ===================================
+   PROJECT GALLERY GRID
+   =================================== */
+
+.project-gallery-grid {
+    padding: 0 var(--container-pad) 80px;
+    background: var(--bg);
+}
+
+.project-gallery-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.project-gallery-item {
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.project-gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s var(--ease);
+}
+
+.project-gallery-item:hover img {
+    transform: scale(1.03);
+}
+
+@media (max-width: 900px) {
+    .project-gallery-grid {
+        padding: 0 var(--container-pad-mobile) 60px;
+    }
+
+    .project-gallery-inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .project-gallery-item img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-gallery-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .project-gallery-item img {
+        height: auto;
+    }
+}
