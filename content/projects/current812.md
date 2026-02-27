@@ -17,20 +17,12 @@ gallery:
   - "current812-9.jpg"
   - "current812-10.jpg"
   - "current812-11.jpg"
-  - "current812-12.jpg"
-  - "current812-13.jpg"
-  - "current812-15.jpg"
-  - "current812-16.jpg"
-  - "current812-17.jpg"
-  - "current812-18.jpg"
-  - "current812-19.jpg"
-  - "current812-20.jpg"
 ---
 
 ## The Shoot
 
-Cheers! Tailspin Ale Fest features over 50 breweries from across America with a dedicated section of brews from the bluegrass state of Kentucky. They do a great job with their marketing and needed high quality photos to really kick their online presence in high gear. 
+Current812 is a luxury apartment community in Jeffersonville, Indiana. They needed brand photography that captured the lifestyle and feel of the property — interiors, amenities, exteriors, and the kind of imagery that makes people want to live there. The goal was a complete visual package for their website and marketing materials.
 
 ## The Results
 
-This 6 hour shoot netted Tailspin an online portfolio of over 300 photos of the event! I can't wait to do it again next year.
+A full set of interior, exterior, and lifestyle images now used across Current812's website, social media, and leasing materials. Clean, elevated photography that matches the quality of the property itself.
