@@ -1,68 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} - Matt Simpson Photography</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body class="potd-archive-page">
-    <!-- Header Navigation -->
-    <header class="header" id="header">
-        <div class="nav-container">
-            <svg class="email-icon" onclick="window.location.href='mailto:hello@hardsearstudio.com'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            
-            <a href="/" class="nav-logo" id="navLogo">Matt Simpson Photography</a>
-            
-            <nav class="desktop-nav">
-                <div class="nav-dropdown">
-                    <a href="#" class="nav-dropdown-toggle">Work</a>
-                    <div class="nav-dropdown-menu">
-                        <a href="/#portfolio">Portfolio</a>
-                        <a href="/projects">Featured Projects</a>
-                        <a href="/#potd">Photo of the Day</a>
-                    </div>
-                </div>
-                <a href="/about">About</a>
-                <a href="/#contact">Contact</a>
-            </nav>
-            
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+{{ define "main" }}
+
+<!-- Archive Hero -->
+<section class="page-hero">
+    <h1 class="page-hero-title">Photo Archive</h1>
+    <p class="page-hero-subtitle">No client briefs, no deadlines. Just what catches my eye.</p>
+</section>
+
+<!-- Archive Grid -->
+<section class="potd-archive-grid">
+    <div class="potd-archive-inner">
+        {{ $posts := sort .Pages "Date" "desc" }}
+        {{ range $posts }}
+        <div class="potd-archive-item">
+            <div class="potd-archive-img">
+                <img src="/images/potd/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+            </div>
+            <div class="potd-archive-info">
+                <div class="potd-archive-date">{{ .Date.Format "January 2, 2006" }}</div>
+                <div class="potd-archive-caption">{{ .Title }}</div>
             </div>
         </div>
-    </header>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-close" id="mobileMenuClose"></div>
-        <ul class="mobile-menu-links">
-            <li><a href="/#portfolio">Work</a></li>
-            <li><a href="/projects">Featured Projects</a></li>
-            <li><a href="/#potd">Photo of the Day</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/#contact">Contact</a></li>
-        </ul>
+        {{ end }}
     </div>
+</section>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="page-header-container">
-            <nav class="breadcrumb">
-                <a href="/">Home</a> / Photo Archive
-            </nav>
-            <h1 class="page-title">Photo Archive</h1>
-            <p class="page-subtitle">TEST - LOGO SHOULD SHOW HERE</p>
-        </div>
-    </section>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <button class="lightbox-prev" onclick="lbNav(-1)">&#8249;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <button class="lightbox-next" onclick="lbNav(1)">&#8250;</button>
+    <div class="lightbox-counter" id="lbCounter"></div>
+    <div class="lightbox-caption" id="lbCaption"></div>
+</div>
 
-</body>
-</html>
+<script>
+(function() {
+    var items = document.querySelectorAll('.potd-archive-item');
+    if (!items.length) return;
+
+    var images = [];
+    items.forEach(function(item, i) {
+        var img = item.querySelector('img');
+        var caption = item.querySelector('.potd-archive-caption');
+        images.push({ src: img.src, caption: caption ? caption.textContent : '' });
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', function() { openLightbox(i); });
+    });
+
+    var lb = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lightboxImg');
+    var lbCounter = document.getElementById('lbCounter');
+    var lbCaption = document.getElementById('lbCaption');
+    var currentLb = 0;
+
+    window.openLightbox = function(idx) {
+        currentLb = idx;
+        lbImg.src = images[idx].src;
+        lbCaption.textContent = images[idx].caption;
+        lbCounter.textContent = (idx + 1) + ' / ' + images.length;
+        lb.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+    window.closeLightbox = function() {
+        lb.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+    window.lbNav = function(dir) {
+        currentLb += dir;
+        if (currentLb < 0) currentLb = images.length - 1;
+        if (currentLb >= images.length) currentLb = 0;
+        lbImg.src = images[currentLb].src;
+        lbCaption.textContent = images[currentLb].caption;
+        lbCounter.textContent = (currentLb + 1) + ' / ' + images.length;
+    };
+
+    lb.addEventListener('click', function(e) {
+        if (e.target === lb) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e) {
+        if (!lb.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') lbNav(-1);
+        if (e.key === 'ArrowRight') lbNav(1);
+    });
+})();
+</script>
+
+{{ end }}
