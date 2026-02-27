@@ -2,6 +2,13 @@
   "display_count": 8,
   "images": [
     {
+      "filename": "headshot-professional-woman-black-blazer-louisville.jpg",
+      "alt": "Professional headshot Louisville KY- blonde woman in black blazer, white background",
+      "path": "/images/",
+      "order": 1,
+      "active": true
+    },
+    {
       "filename": "headshot-executive-man-gray-suit-louisville.jpg",
       "alt": "Executive headshot Louisville KY -  man in gray suit and purple shirt, studio lighting",
       "path": "/images/",
@@ -30,13 +37,6 @@
       "active": true
     },
     {
-      "filename": "headshot-professional-woman-black-blazer-louisville.jpg",
-      "alt": "Professional headshot Louisville KY- blonde woman in black blazer, white background",
-      "path": "/images/",
-      "order": 1,
-      "active": true
-    },
-    {
       "filename": "headshot-executive-blue-blazer-brick-louisville.jpg",
       "alt": "Executive portrait Louisville ÃÂ¢ÃÂÃÂ man in blue blazer, industrial brick wall background",
       "path": "/images/",
@@ -48,13 +48,6 @@
       "alt": "Branding portrait Louisville ÃÂ¢ÃÂÃÂ woman with curly hair on stool, natural light Germantown studio",
       "path": "/images/",
       "order": 7,
-      "active": true
-    },
-    {
-      "filename": "test-this.jpg",
-      "alt": "test-this.jpg",
-      "path": "/images/",
-      "order": 8,
       "active": true
     }
   ]
