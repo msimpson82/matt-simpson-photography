@@ -1,0 +1,78 @@
+{{ define "main" }}
+
+<!-- Blog Post Hero -->
+<section class="blog-post-hero">
+    <div class="blog-post-hero-inner">
+        <nav class="page-breadcrumb">
+            <a href="/">Home</a> / <a href="/blog/">Blog</a> / {{ .Title }}
+        </nav>
+        {{ if .Params.tags }}
+        <div class="blog-post-tags">
+            {{ range .Params.tags }}
+            <span class="blog-card-tag">{{ . }}</span>
+            {{ end }}
+        </div>
+        {{ end }}
+        <h1 class="blog-post-title">{{ .Title }}</h1>
+        <div class="blog-post-meta">
+            <time>{{ .Date.Format "January 2, 2006" }}</time>
+            <span>&middot;</span>
+            <span>{{ math.Round (div (countwords .Content) 200.0) }} min read</span>
+        </div>
+    </div>
+</section>
+
+{{ if .Params.image }}
+<div class="blog-post-hero-img">
+    <img src="/images/blog/{{ .Params.image }}" alt="{{ .Title }}">
+</div>
+{{ end }}
+
+<!-- Blog Post Content -->
+<article class="blog-post-content">
+    <div class="blog-post-inner">
+        {{ .Content }}
+    </div>
+</article>
+
+<!-- Author / CTA -->
+<section class="blog-post-cta">
+    <div class="blog-post-cta-inner">
+        <img src="/images/matt-simpson-photographer-louisville-ky.jpg" alt="Matt Simpson — Louisville photographer" class="blog-post-cta-photo" loading="lazy">
+        <div class="blog-post-cta-text">
+            <div class="blog-post-cta-name">Matt Simpson</div>
+            <p>Louisville photographer specializing in headshots, events, and commercial photography. Need a photographer? <a href="/#contact">Let's talk.</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- More Posts -->
+{{ $related := where site.RegularPages "Section" "blog" | first 3 }}
+{{ if gt (len $related) 1 }}
+<section class="blog-more">
+    <div class="blog-more-inner">
+        <h2 class="blog-more-title">More from the Blog</h2>
+        <div class="blog-grid-inner">
+            {{ range $related }}
+            {{ if ne .Permalink $.Permalink }}
+            <a href="{{ .RelPermalink }}" class="blog-card">
+                {{ if .Params.image }}
+                <div class="blog-card-img">
+                    <img src="/images/blog/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+                </div>
+                {{ end }}
+                <div class="blog-card-body">
+                    <h2 class="blog-card-title">{{ .Title }}</h2>
+                    <div class="blog-card-meta">
+                        <time>{{ .Date.Format "January 2, 2006" }}</time>
+                    </div>
+                </div>
+            </a>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+
+{{ end }}
