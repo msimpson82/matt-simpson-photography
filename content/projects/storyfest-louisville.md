@@ -4,6 +4,9 @@ date: 2024-08-15
 project_type: "Event Photography"
 client: "Storyfest Louisville"
 hero_image: "storyfest-louisville-event-coverage.jpg"
+homepage_featured: true
+homepage_order: 99
+homepage_description: ""
 body_class: "single-project-page"
 gallery:
   - "storyfest.jpg"
