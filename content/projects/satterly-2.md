@@ -5,7 +5,7 @@ project_type: "Headshots"
 client: "Satterly 2"
 hero_image: "satterly-2-hero.jpg"
 body_class: "single-project-page"
-homepage_featured: true
+homepage_featured: false
 homepage_order: 99
 homepage_description: "Satterly 2"
 gallery:
