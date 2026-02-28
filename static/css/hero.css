@@ -14,13 +14,13 @@
     overflow: hidden;
 }
 
-/* Mosaic grid container */
+/* Mosaic grid container — 3 columns */
 .hero-mosaic {
     position: absolute;
-    inset: -10% -2% -10%;
+    inset: -20% -2% -20%;
     z-index: 0;
     display: flex;
-    gap: 8px;
+    gap: 10px;
     pointer-events: none;
 }
 
@@ -29,25 +29,25 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 .hero-col img {
     width: 100%;
     display: block;
-    border-radius: 4px;
+    border-radius: 6px;
     object-fit: cover;
     aspect-ratio: 3 / 4;
 }
 
 /* Scroll up animation */
 .hero-col-up {
-    animation: scrollUp 60s linear infinite;
+    animation: scrollUp 80s linear infinite;
 }
 
-/* Scroll down animation (offset columns move opposite) */
+/* Scroll down animation */
 .hero-col-down {
-    animation: scrollDown 60s linear infinite;
+    animation: scrollDown 80s linear infinite;
 }
 
 @keyframes scrollUp {
@@ -60,7 +60,7 @@
     100% { transform: translateY(0); }
 }
 
-/* Light wash overlay — keeps it bright and airy */
+/* Light wash overlay */
 .hero-wash {
     position: absolute;
     inset: 0;
@@ -140,10 +140,6 @@
         padding: 120px var(--container-pad-mobile) 80px;
     }
 
-    .hero-col-5 {
-        display: none;
-    }
-
     .hero-mosaic {
         gap: 6px;
     }
@@ -155,11 +151,10 @@
 
 @media (max-width: 600px) {
     .hero-mosaic {
-        inset: -10% -5% -10%;
+        inset: -15% -5% -15%;
     }
 
-    .hero-col:nth-child(4),
-    .hero-col:nth-child(5) {
+    .hero-col:nth-child(3) {
         display: none;
     }
 }

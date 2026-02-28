@@ -3,76 +3,22 @@
 <!-- Hero -->
 <section class="hero">
     <div class="hero-mosaic">
+        {{ $images := .Site.Data.galleries.hero.images }}
+        {{ $total := len $images }}
+        {{ if gt $total 0 }}
         <div class="hero-col hero-col-up">
-            <img src="/images/professional-headshot-louisville-ky.jpg" alt="">
-            <img src="/images/current812-14.jpg" alt="">
-            <img src="/images/perfumery-19.jpg" alt="">
-            <img src="/images/potd/2025-06-26.jpg" alt="">
-            <img src="/images/storyfest-louisville-event-coverage.jpg" alt="">
-            <img src="/images/commercial-photography-louisville-brand.jpg" alt="">
-            <img src="/images/professional-headshot-louisville-ky.jpg" alt="">
-            <img src="/images/current812-14.jpg" alt="">
-            <img src="/images/perfumery-19.jpg" alt="">
-            <img src="/images/potd/2025-06-26.jpg" alt="">
-            <img src="/images/storyfest-louisville-event-coverage.jpg" alt="">
-            <img src="/images/commercial-photography-louisville-brand.jpg" alt="">
+            {{ range $i, $img := $images }}{{ if eq (mod $i 3) 0 }}<img src="{{ $img.path }}{{ $img.filename }}" alt="">{{ end }}{{ end }}
+            {{ range $i, $img := $images }}{{ if eq (mod $i 3) 0 }}<img src="{{ $img.path }}{{ $img.filename }}" alt="">{{ end }}{{ end }}
         </div>
         <div class="hero-col hero-col-down">
-            <img src="/images/tailspin-18.jpg" alt="">
-            <img src="/images/louisville-event-photography-conference.jpg" alt="">
-            <img src="/images/potd/2025-07-07.jpg" alt="">
-            <img src="/images/matt-simpson-photographer-louisville-ky.jpg" alt="">
-            <img src="/images/potd/2025-06-25.jpg" alt="">
-            <img src="/images/louisville_actress_headshot.jpg" alt="">
-            <img src="/images/tailspin-18.jpg" alt="">
-            <img src="/images/louisville-event-photography-conference.jpg" alt="">
-            <img src="/images/potd/2025-07-07.jpg" alt="">
-            <img src="/images/matt-simpson-photographer-louisville-ky.jpg" alt="">
-            <img src="/images/potd/2025-06-25.jpg" alt="">
-            <img src="/images/louisville_actress_headshot.jpg" alt="">
+            {{ range $i, $img := $images }}{{ if eq (mod $i 3) 1 }}<img src="{{ $img.path }}{{ $img.filename }}" alt="">{{ end }}{{ end }}
+            {{ range $i, $img := $images }}{{ if eq (mod $i 3) 1 }}<img src="{{ $img.path }}{{ $img.filename }}" alt="">{{ end }}{{ end }}
         </div>
         <div class="hero-col hero-col-up">
-            <img src="/images/potd/2025-06-15.jpg" alt="">
-            <img src="/images/commercial-photography-louisville-brand.jpg" alt="">
-            <img src="/images/storyfest-louisville-event-coverage.jpg" alt="">
-            <img src="/images/current812-14.jpg" alt="">
-            <img src="/images/louisville-event-photography-conference.jpg" alt="">
-            <img src="/images/potd/2025-06-13.jpg" alt="">
-            <img src="/images/potd/2025-06-15.jpg" alt="">
-            <img src="/images/commercial-photography-louisville-brand.jpg" alt="">
-            <img src="/images/storyfest-louisville-event-coverage.jpg" alt="">
-            <img src="/images/current812-14.jpg" alt="">
-            <img src="/images/louisville-event-photography-conference.jpg" alt="">
-            <img src="/images/potd/2025-06-13.jpg" alt="">
+            {{ range $i, $img := $images }}{{ if eq (mod $i 3) 2 }}<img src="{{ $img.path }}{{ $img.filename }}" alt="">{{ end }}{{ end }}
+            {{ range $i, $img := $images }}{{ if eq (mod $i 3) 2 }}<img src="{{ $img.path }}{{ $img.filename }}" alt="">{{ end }}{{ end }}
         </div>
-        <div class="hero-col hero-col-down">
-            <img src="/images/perfumery-19.jpg" alt="">
-            <img src="/images/potd/2026-02-27.jpg" alt="">
-            <img src="/images/professional-headshot-louisville-ky.jpg" alt="">
-            <img src="/images/tailspin-18.jpg" alt="">
-            <img src="/images/matt-simpson-photographer-louisville-ky.jpg" alt="">
-            <img src="/images/potd/2025-06-26.jpg" alt="">
-            <img src="/images/perfumery-19.jpg" alt="">
-            <img src="/images/potd/2026-02-27.jpg" alt="">
-            <img src="/images/professional-headshot-louisville-ky.jpg" alt="">
-            <img src="/images/tailspin-18.jpg" alt="">
-            <img src="/images/matt-simpson-photographer-louisville-ky.jpg" alt="">
-            <img src="/images/potd/2025-06-26.jpg" alt="">
-        </div>
-        <div class="hero-col hero-col-up hero-col-5">
-            <img src="/images/louisville_actress_headshot.jpg" alt="">
-            <img src="/images/storyfest-louisville-event-coverage.jpg" alt="">
-            <img src="/images/potd/2025-07-07.jpg" alt="">
-            <img src="/images/commercial-photography-louisville-brand.jpg" alt="">
-            <img src="/images/current812-14.jpg" alt="">
-            <img src="/images/tailspin-18.jpg" alt="">
-            <img src="/images/louisville_actress_headshot.jpg" alt="">
-            <img src="/images/storyfest-louisville-event-coverage.jpg" alt="">
-            <img src="/images/potd/2025-07-07.jpg" alt="">
-            <img src="/images/commercial-photography-louisville-brand.jpg" alt="">
-            <img src="/images/current812-14.jpg" alt="">
-            <img src="/images/tailspin-18.jpg" alt="">
-        </div>
+        {{ end }}
     </div>
     <div class="hero-wash"></div>
     <div class="hero-content">
