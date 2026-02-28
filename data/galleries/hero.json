@@ -70,6 +70,21 @@
       "filename": "portrait4.jpeg",
       "path": "/images/",
       "order": 14
+    },
+    {
+      "filename": "commercial-business-photography-louisville-6.jpg",
+      "path": "/images/branding/",
+      "order": 15
+    },
+    {
+      "filename": "brand2.jpg",
+      "path": "/images/branding/",
+      "order": 16
+    },
+    {
+      "filename": "branding11.jpg",
+      "path": "/images/branding/",
+      "order": 17
     }
   ]
 }
