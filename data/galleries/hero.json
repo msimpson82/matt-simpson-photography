@@ -16,6 +16,71 @@
       "filename": "louisville_actress_headshot.jpg",
       "path": "/images/",
       "order": 3
+    },
+    {
+      "filename": "alex1.jpeg",
+      "path": "/images/",
+      "order": 4
+    },
+    {
+      "filename": "brand3.jpg",
+      "path": "/images/",
+      "order": 5
+    },
+    {
+      "filename": "event-photography-louisville-festival-cornhole.jpg",
+      "path": "/images/",
+      "order": 6
+    },
+    {
+      "filename": "headshot2.jpg",
+      "path": "/images/",
+      "order": 7
+    },
+    {
+      "filename": "headshot-photography-louisville-testimonial.jpg",
+      "path": "/images/",
+      "order": 8
+    },
+    {
+      "filename": "port2.jpg",
+      "path": "/images/",
+      "order": 9
+    },
+    {
+      "filename": "headshot-executive-man-gray-suit-louisville.jpg",
+      "path": "/images/",
+      "order": 10
+    },
+    {
+      "filename": "portrait1.jpeg",
+      "path": "/images/",
+      "order": 11
+    },
+    {
+      "filename": "port3.jpg",
+      "path": "/images/",
+      "order": 12
+    },
+    {
+      "filename": "portrait3.jpeg",
+      "path": "/images/",
+      "order": 13
+    },
+    {
+      "filename": "portrait7.jpeg",
+      "path": "/images/",
+      "order": 14
+    },
+    {
+      "filename": "portrait5.jpg",
+      "path": "/images/",
+      "order": 15
+    },
+    {
+      "filename": "satterly-2.jpg",
+      "path": "/images/",
+      "order": 16
     }
   ]
 }
