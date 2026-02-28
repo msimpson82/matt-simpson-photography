@@ -60,17 +60,11 @@
     100% { transform: translateY(0); }
 }
 
-/* Light wash overlay */
+/* Wash overlay — gradient set inline by Hugo */
 .hero-wash {
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: radial-gradient(
-        ellipse at center,
-        rgba(250, 248, 245, 0.88) 0%,
-        rgba(250, 248, 245, 0.82) 40%,
-        rgba(250, 248, 245, 0.75) 100%
-    );
 }
 
 /* Content sits above everything */

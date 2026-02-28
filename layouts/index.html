@@ -2,6 +2,7 @@
 
 <!-- Hero -->
 <section class="hero">
+    {{ $opacity := .Site.Data.galleries.hero.opacity | default 0.92 }}
     <div class="hero-mosaic">
         {{ $images := .Site.Data.galleries.hero.images }}
         {{ $cols := .Site.Data.galleries.hero.columns | default 3 }}
@@ -16,7 +17,11 @@
         {{ end }}
         {{ end }}
     </div>
-    <div class="hero-wash"></div>
+    {{ $o1 := $opacity }}
+    {{ $o2 := sub $opacity 0.15 }}
+    {{ $o3 := sub $opacity 0.35 }}
+    {{ $o4 := sub $opacity 0.50 }}
+    <div class="hero-wash" style="background: radial-gradient(ellipse 55% 60% at center, rgba(250,248,245,{{ $o1 }}) 0%, rgba(250,248,245,{{ $o2 }}) 45%, rgba(250,248,245,{{ $o3 }}) 70%, rgba(250,248,245,{{ $o4 }}) 100%)"></div>
     <div class="hero-content">
         <div class="hero-eyebrow">Louisville, KY Photographer</div>
         <h1 class="hero-h1">Professional <span class="serif">headshots,</span> event coverage, and commercial photography in Louisville, Kentucky.</h1>
