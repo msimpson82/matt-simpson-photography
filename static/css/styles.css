@@ -23,6 +23,7 @@
 
 /* Components */
 @import url('lightbox.css');
+@import url('blog-gallery.css');
 
 /* Page-specific styles */
 @import url('pages.css');

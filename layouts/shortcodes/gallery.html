@@ -1,0 +1,5 @@
+{{ $layout := .Get "layout" | default "grid" }}
+{{ $columns := .Get "columns" | default "3" }}
+<div class="blog-gallery blog-gallery-{{ $layout }}" style="--gal-cols: {{ $columns }}">
+{{ .Inner }}
+</div>

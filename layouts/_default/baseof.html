@@ -13,6 +13,7 @@
       gtag('js', new Date());
       gtag('config', 'G-29H7QE4K2L');
     </script>
+
     <title>{{ if .IsHome }}Louisville Photographer | Headshots, Events &amp; Commercial | Matt Simpson Photography{{ else }}{{ .Title }} — Matt Simpson Photography{{ end }}</title>
     {{ if .Params.description }}<meta name="description" content="{{ .Params.description }}">{{ else }}<meta name="description" content="Matt Simpson is a Louisville, KY photographer specializing in professional headshots, corporate event photography, and commercial photography for businesses throughout Louisville, Southern Indiana, and Lexington.">{{ end }}
 
@@ -225,6 +226,7 @@
     })();
     </script>
 
+    <script src="/js/blog-gallery.js" defer></script>
     {{ block "scripts" . }}{{ end }}
 </body>
 </html>

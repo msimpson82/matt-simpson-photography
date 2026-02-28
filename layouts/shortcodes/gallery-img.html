@@ -1,0 +1,9 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $caption := .Get "caption" | default "" }}
+<figure class="blog-gallery-item">
+    <a href="{{ $src }}" class="blog-gallery-link" data-lightbox="gallery">
+        <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy">
+    </a>
+    {{ if $caption }}<figcaption>{{ $caption }}</figcaption>{{ end }}
+</figure>
