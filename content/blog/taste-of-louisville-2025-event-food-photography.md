@@ -1,0 +1,83 @@
+---
+title: "Taste of Louisville 2025 — Event & Food Photography"
+date: 2026-02-28
+description: "Event and food photography from Taste of Louisville 2025. Over 50 restaurants, 200+ photos, and one very well-fed photographer. Shot by Matt Simpson Photography."
+image: "taste-of-louisville-2025-event-food-photography.jpg"
+tags: ["events", "food", "louisville"]
+body_class: "page-blog"
+---
+
+There are gigs that feel like work, and there are gigs that feel like a gift. Taste of Louisville was a gift.
+
+Produced by the Kentucky Restaurant Association, Taste of Louisville brings together 50-60 of the city's best restaurants and 30+ beverage vendors under one roof. Each one showing off a taste of what makes them special. It's loud, it's packed, it's delicious, and this year, I got to be the one behind the camera.
+
+  
+
+This was my first year shooting Taste of Louisville, and honestly, it felt like the event was made for me. A lot of people know me for headshots and corporate work, but what most people don't know is that I got my start in this business shooting food. Restaurants, menus, chef profiles, that was my entry point into professional photography. So when this one came across my desk, I didn't hesitate.
+
+And yes, since everyone always asks, I do get to eat. Call it the perks of what we do.
+
+  
+
+## **The Shoot**
+
+Four hours. Over 200 delivered images. The goal was to capture the energy of the event itself, the crowds, the presentations, the atmosphere, while also giving each restaurant their moment. Every chef plating a dish is a portrait opportunity. Every table setup is a branding shot. That's how I approach event photography: it's not just documentation, it's content that the organizers, the vendors, and the sponsors can all actually use.
+
+  
+
+I shot a mix of wide environmental coverage, tight food detail shots, and candid portraits of the chefs and staff. If you've ever tried to photograph food under event lighting while 500 people mill around you, you know it's a different animal than a controlled studio shoot. But that's what makes it fun.
+
+  
+
+## ![](/images/blog/taste-of-louisville-2025-event-food-photography-1772302932522.jpg)
+
+## **The People Behind the Food**
+
+One of the best parts of a shoot like this is meeting the chefs. I have so much respect for what they do. The hours, the creativity, the pressure, and then they have to plate something beautiful on demand in a tent with a thousand things going on around them. I've always daydreamed about owning a restaurant. I love cooking for my family, and I think that connection to food is part of why my food photography resonates the way it does. When you genuinely care about what's on the plate, the camera picks up on that.
+
+  
+
+## **Working With the Kentucky Restaurant Association**
+
+I was brought on by the event production team after shooting the Waterfront July 4th celebration earlier in the summer. That shoot went well, really well, apparently, and the team wanted that same energy for Taste of Louisville. When the call came in asking if I could bring my "food photography times event style" to this one, I knew exactly what they meant. It's the crossover of two things I love doing, and I think the results speak for themselves.
+
+{{< gallery layout="grid" columns="3" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-1-1772302965298.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-8-1772302971592.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-4-1772302967514.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-2-1772302966039.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-17-1772302978355.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-3-1772302966681.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-5-1772302968317.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-9-1772302972414.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-6-1772302969034.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-12-1772302974360.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-7-1772302970798.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-15-1772302976819.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-10-1772302973026.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-11-1772302973634.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-13-1772302975074.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-14-1772302976069.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-16-1772302977533.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-18-1772302979112.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-19-1772302979746.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-20-1772302980383.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-21-1772302980986.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-22-1772302981681.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-23-1772302982307.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-24-1772302983856.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-25-1772302984513.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-26-1772302985120.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-27-1772302985740.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-28-1772302986441.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-29-1772302987261.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-30-1772302988285.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-31-1772302989003.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-32-1772302989825.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-33-1772302990482.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-34-1772302991255.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-35-1772302991958.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-36-1772302992689.jpg" alt="" caption="" >}}
+{{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-37-1772302993406.jpg" alt="" caption="" >}}
+{{< /gallery >}}
+
