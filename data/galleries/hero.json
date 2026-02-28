@@ -1,17 +1,65 @@
 {
-  "columns": 3,
+  "columns": 5,
   "images": [
-    { "filename": "professional-headshot-louisville-ky.jpg", "path": "/images/", "order": 1 },
-    { "filename": "tailspin-18.jpg", "path": "/images/", "order": 2 },
-    { "filename": "current812-14.jpg", "path": "/images/", "order": 3 },
-    { "filename": "louisville-event-photography-conference.jpg", "path": "/images/", "order": 4 },
-    { "filename": "perfumery-19.jpg", "path": "/images/", "order": 5 },
-    { "filename": "storyfest-louisville-event-coverage.jpg", "path": "/images/", "order": 6 },
-    { "filename": "matt-simpson-photographer-louisville-ky.jpg", "path": "/images/", "order": 7 },
-    { "filename": "commercial-photography-louisville-brand.jpg", "path": "/images/", "order": 8 },
-    { "filename": "louisville_actress_headshot.jpg", "path": "/images/", "order": 9 },
-    { "filename": "2025-07-07.jpg", "path": "/images/potd/", "order": 10 },
-    { "filename": "2025-06-26.jpg", "path": "/images/potd/", "order": 11 },
-    { "filename": "2026-02-27.jpg", "path": "/images/potd/", "order": 12 }
+    {
+      "filename": "professional-headshot-louisville-ky.jpg",
+      "path": "/images/",
+      "order": 1
+    },
+    {
+      "filename": "tailspin-18.jpg",
+      "path": "/images/",
+      "order": 2
+    },
+    {
+      "filename": "current812-14.jpg",
+      "path": "/images/",
+      "order": 3
+    },
+    {
+      "filename": "louisville-event-photography-conference.jpg",
+      "path": "/images/",
+      "order": 4
+    },
+    {
+      "filename": "perfumery-19.jpg",
+      "path": "/images/",
+      "order": 5
+    },
+    {
+      "filename": "storyfest-louisville-event-coverage.jpg",
+      "path": "/images/",
+      "order": 6
+    },
+    {
+      "filename": "matt-simpson-photographer-louisville-ky.jpg",
+      "path": "/images/",
+      "order": 7
+    },
+    {
+      "filename": "commercial-photography-louisville-brand.jpg",
+      "path": "/images/",
+      "order": 8
+    },
+    {
+      "filename": "louisville_actress_headshot.jpg",
+      "path": "/images/",
+      "order": 9
+    },
+    {
+      "filename": "2025-07-07.jpg",
+      "path": "/images/potd/",
+      "order": 10
+    },
+    {
+      "filename": "2025-06-26.jpg",
+      "path": "/images/potd/",
+      "order": 11
+    },
+    {
+      "filename": "2026-02-27.jpg",
+      "path": "/images/potd/",
+      "order": 12
+    }
   ]
 }
