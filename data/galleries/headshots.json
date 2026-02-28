@@ -17,9 +17,9 @@
     },
     {
       "filename": "headshot-creative-professional-dark-background-louisville.jpg",
-      "alt": "Creative professional headshot Louisville ÃÂ¢ÃÂÃÂ young man, dark background portrait",
+      "alt": "Creative professional headshot Louisville - young man, dark background portrait",
       "path": "/images/",
-      "order": 3,
+      "order": 1,
       "active": true
     },
     {
@@ -54,7 +54,7 @@
       "filename": "louisville_actress_headshot.jpg",
       "alt": "louisville+actress+headshot",
       "path": "/images/",
-      "order": 1,
+      "order": 3,
       "active": true
     }
   ]
