@@ -46,21 +46,6 @@
       "filename": "louisville_actress_headshot.jpg",
       "path": "/images/",
       "order": 9
-    },
-    {
-      "filename": "2025-07-07.jpg",
-      "path": "/images/potd/",
-      "order": 10
-    },
-    {
-      "filename": "2025-06-26.jpg",
-      "path": "/images/potd/",
-      "order": 11
-    },
-    {
-      "filename": "2026-02-27.jpg",
-      "path": "/images/potd/",
-      "order": 12
     }
   ]
 }
