@@ -31,7 +31,7 @@ One of the best parts of a shoot like this is meeting the chefs. I have so much 
 
 I was brought on by the event production team after shooting the Waterfront July 4th celebration earlier in the summer. That shoot went well, really well, apparently, and the team wanted that same energy for Taste of Louisville. When the call came in asking if I could bring my "food photography times event style" to this one, I knew exactly what they meant. It's the crossover of two things I love doing, and I think the results speak for themselves.
 
-{{< gallery layout="masonry" columns="3" >}}
+{{< gallery layout="carousel" columns="3" >}}
 {{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-1-1772302965298.jpg" alt="" caption="" >}}
 {{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-8-1772302971592.jpg" alt="" caption="" >}}
 {{< gallery-img src="/images/blog/taste-of-louisville-2025-event-food-photography-4-1772302967514.jpg" alt="" caption="" >}}
