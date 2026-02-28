@@ -4,20 +4,16 @@
 <section class="hero">
     <div class="hero-mosaic">
         {{ $images := .Site.Data.galleries.hero.images }}
+        {{ $cols := .Site.Data.galleries.hero.columns | default 3 }}
         {{ $total := len $images }}
         {{ if gt $total 0 }}
-        <div class="hero-col hero-col-up">
-            {{ range $i, $img := $images }}{{ if eq (mod $i 3) 0 }}<img src="{{ $img.path }}{{ $img.filename }}" alt="">{{ end }}{{ end }}
-            {{ range $i, $img := $images }}{{ if eq (mod $i 3) 0 }}<img src="{{ $img.path }}{{ $img.filename }}" alt="">{{ end }}{{ end }}
+        {{ range $c := seq $cols }}
+        {{ $dir := "up" }}{{ if eq (mod $c 2) 0 }}{{ $dir = "down" }}{{ end }}
+        <div class="hero-col hero-col-{{ $dir }}">
+            {{ range $i, $img := $images }}{{ if eq (mod $i $cols) (sub $c 1) }}<img src="{{ $img.path }}{{ $img.filename }}" alt="">{{ end }}{{ end }}
+            {{ range $i, $img := $images }}{{ if eq (mod $i $cols) (sub $c 1) }}<img src="{{ $img.path }}{{ $img.filename }}" alt="">{{ end }}{{ end }}
         </div>
-        <div class="hero-col hero-col-down">
-            {{ range $i, $img := $images }}{{ if eq (mod $i 3) 1 }}<img src="{{ $img.path }}{{ $img.filename }}" alt="">{{ end }}{{ end }}
-            {{ range $i, $img := $images }}{{ if eq (mod $i 3) 1 }}<img src="{{ $img.path }}{{ $img.filename }}" alt="">{{ end }}{{ end }}
-        </div>
-        <div class="hero-col hero-col-up">
-            {{ range $i, $img := $images }}{{ if eq (mod $i 3) 2 }}<img src="{{ $img.path }}{{ $img.filename }}" alt="">{{ end }}{{ end }}
-            {{ range $i, $img := $images }}{{ if eq (mod $i 3) 2 }}<img src="{{ $img.path }}{{ $img.filename }}" alt="">{{ end }}{{ end }}
-        </div>
+        {{ end }}
         {{ end }}
     </div>
     <div class="hero-wash"></div>

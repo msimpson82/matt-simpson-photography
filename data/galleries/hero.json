@@ -1,4 +1,5 @@
 {
+  "columns": 3,
   "images": [
     { "filename": "professional-headshot-louisville-ky.jpg", "path": "/images/", "order": 1 },
     { "filename": "tailspin-18.jpg", "path": "/images/", "order": 2 },
