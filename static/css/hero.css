@@ -113,8 +113,8 @@
 
 .hero-p {
     font-size: 18px;
-    font-weight: 400;
-    color: var(--mid);
+    font-weight: 600;
+    color: var(--dark);
     line-height: 1.8;
     max-width: 620px;
     margin: 0 auto 44px;

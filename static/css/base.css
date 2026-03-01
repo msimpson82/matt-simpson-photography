@@ -147,17 +147,18 @@ button {
     font-family: var(--font-body);
     font-size: 13px;
     font-weight: 700;
-    color: var(--dark);
+    color: var(--teal);
     padding: 18px 44px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    border: 2px solid var(--border-light);
+    border: 2px solid var(--teal);
     display: inline-block;
     transition: all 0.3s;
 }
 
 .btn-outline:hover {
-    border-color: var(--dark);
+    background: var(--teal);
+    color: #fff;
     transform: translateY(-2px);
 }
 

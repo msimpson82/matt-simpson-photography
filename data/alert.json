@@ -1,18 +1,18 @@
 {
   "banner": {
     "active": false,
-    "message": "asdadasd",
-    "cta_text": "asdasd",
-    "url": "/blog/taste-of-louisville-2025-event-food-photography/",
-    "post_slug": "taste-of-louisville-2025-event-food-photography"
+    "message": "",
+    "cta_text": "",
+    "url": "",
+    "post_slug": ""
   },
   "lightbox": {
-    "active": true,
-    "message": "Just dropped a new blog post - check out my shoot with Taste of Louisville!",
-    "cta_text": "Check it Out!",
-    "url": "/blog/taste-of-louisville-2025-event-food-photography/",
-    "image": "/images/blog/taste-of-louisville-2025-event-food-photography.jpg",
-    "post_slug": "taste-of-louisville-2025-event-food-photography",
-    "scroll_trigger": 5
+    "active": false,
+    "message": "",
+    "cta_text": "",
+    "url": "",
+    "image": "",
+    "post_slug": "",
+    "scroll_trigger": 40
   }
 }

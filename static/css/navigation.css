@@ -48,18 +48,20 @@
 .nav-links a {
     font-size: 12px;
     font-weight: 600;
-    color: var(--light);
+    color: var(--teal);
     text-transform: uppercase;
     letter-spacing: 2px;
-    transition: color 0.3s;
+    transition: color 0.3s, font-weight 0.2s;
 }
 
 .nav-links a:hover {
     color: var(--teal);
+    font-weight: 800;
 }
 
 .nav-links a.active {
     color: var(--teal);
+    font-weight: 800;
 }
 
 /* --- Hamburger --- */
