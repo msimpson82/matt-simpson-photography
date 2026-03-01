@@ -1,6 +1,28 @@
 {{ define "main" }}
 
 <!-- Hero -->
+{{ $h := .Site.Data.homepage.hero }}
+{{ $heroLayout := $h.layout | default "full" }}
+
+{{ if eq $heroLayout "split" }}
+<!-- Split Hero -->
+<section class="hero hero-split">
+    <div class="hero-split-image">
+        <img src="{{ $h.image }}" alt="{{ $h.image_alt }}">
+    </div>
+    <div class="hero-split-content">
+        <div class="hero-eyebrow">{{ $h.eyebrow }}</div>
+        <h1 class="hero-h1">{{ $h.heading_pre }}<span class="serif">{{ $h.heading_serif }}</span>{{ $h.heading_post }}</h1>
+        <p class="hero-p">{{ $h.paragraph }}</p>
+        <div class="hero-actions">
+            <a href="#contact" class="btn-primary">{{ $h.button_primary }}</a>
+            <a href="#featured-projects" class="btn-outline">{{ $h.button_secondary }}</a>
+        </div>
+    </div>
+</section>
+
+{{ else }}
+<!-- Full Width Hero -->
 <section class="hero">
     <div class="hero-mosaic">
         {{ $images := .Site.Data.galleries.hero.images }}
@@ -19,7 +41,6 @@
     {{ $opacity := .Site.Data.galleries.hero.opacity | default 0.85 }}
     <div class="hero-wash" style="background: rgba(250,248,245,{{ $opacity }})"></div>
     <div class="hero-content">
-        {{ $h := .Site.Data.homepage.hero }}
         <div class="hero-eyebrow">{{ $h.eyebrow }}</div>
         <h1 class="hero-h1">{{ $h.heading_pre }}<span class="serif">{{ $h.heading_serif }}</span>{{ $h.heading_post }}</h1>
         <p class="hero-p">{{ $h.paragraph }}</p>
@@ -29,6 +50,7 @@
         </div>
     </div>
 </section>
+{{ end }}
 
 <!-- Statement -->
 <section class="statement">

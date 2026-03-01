@@ -1,5 +1,8 @@
 {
   "hero": {
+    "layout": "full",
+    "image": "/images/hero-main.jpg",
+    "image_alt": "Matt Simpson — Louisville KY photographer",
     "eyebrow": "Louisville, KY Photographer",
     "heading_pre": "Professional ",
     "heading_serif": "headshots,",
