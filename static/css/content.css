@@ -829,7 +829,7 @@
 }
 
 .blog-grid {
-    padding: 0 var(--container-pad) 80px;
+    padding: 140px var(--container-pad) 80px;
     background: var(--bg);
 }
 
@@ -921,7 +921,7 @@
 }
 
 @media (max-width: 900px) {
-    .blog-grid { padding: 0 var(--container-pad-mobile) 60px; }
+    .blog-grid { padding: 120px var(--container-pad-mobile) 60px; }
     .blog-grid-inner { grid-template-columns: repeat(2, 1fr); gap: 20px; }
 }
 
