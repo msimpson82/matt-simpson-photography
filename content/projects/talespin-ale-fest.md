@@ -4,10 +4,10 @@ date: 2025-05-01
 project_type: "Event Photography"
 client: "Tailspin Ale Fest"
 hero_image: "tailspin-18.jpg"
+body_class: "single-project-page"
 homepage_featured: true
 homepage_order: 99
-homepage_description: ""
-body_class: "single-project-page"
+homepage_description: "Cheers! Tailspin Ale Fest features over 50 breweries from across America with a dedicated section of brews from the bluegrass state of Kentucky. They do a great job with their marketing and needed high quality photos to really kick their online presence in high gear."
 gallery:
   - "tailspin.jpg"
   - "tailspin-2.jpg"
@@ -43,7 +43,7 @@ gallery:
 
 ## The Shoot
 
-Cheers! Tailspin Ale Fest features over 50 breweries from across America with a dedicated section of brews from the bluegrass state of Kentucky. They do a great job with their marketing and needed high quality photos to really kick their online presence in high gear. 
+Cheers! Tailspin Ale Fest features over 50 breweries from across America with a dedicated section of brews from the bluegrass state of Kentucky. They do a great job with their marketing and needed high quality photos to really kick their online presence in high gear.
 
 ## The Results
 
