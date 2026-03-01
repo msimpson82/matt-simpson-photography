@@ -6,14 +6,83 @@
     <p class="page-hero-subtitle">Photography tips, behind-the-scenes stories, and insights from a Louisville photographer.</p>
 </section>
 
-<!-- Blog Grid -->
+<!-- Blog Featured Layout -->
 <section class="blog-grid">
+    {{ $posts := sort .Pages "Date" "desc" }}
+    {{ if not $posts }}
     <div class="blog-grid-inner">
-        {{ $posts := sort .Pages "Date" "desc" }}
-        {{ if not $posts }}
         <p class="blog-empty">No posts yet. Check back soon.</p>
-        {{ else }}
-        {{ range $posts }}
+    </div>
+    {{ else }}
+
+    {{ $featured := index $posts 0 }}
+    {{ $sidebar := after 1 $posts | first 3 }}
+    {{ $remaining := after 4 $posts }}
+
+    <div class="blog-featured-layout">
+        <!-- Featured Post (Left) -->
+        <a href="{{ $featured.RelPermalink }}" class="blog-featured-post">
+            {{ if $featured.Params.image }}
+            <div class="blog-featured-img">
+                <img src="/images/blog/{{ $featured.Params.image }}" alt="{{ $featured.Title }}" loading="lazy">
+            </div>
+            {{ end }}
+            <div class="blog-featured-body">
+                {{ if $featured.Params.tags }}
+                <div class="blog-card-tags">
+                    {{ range first 2 $featured.Params.tags }}
+                    <span class="blog-card-tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+                <h2 class="blog-featured-title">{{ $featured.Title }}</h2>
+                <div class="blog-card-meta">
+                    <time>{{ $featured.Date.Format "January 2, 2006" }}</time>
+                    <span>&middot;</span>
+                    <span>{{ math.Round (div (countwords $featured.Content) 200.0) }} min read</span>
+                </div>
+                {{ if $featured.Params.description }}
+                <p class="blog-featured-desc">{{ $featured.Params.description }}</p>
+                {{ end }}
+            </div>
+        </a>
+
+        <!-- Sidebar (Right) -->
+        {{ if $sidebar }}
+        <div class="blog-sidebar">
+            <h3 class="blog-sidebar-heading">Latest Posts</h3>
+            {{ range $sidebar }}
+            <a href="{{ .RelPermalink }}" class="blog-sidebar-card">
+                {{ if .Params.image }}
+                <div class="blog-sidebar-img">
+                    <img src="/images/blog/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+                </div>
+                {{ end }}
+                <div class="blog-sidebar-body">
+                    {{ if .Params.tags }}
+                    <div class="blog-card-tags">
+                        {{ range first 1 .Params.tags }}
+                        <span class="blog-card-tag">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                    <h4 class="blog-sidebar-title">{{ .Title }}</h4>
+                    <div class="blog-card-meta">
+                        <time>{{ .Date.Format "January 2, 2006" }}</time>
+                        <span>&middot;</span>
+                        <span>{{ math.Round (div (countwords .Content) 200.0) }} min read</span>
+                    </div>
+                </div>
+            </a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+
+    <!-- Remaining Posts Grid -->
+    {{ if $remaining }}
+    <div class="blog-grid-inner">
+        {{ range $remaining }}
         <a href="{{ .RelPermalink }}" class="blog-card">
             {{ if .Params.image }}
             <div class="blog-card-img">
@@ -40,8 +109,10 @@
             </div>
         </a>
         {{ end }}
-        {{ end }}
     </div>
+    {{ end }}
+
+    {{ end }}
 </section>
 
 {{ end }}
