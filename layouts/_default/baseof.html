@@ -226,6 +226,8 @@
     })();
     </script>
 
+    {{ partial "alerts.html" . }}
+    <script src="/js/alerts.js" defer></script>
     <script src="/js/blog-gallery.js" defer></script>
     {{ block "scripts" . }}{{ end }}
 </body>

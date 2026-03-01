@@ -24,6 +24,7 @@
 /* Components */
 @import url('lightbox.css');
 @import url('blog-gallery.css');
+@import url('alerts.css');
 
 /* Page-specific styles */
 @import url('pages.css');

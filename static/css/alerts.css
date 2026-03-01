@@ -1,0 +1,311 @@
+/* ========================================
+   ALERTS — Banner Ribbon + Lightbox Popup
+   ======================================== */
+
+/* ---------- BANNER RIBBON ---------- */
+.alert-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    height: 44px;
+    transform: translateY(-100%);
+    animation: bannerSlide 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+}
+
+@keyframes bannerSlide {
+    to { transform: translateY(0); }
+}
+
+.alert-banner.dismissed {
+    animation: bannerSlideOut 0.35s ease forwards;
+}
+
+@keyframes bannerSlideOut {
+    to { transform: translateY(-100%); }
+}
+
+.alert-banner-inner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.alert-banner-badge {
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: var(--teal, #4a9e8e);
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 3px;
+    line-height: 1;
+}
+
+.alert-banner-msg {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: -0.2px;
+}
+
+.alert-banner-cta {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--teal, #4a9e8e);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s, gap 0.2s;
+    white-space: nowrap;
+}
+
+.alert-banner-cta:hover {
+    color: #5fbfad;
+    gap: 8px;
+}
+
+.alert-banner-arrow {
+    transition: transform 0.2s;
+    font-size: 15px;
+}
+
+.alert-banner-cta:hover .alert-banner-arrow {
+    transform: translateX(2px);
+}
+
+.alert-banner-close {
+    position: absolute;
+    right: 16px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.alert-banner-close:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Push page content down when banner is active */
+body.has-alert-banner {
+    padding-top: 44px;
+}
+
+body.has-alert-banner .nav-container {
+    top: 44px;
+}
+
+/* ---------- LIGHTBOX POPUP ---------- */
+.alert-lb {
+    position: fixed;
+    inset: 0;
+    z-index: 10001;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.alert-lb.show {
+    display: flex;
+}
+
+.alert-lb::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+    animation: lbOverlayIn 0.4s ease forwards;
+}
+
+@keyframes lbOverlayIn {
+    to {
+        background: rgba(0, 0, 0, 0.65);
+        backdrop-filter: blur(6px);
+    }
+}
+
+.alert-lb-card {
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 440px;
+    width: 100%;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    transform: scale(0.9) translateY(20px);
+    opacity: 0;
+    animation: lbCardIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+
+@keyframes lbCardIn {
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+.alert-lb.dismissed .alert-lb-card {
+    animation: lbCardOut 0.3s ease forwards;
+}
+
+.alert-lb.dismissed::before {
+    animation: lbOverlayOut 0.3s ease forwards;
+}
+
+@keyframes lbCardOut {
+    to { transform: scale(0.95) translateY(10px); opacity: 0; }
+}
+
+@keyframes lbOverlayOut {
+    to { background: rgba(0, 0, 0, 0); backdrop-filter: blur(0); }
+}
+
+.alert-lb-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 3;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+    backdrop-filter: blur(8px);
+}
+
+.alert-lb-close:hover {
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+
+.alert-lb-img {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.alert-lb-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.alert-lb-img-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(transparent, #fff);
+}
+
+.alert-lb-content {
+    padding: 20px 28px 28px;
+    text-align: center;
+}
+
+.alert-lb-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--teal, #4a9e8e);
+    margin-bottom: 12px;
+}
+
+.alert-lb-msg {
+    font-size: 17px;
+    font-weight: 500;
+    color: #1a1a1a;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    letter-spacing: -0.3px;
+}
+
+.alert-lb-cta {
+    display: inline-block;
+    background: var(--teal, #4a9e8e);
+    color: #fff;
+    padding: 13px 36px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 16px rgba(74, 158, 142, 0.3);
+}
+
+.alert-lb-cta:hover {
+    background: #3d8a7c;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(74, 158, 142, 0.4);
+}
+
+.alert-lb-cta:active {
+    transform: translateY(0);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+    .alert-banner {
+        height: auto;
+        padding: 10px 44px 10px 16px;
+    }
+
+    .alert-banner-inner {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .alert-banner-msg {
+        font-size: 12px;
+    }
+
+    .alert-lb-card {
+        max-width: 95vw;
+    }
+
+    .alert-lb-img {
+        height: 160px;
+    }
+
+    .alert-lb-msg {
+        font-size: 15px;
+    }
+
+    body.has-alert-banner {
+        padding-top: 60px;
+    }
+
+    body.has-alert-banner .nav-container {
+        top: 60px;
+    }
+}

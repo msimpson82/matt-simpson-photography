@@ -1,0 +1,31 @@
+{{ $alert := .Site.Data.alert }}
+
+{{ if $alert.banner.active }}
+<div class="alert-banner" id="alert-banner" data-slug="{{ $alert.banner.post_slug }}">
+    <div class="alert-banner-inner">
+        <span class="alert-banner-badge">New</span>
+        <span class="alert-banner-msg">{{ $alert.banner.message }}</span>
+        <a href="{{ $alert.banner.url }}" class="alert-banner-cta" onclick="alertTrack('banner','{{ $alert.banner.post_slug }}')">{{ $alert.banner.cta_text }} <span class="alert-banner-arrow">→</span></a>
+    </div>
+    <button class="alert-banner-close" onclick="alertDismiss('banner')" aria-label="Close">&times;</button>
+</div>
+{{ end }}
+
+{{ if $alert.lightbox.active }}
+<div class="alert-lb" id="alert-lb" data-slug="{{ $alert.lightbox.post_slug }}" data-trigger="{{ $alert.lightbox.scroll_trigger }}">
+    <div class="alert-lb-card">
+        <button class="alert-lb-close" onclick="alertDismiss('lightbox')">&times;</button>
+        {{ if $alert.lightbox.image }}
+        <div class="alert-lb-img">
+            <img src="{{ $alert.lightbox.image }}" alt="">
+            <div class="alert-lb-img-fade"></div>
+        </div>
+        {{ end }}
+        <div class="alert-lb-content">
+            <div class="alert-lb-badge">📸 Fresh Work</div>
+            <p class="alert-lb-msg">{{ $alert.lightbox.message }}</p>
+            <a href="{{ $alert.lightbox.url }}" class="alert-lb-cta" onclick="alertTrack('lightbox','{{ $alert.lightbox.post_slug }}')">{{ $alert.lightbox.cta_text }}</a>
+        </div>
+    </div>
+</div>
+{{ end }}

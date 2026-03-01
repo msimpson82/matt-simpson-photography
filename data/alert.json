@@ -1,0 +1,18 @@
+{
+  "banner": {
+    "active": false,
+    "message": "",
+    "cta_text": "",
+    "url": "",
+    "post_slug": ""
+  },
+  "lightbox": {
+    "active": false,
+    "message": "",
+    "cta_text": "",
+    "url": "",
+    "image": "",
+    "post_slug": "",
+    "scroll_trigger": 40
+  }
+}
