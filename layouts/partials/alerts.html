@@ -14,7 +14,6 @@
 {{ if $alert.lightbox.active }}
 <div class="alert-lb" id="alert-lb" data-slug="{{ $alert.lightbox.post_slug }}" data-trigger="{{ $alert.lightbox.scroll_trigger }}">
     <div class="alert-lb-card">
-        <button class="alert-lb-close" onclick="alertDismiss('lightbox')">&times;</button>
         {{ if $alert.lightbox.image }}
         <div class="alert-lb-img">
             <img src="{{ $alert.lightbox.image }}" alt="">
@@ -24,7 +23,8 @@
         <div class="alert-lb-content">
             <div class="alert-lb-badge">📸 Fresh Work</div>
             <p class="alert-lb-msg">{{ $alert.lightbox.message }}</p>
-            <a href="{{ $alert.lightbox.url }}" class="alert-lb-cta" onclick="alertTrack('lightbox','{{ $alert.lightbox.post_slug }}')">{{ $alert.lightbox.cta_text }}</a>
+            <a href="{{ $alert.lightbox.url }}" class="alert-lb-cta" onclick="alertTrack('lightbox','{{ $alert.lightbox.post_slug }}');alertDismiss('lightbox')">{{ $alert.lightbox.cta_text }}</a>
+            <button class="alert-lb-nah" onclick="alertDismiss('lightbox')">No, thanks!</button>
         </div>
     </div>
 </div>
