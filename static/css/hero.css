@@ -152,3 +152,113 @@
         display: none;
     }
 }
+
+
+/* ========================================
+   HERO SPLIT — Image left, content right
+   ======================================== */
+
+.hero.hero-split {
+    display: grid !important;
+    grid-template-columns: 55% 1fr;
+    min-height: 100vh;
+    padding: 0 !important;
+    text-align: left;
+    overflow: hidden;
+    flex-direction: unset;
+    justify-content: unset;
+    align-items: stretch;
+}
+
+.hero-split-image {
+    position: relative;
+    overflow: hidden;
+    min-height: 0;
+}
+
+.hero-split-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    inset: 0;
+}
+
+.hero-split-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 64px;
+    background: var(--bg, #F5F0EB);
+}
+
+.hero-split-content .hero-eyebrow {
+    justify-content: flex-start;
+}
+
+.hero-split-content .hero-eyebrow::before {
+    display: none;
+}
+
+.hero-split-content .hero-h1 {
+    font-size: clamp(32px, 3.5vw, 56px);
+}
+
+.hero-split-content .hero-p {
+    margin: 0 0 44px;
+    max-width: 520px;
+}
+
+.hero-split-content .hero-actions {
+    justify-content: flex-start;
+}
+
+/* Split responsive */
+@media (max-width: 900px) {
+    .hero.hero-split {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .hero-split-image {
+        height: 50vh;
+        min-height: 320px;
+    }
+
+    .hero-split-content {
+        padding: 48px var(--container-pad-mobile, 24px);
+        text-align: center;
+    }
+
+    .hero-split-content .hero-eyebrow {
+        justify-content: center;
+    }
+
+    .hero-split-content .hero-eyebrow::before {
+        display: block;
+    }
+
+    .hero-split-content .hero-p {
+        margin: 0 auto 44px;
+    }
+
+    .hero-split-content .hero-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-split-image {
+        height: 40vh;
+        min-height: 260px;
+    }
+
+    .hero-split-content {
+        padding: 36px 20px 48px;
+    }
+
+    .hero-split-content .hero-h1 {
+        font-size: 28px;
+    }
+}
