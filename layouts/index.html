@@ -2,7 +2,6 @@
 
 <!-- Hero -->
 <section class="hero">
-    {{ $opacity := .Site.Data.galleries.hero.opacity | default 0.85 }}
     <div class="hero-mosaic">
         {{ $images := .Site.Data.galleries.hero.images }}
         {{ $cols := .Site.Data.galleries.hero.columns | default 3 }}
@@ -20,12 +19,13 @@
     {{ $opacity := .Site.Data.galleries.hero.opacity | default 0.85 }}
     <div class="hero-wash" style="background: rgba(250,248,245,{{ $opacity }})"></div>
     <div class="hero-content">
-        <div class="hero-eyebrow">Louisville, KY Photographer</div>
-        <h1 class="hero-h1">Professional <span class="serif">headshots,</span> event coverage, and commercial photography in Louisville, Kentucky.</h1>
-        <p class="hero-p">I'm Matt Simpson. I photograph the people, events, and businesses that drive Louisville forward. From executive headshots and corporate events to marketing campaigns and brand launches — if your business needs a camera, I'm on it.</p>
+        {{ $h := .Site.Data.homepage.hero }}
+        <div class="hero-eyebrow">{{ $h.eyebrow }}</div>
+        <h1 class="hero-h1">{{ $h.heading_pre }}<span class="serif">{{ $h.heading_serif }}</span>{{ $h.heading_post }}</h1>
+        <p class="hero-p">{{ $h.paragraph }}</p>
         <div class="hero-actions">
-            <a href="#contact" class="btn-primary">Book a Session</a>
-            <a href="#featured-projects" class="btn-outline">See the Work</a>
+            <a href="#contact" class="btn-primary">{{ $h.button_primary }}</a>
+            <a href="#featured-projects" class="btn-outline">{{ $h.button_secondary }}</a>
         </div>
     </div>
 </section>
@@ -33,7 +33,8 @@
 <!-- Statement -->
 <section class="statement">
     <div class="statement-inner">
-        <p class="statement-text"><strong>Bold, professional, and built for business.</strong> My photography shows up on company websites, LinkedIn profiles, marketing campaigns, and brand launches across Louisville and beyond. Whether you need a single headshot or a full-day commercial shoot, I deliver images that make you look as good as you are.</p>
+        {{ $s := .Site.Data.homepage.statement }}
+        <p class="statement-text"><strong>{{ $s.bold }}</strong> {{ $s.text }}</p>
         <div class="statement-line"></div>
     </div>
 </section>
@@ -107,15 +108,16 @@
 
 <!-- About (Who's Behind the Camera) -->
 <section class="about-section">
+    {{ $a := .Site.Data.homepage.about }}
     <div class="about-section-photo">
-        <img src="/images/matt-simpson-photographer-louisville-ky.jpg" alt="Matt Simpson — professional photographer based in Louisville, Kentucky" loading="lazy">
+        <img src="{{ $a.photo }}" alt="{{ $a.photo_alt }}" loading="lazy">
     </div>
     <div class="about-section-content">
-        <div class="section-label">About the Photographer</div>
-        <h2 class="about-section-title">Who's Behind <span class="serif">the Camera</span></h2>
-        <p class="about-section-text">I'm Matt Simpson, a commercial photographer based in Louisville, Kentucky. I work with businesses, executives, and organizations that need professional photography — headshots, events, and commercial campaigns — and I've been doing it for years.</p>
-        <p class="about-section-text">My studio is in the Germantown neighborhood of Louisville. I shoot on-location throughout Louisville, <strong>Southern Indiana</strong> (Jeffersonville, New Albany, Clarksville), and <strong>Lexington, KY</strong>. I've worked with CEOs, marketing teams, startups, and organizations of all sizes. My images end up on websites, LinkedIn, billboards, brochures, and marketing campaigns.</p>
-        <a href="/about/" class="btn-primary" style="align-self:flex-start; margin-top:20px;">More About Me</a>
+        <div class="section-label">{{ $a.label }}</div>
+        <h2 class="about-section-title">{{ $a.heading_pre }}<span class="serif">{{ $a.heading_serif }}</span></h2>
+        <p class="about-section-text">{{ $a.paragraph_1 }}</p>
+        <p class="about-section-text">{{ $a.paragraph_2 | safeHTML }}</p>
+        <a href="/about/" class="btn-primary" style="align-self:flex-start; margin-top:20px;">{{ $a.button }}</a>
     </div>
 </section>
 
@@ -181,9 +183,10 @@
 
 <!-- Contact -->
 <section class="contact" id="contact">
-    <div class="contact-label">Book a Louisville Photographer</div>
-    <div class="contact-title">Let's Get to Work.</div>
-    <p class="contact-sub">Ready to book a headshot session, schedule event coverage, or plan a commercial shoot? Fill out the form below or reach out directly. I work with businesses of all sizes throughout Louisville, Southern Indiana, and Lexington.</p>
+    {{ $c := .Site.Data.homepage.contact }}
+    <div class="contact-label">{{ $c.label }}</div>
+    <div class="contact-title">{{ $c.heading }}</div>
+    <p class="contact-sub">{{ $c.paragraph }}</p>
     <form class="contact-form" name="contact" method="POST" data-netlify="true">
         <input type="text" name="name" placeholder="Name" required>
         <input type="email" name="email" placeholder="Email" required>

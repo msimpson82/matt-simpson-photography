@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "eyebrow": "Louisville, KY Photographer",
+    "heading_pre": "Professional ",
+    "heading_serif": "headshots,",
+    "heading_post": " event coverage, and commercial photography in Louisville, Kentucky.",
+    "paragraph": "I'm Matt Simpson. I photograph the people, events, and businesses that drive Louisville forward. From executive headshots and corporate events to marketing campaigns and brand launches — if your business needs a camera, I'm on it.",
+    "button_primary": "Book a Session",
+    "button_secondary": "See the Work"
+  },
+  "statement": {
+    "bold": "Bold, professional, and built for business.",
+    "text": "My photography shows up on company websites, LinkedIn profiles, marketing campaigns, and brand launches across Louisville and beyond. Whether you need a single headshot or a full-day commercial shoot, I deliver images that make you look as good as you are."
+  },
+  "about": {
+    "photo": "/images/matt-simpson-photographer-louisville-ky.jpg",
+    "photo_alt": "Matt Simpson — professional photographer based in Louisville, Kentucky",
+    "label": "About the Photographer",
+    "heading_pre": "Who's Behind ",
+    "heading_serif": "the Camera",
+    "paragraph_1": "I'm Matt Simpson, a commercial photographer based in Louisville, Kentucky. I work with businesses, executives, and organizations that need professional photography — headshots, events, and commercial campaigns — and I've been doing it for years.",
+    "paragraph_2": "My studio is in the Germantown neighborhood of Louisville. I shoot on-location throughout Louisville, <strong>Southern Indiana</strong> (Jeffersonville, New Albany, Clarksville), and <strong>Lexington, KY</strong>. I've worked with CEOs, marketing teams, startups, and organizations of all sizes. My images end up on websites, LinkedIn, billboards, brochures, and marketing campaigns.",
+    "button": "More About Me"
+  },
+  "contact": {
+    "label": "Book a Louisville Photographer",
+    "heading": "Let's Get to Work.",
+    "paragraph": "Ready to book a headshot session, schedule event coverage, or plan a commercial shoot? Fill out the form below or reach out directly. I work with businesses of all sizes throughout Louisville, Southern Indiana, and Lexington."
+  }
+}
