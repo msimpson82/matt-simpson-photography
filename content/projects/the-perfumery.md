@@ -4,10 +4,10 @@ date: 2025-05-01
 project_type: "Corporate Branding"
 client: "The Perfumery"
 hero_image: "perfumery-19.jpg"
+body_class: "single-project-page"
 homepage_featured: true
 homepage_order: 99
-homepage_description: ""
-body_class: "single-project-page"
+homepage_description: "I worked with The Perfumery to photograph their factory and highlight the hands on process behind their essential oils. The focus was on the lab, where real scientists were mixing and testing every batch. My job was to capture that detail and precision for their website and international print campaigns. It was a great shoot, and yeah, I came home smelling pretty amazing."
 gallery:
   - "perfumery.jpg"
   - "perfumery-3.jpg"
