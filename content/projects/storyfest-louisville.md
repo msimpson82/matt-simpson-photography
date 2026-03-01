@@ -4,10 +4,10 @@ date: 2024-08-15
 project_type: "Event Photography"
 client: "Storyfest Louisville"
 hero_image: "storyfest-louisville-event-coverage.jpg"
+body_class: "single-project-page"
 homepage_featured: true
 homepage_order: 99
-homepage_description: ""
-body_class: "single-project-page"
+homepage_description: "Storyfest Louisville is HOPE IN ACTION. Created by The Tommy Elliott Fund, a registered 501(c)(3), this entity was formed after a mass shooting in Louisville on April 10, 2023. This tragedy was a pivotal moment for the community, and something which was close to my heart. I was actually on Main St., a block away from the shooting, and it affected me deeply. When Storyfest reached out for photography coverage of their second storytelling event, I knew I had to be a part of it and donated my time to the cause."
 gallery:
   - "storyfest.jpg"
   - "storyfest-2.jpg"
