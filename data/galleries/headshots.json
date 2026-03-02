@@ -12,7 +12,7 @@
       "filename": "headshot-creative-professional-dark-background-louisville.jpg",
       "alt": "Creative professional headshot Louisville - young man, dark background portrait",
       "path": "/images/",
-      "order": 2,
+      "order": 8,
       "active": true
     },
     {
@@ -20,27 +20,6 @@
       "alt": "louisville+actress+headshot",
       "path": "/images/",
       "order": 3,
-      "active": true
-    },
-    {
-      "filename": "headshot-executive-man-gray-suit-louisville.jpg",
-      "alt": "Executive headshot Louisville KY -  man in gray suit and purple shirt, studio lighting",
-      "path": "/images/",
-      "order": 7,
-      "active": true
-    },
-    {
-      "filename": "headshot-business-casual-man-plaid-louisville.jpg",
-      "alt": "Business casual headshot Louisville ÃÂ¢ÃÂÃÂ man in blue plaid shirt, studio portrait",
-      "path": "/images/",
-      "order": 8,
-      "active": true
-    },
-    {
-      "filename": "headshot-professional-woman-black-blazer-louisville.jpg",
-      "alt": "Professional headshot Louisville KY- blonde woman in black blazer, white background",
-      "path": "/images/",
-      "order": 6,
       "active": true
     },
     {
@@ -54,14 +33,28 @@
       "filename": "louisville kentucky CEO headshot.jpg",
       "alt": "Louisville kentucky CEO headshot",
       "path": "/images/",
-      "order": 5,
+      "order": 2,
+      "active": true
+    },
+    {
+      "filename": "headshot-executive-man-gray-suit-louisville.jpg",
+      "alt": "Executive headshot Louisville KY -  man in gray suit and purple shirt, studio lighting",
+      "path": "/images/",
+      "order": 6,
+      "active": true
+    },
+    {
+      "filename": "headshot-business-casual-man-plaid-louisville.jpg",
+      "alt": "Business casual headshot Louisville ÃÂ¢ÃÂÃÂ man in blue plaid shirt, studio portrait",
+      "path": "/images/",
+      "order": 7,
       "active": true
     },
     {
       "filename": "gh-1772478426503.jpg",
       "alt": "gh-1772478426503.jpg",
       "path": "/images/",
-      "order": 9,
+      "order": 5,
       "active": true
     }
   ]
