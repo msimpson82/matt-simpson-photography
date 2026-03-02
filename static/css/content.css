@@ -1117,3 +1117,111 @@
 @media (max-width: 480px) {
     .blog-post-title { font-size: 28px; }
 }
+
+
+/* ========================================
+   BLOG FEATURED IMAGE — aspect-ratio fix
+   ======================================== */
+
+.blog-featured-img img {
+    height: auto !important;
+    aspect-ratio: 4/3;
+    object-position: top;
+}
+
+@media (max-width: 900px) {
+    .blog-featured-img img {
+        height: auto !important;
+        aspect-ratio: 4/3;
+        object-position: top;
+    }
+}
+
+@media (max-width: 580px) {
+    .blog-featured-img img {
+        height: auto !important;
+        aspect-ratio: 3/2;
+        object-position: top;
+    }
+}
+
+
+/* ========================================
+   BLOG GALLERY — matches headshot gallery
+   ======================================== */
+
+.blog-gallery {
+    display: grid;
+    gap: 16px;
+    margin: 40px 0;
+}
+
+.blog-gallery-grid {
+    grid-template-columns: repeat(var(--gal-cols, 3), 1fr);
+}
+
+.blog-gallery-masonry {
+    grid-template-columns: repeat(var(--gal-cols, 3), 1fr);
+}
+
+.blog-gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+}
+
+.blog-gallery-item a {
+    display: block;
+}
+
+.blog-gallery-item img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s var(--ease);
+}
+
+.blog-gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.blog-gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(26, 107, 90, 0.2) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.blog-gallery-item:hover::after {
+    opacity: 1;
+}
+
+.blog-gallery-item figcaption {
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+    padding: 10px 8px 4px;
+}
+
+@media (max-width: 900px) {
+    .blog-gallery-grid,
+    .blog-gallery-masonry {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+@media (max-width: 580px) {
+    .blog-gallery-grid,
+    .blog-gallery-masonry {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
