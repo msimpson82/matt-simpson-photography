@@ -9,10 +9,10 @@
       "active": true
     },
     {
-      "filename": "headshot-creative-professional-dark-background-louisville.jpg",
-      "alt": "Creative professional headshot Louisville - young man, dark background portrait",
+      "filename": "louisville kentucky CEO headshot.jpg",
+      "alt": "Louisville kentucky CEO headshot",
       "path": "/images/",
-      "order": 8,
+      "order": 2,
       "active": true
     },
     {
@@ -30,10 +30,10 @@
       "active": true
     },
     {
-      "filename": "louisville kentucky CEO headshot.jpg",
-      "alt": "Louisville kentucky CEO headshot",
+      "filename": "gh-1772478426503.jpg",
+      "alt": "gh-1772478426503.jpg",
       "path": "/images/",
-      "order": 2,
+      "order": 5,
       "active": true
     },
     {
@@ -44,17 +44,10 @@
       "active": true
     },
     {
-      "filename": "headshot-business-casual-man-plaid-louisville.jpg",
-      "alt": "Business casual headshot Louisville ÃÂ¢ÃÂÃÂ man in blue plaid shirt, studio portrait",
+      "filename": "headshot-creative-professional-dark-background-louisville.jpg",
+      "alt": "Creative professional headshot Louisville - young man, dark background portrait",
       "path": "/images/",
       "order": 7,
-      "active": true
-    },
-    {
-      "filename": "gh-1772478426503.jpg",
-      "alt": "gh-1772478426503.jpg",
-      "path": "/images/",
-      "order": 5,
       "active": true
     }
   ]
