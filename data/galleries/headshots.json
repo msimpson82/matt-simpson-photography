@@ -30,8 +30,8 @@
       "active": true
     },
     {
-      "filename": "gh-1772478426503.jpg",
-      "alt": "gh-1772478426503.jpg",
+      "filename": "social_media_influencer.jpg",
+      "alt": "Louisville, KY influencer headshot",
       "path": "/images/",
       "order": 5,
       "active": true
@@ -40,7 +40,7 @@
       "filename": "headshot-executive-man-gray-suit-louisville.jpg",
       "alt": "Executive headshot Louisville KY -  man in gray suit and purple shirt, studio lighting",
       "path": "/images/",
-      "order": 6,
+      "order": 8,
       "active": true
     },
     {
@@ -54,7 +54,7 @@
       "filename": "louisville_kentucky_professional_headshot.jpg",
       "alt": "Louisville KY web designer needed photography.",
       "path": "/images/",
-      "order": 8,
+      "order": 6,
       "active": true
     }
   ]
