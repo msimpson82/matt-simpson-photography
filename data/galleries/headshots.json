@@ -2,6 +2,13 @@
   "display_count": 9,
   "images": [
     {
+      "filename": "headshot-creative-professional-dark-background-louisville.jpg",
+      "alt": "Creative professional headshot Louisville - young man, dark background portrait",
+      "path": "/images/",
+      "order": 1,
+      "active": true
+    },
+    {
       "filename": "headshot-professional-woman-black-blazer-louisville.jpg",
       "alt": "Professional headshot Louisville KY- blonde woman in black blazer, white background",
       "path": "/images/",
@@ -9,17 +16,10 @@
       "active": true
     },
     {
-      "filename": "headshot-executive-man-gray-suit-louisville.jpg",
-      "alt": "Executive headshot Louisville KY -  man in gray suit and purple shirt, studio lighting",
+      "filename": "louisville_actress_headshot.jpg",
+      "alt": "louisville+actress+headshot",
       "path": "/images/",
-      "order": 8,
-      "active": true
-    },
-    {
-      "filename": "headshot-creative-professional-dark-background-louisville.jpg",
-      "alt": "Creative professional headshot Louisville - young man, dark background portrait",
-      "path": "/images/",
-      "order": 1,
+      "order": 3,
       "active": true
     },
     {
@@ -51,15 +51,15 @@
       "active": true
     },
     {
-      "filename": "louisville_actress_headshot.jpg",
-      "alt": "louisville+actress+headshot",
+      "filename": "headshot-executive-man-gray-suit-louisville.jpg",
+      "alt": "Executive headshot Louisville KY -  man in gray suit and purple shirt, studio lighting",
       "path": "/images/",
-      "order": 3,
+      "order": 8,
       "active": true
     },
     {
-      "filename": "Louisville Banker Headshot",
-      "alt": "louisville_kentucky_headshot_photo.jpg",
+      "filename": "louisville_kentucky_banker_headshot.jpg",
+      "alt": "louisville_kentucky_banker_headshot.jpg",
       "path": "/images/",
       "order": 9,
       "active": true
