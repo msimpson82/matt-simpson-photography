@@ -49,6 +49,13 @@
       "path": "/images/",
       "order": 7,
       "active": true
+    },
+    {
+      "filename": "louisville_kentucky_professional_headshot.jpg",
+      "alt": "Louisville KY web designer needed photography.",
+      "path": "/images/",
+      "order": 8,
+      "active": true
     }
   ]
 }
