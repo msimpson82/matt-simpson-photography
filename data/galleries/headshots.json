@@ -49,6 +49,13 @@
       "path": "/images/",
       "order": 7,
       "active": true
+    },
+    {
+      "filename": "gh-1772480850350.jpg",
+      "alt": "gh-1772480850350.jpg",
+      "path": "/images/",
+      "order": 8,
+      "active": true
     }
   ]
 }
