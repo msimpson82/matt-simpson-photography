@@ -1,5 +1,4 @@
-{{ $layout := .Get "layout" | default "grid" }}
 {{ $columns := .Get "columns" | default "3" }}
-<div class="blog-gallery blog-gallery-{{ $layout }}" style="--gal-cols: {{ $columns }}">
+<div class="sp-gallery-grid blog-gallery" style="grid-template-columns: repeat({{ $columns }}, 1fr)">
 {{ .Inner }}
 </div>

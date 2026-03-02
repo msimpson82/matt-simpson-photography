@@ -1147,72 +1147,11 @@
 
 
 /* ========================================
-   BLOG GALLERY — exact clone of sp-gallery
+   BLOG GALLERY — uses sp-gallery-item/grid
+   only needs margin override for blog context
    ======================================== */
 
 .blog-gallery {
-    display: grid;
-    grid-template-columns: repeat(var(--gal-cols, 3), 1fr);
-    gap: 16px;
-    max-width: 1400px;
     margin: 40px auto;
-}
-
-.blog-gallery-item {
-    overflow: hidden;
-    border-radius: 8px;
-    position: relative;
-    cursor: pointer;
-    margin: 0;
-    padding: 0;
-}
-
-.blog-gallery-item a {
-    display: block;
-    line-height: 0;
-}
-
-.blog-gallery-item img {
-    width: 100%;
-    aspect-ratio: 3/4;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.7s var(--ease);
-}
-
-.blog-gallery-item:hover img {
-    transform: scale(1.05);
-}
-
-.blog-gallery-item::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(26, 107, 90, 0.2) 0%, transparent 50%);
-    opacity: 0;
-    transition: opacity 0.4s;
-    border-radius: 8px;
-    pointer-events: none;
-}
-
-.blog-gallery-item:hover::after {
-    opacity: 1;
-}
-
-.blog-gallery-item figcaption {
-    display: none;
-}
-
-@media (max-width: 900px) {
-    .blog-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-}
-
-@media (max-width: 580px) {
-    .blog-gallery {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
+    max-width: 1400px;
 }
