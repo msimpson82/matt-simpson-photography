@@ -37,10 +37,10 @@
       "active": true
     },
     {
-      "filename": "headshot-executive-man-gray-suit-louisville.jpg",
-      "alt": "Executive headshot Louisville KY -  man in gray suit and purple shirt, studio lighting",
+      "filename": "louisville_kentucky_professional_headshot.jpg",
+      "alt": "Louisville KY web designer needed photography.",
       "path": "/images/",
-      "order": 8,
+      "order": 6,
       "active": true
     },
     {
@@ -48,13 +48,6 @@
       "alt": "gh-1772480850350.jpg",
       "path": "/images/",
       "order": 7,
-      "active": true
-    },
-    {
-      "filename": "louisville_kentucky_professional_headshot.jpg",
-      "alt": "Louisville KY web designer needed photography.",
-      "path": "/images/",
-      "order": 6,
       "active": true
     }
   ]
