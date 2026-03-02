@@ -16,7 +16,7 @@ The result is a headshot that's striking without trying too hard. It's confident
 
 If you're starting a new role, getting promoted, or just realized your current headshot is from 2017 — let's fix that. Book a session and walk out with something you're actually proud to post.
 
-{{< gallery layout="grid" columns="3" >}}
+{{< gallery layout="masonry" columns="3" >}}
 {{< gallery-img src="/images/blog/bankers-headshot-louisville.jpg" alt="" caption="" >}}
 {{< gallery-img src="/images/blog/blog-1-1772431880663.jpg" alt="" caption="" >}}
 {{< gallery-img src="/images/blog/blog-10-1772431911542.jpg" alt="" caption="" >}}
@@ -24,8 +24,6 @@ If you're starting a new role, getting promoted, or just realized your current h
 {{< gallery-img src="/images/blog/blog-12-1772431916255.jpg" alt="" caption="" >}}
 {{< gallery-img src="/images/blog/blog-13-1772431918179.jpg" alt="" caption="" >}}
 {{< gallery-img src="/images/blog/blog-16-1772431926846.jpg" alt="" caption="" >}}
-{{< gallery-img src="/images/blog/blog-15-1772431924445.jpg" alt="" caption="" >}}
-{{< gallery-img src="/images/blog/blog-14-1772431921270.jpg" alt="" caption="" >}}
 {{< gallery-img src="/images/blog/blog-2-1772431893360.jpg" alt="" caption="" >}}
 {{< gallery-img src="/images/blog/blog-3-1772431896082.jpg" alt="" caption="" >}}
 {{< gallery-img src="/images/blog/blog-4-1772431898354.jpg" alt="" caption="" >}}
