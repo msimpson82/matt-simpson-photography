@@ -44,17 +44,10 @@
       "active": true
     },
     {
-      "filename": "headshot-creative-professional-dark-background-louisville.jpg",
-      "alt": "Creative professional headshot Louisville - young man, dark background portrait",
-      "path": "/images/",
-      "order": 7,
-      "active": true
-    },
-    {
       "filename": "gh-1772480850350.jpg",
       "alt": "gh-1772480850350.jpg",
       "path": "/images/",
-      "order": 8,
+      "order": 7,
       "active": true
     }
   ]
