@@ -3,16 +3,16 @@
     "active": false,
     "message": "",
     "cta_text": "",
-    "url": "",
-    "post_slug": ""
+    "url": "/blog/bankers-headshot-louisville/",
+    "post_slug": "bankers-headshot-louisville"
   },
   "lightbox": {
-    "active": false,
+    "active": true,
     "message": "",
     "cta_text": "",
-    "url": "",
-    "image": "",
-    "post_slug": "",
+    "url": "/blog/bankers-headshot-louisville/",
+    "image": "/images/blog/bankers-headshot-louisville.jpg",
+    "post_slug": "bankers-headshot-louisville",
     "scroll_trigger": 40
   }
 }
