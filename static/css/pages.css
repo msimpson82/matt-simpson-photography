@@ -988,6 +988,8 @@
     font-weight: 600;
     color: var(--teal);
     font-style: italic;
+    text-align: center;
+    grid-column: 1 / -1;
 }
 
 @media (max-width: 768px) {
