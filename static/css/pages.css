@@ -430,7 +430,9 @@
 
 /* --- Video Split Section --- */
 .sp-split-video {
-    min-height: auto;
+    min-height: 70vh;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .sp-video-wrap {
