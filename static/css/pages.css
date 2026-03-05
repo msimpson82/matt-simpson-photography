@@ -960,9 +960,10 @@
 .proc-price-amount {
     font-size: 42px;
     font-weight: 800;
-    color: var(--dark);
+    color: var(--teal);
     line-height: 1;
     letter-spacing: -1px;
+    margin-top: 16px;
 }
 
 .proc-price-label {
