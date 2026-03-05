@@ -434,16 +434,14 @@
 }
 
 .sp-video-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: #000;
+    overflow: hidden;
 }
 
 .sp-video-container {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -461,8 +459,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 110%;
-    height: 110%;
+    width: 140%;
+    height: 140%;
     transform: translate(-50%, -50%);
     border: none;
     pointer-events: none;
