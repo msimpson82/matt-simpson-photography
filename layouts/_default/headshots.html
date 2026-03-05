@@ -236,16 +236,9 @@
 <!-- Why My Headshots Look Different -->
 <section class="sp-split reverse sp-split-video">
     <div class="sp-split-photo sp-video-wrap">
-        <div class="sp-video-container" id="hs-video">
-            <iframe
-                data-src="https://www.youtube-nocookie.com/embed/NxzQkZQv0x4?autoplay=1&mute=1&loop=1&playlist=NxzQkZQv0x4&controls=0&modestbranding=1&rel=0&showinfo=0&playsinline=1&iv_load_policy=3&disablekb=1"
-                frameborder="0"
-                allow="autoplay; encrypted-media"
-                allowfullscreen
-                title="Matt Simpson Photography Headshot Experience"
-            ></iframe>
-            <div class="sp-video-overlay"></div>
-        </div>
+        <video autoplay muted loop playsinline>
+            <source src="/videos/headshot-reel.mp4" type="video/mp4">
+        </video>
     </div>
     <div class="sp-split-content">
         <div class="sp-split-label">What Sets Me Apart</div>
@@ -255,24 +248,7 @@
     </div>
 </section>
 
-<script>
-(function(){
-    var vid = document.getElementById('hs-video');
-    if (!vid) return;
-    var iframe = vid.querySelector('iframe');
-    var loaded = false;
-    var obs = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-            if (e.isIntersecting && !loaded) {
-                iframe.src = iframe.dataset.src;
-                loaded = true;
-                obs.disconnect();
-            }
-        });
-    }, { threshold: 0.3 });
-    obs.observe(vid);
-})();
-</script>
+
 
 <!-- Testimonial -->
 <section class="sp-testimonial">
