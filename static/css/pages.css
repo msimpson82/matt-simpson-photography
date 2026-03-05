@@ -432,44 +432,42 @@
     
 }
 
+@media (max-width: 768px) {
+}
 
-/* --- Why Section (Video + Text) --- */
-.hs-why {
-    display: flex;
-    max-width: 1600px;
-    margin: 0 auto;
-    min-height: 75vh;
+
+/* --- Why My Headshots Look Different --- */
+.hs-diff {
     background: var(--bg);
+    padding: 100px 60px;
 }
 
-.hs-why-video {
-    flex: 1.2;
-    position: relative;
-    overflow: hidden;
-    background: #000;
-    min-height: 500px;
-}
-
-.hs-why-video video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.hs-why-content {
-    flex: 1;
+.hs-diff-inner {
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 80px 72px;
-    max-width: 600px;
+    align-items: center;
+    gap: 60px;
 }
 
-.hs-why-label {
+.hs-diff-vid {
+    flex: 1.3;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,.12);
+}
+
+.hs-diff-vid video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hs-diff-text {
+    flex: 1;
+}
+
+.hs-diff-label {
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
@@ -478,7 +476,7 @@
     margin-bottom: 20px;
 }
 
-.hs-why-title {
+.hs-diff-title {
     font-size: clamp(32px, 3.5vw, 52px);
     font-weight: 800;
     letter-spacing: -1px;
@@ -486,37 +484,32 @@
     margin-bottom: 28px;
 }
 
-.hs-why-title span {
+.hs-diff-title span {
     font-family: var(--font-serif);
     font-weight: 400;
     font-style: italic;
     color: var(--teal);
 }
 
-.hs-why-content p {
+.hs-diff-text p {
     font-size: 16px;
-    font-weight: 400;
     color: var(--mid);
     line-height: 1.85;
     margin-bottom: 20px;
 }
 
-.hs-why-content strong {
+.hs-diff-text strong {
     font-weight: 700;
     color: var(--dark);
 }
 
 @media (max-width: 768px) {
-    .hs-why {
-        flex-direction: column;
-        min-height: auto;
-    }
-    .hs-why-video {
-        min-height: 50vh;
-    }
-    .hs-why-content {
+    .hs-diff {
         padding: 60px 24px;
-        max-width: 100%;
+    }
+    .hs-diff-inner {
+        flex-direction: column;
+        gap: 40px;
     }
 }
 
