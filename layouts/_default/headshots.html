@@ -234,9 +234,17 @@
 </section>
 
 <!-- Why My Headshots Look Different -->
-<section class="sp-split reverse">
-    <div class="sp-split-photo">
-        <img src="/images/headshot-branding-portrait-natural-light-germantown.jpg" alt="Branding portrait Louisville — woman on stool in natural light Germantown studio" loading="lazy">
+<section class="sp-split reverse sp-split-video">
+    <div class="sp-split-photo sp-video-wrap">
+        <div class="sp-video-container" id="hs-video">
+            <iframe
+                data-src="https://www.youtube-nocookie.com/embed/NxzQkZQv0x4?autoplay=1&mute=1&loop=1&playlist=NxzQkZQv0x4&controls=0&modestbranding=1&rel=0&showinfo=0&playsinline=1&iv_load_policy=3&disablekb=1"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                title="Matt Simpson Photography Headshot Experience"
+            ></iframe>
+        </div>
     </div>
     <div class="sp-split-content">
         <div class="sp-split-label">What Sets Me Apart</div>
@@ -245,6 +253,25 @@
         <p class="sp-split-text">That experience shows up in every headshot I take. My images are <strong>sharp, clean, modern, and rich.</strong> They have a pop to them that comes from understanding what it takes to compete visually online.</p>
     </div>
 </section>
+
+<script>
+(function(){
+    var vid = document.getElementById('hs-video');
+    if (!vid) return;
+    var iframe = vid.querySelector('iframe');
+    var loaded = false;
+    var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+            if (e.isIntersecting && !loaded) {
+                iframe.src = iframe.dataset.src;
+                loaded = true;
+                obs.disconnect();
+            }
+        });
+    }, { threshold: 0.3 });
+    obs.observe(vid);
+})();
+</script>
 
 <!-- Testimonial -->
 <section class="sp-testimonial">
