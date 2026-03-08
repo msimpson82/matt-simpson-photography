@@ -51,8 +51,7 @@
 
 .potd-featured img {
     width: 100%;
-    aspect-ratio: 3/2;
-    object-fit: cover;
+    height: auto;
     display: none;
     transition: opacity 0.3s;
 }
