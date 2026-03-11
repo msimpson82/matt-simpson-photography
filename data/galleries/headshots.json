@@ -56,6 +56,13 @@
       "path": "/images/",
       "order": 8,
       "active": true
+    },
+    {
+      "filename": "professional-headshot-woman-louisville-ky.jpg",
+      "alt": "Professional headshot of a woman in a black blazer — Louisville, KY headshot photographer",
+      "path": "/images/",
+      "order": 9,
+      "active": true
     }
   ]
 }
