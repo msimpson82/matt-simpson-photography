@@ -5,14 +5,14 @@
       "filename": "louisville_kentucky_banker_headshot.jpg",
       "alt": "louisville_kentucky_banker_headshot.jpg",
       "path": "/images/",
-      "order": 1,
+      "order": 2,
       "active": true
     },
     {
       "filename": "louisville kentucky CEO headshot.jpg",
       "alt": "Louisville kentucky CEO headshot",
       "path": "/images/",
-      "order": 2,
+      "order": 4,
       "active": true
     },
     {
@@ -26,7 +26,7 @@
       "filename": "gh-1772469897042.jpg",
       "alt": "gh-1772469897042.jpg",
       "path": "/images/",
-      "order": 4,
+      "order": 8,
       "active": true
     },
     {
@@ -40,28 +40,28 @@
       "filename": "louisville_kentucky_professional_headshot.jpg",
       "alt": "Louisville KY web designer needed photography.",
       "path": "/images/",
-      "order": 6,
+      "order": 7,
       "active": true
     },
     {
       "filename": "gh-1772480850350.jpg",
       "alt": "gh-1772480850350.jpg",
       "path": "/images/",
-      "order": 7,
+      "order": 6,
       "active": true
     },
     {
       "filename": "louisville_headshot_matt.jpg",
       "alt": "A selfie...but apt.",
       "path": "/images/",
-      "order": 8,
+      "order": 9,
       "active": true
     },
     {
       "filename": "professional-headshot-woman-louisville-ky.jpg",
       "alt": "Professional headshot of a woman in a black blazer — Louisville, KY headshot photographer",
       "path": "/images/",
-      "order": 9,
+      "order": 1,
       "active": true
     }
   ]
