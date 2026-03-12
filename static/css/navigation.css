@@ -199,6 +199,9 @@
 @media (max-width: 900px) {
     .nav {
         padding: 20px var(--container-pad-mobile);
+        background: rgba(250, 248, 245, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
     }
 
     .nav-links {
