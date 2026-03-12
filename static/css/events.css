@@ -5,3 +5,23 @@
 
 /* Events page uses sp-* classes from pages.css */
 /* Add any events-only styles here */
+
+/* Events page spacing adjustments */
+.page-events .statement {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.page-events .galleries {
+    padding-top: 80px;
+}
+
+@media (max-width: 900px) {
+    .page-events .statement {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .page-events .galleries {
+        padding-top: 60px;
+    }
+}
