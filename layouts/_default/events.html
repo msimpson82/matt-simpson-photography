@@ -94,6 +94,30 @@
     </div>
 </section>
 
+<!-- Featured Event Galleries -->
+<section class="galleries" id="event-galleries">
+    <div class="galleries-header">
+        <div class="galleries-label">Selected Work</div>
+        <div class="galleries-title">Featured Events</div>
+    </div>
+
+    {{ $events := where (where site.RegularPages "Section" "projects") "Params.project_type" "Event Photography" }}
+    {{ $sorted := sort $events "Date" "desc" }}
+    {{ range $sorted }}
+    <div class="gal-item">
+        <div class="gal-photo">
+            <img src="/images/{{ .Params.hero_image }}" alt="{{ .Title }} — Event Photography Louisville KY" loading="lazy">
+        </div>
+        <div class="gal-content">
+            <div class="gal-tag">{{ .Params.project_type }}</div>
+            <div class="gal-name">{{ .Title }}</div>
+            <p class="gal-desc">{{ .Params.homepage_description }}</p>
+            <a href="{{ .RelPermalink }}" class="gal-btn">View Full Gallery</a>
+        </div>
+    </div>
+    {{ end }}
+</section>
+
 <!-- What I Shoot (Bebas rows on dark) -->
 <section class="sp-services">
     <div class="sp-services-label">What I Shoot</div>
