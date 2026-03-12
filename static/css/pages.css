@@ -146,6 +146,66 @@
 }
 
 
+
+/* --- Band CTA (events page) --- */
+.band-cta {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    padding: 32px 48px;
+}
+
+.band-cta:hover {
+    background: #3d8a7b;
+}
+
+.band-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.band-cta-badge {
+    background: #fff;
+    color: var(--teal);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 4px 14px;
+    border-radius: 4px;
+    animation: bandPulse 2s ease-in-out infinite;
+}
+
+.band-cta-text {
+    font-size: clamp(20px, 3vw, 34px);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.band-cta-link {
+    font-size: clamp(14px, 1.5vw, 18px);
+    font-weight: 700;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.band-cta:hover .band-cta-link {
+    color: #fff;
+}
+
+@keyframes bandPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.08); opacity: 0.85; }
+}
+
 /* --- Gallery Grid --- */
 .sp-gallery {
     padding: 0 var(--container-pad) var(--section-pad);
