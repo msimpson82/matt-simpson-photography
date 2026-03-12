@@ -204,6 +204,30 @@
 @keyframes bandPulse {
     0%, 100% { transform: scale(1); opacity: 1; }
     50% { transform: scale(1.08); opacity: 0.85; }
+
+@media (max-width: 768px) {
+    .band-cta {
+        padding: 28px 20px;
+    }
+    .band-cta-inner {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    .band-cta-badge {
+        font-size: 9px;
+        padding: 3px 10px;
+    }
+    .band-cta-text {
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .band-cta-link {
+        font-size: 13px;
+    }
+}
+
 }
 
 /* --- Gallery Grid --- */
