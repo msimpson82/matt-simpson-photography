@@ -981,7 +981,7 @@
     }
 
     .sp-gallery {
-        padding: 0 var(--container-pad-mobile) var(--section-pad-mobile);
+        padding: var(--section-pad-mobile) var(--container-pad-mobile);
     }
 
     .sp-gallery-grid {
