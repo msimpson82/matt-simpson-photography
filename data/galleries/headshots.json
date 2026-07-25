@@ -33,7 +33,7 @@
       "filename": "social_media_influencer.jpg",
       "alt": "Louisville, KY influencer headshot",
       "path": "/images/",
-      "order": 4,
+      "order": 10,
       "active": true
     },
     {
@@ -61,14 +61,14 @@
       "filename": "professional-headshot-woman-louisville-ky.jpg",
       "alt": "Professional headshot of a woman in a black blazer — Louisville, KY headshot photographer",
       "path": "/images/",
-      "order": 1,
+      "order": 4,
       "active": true
     },
     {
       "filename": "gh-1784941758912.jpg",
       "alt": "Louisville Professional Headshots",
       "path": "/images/",
-      "order": 10,
+      "order": 1,
       "active": true
     }
   ]
