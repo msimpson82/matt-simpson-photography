@@ -70,6 +70,13 @@
       "path": "/images/",
       "order": 10,
       "active": true
+    },
+    {
+      "filename": "louisville_headshot_doctors.jpg",
+      "alt": "Headshots for Doctors in Louisville",
+      "path": "/images/",
+      "order": 11,
+      "active": true
     }
   ]
 }
