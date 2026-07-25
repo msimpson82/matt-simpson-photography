@@ -12,7 +12,7 @@
       "filename": "gh-1772480850350.jpg",
       "alt": "gh-1772480850350.jpg",
       "path": "/images/",
-      "order": 5,
+      "order": 8,
       "active": true
     },
     {
@@ -26,7 +26,7 @@
       "filename": "louisville_kentucky_banker_headshot.jpg",
       "alt": "louisville_kentucky_banker_headshot.jpg",
       "path": "/images/",
-      "order": 4,
+      "order": 5,
       "active": true
     },
     {
@@ -54,7 +54,7 @@
       "filename": "gh-1772469897042.jpg",
       "alt": "gh-1772469897042.jpg",
       "path": "/images/",
-      "order": 8,
+      "order": 12,
       "active": true
     },
     {
@@ -75,14 +75,14 @@
       "filename": "louisville_headshot_doctors.jpg",
       "alt": "Headshots for Doctors in Louisville",
       "path": "/images/",
-      "order": 3,
+      "order": 4,
       "active": true
     },
     {
       "filename": "professional_headshots_in_Louisville_Ky.jpg",
       "alt": "professional_headshots_in_Louisville_Ky",
       "path": "/images/",
-      "order": 12,
+      "order": 3,
       "active": true
     }
   ]
