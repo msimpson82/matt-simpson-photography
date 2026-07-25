@@ -19,7 +19,7 @@
       "filename": "event-photography-louisville-food-vendor.jpg",
       "alt": "Louisville festival food vendor — serving customers at lemonade stand",
       "path": "/images/",
-      "order": 3,
+      "order": 9,
       "active": true
     },
     {
@@ -61,7 +61,14 @@
       "filename": "eventphotographyinlouisville.jpg",
       "alt": "Event photography in Louisville KY",
       "path": "/images/",
-      "order": 9,
+      "order": 3,
+      "active": true
+    },
+    {
+      "filename": "event_photographer.jpg",
+      "alt": "Louisville Event Photographer",
+      "path": "/images/",
+      "order": 10,
       "active": true
     }
   ]
