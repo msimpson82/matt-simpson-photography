@@ -63,6 +63,13 @@
       "path": "/images/",
       "order": 1,
       "active": true
+    },
+    {
+      "filename": "gh-1784941758912.jpg",
+      "alt": "Louisville Professional Headshots",
+      "path": "/images/",
+      "order": 10,
+      "active": true
     }
   ]
 }
