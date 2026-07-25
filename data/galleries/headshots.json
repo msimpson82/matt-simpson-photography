@@ -77,6 +77,13 @@
       "path": "/images/",
       "order": 3,
       "active": true
+    },
+    {
+      "filename": "professional_headshots_in_Louisville_Ky.jpg",
+      "alt": "professional_headshots_in_Louisville_Ky",
+      "path": "/images/",
+      "order": 12,
+      "active": true
     }
   ]
 }
