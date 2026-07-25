@@ -70,6 +70,13 @@
       "path": "/images/",
       "order": 1,
       "active": true
+    },
+    {
+      "filename": "louisville_kentucky_headshots.jpg",
+      "alt": "Professional Headshot in Louisville Kentucky",
+      "path": "/images/",
+      "order": 11,
+      "active": true
     }
   ]
 }
