@@ -19,14 +19,14 @@
       "filename": "louisville_kentucky_headshots.jpg",
       "alt": "Professional Headshot in Louisville Kentucky",
       "path": "/images/",
-      "order": 3,
+      "order": 2,
       "active": true
     },
     {
       "filename": "louisville_kentucky_banker_headshot.jpg",
       "alt": "louisville_kentucky_banker_headshot.jpg",
       "path": "/images/",
-      "order": 2,
+      "order": 4,
       "active": true
     },
     {
@@ -75,7 +75,7 @@
       "filename": "louisville_headshot_doctors.jpg",
       "alt": "Headshots for Doctors in Louisville",
       "path": "/images/",
-      "order": 4,
+      "order": 3,
       "active": true
     }
   ]
