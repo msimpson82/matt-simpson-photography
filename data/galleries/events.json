@@ -40,7 +40,7 @@
       "filename": "event-photography-louisville-conference-speaker.jpg",
       "alt": "Louisville conference speaker — man in blazer presenting at corporate event podium",
       "path": "/images/",
-      "order": 6,
+      "order": 8,
       "active": true
     },
     {
@@ -54,7 +54,7 @@
       "filename": "event-photography-louisville-corporate-networking.jpg",
       "alt": "Louisville corporate networking — attendees mingling at professional conference",
       "path": "/images/",
-      "order": 8,
+      "order": 10,
       "active": true
     },
     {
@@ -68,7 +68,7 @@
       "filename": "event_photographer.jpg",
       "alt": "Louisville Event Photographer",
       "path": "/images/",
-      "order": 10,
+      "order": 6,
       "active": true
     }
   ]
