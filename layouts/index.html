@@ -2,7 +2,7 @@
 
 {{ $h := .Site.Data.homepage.hero }}
 
-<!-- Journal Hero -->
+<!-- Journal Hero — 3 Column -->
 {{ $blogPosts := sort (where site.RegularPages "Section" "blog") "Date" "desc" }}
 {{ $hasBlog := gt (len $blogPosts) 0 }}
 
@@ -12,7 +12,12 @@
 {{ $secondaryShow := first 4 $secondary }}
 
 <section class="journal-hero">
-    <div class="journal-hero-grid">
+    
+            <div class="journal-hero-topbar">
+                <span class="journal-hero-topbar-left">Recent Work &amp; Stories</span>
+                <span class="journal-hero-topbar-right">Louisville, Kentucky</span>
+            </div>
+            <div class="journal-hero-grid">
         <!-- Left: Headline + CTA -->
         <div class="journal-hero-left">
             <div class="journal-hero-headline">
@@ -26,12 +31,11 @@
                     <a href="#contact" class="jh-cta jh-cta-outline">Work With Me</a>
                 </div>
             </div>
-
         </div>
 
-        <!-- Right: Featured Blog Post -->
-        <div class="journal-hero-right">
-            <div class="journal-hero-journal-label"><span class="jh-line"></span> Latest from the Journal <span class="jh-line"></span></div>
+        <!-- Center: Featured Blog Post -->
+        <div class="journal-hero-center">
+            
             <a href="{{ $featured.RelPermalink }}" class="journal-hero-post-link">
                 <img src="/images/blog/{{ $featured.Params.image }}" alt="{{ $featured.Title }}" class="journal-hero-post-img">
             </a>
@@ -45,43 +49,47 @@
             <a href="{{ $featured.RelPermalink }}" class="journal-hero-post-title-link">
                 <h2 class="journal-hero-post-title">{{ $featured.Title }}</h2>
             </a>
-            <p class="journal-hero-post-excerpt">{{ $featured.Params.description }}</p>
+            <p class="journal-hero-post-excerpt">{{ $featured.Summary | plainify | truncate 300 }}</p>
             <a href="{{ $featured.RelPermalink }}" class="jh-link">Read the Story <span class="jh-arrow">&#8599;</span></a>
         </div>
-    </div>
-</section>
 
-<!-- More from the Journal -->
-{{ if gt (len $secondaryShow) 0 }}
-<section class="journal-more">
-    <div class="journal-more-header">
-        <h2 class="journal-more-title">More from the blog</h2>
-        <a href="/blog/" class="jh-link">View All Stories <span class="jh-arrow">&#8599;</span></a>
-    </div>
-    <div class="journal-more-grid">
-        {{ range $secondaryShow }}
-        <a href="{{ .RelPermalink }}" class="journal-more-card">
-            <div class="journal-more-card-img">
-                <img src="/images/blog/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+        <!-- Right: More from the Blog -->
+        {{ if gt (len $secondaryShow) 0 }}
+        <div class="journal-hero-sidebar">
+            <div class="journal-hero-sidebar-header">
+                <h2 class="journal-hero-sidebar-title">More from the Blog</h2>
             </div>
-            <div class="journal-more-card-body">
-                <div class="journal-more-card-meta">
-                    {{ $tags := .Params.tags }}{{ if $tags }}{{ index $tags 0 | upper }}{{ end }}
-                    &middot;
-                    {{ .Date.Format "Jan 2" | upper }}
-                </div>
-                <div class="journal-more-card-title">{{ .Title }}</div>
-                <p class="journal-more-card-excerpt">{{ .Params.description | truncate 120 }}</p>
-                <span class="jh-link-sm">Read the Story <span class="jh-arrow">&#8599;</span></span>
+            <div class="journal-hero-sidebar-list">
+                {{ range $secondaryShow }}
+                <a href="{{ .RelPermalink }}" class="journal-hero-sidebar-item">
+                    <div class="journal-hero-sidebar-img">
+                        <img src="/images/blog/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+                    </div>
+                    <div class="journal-hero-sidebar-body">
+                        <div class="journal-hero-sidebar-meta">
+                            {{ $tags := .Params.tags }}{{ if $tags }}{{ index $tags 0 | upper }}{{ end }}
+                            &middot;
+                            {{ .Date.Format "Jan 2" | upper }}
+                        </div>
+                        <div class="journal-hero-sidebar-item-title">{{ .Title }}</div>
+                        <p class="journal-hero-sidebar-excerpt">{{ .Summary | plainify | truncate 80 }}</p>
+                        <span class="journal-hero-sidebar-readmore">Read More &rsaquo;</span>
+                    </div>
+                </a>
+                {{ end }}
             </div>
-        </a>
+            <a href="/blog/" class="jh-link" style="margin-top: 16px; display: inline-flex;">View All Stories <span class="jh-arrow">&#8599;</span></a>
+        </div>
         {{ end }}
     </div>
 </section>
-{{ end }}
 
 {{ end }}
 <!-- End Journal Hero -->
+
+
+
+
 
 
 <!-- ============================================
