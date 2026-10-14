@@ -3,7 +3,7 @@
    ======================================== */
 
 .services-section {
-    padding: 0 var(--container-pad) var(--section-pad);
+    padding: var(--section-pad) var(--container-pad) var(--section-pad);
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -214,7 +214,7 @@
 /* --- Responsive --- */
 @media (max-width: 900px) {
     .services-section {
-        padding: 0 var(--container-pad-mobile) var(--section-pad-mobile);
+        padding: var(--section-pad-mobile) var(--container-pad-mobile) var(--section-pad-mobile);
     }
 
     .services-grid {

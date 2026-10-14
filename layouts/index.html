@@ -1,56 +1,92 @@
 {{ define "main" }}
 
-<!-- Hero -->
 {{ $h := .Site.Data.homepage.hero }}
-{{ $heroLayout := $h.layout | default "full" }}
 
-{{ if eq $heroLayout "split" }}
-<!-- Split Hero -->
-<section class="hero hero-split">
-    <div class="hero-split-image">
-        <img src="{{ $h.image }}" alt="{{ $h.image_alt }}">
-    </div>
-    <div class="hero-split-content">
-        <div class="hero-eyebrow">{{ $h.eyebrow }}</div>
-        <h1 class="hero-h1">{{ $h.heading_pre }}<span class="serif">{{ $h.heading_serif }}</span>{{ $h.heading_post }}</h1>
-        <p class="hero-p">{{ $h.paragraph }}</p>
-        <div class="hero-actions">
-            <a href="#contact" class="btn-primary">{{ $h.button_primary }}</a>
-            <a href="#featured-projects" class="btn-outline">{{ $h.button_secondary }}</a>
+<!-- Journal Hero -->
+{{ $blogPosts := sort (where site.RegularPages "Section" "blog") "Date" "desc" }}
+{{ $hasBlog := gt (len $blogPosts) 0 }}
+
+{{ if $hasBlog }}
+{{ $featured := index $blogPosts 0 }}
+{{ $secondary := after 1 $blogPosts }}
+{{ $secondaryShow := first 4 $secondary }}
+
+<section class="journal-hero">
+    <div class="journal-hero-grid">
+        <!-- Left: Headline + CTA -->
+        <div class="journal-hero-left">
+            <div class="journal-hero-headline">
+                <div class="journal-hero-avatar">
+                    <img src="/images/matt-simpson-photographer-louisville-ky.jpg" alt="Matt Simpson">
+                </div>
+                <h1 class="hero-h1">{{ $h.heading_pre }}{{ $h.heading_serif }}{{ $h.heading_post }}</h1>
+                <p class="hero-p">{{ $h.paragraph }}</p>
+                <div class="journal-hero-ctas">
+                    <a href="#featured-projects" class="jh-cta">Explore My Work</a>
+                    <a href="#contact" class="jh-cta jh-cta-outline">Work With Me</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right: Featured Blog Post -->
+        <div class="journal-hero-right">
+            <div class="journal-hero-journal-label"><span class="jh-line"></span> Latest from the Journal <span class="jh-line"></span></div>
+            <a href="{{ $featured.RelPermalink }}" class="journal-hero-post-link">
+                <img src="/images/blog/{{ $featured.Params.image }}" alt="{{ $featured.Title }}" class="journal-hero-post-img">
+            </a>
+            <div class="journal-hero-post-meta">
+                {{ $tags := $featured.Params.tags }}{{ if $tags }}{{ index $tags 0 | upper }}{{ end }}
+                &middot;
+                {{ $featured.Date.Format "Jan 2, 2006" | upper }}
+                &middot;
+                {{ $featured.ReadingTime }} Min Read
+            </div>
+            <a href="{{ $featured.RelPermalink }}" class="journal-hero-post-title-link">
+                <h2 class="journal-hero-post-title">{{ $featured.Title }}</h2>
+            </a>
+            <p class="journal-hero-post-excerpt">{{ $featured.Params.description }}</p>
+            <a href="{{ $featured.RelPermalink }}" class="jh-link">Read the Story <span class="jh-arrow">&#8599;</span></a>
         </div>
     </div>
 </section>
 
-{{ else }}
-<!-- Full Width Hero -->
-<section class="hero">
-    <div class="hero-mosaic">
-        {{ $images := .Site.Data.galleries.hero.images }}
-        {{ $cols := .Site.Data.galleries.hero.columns | default 3 }}
-        {{ $total := len $images }}
-        {{ if gt $total 0 }}
-        {{ range $c := seq $cols }}
-        {{ $dir := "up" }}{{ if eq (mod $c 2) 0 }}{{ $dir = "down" }}{{ end }}
-        <div class="hero-col hero-col-{{ $dir }}">
-            {{ range $i, $img := $images }}{{ if eq (mod $i $cols) (sub $c 1) }}<img src="{{ $img.path }}{{ $img.filename }}" alt="">{{ end }}{{ end }}
-            {{ range $i, $img := $images }}{{ if eq (mod $i $cols) (sub $c 1) }}<img src="{{ $img.path }}{{ $img.filename }}" alt="">{{ end }}{{ end }}
-        </div>
-        {{ end }}
-        {{ end }}
+<!-- More from the Journal -->
+{{ if gt (len $secondaryShow) 0 }}
+<section class="journal-more">
+    <div class="journal-more-header">
+        <h2 class="journal-more-title">More from the blog</h2>
+        <a href="/blog/" class="jh-link">View All Stories <span class="jh-arrow">&#8599;</span></a>
     </div>
-    {{ $opacity := .Site.Data.galleries.hero.opacity | default 0.85 }}
-    <div class="hero-wash" style="background: rgba(250,248,245,{{ $opacity }})"></div>
-    <div class="hero-content">
-        <div class="hero-eyebrow">{{ $h.eyebrow }}</div>
-        <h1 class="hero-h1">{{ $h.heading_pre }}<span class="serif">{{ $h.heading_serif }}</span>{{ $h.heading_post }}</h1>
-        <p class="hero-p">{{ $h.paragraph }}</p>
-        <div class="hero-actions">
-            <a href="#contact" class="btn-primary">{{ $h.button_primary }}</a>
-            <a href="#featured-projects" class="btn-outline">{{ $h.button_secondary }}</a>
-        </div>
+    <div class="journal-more-grid">
+        {{ range $secondaryShow }}
+        <a href="{{ .RelPermalink }}" class="journal-more-card">
+            <div class="journal-more-card-img">
+                <img src="/images/blog/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+            </div>
+            <div class="journal-more-card-body">
+                <div class="journal-more-card-meta">
+                    {{ $tags := .Params.tags }}{{ if $tags }}{{ index $tags 0 | upper }}{{ end }}
+                    &middot;
+                    {{ .Date.Format "Jan 2" | upper }}
+                </div>
+                <div class="journal-more-card-title">{{ .Title }}</div>
+                <p class="journal-more-card-excerpt">{{ .Params.description | truncate 120 }}</p>
+                <span class="jh-link-sm">Read the Story <span class="jh-arrow">&#8599;</span></span>
+            </div>
+        </a>
+        {{ end }}
     </div>
 </section>
 {{ end }}
+
+{{ end }}
+<!-- End Journal Hero -->
+
+
+<!-- ============================================
+     EXISTING SECTIONS BELOW — ALL UNCHANGED
+     ============================================ -->
 
 <!-- Statement -->
 <section class="statement">
