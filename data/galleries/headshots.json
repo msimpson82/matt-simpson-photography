@@ -91,6 +91,13 @@
       "path": "/images/",
       "order": 1,
       "active": true
+    },
+    {
+      "filename": "professional-headshot-in-louisville-kentucky.jpg",
+      "alt": "professional-headshot-in-louisville-kentucky",
+      "path": "/images/",
+      "order": 14,
+      "active": true
     }
   ]
 }
