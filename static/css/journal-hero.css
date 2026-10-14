@@ -531,6 +531,10 @@
     }
 
     .journal-hero-topbar {
+        display: none;
+    }
+
+    .journal-hero-topbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
