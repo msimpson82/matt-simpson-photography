@@ -98,6 +98,13 @@
       "path": "/images/",
       "order": 14,
       "active": true
+    },
+    {
+      "filename": "actors-headshot-in-louisville-kentucky.jpg",
+      "alt": "actors-headshot-in-louisville-kentucky",
+      "path": "/images/",
+      "order": 15,
+      "active": true
     }
   ]
 }
