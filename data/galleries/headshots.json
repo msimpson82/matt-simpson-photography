@@ -19,7 +19,7 @@
       "filename": "louisville_actress_headshot.jpg",
       "alt": "louisville+actress+headshot",
       "path": "/images/",
-      "order": 6,
+      "order": 9,
       "active": true
     },
     {
@@ -54,21 +54,21 @@
       "filename": "louisville kentucky CEO headshot.jpg",
       "alt": "Louisville kentucky CEO headshot",
       "path": "/images/",
-      "order": 8,
+      "order": 14,
       "active": true
     },
     {
       "filename": "louisville_headshot_doctors.jpg",
       "alt": "Headshots for Doctors in Louisville",
       "path": "/images/",
-      "order": 9,
+      "order": 8,
       "active": true
     },
     {
       "filename": "louisville_kentucky_professional_headshot.jpg",
       "alt": "Louisville KY web designer needed photography.",
       "path": "/images/",
-      "order": 10,
+      "order": 15,
       "active": true
     },
     {
@@ -96,14 +96,14 @@
       "filename": "professional-headshot-in-louisville-kentucky.jpg",
       "alt": "professional-headshot-in-louisville-kentucky",
       "path": "/images/",
-      "order": 14,
+      "order": 6,
       "active": true
     },
     {
       "filename": "actors-headshot-in-louisville-kentucky.jpg",
       "alt": "actors-headshot-in-louisville-kentucky",
       "path": "/images/",
-      "order": 15,
+      "order": 10,
       "active": true
     }
   ]
