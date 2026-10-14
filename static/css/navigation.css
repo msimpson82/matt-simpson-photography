@@ -200,9 +200,17 @@
 @media (max-width: 900px) {
     .nav {
         padding: 20px var(--container-pad-mobile);
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
         background: rgba(250, 248, 245, 0.85);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
+    }
+
+    .nav-logo {
+        font-size: 14px;
+        letter-spacing: 2px;
     }
 
     .nav-links {
