@@ -84,6 +84,20 @@
       "path": "/images/",
       "order": 3,
       "active": true
+    },
+    {
+      "filename": "professional-headshot-in-lexington-kentucky.jpg",
+      "alt": "A professional headshot in Lexington, KY",
+      "path": "/images/",
+      "order": 13,
+      "active": true
+    },
+    {
+      "filename": "professional-headshot-in-lexington-kentucky.jpg",
+      "alt": "A professional headshot in Lexington, KY",
+      "path": "/images/",
+      "order": 14,
+      "active": true
     }
   ]
 }
