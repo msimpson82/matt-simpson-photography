@@ -2,101 +2,87 @@
   "display_count": 9,
   "images": [
     {
-      "filename": "gh-1784941758912.jpg",
-      "alt": "Louisville Professional Headshots",
+      "filename": "professional_headshots_in_Louisville_Ky.jpg",
+      "alt": "professional_headshots_in_Louisville_Ky",
       "path": "/images/",
       "order": 1,
-      "active": true
-    },
-    {
-      "filename": "gh-1772480850350.jpg",
-      "alt": "gh-1772480850350.jpg",
-      "path": "/images/",
-      "order": 8,
-      "active": true
-    },
-    {
-      "filename": "louisville_kentucky_headshots.jpg",
-      "alt": "Professional Headshot in Louisville Kentucky",
-      "path": "/images/",
-      "order": 2,
       "active": true
     },
     {
       "filename": "louisville_kentucky_banker_headshot.jpg",
       "alt": "louisville_kentucky_banker_headshot.jpg",
       "path": "/images/",
-      "order": 5,
+      "order": 2,
       "active": true
     },
     {
       "filename": "louisville_actress_headshot.jpg",
       "alt": "louisville+actress+headshot",
       "path": "/images/",
-      "order": 6,
+      "order": 3,
       "active": true
     },
     {
-      "filename": "louisville kentucky CEO headshot.jpg",
-      "alt": "Louisville kentucky CEO headshot",
+      "filename": "louisville_kentucky_headshots.jpg",
+      "alt": "Professional Headshot in Louisville Kentucky",
       "path": "/images/",
-      "order": 7,
+      "order": 4,
       "active": true
     },
     {
-      "filename": "louisville_kentucky_professional_headshot.jpg",
-      "alt": "Louisville KY web designer needed photography.",
+      "filename": "gh-1772480850350.jpg",
+      "alt": "gh-1772480850350.jpg",
       "path": "/images/",
-      "order": 11,
-      "active": true
-    },
-    {
-      "filename": "gh-1772469897042.jpg",
-      "alt": "gh-1772469897042.jpg",
-      "path": "/images/",
-      "order": 12,
+      "order": 5,
       "active": true
     },
     {
       "filename": "social_media_influencer.jpg",
       "alt": "Louisville, KY influencer headshot",
       "path": "/images/",
-      "order": 9,
+      "order": 6,
       "active": true
     },
     {
-      "filename": "professional-headshot-woman-louisville-ky.jpg",
-      "alt": "Professional headshot of a woman in a black blazer — Louisville, KY headshot photographer",
+      "filename": "gh-1784941758912.jpg",
+      "alt": "Louisville Professional Headshots",
       "path": "/images/",
-      "order": 10,
+      "order": 7,
+      "active": true
+    },
+    {
+      "filename": "louisville kentucky CEO headshot.jpg",
+      "alt": "Louisville kentucky CEO headshot",
+      "path": "/images/",
+      "order": 8,
       "active": true
     },
     {
       "filename": "louisville_headshot_doctors.jpg",
       "alt": "Headshots for Doctors in Louisville",
       "path": "/images/",
-      "order": 4,
+      "order": 9,
       "active": true
     },
     {
-      "filename": "professional_headshots_in_Louisville_Ky.jpg",
-      "alt": "professional_headshots_in_Louisville_Ky",
+      "filename": "louisville_kentucky_professional_headshot.jpg",
+      "alt": "Louisville KY web designer needed photography.",
       "path": "/images/",
-      "order": 3,
+      "order": 10,
       "active": true
     },
     {
-      "filename": "professional-headshot-in-lexington-kentucky.jpg",
-      "alt": "A professional headshot in Lexington, KY",
+      "filename": "gh-1772469897042.jpg",
+      "alt": "gh-1772469897042.jpg",
       "path": "/images/",
-      "order": 13,
+      "order": 11,
       "active": true
     },
     {
-      "filename": "professional-headshot-in-lexington-kentucky.jpg",
-      "alt": "A professional headshot in Lexington, KY",
+      "filename": "professional-headshot-woman-louisville-ky.jpg",
+      "alt": "Professional headshot of a woman in a black blazer — Louisville, KY headshot photographer",
       "path": "/images/",
-      "order": 14,
+      "order": 12,
       "active": true
     }
   ]
