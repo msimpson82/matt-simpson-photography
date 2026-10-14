@@ -84,6 +84,13 @@
       "path": "/images/",
       "order": 12,
       "active": true
+    },
+    {
+      "filename": "professional-headshot-in-lexington-kentucky.jpg",
+      "alt": "professional-headshot-in-lexington-kentucky",
+      "path": "/images/",
+      "order": 13,
+      "active": true
     }
   ]
 }
