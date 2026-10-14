@@ -5,21 +5,21 @@
       "filename": "professional_headshots_in_Louisville_Ky.jpg",
       "alt": "professional_headshots_in_Louisville_Ky",
       "path": "/images/",
-      "order": 1,
+      "order": 2,
       "active": true
     },
     {
       "filename": "louisville_kentucky_banker_headshot.jpg",
       "alt": "louisville_kentucky_banker_headshot.jpg",
       "path": "/images/",
-      "order": 2,
+      "order": 3,
       "active": true
     },
     {
       "filename": "louisville_actress_headshot.jpg",
       "alt": "louisville+actress+headshot",
       "path": "/images/",
-      "order": 3,
+      "order": 6,
       "active": true
     },
     {
@@ -40,14 +40,14 @@
       "filename": "social_media_influencer.jpg",
       "alt": "Louisville, KY influencer headshot",
       "path": "/images/",
-      "order": 6,
+      "order": 7,
       "active": true
     },
     {
       "filename": "gh-1784941758912.jpg",
       "alt": "Louisville Professional Headshots",
       "path": "/images/",
-      "order": 7,
+      "order": 13,
       "active": true
     },
     {
@@ -89,7 +89,7 @@
       "filename": "professional-headshot-in-lexington-kentucky.jpg",
       "alt": "professional-headshot-in-lexington-kentucky",
       "path": "/images/",
-      "order": 13,
+      "order": 1,
       "active": true
     }
   ]
