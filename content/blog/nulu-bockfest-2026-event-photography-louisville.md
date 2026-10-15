@@ -2,7 +2,7 @@
 title: "NuLu Bockfest 2026: Event Photography in Louisville's Coolest Neighborhood"
 date: 2026-10-13
 description: "Event photography from the 2026 NuLu Bockfest in Louisville. Goat racing, bock beer, live music, and the Wurst Fest — all captured by Matt Simpson Photography."
-image: "nulu-bockfest-louisville-event.jpg"
+image: "nulu-bockfest-2026-event-photography-louisville.jpg"
 tags: ["events", "louisville", "nulu"]
 body_class: "page-blog"
 ---
